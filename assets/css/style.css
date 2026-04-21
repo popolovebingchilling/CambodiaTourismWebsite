@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+:root {
+    --primary-color: #8B322C;
+    --secondary-color: #EE9209;
+    --accent-color: #FACC15;
+    --bg-dark: #0F172A;
+}
+body{
+    font-family: "Kantumruy Pro", "Roboto" !important;
+    background-color: var(--bg-dark) !important;
+    color: #ffffff !important;
+}
+header {
+    background-color:  var(--bg-dark) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: 0.3s !important;
+}
+.nav-link:hover {
+    color: var(--secondary-color) !important;
+}
+.nav-link.active {
+    color: var(--secondary-color) !important;
+    font-weight: bold !important;
+}
+
+.btn-book-now {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border: none !important;
+    transition: 0.3s !important;
+}
+.btn-book-now:hover {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+}
+
+.hero-section {
+    height: 100vh !important;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../image/herobanner.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.hero-badge {
+    background-color: var(--primary-color) !important;
+    padding: 8px 25px !important;
+    border-radius: 50px !important;
+    width: fit-content !important;
+    margin: 0 auto 20px auto !important;
+}
+
+.hero-title {
+    font-family: "Playfair Display", serif !important;
+    font-size: 4rem !important;
+}
+.btn-hero-primary {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    padding: 10px 25px !important;
+    border: none !important;
+    transition: 0.3s !important;
+}
+.btn-hero-primary:hover {
+    transform: scale(1.1) !important;
+    background-color: var(--secondary-color) !important;
+}
+
+.btn-hero-outline {
+    background-color: transparent !important;
+    color: white !important;
+    padding: 10px 25px !important;
+    border: 1px solid white !important;
+    transition: 0.3s !important;
+}
+.btn-hero-outline:hover {
+    background-color: #FACC15 !important;
+    color: black !important;
+    border-color: #FACC15 !important;
+    transform: scale(1.1) !important;
+}
+.footer {
+    background-color: var(--bg-dark) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.btn-subscribe {
+    background-color: #FACC15 !important;
+    color: black !important;
+    border: none !important;
+}
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-decoration: none !important;
+    transition: 0.3s !important;
+}
+.footer-links a:hover {
+    color: #EC4899 !important;
+}
