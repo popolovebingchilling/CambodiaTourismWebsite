@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ទំព័រដើម | ទេសចរណ៍កម្ពុជា</title>
+    <title>ចូលប្រើប្រាស់ | ទេសចរណ៍កម្ពុជា</title>
     <!-- HTML CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- BOOTSTRAP CSS -->
@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <!-- BOOTSTRAP ICON -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <!-- SWIPER -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -37,7 +35,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav gap-2">
                         <li class="nav-item">
-                            <a class="nav-link active rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                            <a class="nav-link rounded-pill px-3" href="index.html">ទំព័រដើម</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle px-3" href="#" role="button"
@@ -70,41 +68,69 @@
                         <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
                     </ul>
                 </div>
-                <div class="d-none d-lg-flex gap-2">
-                    <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
-                    <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
-                </div>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section class="hero-section d-flex align-items-center text-center">
-            <div class="container hero-content">
-                <div class="hero-badge mx-auto mb-4 py-2 px-4 rounded-pill">
-                    <small class="tracking-widest fw-semibold text-white">ព្រះរាជាណាចក្រកម្ពុជា</small>
-                </div>
-                <h1 class="display-1 fw-bold text-white mb-2 hero-title">ស្វែងរកកម្ពុជា</h1>
-                <h2 class="h1 fw-bold text-white mb-4 hero-khmer-title">រកឃើញភាពអស្ចារ្យ</h2>
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-8">
-                        <p class="lead text-white-50 hero-desc">
-                            សូមស្វាគមន៍មកកាន់ព្រះរាជាណាចក្រកម្ពុជា ដែនដីនៃប្រាសាទបុរាណដ៏អស្ចារ្យ ធម្មជាតិស្រស់បំព្រង
-                            វប្បធម៌សំបូរបែប និងមនុស្សជាតិដែលមានសេចក្តីថ្លៃថ្នូរ និងភាពញញឹមស្រស់ស្រាយរាក់ទាក់។
-                            សូមរកឃើញភាពស្រស់ស្អាតនៃទឹកដីខ្មែរ។
-                        </p>
+    <main class="auth-wrapper">
+        <div class="container d-flex justify-content-center">
+            <div class="auth-card d-flex flex-column flex-md-row">
+                <!-- Image Side -->
+                <div class="auth-img-side col-md-5">
+                    <h2 class="auth-title text-white mb-3">សូមស្វាគមន៍មកវិញ</h2>
+                    <p class="mb-4">សូមស្វាគមន៍មកកាន់គេហទំព័រទេសចរណ៍កម្ពុជា។
+                        សូមចូលប្រើប្រាស់ដើម្បីបន្តដំណើរកម្សាន្តរបស់អ្នក។</p>
+                    <div class="mt-auto">
+                        <p class="small">មិនទាន់មានគណនីមែនទេ?</p>
+                        <a href="register.html" class="btn btn-outline-light rounded-pill px-4">ចុះឈ្មោះឥឡូវនេះ</a>
                     </div>
                 </div>
-                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
-                    <a href="booking.html" class="btn btn-hero-primary px-5 py-3 rounded-3 shadow">
-                        រៀបចំដំណើរកម្សាន្ត
-                    </a>
-                    <a href="#" class="btn btn-hero-outline px-5 py-3 rounded-3">
-                        ស្វែងរកបន្ថែម
-                    </a>
+                <!-- Form Side -->
+                <div class="auth-form-side col-md-7">
+                    <div class="mb-4">
+                        <h3 class="auth-title mb-1">ចូលប្រើប្រាស់</h3>
+                        <p class="text-muted">ចូលប្រើប្រាស់គណនីរបស់អ្នក</p>
+                    </div>
+                    <form action="index.html">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">អាសយដ្ឋានអ៊ីម៉ែល</label>
+                            <input type="email" class="form-control" id="email" placeholder="បញ្ចូលអ៊ីមែលរបស់អ្នក"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <label for="password" class="form-label">ពាក្យសម្ងាត់</label>
+                                <a href="forgot-password.html" class="small auth-link">ភ្លេចពាក្យសម្ងាត់?</a>
+                            </div>
+                            <div class="password-field-wrapper">
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
+                                <button type="button" class="password-toggle" id="togglePassword">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="remember">
+                            <label class="form-check-label small" for="remember">ចងចាំខ្ញុំ</label>
+                        </div>
+                        <button type="submit" class="btn btn-auth mb-4">ចូលប្រើ</button>
+
+                        <div class="text-center">
+                            <p class="small text-muted mb-3">ឬចូលប្រើជាមួយ</p>
+                            <div class="social-auth">
+                                <a href="#" class="btn-social"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="btn-social"><i class="fab fa-google"></i></a>
+                                <a href="#" class="btn-social"><i class="fab fa-apple"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="mt-5 text-center d-md-none">
+                        <p class="small">មិនទាន់មានគណនីមែនទេ? <a href="register.html" class="auth-link">ចុះឈ្មោះ</a></p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="footer py-5">
@@ -113,13 +139,13 @@
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <h5 class="fw-bold mb-2">ទេសចរណ៍កម្ពុជា</h5>
                     <p class="text-white-50 small mb-3">ទេសចរណ៍កម្ពុជា</p>
-                    <p class="text-white-50 small pe-lg-5 mb-3">
+                    <p class="text-white-50 small pe-lg-5">
                         ស្វែងរកភាពស្រស់ស្អាតនៃព្រះរាជាណាចក្រកម្ពុជា ដែនដីនៃប្រាសាទបុរាណ ធម្មជាតិស្រស់បំព្រង
                         និងប្បធម៌ដ៏អស្ចារ្យ។
                     </p>
-                    <div class="d-flex align-items-center text-white-50 small">
-                        <i class="fas fa-envelope me-2 text-secondary"></i>
-                        <span>info@tourismcambodia.com</span>
+                    <div class="d-flex align-items-center text-white-50 small mt-3">
+                        <i class="fas fa-envelope me-2"></i>
+                        <span>info@cambodiatourism.com</span>
                     </div>
                 </div>
                 <div class="col-6 col-lg-2 mb-4 mb-lg-0">
@@ -151,7 +177,7 @@
                         <li><a href="#">វិចិត្រសាល</a></li>
                         <li><a href="blog.html">ប្លុក</a></li>
                         <li><a href="#">មតិយោបល់</a></li>
-                        <li><a href="map.html">ផែនទី</a></li>
+                        <li><a href="#">ផែនទី</a></li>
                     </ul>
                 </div>
             </div>
@@ -164,8 +190,18 @@
 
     <!-- BOOTSTRAP JAVA -->
     <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-    <!-- SWIPER JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye slash icon
+            this.querySelector('i').classList.toggle('fa-eye-slash');
+        });
+    </script>
 </body>
 
 </html>

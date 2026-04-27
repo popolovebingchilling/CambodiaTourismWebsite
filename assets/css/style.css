@@ -2,7 +2,7 @@
 *{
     padding: 0; margin: 0; box-sizing: border-box;
 }
-:root {
+:root{
     --deep-mahogany:      #4A1C00;
     --burnt-sienna:       #7B2D00;
     --desert-terracotta:  #C0622A;
@@ -19,34 +19,32 @@ body{
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
 }
-header {
+header{
     background-color:  var(--deep-mahogany) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
-.nav-link {
+.nav-link{
     color: rgba(255, 255, 255, 0.8) !important;
     transition: 0.3s !important;
 }
-.nav-link:hover {
+.nav-link:hover{
     color: var(--golden-spice) !important;
 }
-.nav-link.active {
+.nav-link.active{
     color: var(--golden-spice) !important;
     font-weight: bold !important;
 }
-
-.btn-book-now {
+.btn-book-now{
     background-color: var(--desert-terracotta) !important;
     color: white !important;
     border: none !important;
     transition: 0.3s !important;
 }
-.btn-book-now:hover {
+.btn-book-now:hover{
     background-color: var(--burnt-sienna) !important;
     color: white !important;
 }
-
-.hero-section {
+.hero-section{
     height: 100vh !important;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../image/herobanner.jpg') !important;
     background-size: cover !important;
@@ -55,66 +53,382 @@ header {
     align-items: center !important;
     justify-content: center !important;
 }
-.hero-badge {
+.hero-badge{
     background-color: var(--burnt-sienna) !important;
     padding: 8px 25px !important;
     border-radius: 50px !important;
     width: fit-content !important;
     margin: 0 auto 20px auto !important;
 }
-
-.hero-title {
+.hero-title{
     font-family: "Playfair Display", serif !important;
     font-size: 4rem !important;
 }
-.btn-hero-primary {
+.btn-hero-primary{
     background-color: var(--desert-terracotta) !important;
     color: white !important;
     padding: 10px 25px !important;
     border: none !important;
     transition: 0.3s !important;
 }
-.btn-hero-primary:hover {
+.btn-hero-primary:hover{
     transform: scale(1.1) !important;
     background-color: var(--burnt-sienna) !important;
 }
-
-.btn-hero-outline {
+.btn-hero-outline{
     background-color: transparent !important;
     color: white !important;
     padding: 10px 25px !important;
     border: 1px solid white !important;
     transition: 0.3s !important;
 }
-.btn-hero-outline:hover {
+.btn-hero-outline:hover{
     background-color: var(--amber-dune) !important;
     color: white !important;
     border-color: var(--amber-dune) !important;
     transform: scale(1.1) !important;
 }
-.footer {
+.footer{
     background-color: var(--dark-oud) !important;
     color: var(--parchment) !important;
     border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
-.btn-subscribe {
+.btn-subscribe{
     background-color: var(--amber-dune) !important;
     color: white !important;
     border: none !important;
 }
-.footer-links a {
+.footer-links a{
     color: rgba(255, 255, 255, 0.7) !important;
     text-decoration: none !important;
     transition: 0.3s !important;
 }
-.footer-links a:hover {
+.footer-links a:hover{
     color: var(--golden-spice) !important;
 }
 
 /* Bootstrap Overrides */
-.text-secondary {
+.text-secondary{
     color: var(--golden-spice) !important;
 }
-.border-secondary {
+.border-secondary{
     border-color: var(--camel-brown) !important;
 }
+
+/* Authentication Pages Styles */
+.auth-wrapper{
+    min-height: 80vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 50px 0 !important;
+}
+.auth-card{
+    background: white !important;
+    border-radius: 20px !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    max-width: 900px !important;
+}
+.auth-img-side{
+    background: linear-gradient(rgba(74, 28, 0, 0.6), rgba(74, 28, 0, 0.6)), url('../image/auth-bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 40px !important;
+    color: white !important;
+    text-align: center !important;
+}
+.auth-form-side{
+    padding: 50px !important;
+}
+.auth-title{
+    font-family: "Playfair Display", serif !important;
+    color: var(--deep-mahogany) !important;
+    font-weight: 700 !important;
+}
+.form-label{
+    color: var(--night-indigo) !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+}
+.form-control{
+    padding: 12px 15px !important;
+    border-radius: 10px !important;
+    border: 1px solid #ddd !important;
+}
+.form-control:focus{
+    border-color: var(--desert-terracotta) !important;
+    box-shadow: 0 0 0 0.2rem rgba(192, 98, 42, 0.25) !important;
+}
+
+.btn-auth{
+    background-color: var(--desert-terracotta) !important;
+    color: white !important;
+    padding: 12px !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    font-weight: 600 !important;
+    transition: 0.3s !important;
+    border: none !important;
+}
+.btn-auth:hover{
+    background-color: var(--burnt-sienna) !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+}
+.social-auth{
+    display: flex !important;
+    gap: 15px !important;
+    justify-content: center !important;
+    margin-top: 20px !important;
+}
+.btn-social{
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid #ddd !important;
+    color: var(--night-indigo) !important;
+    transition: 0.3s !important;
+    text-decoration: none !important;
+}
+.btn-social:hover{
+    background-color: var(--sand-whisper) !important;
+    color: var(--desert-terracotta) !important;
+    border-color: var(--desert-terracotta) !important;
+}
+.auth-link{
+    color: var(--desert-terracotta) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+.auth-link:hover{
+    color: var(--burnt-sienna) !important;
+    text-decoration: underline !important;
+}
+@media (max-width: 768px){
+    .auth-img-side {
+        display: none !important;
+    }
+    .auth-form-side {
+        padding: 30px !important;
+    }
+}
+
+/* Booking Page Styles */
+.booking-header{
+    background: linear-gradient(rgba(44, 26, 14, 0.7), rgba(44, 26, 14, 0.7)), url('../image/auth-bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 100px 0 60px !important;
+    color: white !important;
+    text-align: center !important;
+}
+.booking-card{
+    background: white !important;
+    border-radius: 20px !important;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.08) !important;
+    margin-top: -50px !important;
+    padding: 40px !important;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+}
+.section-title-kh{
+    color: var(--desert-terracotta) !important;
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+}
+.booking-form-label{
+    font-weight: 600 !important;
+    color: var(--deep-mahogany) !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+}
+.booking-input-group{
+    position: relative !important;
+}
+.booking-input-group i{
+    position: absolute !important;
+    left: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: var(--camel-brown) !important;
+}
+.booking-form .form-control, .booking-form .form-select{
+    padding-left: 45px !important;
+    height: 55px !important;
+    border-radius: 12px !important;
+    border: 1px solid #eee !important;
+    background-color: #fcfcfc !important;
+}
+.booking-form .form-control:focus{
+    background-color: white !important;
+    border-color: var(--desert-terracotta) !important;
+    box-shadow: 0 5px 15px rgba(192, 98, 42, 0.1) !important;
+}
+.btn-confirm-booking{
+    background-color: var(--desert-terracotta) !important;
+    color: white !important;
+    padding: 15px 40px !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    transition: 0.3s !important;
+    width: 100% !important;
+}      
+.btn-confirm-booking:hover{
+    background-color: var(--burnt-sienna) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 20px rgba(123, 45, 0, 0.2) !important;
+}
+
+/* Password Toggle Styles */
+.password-field-wrapper{
+    position: relative !important;
+}
+.password-toggle{
+    position: absolute !important;
+    right: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    cursor: pointer !important;
+    color: var(--camel-brown) !important;
+    z-index: 10 !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+}
+.password-toggle:hover{
+    color: var(--desert-terracotta) !important;
+}
+
+/* Map Page Styles */
+.map-hero{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../image/auth-bg.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 120px 0 80px !important;
+    text-align: center !important;
+    color: white !important;
+}
+.map-container{
+    background: white !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    margin-bottom: 40px !important;
+}
+.map-info-card{
+    border: none !important;
+    border-radius: 20px !important;
+    transition: 0.3s !important;
+    overflow: hidden !important;
+    height: 100% !important;
+    background: white !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
+}
+.map-info-card:hover{
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+}
+.map-frame{
+    width: 100% !important;
+    height: 250px !important;
+    border: none !important;
+}
+.location-badge{
+    background-color: var(--desert-terracotta) !important;
+    color: white !important;
+    padding: 5px 15px !important;
+    border-radius: 50px !important;
+    font-size: 0.8rem !important;
+    display: inline-block !important;
+    margin-bottom: 10px !important;
+}
+.map-title{
+    color: var(--deep-mahogany) !important;
+    font-weight: 700 !important;
+    margin-bottom: 15px !important;
+}
+.map-desc{
+    font-size: 0.9rem !important;
+    color: var(--night-indigo) !important;
+    opacity: 0.8 !important;
+}
+
+/* Blog Styles - Bootstrap approach */
+.blog-hero-section {
+    padding: 100px 0;
+    background-color: #333;
+    color: white;
+}
+.card {
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+}
+.card:hover {
+    transform: translateY(-8px);
+}
+.card-title {
+    color: var(--deep-mahogany);
+    font-size: 1.2rem;
+}
+.card-text {
+    line-height: 1.5;
+}
+.badge {
+    padding: 6px 12px;
+    font-weight: 500;
+}
+
+/* Blog Detail Styles */
+.blog-detail-hero{
+    height: 300px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../image/auth-bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.blog-article {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: -50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.article-meta {
+    margin-bottom: 20px;
+    color: #888;
+    font-size: 0.85rem;
+}
+.article-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.attraction-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+@media (max-width: 768px) {
+    .blog-article {
+        padding: 20px;
+        margin-top: -30px;
+    }
+}
+
+
+
+
