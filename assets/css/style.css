@@ -3,18 +3,24 @@
     padding: 0; margin: 0; box-sizing: border-box;
 }
 :root {
-    --primary-color: #8B322C;
-    --secondary-color: #EE9209;
-    --accent-color: #FACC15;
-    --bg-dark: #0F172A;
+    --deep-mahogany:      #4A1C00;
+    --burnt-sienna:       #7B2D00;
+    --desert-terracotta:  #C0622A;
+    --amber-dune:         #D4A054;
+    --golden-spice:       #F2C078;
+    --parchment:          #FEF0CD;
+    --sand-whisper:       #FEF6E4;
+    --night-indigo:       #3D405B;
+    --camel-brown:        #9B6A3A;
+    --dark-oud:           #2C1A0E;
 }
 body{
     font-family: "Kantumruy Pro", "Roboto" !important;
-    background-color: var(--bg-dark) !important;
-    color: #ffffff !important;
+    background-color: var(--sand-whisper) !important;
+    color: var(--night-indigo) !important;
 }
 header {
-    background-color:  var(--bg-dark) !important;
+    background-color:  var(--deep-mahogany) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 .nav-link {
@@ -22,21 +28,21 @@ header {
     transition: 0.3s !important;
 }
 .nav-link:hover {
-    color: var(--secondary-color) !important;
+    color: var(--golden-spice) !important;
 }
 .nav-link.active {
-    color: var(--secondary-color) !important;
+    color: var(--golden-spice) !important;
     font-weight: bold !important;
 }
 
 .btn-book-now {
-    background-color: var(--primary-color) !important;
+    background-color: var(--desert-terracotta) !important;
     color: white !important;
     border: none !important;
     transition: 0.3s !important;
 }
 .btn-book-now:hover {
-    background-color: var(--secondary-color) !important;
+    background-color: var(--burnt-sienna) !important;
     color: white !important;
 }
 
@@ -50,7 +56,7 @@ header {
     justify-content: center !important;
 }
 .hero-badge {
-    background-color: var(--primary-color) !important;
+    background-color: var(--burnt-sienna) !important;
     padding: 8px 25px !important;
     border-radius: 50px !important;
     width: fit-content !important;
@@ -62,7 +68,7 @@ header {
     font-size: 4rem !important;
 }
 .btn-hero-primary {
-    background-color: var(--primary-color) !important;
+    background-color: var(--desert-terracotta) !important;
     color: white !important;
     padding: 10px 25px !important;
     border: none !important;
@@ -70,7 +76,7 @@ header {
 }
 .btn-hero-primary:hover {
     transform: scale(1.1) !important;
-    background-color: var(--secondary-color) !important;
+    background-color: var(--burnt-sienna) !important;
 }
 
 .btn-hero-outline {
@@ -81,18 +87,19 @@ header {
     transition: 0.3s !important;
 }
 .btn-hero-outline:hover {
-    background-color: #FACC15 !important;
-    color: black !important;
-    border-color: #FACC15 !important;
+    background-color: var(--amber-dune) !important;
+    color: white !important;
+    border-color: var(--amber-dune) !important;
     transform: scale(1.1) !important;
 }
 .footer {
-    background-color: var(--bg-dark) !important;
+    background-color: var(--dark-oud) !important;
+    color: var(--parchment) !important;
     border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 .btn-subscribe {
-    background-color: #FACC15 !important;
-    color: black !important;
+    background-color: var(--amber-dune) !important;
+    color: white !important;
     border: none !important;
 }
 .footer-links a {
@@ -101,5 +108,13 @@ header {
     transition: 0.3s !important;
 }
 .footer-links a:hover {
-    color: #EC4899 !important;
+    color: var(--golden-spice) !important;
+}
+
+/* Bootstrap Overrides */
+.text-secondary {
+    color: var(--golden-spice) !important;
+}
+.border-secondary {
+    border-color: var(--camel-brown) !important;
 }
