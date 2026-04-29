@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ខេត្តកំពត - ភាពស្រស់ស្អាតនៅតំបន់កម្ពុជា</title>
+    <!-- HTML CSS -->
+    <!-- KAMPOT SPECIFIC CSS -->
+    <link rel="stylesheet" href="assets/css/soama.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100;300;400;500;700&display=swap"
         rel="stylesheet">
-
     <style>
         :root {
             --deep-mahogany: #4A1C00;
@@ -630,6 +632,69 @@
 </head>
 
 <body>
+=======
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container py-2">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="assets/image/logo.jpg" alt="Logo" width="45" height="45"
+                        class="rounded-3 me-2 object-fit-cover">
+                    <div class="d-flex flex-column lh-1">
+                        <span class="text-secondary small">ទេសចរណ៍កម្ពុជា</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3 active" href="#" role="button"
+                                data-bs-toggle="dropdown">គោលដៅ</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="#">សៀមរាប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="#">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item active" href="kampot.html">កំពត</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="#">កែប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="#">ព្រះសីហនុ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="#">បាត់ដំបង</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="#">មណ្ឌលគិរី</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="#">កោះកុង</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                                data-bs-toggle="dropdown">សេវាកម្ម</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="#">សណ្ឋាគារ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="#">ភោជនីយដ្ឋាន</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="#">មគ្គុទ្ទេសក៍</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="#">ការដឹកជញ្ជូន</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">មគ្គុទ្ទេសក៍</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">វិចិត្រសាល</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">មតិយោបល់</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex gap-2">
+                    <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
+                    <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
     <section class="modal-section">
         <!-- Amber Kampot Detail Modal -->
         <div class="modal fade" id="amberModal" tabindex="-1" aria-hidden="true">
@@ -772,7 +837,11 @@
                                 onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 0 20px -5px rgba(255,255,255,0.15)'">
                                 <i class="fas fa-globe"></i> គេហទំព័រផ្លូវការ
                             </a>
+<<<<<<< HEAD
                              <a href="booking.html"
+=======
+                            <a href="booking.html"
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                                 style="flex:1;min-width:140px;background:var(--card-bg);color:var(--text-secondary);font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:1px solid var(--card-border);text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);"
                                 onmouseover="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--text-primary)';this.style.transform='translateY(-2px)'"
                                 onmouseout="this.style.background='var(--card-bg)';this.style.color='var(--text-secondary)';this.style.transform='translateY(0)'">
@@ -928,7 +997,11 @@
                                 style="flex:1;min-width:140px;background:var(--card-bg);color:var(--text-secondary);font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:1px solid var(--card-border);text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);"
                                 onmouseover="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--text-primary)';this.style.transform='translateY(-2px)'"
                                 onmouseout="this.style.background='var(--card-bg)';this.style.color='var(--text-secondary)';this.style.transform='translateY(0)'">
+<<<<<<< HEAD
                                <i class="fas fa-ticket-alt"></i> កក់ឥឡូវនេះ
+=======
+                                <i class="fas fa-ticket-alt"></i> កក់ឥឡូវនេះ
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                             </a>
                         </div>
                     </div>
@@ -1080,7 +1153,11 @@
                                 style="flex:1;min-width:140px;background:var(--card-bg);color:var(--text-secondary);font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:1px solid var(--card-border);text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);"
                                 onmouseover="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--text-primary)';this.style.transform='translateY(-2px)'"
                                 onmouseout="this.style.background='var(--card-bg)';this.style.color='var(--text-secondary)';this.style.transform='translateY(0)'">
+<<<<<<< HEAD
                                <i class="fas fa-ticket-alt"></i> កក់ឥឡូវនេះ
+=======
+                                <i class="fas fa-ticket-alt"></i> កក់ឥឡូវនេះ
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                             </a>
                         </div>
                     </div>
@@ -1242,7 +1319,11 @@
     </section>
     <!-- ════════ HERO ════════ -->
     <section class="hero-section" id="hero"
+<<<<<<< HEAD
         style="background: url('https://d34vm3j4h7f97z.cloudfront.net/original/4X/8/1/e/81e31f6817402c4a711d09891d53515e0ada2571.jpeg') center/cover no-repeat;">
+=======
+        style="background: url('https://d34vm3j4h7f97z.cloudfront.net/original/4X/8/1/e/81e31f6817402c4a711d09891d53515e0ada2571.jpeg') center/cover no-repeat !important;">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
         <div class="container" style="max-width: 1280px;">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6">
@@ -1303,7 +1384,11 @@
                     </a>
                 </div>
                 <div class="col-lg-7 reveal reveal-delay-2">
+<<<<<<< HEAD
                     <div class="row g-3">
+=======
+                    <div class="row g-4">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                         <div class="col-6">
                             <div class="glass-card text-center">
                                 <div class="feature-icon emerald mx-auto"><i class="fas fa-mountain"></i></div>
@@ -1312,21 +1397,33 @@
                             </div>
                         </div>
                         <div class="col-6">
+<<<<<<< HEAD
                             <div class="glass-card text-center">
+=======
+                            <div class="glass-card text-center h-100">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                                 <div class="feature-icon blue mx-auto"><i class="fas fa-water"></i></div>
                                 <div class="stat-number">៨០កម</div>
                                 <div class="stat-label">ប្រវែងទន្លេកំពត</div>
                             </div>
                         </div>
                         <div class="col-6">
+<<<<<<< HEAD
                             <div class="glass-card text-center">
+=======
+                            <div class="glass-card text-center h-100">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                                 <div class="feature-icon amber mx-auto"><i class="fas fa-temperature-low"></i></div>
                                 <div class="stat-number">២៤°C</div>
                                 <div class="stat-label">សីតុណ្ហភាពមធ្យម</div>
                             </div>
                         </div>
                         <div class="col-6">
+<<<<<<< HEAD
                             <div class="glass-card text-center">
+=======
+                            <div class="glass-card text-center h-100">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                                 <div class="feature-icon rose mx-auto"><i class="fas fa-people-group"></i></div>
                                 <div class="stat-number">៥៣៨៧</div>
                                 <div class="stat-label">ប្រជាជន​(ពាន់នាក់)</div>
@@ -1339,6 +1436,7 @@
             <!-- Features Row -->
             <div class="row g-4 mt-5">
                 <div class="col-md-4 reveal reveal-delay-1">
+<<<<<<< HEAD
                     <div class="glass-card">
                         <div class=" emerald">
                             <img src="https://static.information.gov.kh/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOVpLQWc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c2446b4c93f4f22848a039eafa92a097894f153f/5FFC8409-7747-4451-B641-FA6044B.jpeg"
@@ -1377,6 +1475,49 @@
                             ឆ្នេរថ្មសោរដ៏ល្បីល្បាញ ស្ថិតនៅចន្លោះខេត្តកំពតនិងកែប
                             គឺជាចំណុចកំសាក្យបំផុតនៅតំបន់ឆ្នេរកម្ពុជា។
                         </p>
+=======
+                    <div class="image-card h-100">
+                        <img src="https://static.information.gov.kh/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOVpLQWc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c2446b4c93f4f22848a039eafa92a097894f153f/5FFC8409-7747-4451-B641-FA6044B.jpeg"
+                            alt="ម្រេចកំពត">
+                        <div class="card-body-custom">
+                            <h5 class="card-title-custom" style="font-size:16px;font-weight:600;margin-bottom:8px;">
+                                ម្រេចកំពត</h5>
+                            <p class="card-desc"
+                                style="font-size:13px;color:var(--text-secondary);font-weight:300;line-height:1.8;">
+                                ម្រេចកំពត គឺជាផលិតផលឈាមមេដៃនៅកម្ពុជា ដែលបានទទួលការទុកចិត្តពីសំណាក់អន្តរជាតិ
+                                ដោយសារគុណភាពខ្ពស់និងក្លិនក្លាក់ពិសេស។
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal reveal-delay-2">
+                    <div class="image-card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Phnom-Wan-001.jpg" alt="ប្រាសាទភ្នំក្រវាញ">
+                        <div class="card-body-custom">
+                            <h5 class="card-title-custom" style="font-size:16px;font-weight:600;margin-bottom:8px;">
+                                ប្រាសាទភ្នំក្រវាញ</h5>
+                            <p class="card-desc"
+                                style="font-size:13px;color:var(--text-secondary);font-weight:300;line-height:1.8;">
+                                ប្រាសាទព្រះវិហារខ្មែរបុរាណ ស្ថិតនៅលើកំពូលភ្នំក្រវាញ មានប្រវត្តិជាង ១០០០ឆ្នាំ
+                                បង្ហាញពីវិសាលភាពនៃសម័យបុរេរបារ។
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal reveal-delay-3">
+                    <div class="image-card h-100">
+                        <img src="https://cdn.cc-times.com/kh.cc-times.com/images/25641/large/Beach1.jpg?1723630718"
+                            alt="ឆ្នេរកោះស្មៅ">
+                        <div class="card-body-custom">
+                            <h5 class="card-title-custom" style="font-size:16px;font-weight:600;margin-bottom:8px;">
+                                ឆ្នេរកោះស្មៅ</h5>
+                            <p class="card-desc"
+                                style="font-size:13px;color:var(--text-secondary);font-weight:300;line-height:1.8;">
+                                ឆ្នេរថ្មសោរដ៏ល្បីល្បាញ ស្ថិតនៅចន្លោះខេត្តកំពតនិងកែប
+                                គឺជាចំណុចកំសាក្យបំផុតនៅតំបន់ឆ្នេរកម្ពុជា។
+                            </p>
+                        </div>
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                     </div>
                 </div>
             </div>
@@ -1399,7 +1540,11 @@
 
             <div class="row g-4">
                 <div class="col-lg-8 reveal">
+<<<<<<< HEAD
                     <div class="image-card" style="border-radius:20px;overflow:hidden;">
+=======
+                    <div class="image-card featured" style="border-radius:20px;overflow:hidden;">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                         <div style="position:relative;overflow:hidden;border-radius:20px 20px 0 0;">
                             <img src="https://s9.kh1.co/27/27aefe989424a95fe2d6726a3dfffa67aee05be3.jpg" alt="ភ្នំបូកគោ"
                                 style="height:360px;">
@@ -1413,10 +1558,32 @@
                         </div>
                         <div style="padding:24px;">
                             <p style="font-size:14px;color:var(--text-secondary);font-weight:300;line-height:1.9;">
+<<<<<<< HEAD
                                 ឧទ្យានជាតិភ្នំបូកគោ ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ ១៩៩៣ មានរុក្ខជាតិធំតូចជាច្រើនប្រភេទ
                                 រួមទាំងព្រៃភ្នំគ្របដណ្តប់ដោយផ្កា orchid និងសត្វព្រៃដូចជា ឆ្កែព្រៃ សត្វកំបុត
                                 និងសត្វបក្សីជាច្រើនប្រភេទ។ នៅលើភ្នំមានអគារបារាំងចាស់ដូចជា កាស៊ីណូ សណ្ឋាគារ
                                 និងវិហារកាតូលិក។
+=======
+                                ភ្នំបូកគោ គឺជាទិសដៅទេសចរណ៍ដ៏ល្បីល្បាញមួយនៅក្នុងប្រទេសកម្ពុជា ដែលស្ថិតនៅក្នុងខេត្តកំពត។
+                                វាជាផ្នែកមួយនៃ ឧទ្យានជាតិព្រះមុនីវង្ស បូកគោ ដែលមានទេសភាពធម្មជាតិស្រស់ស្អាត
+                                និងអាកាសធាត្រត្រជាក់ស្រួល ជាពិសេសនៅពេលព្រឹក និងល្ងាច។
+                                <br><br>
+                                    ឧទ្យានជាតិភ្នំបូកគោ ត្រូវបានបង្កើតឡើងក្នុងឆ្នាំ ១៩៩៣ មានរុក្ខជាតិធំតូចជាច្រើនប្រភេទ
+                                រួមទាំងព្រៃភ្នំគ្របដណ្តប់ដោយផ្កា orchid និងសត្វព្រៃដូចជា ឆ្កែព្រៃ សត្វកំបុត
+                                និងសត្វបក្សីជាច្រើនប្រភេទ។ នៅលើភ្នំមានអគារបារាំងចាស់ដូចជា កាស៊ីណូ សណ្ឋាគារ
+                                និងវិហារកាតូលិក។
+                                ភ្នំបូកគោមានកម្ពស់ប្រហែល ១,០៨០ ម៉ែត្រ លើមាត់សមុទ្រ
+                                ហើយជាទីកន្លែងដែលអ្នកទេសចរអាចមើលឃើញទេសភាពសមុទ្រ ព្រៃភ្នំ និងពពកអណ្តែតយ៉ាងស្រស់ស្អាត។
+                                នៅទីនេះ ក៏មានអាគារបុរាណសំខាន់ៗ ដែលសាងសង់តាំងពីសម័យអាណានិគមបារាំង ដូចជា សណ្ឋាគារចាស់
+                                បូកគោ និងព្រះវិហារ Catholic ដែលបង្ហាញពីប្រវត្តិសាស្ត្រយូរអង្វែង។    
+                                <br><br>
+                                    លើសពីនេះ ភ្នំបូកគោក៏មានកន្លែងទស្សនាច្រើនដូចជា ទឹកជ្រោះបូកគោ វត្តសំពៅប្រាំ
+                                (ជាទីកន្លែងគោរពបូជាដ៏សំខាន់) និងកន្លែងមើលថ្ងៃលិចដែលមានទេសភាពអស្ចារ្យ។
+                                អ្នកទេសចរអាចធ្វើសកម្មភាពផ្សេងៗដូចជា ដើរឡើងភ្នំ ថតរូប សម្រាកលំហែ
+                                និងស្វែងយល់អំពីធម្មជាតិ។ជាសរុប ភ្នំបូកគោ គឺជាទិសដៅល្អសម្រាប់អ្នកដែលចូលចិត្តធម្មជាតិ
+                                ប្រវត្តិសាស្ត្រនិងចង់រីករាយជាមួយខ្យល់ត្រជាក់នៅលើភ្នំ។
+                                វាជាកន្លែងមិនគួរឱ្យខកខានសម្រាប់គម្រោងទេសចរណ៍នៅកម្ពុជា។
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                             </p>
                         </div>
                     </div>
@@ -1450,28 +1617,44 @@
             <!-- Bokor Highlights -->
             <div class="row g-4 mt-2">
                 <div class="col-md-3 col-6 reveal reveal-delay-1">
+<<<<<<< HEAD
                     <div class="glass-card text-center" style="padding:20px;">
+=======
+                    <div class="glass-card text-center h-100" style="padding:20px;">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                         <i class="fas fa-cloud-sun mb-3" style="font-size:24px;color:var(--accent-light);"></i>
                         <div style="font-size:14px;font-weight:500;margin-bottom:4px;">អាកាសធាតុ</div>
                         <div style="font-size:12px;color:var(--text-tertiary);">ត្ជ្រឹង ១៨-២២°C</div>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 reveal reveal-delay-2">
+<<<<<<< HEAD
                     <div class="glass-card text-center" style="padding:20px;">
+=======
+                    <div class="glass-card text-center h-100" style="padding:20px;">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                         <i class="fas fa-clock mb-3" style="font-size:24px;color:#60a5fa;"></i>
                         <div style="font-size:14px;font-weight:500;margin-bottom:4px;">ពេលវេលាឡើងភ្នំ</div>
                         <div style="font-size:12px;color:var(--text-tertiary);">ប្រមាណ ១.៥ ម៉ោង</div>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 reveal reveal-delay-3">
+<<<<<<< HEAD
                     <div class="glass-card text-center" style="padding:20px;">
+=======
+                    <div class="glass-card text-center h-100" style="padding:20px;">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                         <i class="fas fa-ticket mb-3" style="font-size:24px;color:#fbbf24;"></i>
                         <div style="font-size:14px;font-weight:500;margin-bottom:4px;">ថ្លៃចូល</div>
                         <div style="font-size:12px;color:var(--text-tertiary);">បុរស ៥$/ស្រី ៣$</div>
                     </div>
                 </div>
                 <div class="col-md-3 col-6 reveal reveal-delay-4">
+<<<<<<< HEAD
                     <div class="glass-card text-center" style="padding:20px;">
+=======
+                    <div class="glass-card text-center h-100" style="padding:20px;">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                         <i class="fas fa-road mb-3" style="font-size:24px;color:#fb7185;"></i>
                         <div style="font-size:14px;font-weight:500;margin-bottom:4px;">ផ្លូវឡើង</div>
                         <div style="font-size:12px;color:var(--text-tertiary);">បេតុងល្អប្រកប</div>
@@ -1536,7 +1719,11 @@
                 </div>
                 <div class="col-lg-6 order-lg-1 reveal reveal-delay-2">
                     <div class="position-relative">
+<<<<<<< HEAD
                         <div class="image-card" style="border-radius:20px;overflow:hidden;">
+=======
+                        <div class="image-card featured" style="border-radius:20px;overflow:hidden;">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                             <img src="https://s3.ams.com.kh/infotainment/2025/02/475434446_122133604742565823_2689345882788625783_n.jpg"
                                 alt="ជិះទូកកាយ៉ាក" style="height:400px;">
                         </div>
@@ -1561,7 +1748,11 @@
             <!-- Activity Cards -->
             <div class="row g-4 mt-5">
                 <div class="col-md-4 reveal reveal-delay-1">
+<<<<<<< HEAD
                     <div class="image-card">
+=======
+                    <div class="image-card h-100">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                         <img src="https://ezstatic1.ezweb.online/ezweb_2157/soem-panha/tourism/kampot/t9.1.jpg"
                             alt="ព្រលឹមលើទន្លេ">
                         <div class="card-body-custom">
@@ -1572,7 +1763,11 @@
                     </div>
                 </div>
                 <div class="col-md-4 reveal reveal-delay-2">
+<<<<<<< HEAD
                     <div class="image-card">
+=======
+                    <div class="image-card h-100">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                         <img src="https://static.information.gov.kh/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOWhLQWc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e20692056e4737b86407a3482710ac7d70bba7cb/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNT1RBd2VEWXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--70cbddbba2e46c7ca8ac0c1f8b8316d88752e16d/C3CB8A83-160F-4398-9B42-F9C8CEC.jpeg"
                             alt="ព្រៃកូនទឹក">
                         <div class="card-body-custom">
@@ -1583,7 +1778,11 @@
                     </div>
                 </div>
                 <div class="col-md-4 reveal reveal-delay-3">
+<<<<<<< HEAD
                     <div class="image-card">
+=======
+                    <div class="image-card h-100">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUuxSzpXAgitMPOHj35fc7fsKTvkp9K1zxD7GKMIaSlo7A3zF_P23UOzrLMbGkZ0WD9n11t7sBEHCHgUkM4mqoXFaOHUJWpiV47EAoZJlSwAg1rvMOl1_FQsd5U-gV3n1DwrC8siPoYrE/s1600/5b447d1ebfe74_1531215120_large.jpg"
                             alt="ភ្លើងព្រះអង្គារ">
                         <div class="card-body-custom">
@@ -1623,6 +1822,7 @@
                     </div>
                 </div>
                 <div class="col-lg-7 reveal reveal-delay-2">
+<<<<<<< HEAD
                     <div class="row g-3">
                         <!-- Relax Card 1 -->
                         <div class="col-md-6">
@@ -1630,13 +1830,26 @@
                                 data-bs-target="#edenModal">
                                 <img src="https://static.wixstatic.com/media/b71427_59d1022518374f238e9d957c0644e440~mv2.jpg/v1/fill/w_721,h_406,al_c,lg_1,q_80/b71427_59d1022518374f238e9d957c0644e440~mv2.jpg"
                                     alt="Eco Lodge" style="height:200px;">
+=======
+                    <div class="row g-4">
+                        <!-- Relax Card 1 -->
+                        <div class="col-md-6">
+                            <div class="image-card h-100" style="cursor:pointer;" data-bs-toggle="modal"
+                                data-bs-target="#edenModal">
+                                <img src="https://static.wixstatic.com/media/b71427_59d1022518374f238e9d957c0644e440~mv2.jpg/v1/fill/w_721,h_406,al_c,lg_1,q_80/b71427_59d1022518374f238e9d957c0644e440~mv2.jpg"
+                                    alt="Eco Lodge">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                                 <div class="card-body-custom">
                                     <span class="card-tag"
                                         style="background:rgba(59,130,246,0.1);color:#60a5fa;">ការសម្រាក</span>
                                     <h5 class="card-title-custom">RiverTree Villa</h5>
                                     <p class="card-desc">RiverTree Villa & Resort គឺជា resort លំដាប់ luxury បែបធម្មជាតិ
                                         (eco-luxury) ដែលពេញនិយមខ្លាំងនៅកំពត</p>
+<<<<<<< HEAD
                                     <div class="d-flex align-items-center gap-2 mt-3"
+=======
+                                    <div class="d-flex align-items-center gap-2 mt-auto pt-3"
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                                         style="font-size:11px;color:var(--text-tertiary);">
                                         <i class="fas fa-star" style="color:#fbbf24;"></i> ៥.៥
                                         <span style="color:var(--card-border);">|</span>
@@ -1647,17 +1860,27 @@
                         </div>
                         <!-- Relax Card 2 -->
                         <div class="col-md-6">
+<<<<<<< HEAD
                             <div class="image-card" style="cursor:pointer;" data-bs-toggle="modal"
                                 data-bs-target="#sweetModal">
                                 <img src="https://www.mekongdolphintours.com/userfiles/thumb/R.jpg" alt="Bungalow"
                                     style="height:200px;">
+=======
+                            <div class="image-card h-100" style="cursor:pointer;" data-bs-toggle="modal"
+                                data-bs-target="#sweetModal">
+                                <img src="https://www.mekongdolphintours.com/userfiles/thumb/R.jpg" alt="Bungalow">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                                 <div class="card-body-custom">
                                     <span class="card-tag"
                                         style="background:rgba(251,191,36,0.1);color:#fbbf24;">Hotel</span>
                                     <h5 class="card-title-custom">Kampot Sweet Boutique</h5>
                                     <p class="card-desc">សណ្ឋាគារប៊ូទិកប្រណិត ផ្ដល់បទពិសោធន៍សម្រាកលំហែដ៏ស្ងប់ស្ងាត់
                                         នៅជិតទន្លេកំពត</p>
+<<<<<<< HEAD
                                     <div class="d-flex align-items-center gap-2 mt-3"
+=======
+                                    <div class="d-flex align-items-center gap-2 mt-auto pt-3"
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                                         style="font-size:11px;color:var(--text-tertiary);">
                                         <i class="fas fa-star" style="color:#fbbf24;"></i> ៤.៧
                                         <span style="color:var(--card-border);">|</span>
@@ -1668,17 +1891,28 @@
                         </div>
                         <!-- Relax Card 3 -->
                         <div class="col-md-6">
+<<<<<<< HEAD
                             <div class="image-card" style="cursor:pointer;" data-bs-toggle="modal"
                                 data-bs-target="#retroModal">
                                 <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/250943257.jpg?k=ea95e12892ad429de0fa42811bff9bfea7d0fc83ffddecadc03456265061930f&o="
                                     alt="Guesthouse" style="height:200px;">
+=======
+                            <div class="image-card h-100" style="cursor:pointer;" data-bs-toggle="modal"
+                                data-bs-target="#retroModal">
+                                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/250943257.jpg?k=ea95e12892ad429de0fa42811bff9bfea7d0fc83ffddecadc03456265061930f&o="
+                                    alt="Guesthouse">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                                 <div class="card-body-custom">
                                     <span class="card-tag"
                                         style="background:rgba(244,63,94,0.1);color:#fb7185;">បុរាណ</span>
                                     <h5 class="card-title-custom">Retro Kampot Guesthouse</h5>
                                     <p class="card-desc">សណ្ឋាគារតូចមួយក្នុងទីក្រុងចាស់កំពត ស្ងាត់ស្ងាត់
                                         និងក្បែរនឹងភោជនីយដ្ឋាន។</p>
+<<<<<<< HEAD
                                     <div class="d-flex align-items-center gap-2 mt-3"
+=======
+                                    <div class="d-flex align-items-center gap-2 mt-auto pt-3"
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                                         style="font-size:11px;color:var(--text-tertiary);">
                                         <i class="fas fa-star" style="color:#fbbf24;"></i> ៤.៦
                                         <span style="color:var(--card-border);">|</span>
@@ -1689,17 +1923,28 @@
                         </div>
                         <!-- Relax Card 4 -->
                         <div class="col-md-6">
+<<<<<<< HEAD
                             <div class="image-card" style="cursor:pointer;" data-bs-toggle="modal"
                                 data-bs-target="#amberModal">
                                 <img src="https://amber-kampot.com/wp-content/uploads/2020/06/lagoon-scaled.jpg"
                                     alt="Farmstay" style="height:200px;">
+=======
+                            <div class="image-card h-100" style="cursor:pointer;" data-bs-toggle="modal"
+                                data-bs-target="#amberModal">
+                                <img src="https://amber-kampot.com/wp-content/uploads/2020/06/lagoon-scaled.jpg"
+                                    alt="Farmstay">
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                                 <div class="card-body-custom">
                                     <span class="card-tag"
                                         style="background:rgba(16,185,129,0.1);color:var(--accent-light);">Resort</span>
                                     <h5 class="card-title-custom">Amber Kampot</h5>
                                     <p class="card-desc">រមណីយដ្ឋានប្រណិតកម្រិតខ្ពស់ ដែលមានរចនាបថទំនើបស្រស់ស្អាត
                                         និងវីឡាឯកជន ផ្តល់ភាពឯកជន និងផាសុខភាពដល់ភ្ញៀវ</p>
+<<<<<<< HEAD
                                     <div class="d-flex align-items-center gap-2 mt-3"
+=======
+                                    <div class="d-flex align-items-center gap-2 mt-auto pt-3"
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                                         style="font-size:11px;color:var(--text-tertiary);">
                                         <i class="fas fa-star" style="color:#fbbf24;"></i> ៤.៨
                                         <span style="color:var(--card-border);">|</span>
@@ -1812,6 +2057,75 @@
             </div>
         </div>
     </section>
+<<<<<<< HEAD
+=======
+
+    <footer class="footer py-5">
+        <div class="container mt-5">
+            <div class="row mt-5">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-2">ទេសចរណ៍កម្ពុជា</h5>
+                    <p class="text-white-50 small mb-3">ទេសចរណ៍កម្ពុជា</p>
+                    <p class="text-white-50 small pe-lg-5 mb-3">
+                        ស្វែងរកភាពស្រស់ស្អាតនៃព្រះរាជាណាចក្រកម្ពុជា ដែនដីនៃប្រាសាទបុរាណ ធម្មជាតិស្រស់បំព្រង
+                        និងប្បធម៌ដ៏អស្ចារ្យ។
+                    </p>
+                    <div class="d-flex align-items-center text-white-50 small">
+                        <i class="fas fa-envelope me-2 text-secondary"></i>
+                        <span>info@tourismcambodia.com</span>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase fw-bold mb-4 small tracking-widest">គោលដៅ</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">ភ្នំពេញ</a></li>
+                        <li><a href="#">សៀមរាប</a></li>
+                        <li><a href="kampot.html">កំពត</a></li>
+                        <li><a href="#">កែប</a></li>
+                        <li><a href="#">ព្រះសីហនុ</a></li>
+                        <li><a href="#">បាត់ដំបង</a></li>
+                        <li><a href="#">មណ្ឌលគិរី</a></li>
+                        <li><a href="#">កោះកុង</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase fw-bold mb-4 small tracking-widest">សេវាកម្ម</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">សណ្ឋាគារ</a></li>
+                        <li><a href="#">ភោជនីយដ្ឋាន</a></li>
+                        <li><a href="#">មគ្គុទ្ទេសក៍</a></li>
+                        <li><a href="#">ការដឹកជញ្ជូន</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="text-uppercase fw-bold mb-4 small tracking-widest">ស្វែងយល់</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">មគ្គុទ្ទេសក៍</a></li>
+                        <li><a href="#">វិចិត្រសាល</a></li>
+                        <li><a href="blog.html">ប្លុក</a></li>
+                        <li><a href="#">ផែនទី</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top border-white-10 mt-5 pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="text-white-50 small mb-0">&copy; 2024 រក្សាសិទ្ធិដោយ ទេសចរណ៍កម្ពុជា</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                        <div class="d-flex justify-content-center justify-content-md-end gap-3">
+                            <a href="#" class="text-white-50"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white-50"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white-50"><i class="fab fa-telegram"></i></a>
+                            <a href="#" class="text-white-50"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -1826,6 +2140,7 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
         revealElements.forEach(el => revealObserver.observe(el));
         // ── Smooth scroll ──
+<<<<<<< HEAD
         navLinks.forEach(link => {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1839,6 +2154,26 @@
                 const navCollapse = document.getElementById('navMenu');
                 if (navCollapse.classList.contains('show')) {
                     bootstrap.Collapse.getInstance(navCollapse)?.hide();
+=======
+        const navLinks = document.querySelectorAll('.nav-link, .nav-link-custom');
+        const navMenu = document.getElementById('navMenu');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const offset = 80;
+                        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({ top, behavior: 'smooth' });
+                    }
+                }
+                // Close mobile menu
+                if (navMenu && navMenu.classList.contains('show')) {
+                    bootstrap.Collapse.getInstance(navMenu)?.hide();
+>>>>>>> b36818d66f86bd83b7f69f97933cbf0f457d70a2
                 }
             });
         });
