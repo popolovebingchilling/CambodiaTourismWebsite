@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --deep-mahogany: #4A1C00;
+    --burnt-sienna: #7B2D00;
+    --desert-terracotta: #C0622A;
+    --amber-dune: #D4A054;
+    --golden-spice: #F2C078;
+    --parchment: #FEF0CD;
+    --sand-whisper: #FEF6E4;
+    --night-indigo: #3D405B;
+    --camel-brown: #9B6A3A;
+    --dark-oud: #2C1A0E;
+}
+
+body {
+    font-family: "Kantumruy Pro", "Roboto" !important;
+    background-color: var(--sand-whisper) !important;
+    color: var(--night-indigo) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.hero-section {
+    height: 100vh !important;
+    width: 100% !important;
+    background-image: url(../image_preah-sihanouk/360_F_294111387_577OL7DUxO84ptyyvMCo2z6Ul9WVuiyp.jpg) !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.gallery {
+    width: 170px !important;
+    height: 400px !important;
+    overflow: hidden !important;
+    border: 4px solid rgba(12, 8, 239, 0.941) !important;
+    transform: skewX(-10deg) !important;
+    transition: all 0.4s ease !important;
+}
+
+.gallery-left {
+    width: 170px !important;
+    height: 400px !important;
+    overflow: hidden !important;
+    border: 4px solid rgb(6, 67, 236) !important;
+    transform: skewX(10deg) !important;
+    transition: all 0.4s ease !important;
+}
+.scroll{
+    transition: 0.3s !important;
+}
+.scroll:hover{
+    transform: scale(1.03) !important;
+    background-color: rgba(0, 0, 255, 0.297) !important;
+    color: #f9d006 !important;
+}
+.center-piece {
+    width: 450px !important;
+    height: 400px !important;
+    z-index: 10 !important;
+    clip-path: polygon(10% 0%, 90% 0%, 75% 100%, 25% 100%) !important;
+    border: 4px solid rgb(6, 67, 236) !important;
+    margin-top: 120px !important;
+}
+
+img {
+    width: 100% !important;
+    height: 400px !important;
+    object-fit: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+.line {
+    font-weight: 350px !important;
+    width: 500px !important;
+    font-size: 50px !important;
+    border-bottom: 3px solid rgb(67, 5, 253) !important;
+    margin-left: 20px;
+}
+
+.bg {
+    height: 100vh !important;
+    width: 100% !important;
+    background-image: url(../image_preah-sihanouk/dbfe4ea5f4fb4d21821fc0d91780fbf4.webp) !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: flex !important;
+    flex-direction: column !important;
+    margin-top: 40px !important;
+}
+
+.modal {
+    z-index: 9999 !important;
+}
+
+.modal-backdrop {
+    z-index: 9998 !important;
+}
+
+.glass-card {
+    display: flex !important;
+    align-items: center !important;
+    padding: 25px !important;
+    width: 100% !important;
+
+    background: rgba(255, 255, 255, 0.14) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.333) !important;
+    border-radius: 12px !important;
+
+    color: white !important;
+
+
+
+}
+
+.icon {
+    font-size: 2rem !important;
+    margin-right: 20px !important;
+    opacity: 0.7 !important;
+}
+
+.line-1 {
+    font-weight: 350px !important;
+    width: 620px !important;
+    font-size: 50px !important;
+    border-bottom: 3px solid rgb(5, 38, 253) !important;
+    margin-left: 20px;
+}
+
+.bg-no-repead {
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+
+}
+
+.bg-food {
+    height: 192vh !important;
+    width: 100% !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(../image_preah-sihanouk/987fceb8-e9c2-4704-ab47-4edb92ffa4f5.jpg) !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: flex !important;
+    flex-direction: column !important;
+
+}
+
+.img-food {
+    width: 100% !important;
+    height: 250px !important;
+    transition: 0.3s !important;
+    object-fit: cover !important;
+}
+
+.img-food:hover {
+    transform: scale(1.05);
+}
+
+.card-food {
+    transition: 0.3s !important;
+}
+
+.card-food:hover {
+    box-shadow: 1px 8px 20px rgb(189, 183, 183) !important;
+    transform: scale(1.02) !important;
+}
+.stat {
+    text-align: center !important;
+    position: relative !important;
+    padding: 0 20px !important;
+}
+
+.stat:not(:last-child)::after {
+    content: "" !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 10% !important;
+    height: 80% !important;
+    width: 2px !important;
+    background: linear-gradient(to bottom, #a88f02, #C9A227) !important;
+}
+.stats {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 60px !important;
+    padding: 40px 0 !important;
+    color: #062962 !important;
+}
+.wrapper {
+    width: 100% !important;
+    height: 65vh !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.container-auto {
+    height: 400px !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: start !important;
+}
+
+.card-auto {
+    width: 80px !important;
+    border-radius: .75rem !important;
+    background-size: cover !important;
+    cursor: pointer !important;
+    overflow: hidden !important;
+    margin: 0 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99) !important;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8) !important;
+}
+
+.card-auto>.row {
+    color: white !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    margin-bottom: -340px !important;
+    margin-left: 1px !important;
+}
+
+.card-auto>.row .icon {
+    background: #223 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    width: 50px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 15px !important;
+}
+
+.card-auto>.row>.description {
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    height: 80px !important;
+    width: 520px !important;
+    opacity: 0 !important;
+    transform: translateY(30px) !important;
+    transition-delay: .3s !important;
+    transition: all .3s ease !important;
+}
+
+input {
+    display: none !important;
+}
+
+input:checked+label {
+    width: 600px !important;
+}
+
+input:checked+label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+
+}
+
+.card-auto[for="c1"] {
+    background-image: url(../image_preah-sihanouk/seahorse-underwater-grace-stockcake.webp) !important;
+}
+
+.card-auto[for="c2"] {
+    background-image: url(../image_preah-sihanouk/02f6dc67.jpg) !important;
+}
+
+.card-auto[for="c3"] {
+    background-image: url(../image_preah-sihanouk/360_F_714943782_jVpMEWPpzBt9EsC0gjYEiHJNhR9HjNsw.jpg) !important;
+}
+
+.card-auto[for="c4"] {
+    background-image: url(../image_preah-sihanouk/671579097_1252911686959639_3582462382779199224_n-660x330.jpg) !important;
+}
+
+.card-auto[for="c5"] {
+    background-image: url(../image_preah-sihanouk/13.jpg) !important;
+}
+
+.card-auto[for="c6"] {
+    background-image: url(../image_preah-sihanouk/e2ec5fca6c3833748279fb510fdb52a78b60f3bc.jpg) !important;
+}
+
+.card-auto[for="c7"] {
+    background-image: url(../image_preah-sihanouk/Preah-Sihanouk-2.jpg) !important;
+}
+
+.forest-bg {
+    width: 100% !important;
+    height: 200px !important;
+    background-image: url(../image_preah-sihanouk/360_F_294111387_577OL7DUxO84ptyyvMCo2z6Ul9WVuiyp.jpg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%) !important;
+}
+
+.profile-pic {
+    position: absolute !important;
+    transform: translateX(-50%) !important;
+    margin-left: 42% !important;
+    margin-top: -7% !important;
+}
+
+.profile-pic img {
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 50% !important;
+    border: 5px solid white !important;
+    object-fit: cover !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+    position: relative !important;
+}
+
+.button {
+    transition: 0.3s !important;
+}
+
+.button:hover {
+    transform: scale(1.03) !important;
+    background-color: brown !important;
+}
+
+.colum {
+    transition: 0.3s !important;
+}
+
+.colum:hover {
+    transform: scale(1.09) !important;
+
+}
