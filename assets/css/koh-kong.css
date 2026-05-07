@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Beach Blue Theme */
+    --royal-blue:        #0D2A43; 
+    --khmer-gold:        #D7B56D; 
+    --beach-blue:        #00B4D8; /* Crystal Clear Water */
+    --ocean-deep:        #0077B6; /* Deep Blue Sea */
+    --sand-gold:         #E9C46A; /* Warm Sand */
+    --sky-light:         #CAF0F8; /* Soft Sky */
+    
+    /* Semantic Palette */
+    --sand-whisper:      #FAF9F6;
+    --night-indigo:      #1A365D;
+    
+    /* Atmospheric Gradients for Beach Feel */
+    --bg-beach:          linear-gradient(135deg, var(--ocean-deep) 0%, var(--beach-blue) 100%);
+    --bg-sand-light:     linear-gradient(135deg, #FFF9E6 0%, #FAF9F6 100%);
+}
+
+body {
+    font-family: "Kantumruy Pro", "Roboto" !important;
+    background-color: var(--sand-whisper) !important;
+    color: var(--night-indigo) !important;
+    overflow-x: hidden !important;
+    line-height: 1.7 !important;
+}
+
+/* ── Shared Utilities ── */
+.section-padding {
+    padding: 100px 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* ── Immersive Hero ── */
+.wild-hero {
+    min-height: 100vh !important;
+    padding: 120px 0 80px !important;
+    width: 100% !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    text-align: center !important;
+    overflow: hidden !important;
+}
+
+.hero-video-bg {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    z-index: -2 !important;
+}
+
+.hero-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(to bottom, 
+        rgba(13, 42, 67, 0.7) 0%, 
+        rgba(0, 119, 182, 0.3) 50%, 
+        var(--royal-blue) 100%) !important;
+    z-index: -1 !important;
+}
+
+.hero-tagline {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.4em !important;
+    color: var(--khmer-gold) !important;
+    margin-bottom: 20px !important;
+    display: block !important;
+}
+
+.hero-title-main {
+    font-size: clamp(40px, 8vw, 90px) !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    margin-bottom: 30px !important;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+}
+
+.hero-title-main span {
+    color: var(--beach-blue) !important;
+}
+
+/* ── Mixed Background Sections ── */
+.explore-grid-container {
+    padding: 100px 0 !important;
+    background: var(--bg-beach) !important;
+    color: white !important;
+}
+
+.section-label {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.2em !important;
+    color: var(--khmer-gold) !important;
+    margin-bottom: 16px !important;
+}
+
+/* ── Adventure Cards ── */
+.adventure-item {
+    position: relative !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    height: 480px !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+.adventure-item:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4) !important;
+}
+
+.adventure-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 1.2s ease !important;
+}
+
+.adventure-item:hover img {
+    transform: scale(1.1) !important;
+}
+
+.adventure-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(to top, rgba(13, 42, 67, 0.9) 0%, transparent 70%) !important;
+    padding: 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+}
+
+/* ── Taste Section ── */
+.taste-section {
+    padding: 100px 0 !important;
+    background: var(--sky-light) !important;
+}
+
+.food-card {
+    background: white !important;
+    border-radius: 24px !important;
+    padding: 35px !important;
+    box-shadow: 0 10px 30px rgba(0, 119, 182, 0.05) !important;
+    transition: all 0.4s ease !important;
+    border: 1px solid rgba(0, 180, 216, 0.1) !important;
+}
+
+.food-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(0, 119, 182, 0.1) !important;
+    border-color: var(--beach-blue) !important;
+}
+
+.food-icon {
+    font-size: 28px !important;
+    color: var(--beach-blue) !important;
+    margin-bottom: 20px !important;
+}
+
+/* ── Stay Section ── */
+.stay-section {
+    background: white !important;
+}
+
+.lodge-premium-card {
+    display: flex !important;
+    background: var(--night-indigo) !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    color: white !important;
+    margin-bottom: 40px !important;
+    transition: all 0.5s ease !important;
+}
+
+.lodge-premium-card:hover {
+    transform: scale(1.02) !important;
+    box-shadow: 0 30px 60px rgba(13, 42, 67, 0.3) !important;
+}
+
+.lodge-premium-img {
+    width: 50% !important;
+    object-fit: cover !important;
+    min-height: 350px !important;
+}
+
+.lodge-premium-info {
+    width: 50% !important;
+    padding: 50px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+.hotel-rating {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-bottom: 15px !important;
+}
+
+.rating-score {
+    background: var(--khmer-gold) !important;
+    color: var(--royal-blue) !important;
+    padding: 4px 10px !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+}
+
+.hotel-price {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: var(--khmer-gold) !important;
+    margin-bottom: 20px !important;
+}
+
+.hotel-amenities {
+    display: flex !important;
+    gap: 15px !important;
+    margin-bottom: 25px !important;
+    opacity: 0.8 !important;
+}
+
+.amenity-item {
+    font-size: 18px !important;
+    color: white !important;
+}
+
+/* ── Reveal Animations ── */
+.btn-khmer-gold {
+    background: var(--beach-blue) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.btn-khmer-gold:hover {
+    background: var(--ocean-deep) !important;
+    color: white !important;
+    transform: translateY(-3px) !important;
+}
+
+.food-explore-card {
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+    border: 1px solid rgba(0, 180, 216, 0.05) !important;
+}
+
+.food-explore-card:hover {
+    transform: translateY(-12px) !important;
+    box-shadow: 0 40px 80px rgba(0, 119, 182, 0.15) !important;
+}
+
+.food-explore-card img {
+    transition: transform 1.5s ease !important;
+}
+
+.food-explore-card:hover img {
+    transform: scale(1.05) !important;
+}
+
+/* ── Reveal Animations ── */
+.reveal {
+    opacity: 0 !important;
+    transform: translateY(30px) !important;
+    transition: all 0.8s ease-out !important;
+}
+
+.reveal.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* -- Modal Enhancements -- */
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(13, 42, 67, 0.5) !important;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 10px 20px rgba(0, 180, 216, 0.1) !important;
+    border-color: var(--beach-blue) !important;
+    transform: translateY(-2px) !important;
+}
+
+.transition-all {
+    transition: all 0.3s ease !important;
+}
+
+.hover-up:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 30px rgba(0, 119, 182, 0.3) !important;
+}
+
+.modal-content {
+    background-color: #ffffff !important;
+    border: none !important;
+}
