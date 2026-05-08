@@ -52,19 +52,16 @@
             overflow: hidden;
             background: linear-gradient(100deg, var(--dark-oud) 0%, var(--deep-mahogany) 40%, var(--burnt-sienna) 100%);
         }
-
         .hero-bg-img {
             position: absolute;
             inset: 0;
             opacity: .25;
             z-index: 0;
         }
-
         .hero-content {
             position: relative;
             z-index: 2;
         }
-
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -78,7 +75,6 @@
             margin-bottom: 1.5rem;
             backdrop-filter: blur(8px);
         }
-
         .hero-title {
             font-size: 4.5rem;
             font-weight: 700;
@@ -86,7 +82,6 @@
             line-height: 1.15;
             margin-bottom: 1.5rem;
         }
-
         .hero-desc {
             font-size: 1.15rem;
             color: rgba(254, 240, 205, .75);
@@ -95,7 +90,6 @@
             font-weight: 300;
             margin-bottom: 2.5rem;
         }
-
         .hero-btns .btn {
             padding: .75rem 2rem;
             font-family: 'Kantumruy Pro', sans-serif;
@@ -104,27 +98,23 @@
             border-radius: 12px;
             transition: all .3s ease;
         }
-
         .btn-golden {
             background: linear-gradient(135deg, var(--amber-dune), var(--golden-spice));
             color: var(--dark-oud);
             border: none;
             box-shadow: 0 4px 20px rgba(212, 160, 84, .35);
         }
-
         .btn-golden:hover {
             background: linear-gradient(135deg, var(--golden-spice), var(--amber-dune));
             color: var(--dark-oud);
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(212, 160, 84, .5);
         }
-
         .btn-outline-warm {
             background: transparent;
             color: var(--parchment);
             border: 1.5px solid rgba(254, 240, 205, .35);
         }
-
         .btn-outline-warm:hover {
             background: rgba(254, 240, 205, .1);
             color: var(--parchment);
@@ -140,7 +130,6 @@
             padding-top: 2.5rem;
             border-top: 1px solid rgba(212, 160, 84, .15);
         }
-
         .hero-stat-num {
             font-size: 2rem;
             font-weight: 700;
@@ -148,7 +137,6 @@
             display: block;
             line-height: 1;
         }
-
         .hero-stat-label {
             font-size: .85rem;
             color: rgba(254, 240, 205, .55);
@@ -198,7 +186,6 @@
         .section-padding {
             padding: 5rem 0;
         }
-
         .section-label {
             display: inline-flex;
             align-items: center;
@@ -222,7 +209,6 @@
             line-height: 1.2;
             margin-bottom: 1rem;
         }
-
         .section-subtitle {
             font-size: 1.05rem;
             color: var(--camel-brown);
@@ -243,7 +229,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .guide-card::before {
             position: absolute;
             top: 0;
@@ -254,7 +239,6 @@
             opacity: 0;
             transition: opacity .4s ease;
         }
-
         .guide-card:hover {
             background: var(--card-hover-bg);
             border-color: var(--card-hover-border);
@@ -319,14 +303,12 @@
             margin-bottom: .5rem;
             letter-spacing: 1px;
         }
-
         .guide-card h4 {
             font-size: 1.2rem;
             font-weight: 700;
             color: var(--card-title);
             margin-bottom: .75rem;
         }
-
         .guide-card p,
         .guide-card li {
             font-size: .92rem;
@@ -334,19 +316,16 @@
             line-height: 1.75;
             font-weight: 400;
         }
-
         .guide-card ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-
         .guide-card ul li {
             padding: .35rem 0;
             padding-left: 1.5rem;
             position: relative;
         }
-
         .guide-card ul li::before {
             content: '';
             position: absolute;
@@ -363,7 +342,6 @@
             position: relative;
             padding-left: 2rem;
         }
-
         .season-timeline::before {
             content: '';
             position: absolute;
@@ -374,12 +352,10 @@
             background: linear-gradient(180deg, var(--amber-dune), var(--desert-terracotta), rgba(155, 106, 58, .3));
             border-radius: 2px;
         }
-
         .season-item {
             position: relative;
             padding: .75rem 0 .75rem 1.5rem;
         }
-
         .season-item::before {
             position: absolute;
             left: -2rem;
@@ -391,12 +367,10 @@
             background: var(--card-bg);
             z-index: 1;
         }
-
         .season-item.best::before {
             background: var(--amber-dune);
             box-shadow: 0 0 0 4px rgba(212, 160, 84, .2);
         }
-
         .season-months {
             font-size: .8rem;
             font-weight: 700;
@@ -414,7 +388,6 @@
             color: var(--card-text);
             line-height: 1.6;
         }
-
         .best-tag {
             display: inline-block;
             font-size: .65rem;
@@ -453,7 +426,6 @@
             justify-content: center;
             font-size: 1rem;
         }
-
         .budget-tip-text {
             font-size: .92rem;
             color: var(--card-text);
@@ -496,7 +468,6 @@
             color: var(--parchment);
             margin-bottom: 1rem;
         }
-
         .cta-desc {
             font-size: 1.05rem;
             color: rgba(254, 240, 205, .65);
@@ -504,7 +475,6 @@
             line-height: 1.7;
             max-width: 500px;
         }
-
         /* ── Scroll to top ── */
         .scroll-top-btn {
             position: fixed;
@@ -528,13 +498,11 @@
             z-index: 999;
             cursor: pointer;
         }
-
         .scroll-top-btn.show {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
-
         .scroll-top-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 30px rgba(212, 160, 84, .5);
@@ -546,7 +514,6 @@
             transform: translateY(30px);
             transition: opacity .7s ease, transform .7s ease;
         }
-
         .fade-up.visible {
             opacity: 1;
             transform: translateY(0);
