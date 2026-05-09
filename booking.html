@@ -4,6 +4,476 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>កក់ទេសចរណ៍ - កម្ពុជា</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts: Kantumruy Pro -->
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/booking.css">
+</head>
+
+<body>
+    <main>
+        <section class="hero-bk">
+            <div class="container">
+                <div class="badge-a"><i class="fas fa-shield-halved"></i> ប្រព័ន្ធកក់សុវត្ថិភាព</div>
+                <h1>កក់ទេសចរណ៍<br><span>ទូទាំងខេត្តកម្ពុជា</span></h1>
+                <p>ជ្រើសរើសខេត្ត កក់សណ្ឋាគារ ដំណើរកម្សាន្ត ដោយមធ្យោបាយទូទាត់ងាយស្រួល។</p>
+            </div>
+        </section>
+
+        <section style="padding:40px 0 80px">
+            <div class="container">
+                <!-- TABS -->
+                <div class="btabs">
+                    <button class="btab on" onclick="openTab('hotel', this)"><i class="fas fa-hotel"></i>
+                        កក់សណ្ឋាគារ</button>
+                    <button class="btab" onclick="openTab('tour', this)"><i class="fas fa-route"></i>
+                        កក់ដំណើរកម្សាន្ត</button>
+                    <button class="btab" onclick="openTab('contact', this)"><i class="fas fa-message"></i>
+                        ទំនាក់ទំនង</button>
+                </div>
+
+                <!-- ════ HOTEL FORM ════ -->
+                <div class="tp on" id="p-hotel">
+                    <form class="form-card" id="form-hotel" method="POST">
+                        <div style="text-align:center;margin-bottom:24px">
+                            <div
+                                style="width:56px;height:56px;border-radius:16px;background:rgba(192,98,42,.1);border:1px solid rgba(192,98,42,.15);display:inline-flex;align-items:center;justify-content:center;font-size:24px;color:var(--desert-terracotta);margin-bottom:12px">
+                                <i class="fas fa-hotel"></i>
+                            </div>
+                            <h3 style="font-size:20px;font-weight:700;color:var(--card-title);margin-bottom:4px">
+                                កក់បន្ទប់សណ្ឋាគារ</h3>
+                            <p style="font-size:12px;color:var(--card-text)">
+                                សូមបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ជាក់កក់របស់អ្នក</p>
+                        </div>
+
+                        <!-- Name Fields -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">ឈ្មោះ</label>
+                                <input type="text" class="form-input" name="fname" placeholder="ឈ្មោះ" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">នាមត្រកូល</label>
+                                <input type="text" class="form-input" name="lname" placeholder="នាមត្រកូល" required>
+                            </div>
+                        </div>
+
+                        <!-- Contact -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">អ៊ីមែល</label>
+                                <input type="email" class="form-input" name="email" placeholder="example@email.com"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">លេខទូរស័ព្ទ</label>
+                                <input type="tel" class="form-input" name="phone" placeholder="០៩៦ xxx xxx" required>
+                            </div>
+                        </div>
+
+                        <!-- Dates -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">ថ្ងៃ Check-in</label>
+                                <input type="date" class="form-input" name="checkin" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">ថ្ងៃ Check-out</label>
+                                <input type="date" class="form-input" name="checkout" required>
+                            </div>
+                        </div>
+
+                        <!-- Room & Guests -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">ប្រភេទបន្ទប់</label>
+                                <select class="form-select" name="roomtype" required>
+                                    <option value="" selected disabled>-- ជ្រើសរើស --</option>
+                                    <option value="Standard">Standard Room</option>
+                                    <option value="Deluxe">Deluxe Room</option>
+                                    <option value="Suite">Suite Room</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">ចំនួនភ្ញៀវ</label>
+                                <select class="form-select" name="guests">
+                                    <option value="1">១ នាក់</option>
+                                    <option value="2">២ នាក់</option>
+                                    <option value="3">៣ នាក់</option>
+                                    <option value="4">៤ នាក់</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Requests -->
+                        <div class="form-group">
+                            <label class="form-label">តម្រូវការ</label>
+                            <select class="form-select" name="requests">
+                                <option value="">-- ជ្រើសរើស --</option>
+                                <option>បន្ទប់ជាន់ផ្ទាល់ដី</option>
+                                <option>បន្ទប់ជាប់លើ</option>
+                                <option>មិនញ៉ាំសាច់</option>
+                                <option>ផ្សេងៗ</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">សំណូមពរពិសេស</label>
+                            <textarea class="form-textarea" name="notes"
+                                placeholder="សរសេរសំណូមពរបន្ថែមរបស់អ្នកនៅទីនេះ..." style="min-height:90px"></textarea>
+                        </div>
+
+                        <!-- Payment -->
+                        <div class="form-group">
+                            <label class="form-label" style="margin-bottom:12px">មធ្យោបាយទូទាត់</label>
+                            <div class="pay-methods">
+                                <label class="pay-method">
+                                    <input type="radio" name="payment" value="ABA Bank" required>
+                                    <div class="pay-method-content">
+                                        <img src="https://play-lh.googleusercontent.com/WU6sZMD1UspzwqYnlACtmN60rckp8hoINSgsR21mKLJBbsHPwXtzwvOocpjC7FcO1g=w240-h480-rw"
+                                            alt="">
+                                        <span>ABA Bank</span>
+                                    </div>
+                                </label>
+                                <label class="pay-method">
+                                    <input type="radio" name="payment" value="ACLEDA Bank">
+                                    <div class="pay-method-content">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM37KLHTgu31C4LMRGMBzIu7QwwJXVeOC-EA&s"
+                                            alt="">
+                                        <span>ACLEDA</span>
+                                    </div>
+                                </label>
+                                <label class="pay-method">
+                                    <input type="radio" name="payment" value="Wing">
+                                    <div class="pay-method-content">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1t5E_3ir1VR1l2i93jV3uauE0PBkS8cXHxQ&s"
+                                            alt="">
+                                        <span>Wing</span>
+                                    </div>
+                                </label>
+                                <label class="pay-method">
+                                    <input type="radio" name="payment" value="Visa / Mastercard">
+                                    <div class="pay-method-content">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdnU9t0avXLpXMIBCV56vAo0KGKmXN8fdi6Q&s"
+                                            alt="">
+                                        <span>Visa / MC</span>
+                                    </div>
+                                </label>
+                                <label class="pay-method">
+                                    <input type="radio" name="payment" value="Pi Pay">
+                                    <div class="pay-method-content">
+                                        <img src="https://play-lh.googleusercontent.com/vMYo6gEAk5IMCY5x3gHa2G4uP7WXQVxJsH0u2epQK17_eVdoOQVWaSK7IZTG_xway2Q"
+                                            alt="">
+                                        <span>Pi Pay</span>
+                                    </div>
+                                </label>
+                                <label class="pay-method">
+                                    <input type="radio" name="payment" value="Cash">
+                                    <div class="pay-method-content">
+                                        <img src="https://cdn-icons-png.flaticon.com/256/15597/15597539.png" alt="">
+                                        <span>លុយក្រៅ</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-check-circle"></i>បញ្ជាក់កក់
+                        </button>
+                    </form>
+                </div>
+
+                <!-- ════ TOUR FORM ════ -->
+                <div class="tp" id="p-tour">
+                    <form class="fc" id="form-tour" method="POST">
+
+                        <!--  Destination -->
+                        <div class="sl">ជំហាន ១</div>
+                        <div class="st">ជ្រើសរើសគោលដៅ</div>
+                        <div class="sd">អ្នកចង់ទៅណា?</div>
+                        <div class="pg">
+                            <label class="radio-card">
+                                <input type="radio" name="province" value="Phnom Penh" required>
+                                <div class="pb"><i class="fas fa-landmark"></i><span>ភ្នំពេញ</span></div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="province" value="Siem Reap">
+                                <div class="pb"><i class="fas fa-place-of-worship"></i><span>សៀមរាប</span></div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="province" value="Kampot">
+                                <div class="pb"><i class="fas fa-mountain"></i><span>កំពត</span></div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="province" value="Kep">
+                                <div class="pb"><i class="fas fa-umbrella-beach"></i><span>កែប</span></div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="province" value="Sihanoukville">
+                                <div class="pb"><i class="fas fa-ship"></i><span>ព្រះសីហនុ</span></div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="province" value="Battambang">
+                                <div class="pb"><i class="fas fa-gopuram"></i><span>បាត់ដំបង</span></div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="province" value="Mondulkiri">
+                                <div class="pb"><i class="fas fa-tree"></i><span>មណ្ឌលគីរី</span></div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="province" value="Kong Kong">
+                                <div class="pb"><i class="fas fa-leaf"></i><span>កោះកុង</span></div>
+                            </label>
+                        </div>
+
+                        <div style="height:1px;background:var(--card-border);margin:24px 0"></div>
+
+                        <!--  Tour Type -->
+                        <div class="sl">ជំហាន ២</div>
+                        <div class="st">ប្រភេទដំណើរ</div>
+                        <div class="sd">ជ្រើសរើសកាលបរិច្ឆេទកាល</div>
+                        <div style="display: grid; grid-template-columns: repeat(3,1fr); gap:8px; margin-bottom:20px">
+                            <label class="radio-card">
+                                <input type="radio" name="tourtype" value="Day Trip" required>
+                                <div class="pb" style="height:100%; padding:18px 4px;">
+                                    <i class="fas fa-sun" style="margin-bottom:8px; font-size:22px"></i>
+                                    <div style="font-size:13px;font-weight:600;display:block;margin-bottom:2px">
+                                        ថ្ងៃតែមួយ
+                                    </div>
+                                    <div style="font-size:10px;opacity:0.8">ចេញព្រឹក ត្រលប់ល្ងាច</div>
+                                </div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="tourtype" value="Multi Day">
+                                <div class="pb" style="height:100%; padding:18px 4px;">
+                                    <i class="fas fa-moon" style="margin-bottom:8px; font-size:22px"></i>
+                                    <div style="font-size:13px;font-weight:600;display:block;margin-bottom:2px">
+                                        ច្រើនថ្ងៃ
+                                    </div>
+                                    <div style="font-size:10px;opacity:0.8">២-៣ ថ្ងៃ ១ យប់</div>
+                                </div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="tourtype" value="Private">
+                                <div class="pb" style="height:100%; padding:18px 4px;">
+                                    <i class="fas fa-car" style="margin-bottom:8px; font-size:22px"></i>
+                                    <div style="font-size:13px;font-weight:600;display:block;margin-bottom:2px">ឯកជន
+                                    </div>
+                                    <div style="font-size:10px;opacity:0.8">រថយន្តឯកជន + Guide</div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div style="height:1px;background:var(--card-border);margin:24px 0"></div>
+
+                        <!--Transport -->
+                        <div class="sl">ជំហាន ៣</div>
+                        <div class="st">មធ្យោបាយធ្វើដំណើរ</div>
+                        <div class="tg">
+                            <label class="radio-card">
+                                <input type="radio" name="transport" value="Car" required>
+                                <div class="tc">
+                                    <img src="https://oss.tnaot.com/tnaot/image/2020/06/04/068ea50e8c4145289ca42ec0d76e7e57.jpg"
+                                        alt="Car">
+                                    <div class="tb">
+                                        <div class="tn">ឡាន</div>
+                                        <div class="td">សុវត្ថិភាព</div>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="transport" value="Minivan">
+                                <div class="tc">
+                                    <img src="https://www.baolau.com/images/transport_classes/LAR-MV-GHE.png"
+                                        alt="Minivan">
+                                    <div class="tb">
+                                        <div class="tn">មីនីវ៉ាន់</div>
+                                        <div class="td">ក្រុម ៥-១២</div>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="transport" value="Bus">
+                                <div class="tc">
+                                    <img src="https://s1.rdbuz.com/bo-images/KHM/WM/30027/609/SI/ML/webp/C6UbhF.webp"
+                                        alt="Bus">
+                                    <div class="tb">
+                                        <div class="tn">រថយន្តក្រុង</div>
+                                        <div class="td">ថ្លៃសមរម្យ</div>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="transport" value="Moto">
+                                <div class="tc">
+                                    <img src="https://lh4.googleusercontent.com/proxy/3qvtiCfMQ3ugfLwzcvE88EgmswMYMFriE9uiuRTddKjG6u1UW1Uxl8rw8hqE-aysQ3hFzusuHBT06iy5cWv_rkYFg39w0e-uisqpYFtuk7O7yw"
+                                        alt="Moto">
+                                    <div class="tb">
+                                        <div class="tn">ម៉ូតូ</div>
+                                        <div class="td">សេរីភាព</div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div style="height:1px;background:var(--card-border);margin:24px 0"></div>
+
+                        <!--  Personal Info -->
+                        <div class="sl">ជំហាន ៤</div>
+                        <div class="st">ព័ត៌មានផ្ទាល់ខ្លួន</div>
+                        <div class="fr">
+                            <div class="fg"><label class="fl">ឈ្មោះពេញ</label><input type="text" class="fi"
+                                    name="fullname" placeholder="ឈ្មោះ និង នាមត្រកូល" required></div>
+                            <div class="fg"><label class="fl">លេខទូរស័ព្ទ</label><input type="tel" class="fi"
+                                    name="phone" placeholder="០៩៦ xxx xxx" required></div>
+                        </div>
+                        <div class="fg"><label class="fl">អ៊ីមែល</label><input type="email" class="fi" name="email"
+                                placeholder="example@email.com" required></div>
+                        <div class="fr">
+                            <div class="fg"><label class="fl">ថ្ងៃចាប់ផ្តើម</label><input type="date" class="fi"
+                                    name="date" required></div>
+                            <div class="fg"><label class="fl">ចំនួនមនុស្ស</label><select class="fs" name="pax">
+                                    <option value="1">១</option>
+                                    <option value="2" selected>២</option>
+                                    <option value="3">៣</option>
+                                    <option value="4">៤</option>
+                                    <option value="5">៥</option>
+                                    <option value="6">៦+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="fg" style="display:flex;gap:14px;flex-wrap:wrap">
+                            <label class="co">
+                                <input type="checkbox" name="guide" value="yes">
+                                <span>Tour Guide ($15/ថ្ងៃ)</span>
+                            </label>
+                            <label class="co">
+                                <input type="checkbox" name="food" value="yes">
+                                <span>អាហារថ្ងៃត្រង់ ($8/នាក់)</span>
+                            </label>
+                        </div>
+                        <div class="fg" style="margin-top:16px"><label class="fl">សំណូមពរពិសេស</label><textarea
+                                class="fta" name="notes" placeholder="សូមសរសេរបន្ថែម..."></textarea></div>
+
+                        <div style="height:1px;background:var(--card-border);margin:24px 0"></div>
+
+                        <!-- Payment -->
+                        <div class="sl">ជំហាន ៥</div>
+                        <div class="st">មធ្យោបាយទូទាត់</div>
+                        <div class="form-group">
+                            <label class="form-label" style="margin-bottom:12px">មធ្យោបាយទូទាត់</label>
+                            <div class="pay-methods">
+                                <label class="pay-method">
+                                    <input type="radio" name="payment" value="ABA Bank" required>
+                                    <div class="pay-method-content">
+                                        <img src="https://play-lh.googleusercontent.com/WU6sZMD1UspzwqYnlACtmN60rckp8hoINSgsR21mKLJBbsHPwXtzwvOocpjC7FcO1g=w240-h480-rw"
+                                            alt="">
+                                        <span>ABA Bank</span>
+                                    </div>
+                                </label>
+                                <label class="pay-method">
+                                    <input type="radio" name="payment" value="ACLEDA Bank">
+                                    <div class="pay-method-content">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM37KLHTgu31C4LMRGMBzIu7QwwJXVeOC-EA&s"
+                                            alt="">
+                                        <span>ACLEDA</span>
+                                    </div>
+                                </label>
+                                <label class="pay-method">
+                                    <input type="radio" name="payment" value="Wing">
+                                    <div class="pay-method-content">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1t5E_3ir1VR1l2i93jV3uauE0PBkS8cXHxQ&s"
+                                            alt="">
+                                        <span>Wing</span>
+                                    </div>
+                                </label>
+                                <label class="pay-method">
+                                    <input type="radio" name="payment" value="Visa / Mastercard">
+                                    <div class="pay-method-content">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdnU9t0avXLpXMIBCV56vAo0KGKmXN8fdi6Q&s"
+                                            alt="">
+                                        <span>Visa / MC</span>
+                                    </div>
+                                </label>
+                                <label class="pay-method">
+                                    <input type="radio" name="payment" value="Pi Pay">
+                                    <div class="pay-method-content">
+                                        <img src="https://play-lh.googleusercontent.com/vMYo6gEAk5IMCY5x3gHa2G4uP7WXQVxJsH0u2epQK17_eVdoOQVWaSK7IZTG_xway2Q"
+                                            alt="">
+                                        <span>Pi Pay</span>
+                                    </div>
+                                </label>
+                                <label class="pay-method">
+                                    <input type="radio" name="payment" value="Cash">
+                                    <div class="pay-method-content">
+                                        <img src="https://cdn-icons-png.flaticon.com/256/15597/15597539.png" alt="">
+                                        <span>លុយក្រៅ</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="bs"><i class="fas fa-lock"></i> កក់ដំណើរឥឡូវនេះ</button>
+                    </form>
+                </div>
+                <!-- ════ CONTACT FORM ════ -->
+                <div class="tp" id="p-contact">
+                    <form class="fc" id="form-contact" method="POST">
+                        <div class="sl">ទំនាក់ទំនង</div>
+                        <div class="st">ផ្ញើសារមកយើង</div>
+                        <div class="sd">យើងនឹងឆ្លើយតបក្នុងពេល ២៤ ម៉ោង។</div>
+                        <div id="contactSuccessBox" class="contact-success-box">
+                            <i class="fas fa-check-circle fa-3x mb-2"></i>
+                            <h4 class="fw-bold">សារត្រូវបានផ្ញើ!</h4>
+                            <p class="mb-0">សូមអរគុណចំពោះលើការទាក់ទងមក។</p>
+                        </div>
+
+                        <div class="fr">
+                            <div class="fg"><label class="fl">ឈ្មោះ</label><input type="text" class="fi" name="name"
+                                    placeholder="ឈ្មោះពេញរបស់អ្នក" required></div>
+                            <div class="fg"><label class="fl">អ៊ីមែល</label><input type="email" class="fi" name="email"
+                                    placeholder="example@email.com" required></div>
+                        </div>
+                        <div class="fg"><label class="fl">ប្រធានបទ</label><select class="fs" name="subject" required>
+                                <option value="" selected disabled>-- ជ្រើសរើស --</option>
+                                <option>សួរព័ត៌មានបន្ថែម</option>
+                                <option>បញ្ហាកក់</option>
+                                <option>បោះបង់កក់</option>
+                                <option>មតិកែលម្អ</option>
+                                <option>សហការគ្នា</option>
+                                <option>ផ្សេងៗ</option>
+                            </select></div>
+                        <div class="fg"><label class="fl">សារ</label><textarea class="fta" name="message"
+                                placeholder="សរសេរសាររបស់អ្នក..." style="min-height:130px" required></textarea></div>
+                        <button type="submit" class="bs"><i class="fas fa-paper-plane"></i> ផ្ញើសារ</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUCCESS MODAL -->
+        <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content p-4">
+                    <div class="modal-body">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="fw-bold mb-2">ការកក់ជោគជ័យ!</h3>
+                        <p class="text-muted mb-3">ការកក់របស់អ្នកត្រូវបានបញ្ជាក់។</p>
+
+                        <div class="alert alert-light border bg-light">
+                            <small class="text-muted d-block">លេខកក់</small>
+                            <strong class="fs-4" style="color:var(--desert-terracotta);"
+                                id="bookingIdDisplay">BK-0000</strong>
+                        </div>
+
+                        <button type="button" class="btn btn-confirm mt-2" data-bs-dismiss="modal">បិទ</button>
+=======
     <title>កក់ដំណើរកម្សាន្ត | ទេសចរណ៍កម្ពុជា</title>
     <!-- HTML CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -307,10 +777,77 @@
                         <i class="fab fa-cc-visa"></i>
                         <i class="fab fa-cc-apple-pay"></i>
                         <i class="fab fa-cc-paypal"></i>
+
                     </div>
                 </div>
             </div>
-        </div>
+      </div>
+    </main>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // --- Tab Switching ---
+        function openTab(tabName, btnElement) {
+            var contents = document.getElementsByClassName('tp');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].classList.remove('on');
+            }
+            var buttons = document.getElementsByClassName('btab');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('on');
+            }
+            document.getElementById('p-' + tabName).classList.add('on');
+            btnElement.classList.add('on');
+        }
+
+        // --- Form Submission Logic ---
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const bookingForms = ['form-hotel', 'form-tour'];
+
+            bookingForms.forEach(function (id) {
+                const form = document.getElementById(id);
+                if (form) {
+                    form.addEventListener('submit', function (event) {
+                        event.preventDefault();
+
+                        // Generate Booking ID
+                        const randomId = Math.floor(100000 + Math.random() * 900000);
+                        const displayId = 'BK-' + randomId;
+
+                        // Update Modal Text
+                        document.getElementById('bookingIdDisplay').textContent = displayId;
+
+                        // Show Modal
+                        const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                        successModal.show();
+
+                        // Reset Form
+                        form.reset();
+                    });
+                }
+            });
+
+            const contactForm = document.getElementById('form-contact');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    const inputs = contactForm.querySelectorAll('input, select, textarea, button');
+                    const successBox = document.getElementById('contactSuccessBox');
+
+                    // Animate inputs out
+                    inputs.forEach(el => el.style.display = 'none');
+
+                    successBox.style.display = 'block';
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
+
     </footer>
 
     <!-- BOOTSTRAP JAVA -->
@@ -348,5 +885,5 @@
         }
     </script>
 </body>
-
 </html>
+
