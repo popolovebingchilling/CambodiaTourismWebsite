@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siem Reap | ទេសចរណ៍កម្ពុជា</title>
+    <!-- HTML CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/siem-reap.css">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
+    <!-- BOOTSTRAP THEME  -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <!-- FONT AWESOME FOR ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- BOOTSTRAP ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container py-2">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="assets/image/new_logo_v2.png" alt="Logo" width="45" height="45" class="me-2">
+                    <div class="d-flex flex-column lh-1">
+                        <span class="text-secondary small">ទេសចរណ៍កម្ពុជា</span>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link active rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                                data-bs-toggle="dropdown">គោលដៅ</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="sr.html">សៀមរាប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="#">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="battambang.html">បាត់ដំបង</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="mondulkiri.html">មណ្ឌលគិរី</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="koh-kong.html">កោះកុង</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                                data-bs-toggle="dropdown">សេវាកម្ម</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="#">សណ្ឋាគារ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="#">ភោជនីយដ្ឋាន</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="#">មគ្គុទ្ទេសក៍</a></li>
+                                <li><a class="dropdown-content dropdown-item"
+                                        href="transportation.html">ការដឹកជញ្ជូន</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">មគ្គុទ្ទេសក៍</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">វិចិត្រសាល</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">មតិយោបល់</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex align-items-center gap-3">
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="btn btn-link text-white p-0 border-0 fs-5"
+                        title="ផ្លាស់ប្តូរពន្លឺ">
+                        <i class="bi bi-moon-stars-fill"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
+                    <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- ===== HERO ===== -->
+    <section class="sr-hero" id="hero">
+        <div class="text-center text-white px-3" style="z-index:2;">
+            <h1 class="hero-title fw-bold"
+                style="animation-delay:0.2s; font-size:clamp(2.5rem,7vw,5.5rem); text-shadow:0 4px 20px rgba(0,0,0,0.5);">
+                <span style="color:var(--golden-spice);">សៀម</span>រាប
+            </h1>
+            <p class=" lead mb-4"
+                style="animation-delay:0.4s; max-width:600px; margin:0 auto; font-size:1.1rem; opacity:0.9;">
+                ទីក្រុងអង្គរ · ភាពអស្ចារ្យនៃប្រាសាទ · វប្បធម៌ខ្មែរដ៏សម្បូរបែប
+            </p>
+            <div class=" d-flex gap-3 justify-content-center flex-wrap" style="animation-delay:0.6s;">
+                <a href="#attractions" class="btn btn-hero-primary rounded-pill px-4 py-2">
+                    <i class="bi bi-compass me-2"></i>រុករកឥឡូវ
+                </a>
+                <a href="review.html" class="btn btn-hero-outline rounded-pill px-4 py-2">
+                    <i class="bi bi-star me-2"></i>ចែករំលែកបទពិសោធ
+                </a>
+            </div>
+            <div class="d-flex justify-content-center gap-4 mt-5 " style="animation-delay:0.8s;">
+                <div class="text-center">
+                    <div style="font-size:1.8rem; font-weight:700; color:var(--golden-spice);">1000+</div>
+                    <div style="font-size:0.8rem; opacity:0.8;">ប្រាសាទ</div>
+                </div>
+                <div style="width:1px; background:rgba(255,255,255,0.3);"></div>
+                <div class="text-center">
+                    <div style="font-size:1.8rem; font-weight:700; color:var(--golden-spice);">3M+</div>
+                    <div style="font-size:0.8rem; opacity:0.8;">ភ្ញៀវទេសចរ/ឆ្នាំ</div>
+                </div>
+                <div style="width:1px; background:rgba(255,255,255,0.3);"></div>
+                <div class="text-center">
+                    <div style="font-size:1.8rem; font-weight:700; color:var(--golden-spice);">401 km²</div>
+                    <div style="font-size:0.8rem; opacity:0.8;">ក្នុងតំបន់អង្គរ</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-line">
+            <span style="font-size:0.75rem; letter-spacing:2px;">រំកិលចុះក្រោម</span>
+            <i class="bi bi-chevron-double-down"></i>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about-section bg-stone-light" id="about">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 ">
+                    <p class="section-label">អំពីខេត្ត</p>
+                    <h2 class="section-title-km">ខេត្តសៀមរាប</h2>
+                    <p class="mb-4" style="line-height:2; color:var(--night-indigo);">
+                        ខេត្តសៀមរាបជាខេត្តមួយក្នុងចំណោមខេត្តដ៏ល្បីល្បាញបំផុតនៅកម្ពុជា
+                        ដែលត្រូវបានស្គាល់ជាទីកន្លែងរស់នៅនៃប្រាសាទអង្គរដ៏ល្បីនៅលើពិភពលោក។
+                        ខេត្តនេះស្ថិតនៅភាគខាងជើងនៃប្រទេស ហើយមានប្រជាជនប្រហែល ១ លាននាក់។
+                    </p>
+                    <p style="line-height:2; color:var(--night-indigo);">
+                        ជាមួយនឹងប្រវត្តិសាស្ត្រដ៏យូរលង់ ទេសភាពធម្មជាតិដ៏ស្រស់ស្អាត
+                        និងវប្បធម៌ខ្មែរដ៏សម្បូរបែប សៀមរាបជាគោលដៅទេសចរណ៍ដ៏ពេញនិយម
+                        ក្នុងចំណោមភ្ញៀវទេសចរអន្តរជាតិ។
+                    </p>
+                    <a href="#attractions" class="btn btn-book-now mt-4 rounded-pill px-4">
+                        <i class="bi bi-arrow-down me-2"></i>ស្វែងយល់បន្ថែម
+                    </a>
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <div class="stat-number">13</div>
+                                <p class="mb-0 small" style="color:var(--camel-brown);">ស្រុក/ខណ្ឌ</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <div class="stat-number">1000+</div>
+                                <p class="mb-0 small" style="color:var(--camel-brown);">ប្រាសាទ</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <div class="stat-number">3M+</div>
+                                <p class="mb-0 small" style="color:var(--camel-brown);">ភ្ញៀវ/ឆ្នាំ</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <div class="stat-number">1992</div>
+                                <p class="mb-0 small" style="color:var(--camel-brown);">បេតិកភណ្ឌពិភពលោក</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ATTRACTIONS ===== -->
+    <section class="attractions-section bg-stone-light" id="attractions">
+        <div class="container">
+            <div class="text-center mb-5 ">
+                <h2 class="section-label">ទីតាំងកំសាន្ត</h2>
+                <h2 class="section-title-km">តំបន់ទេសចរណ៍ដ៏ល្បី</h2>
+                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3"
+                        style="color:var(--amber-dune);"></i></div>
+            </div>
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6 " style="transition-delay:0.1s">
+                    <div class="attraction-card-sr h-100">
+                        <div class="attraction-img-wrap">
+                            <img src="assets/image/Siem_Reap/Back-angkor-wat.jpg" alt="អង្គរវត្ត"
+                                class="attraction-img">
+                        </div>
+                        <div class="attraction-card-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0" style="color:var(--deep-mahogany);">អង្គរវត្ត</h5>
+                                <span class="attraction-tag">ប្រាសាទ</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 mb-3">
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <span class="small ms-1" style="color:var(--camel-brown);">5.0</span>
+                            </div>
+                            <p class="small mb-3" style="color:var(--night-indigo); line-height:1.8;">
+                                ប្រាសាទអង្គរវត្តជាប្រាសាទដ៏ធំបំផុតលើពិភពលោក ដែលត្រូវបានសាងសង់ក្នុងសតវត្សទី១២ ដោយព្រះបាទសូរ្យវម្ម័នទី២។
+                            </p>
+                            <div class="attraction-card-meta d-flex gap-3 text-muted small">
+                                <span><i class="bi bi-clock me-1"></i>ម៉ោង ៥ ព្រឹក</span>
+                                <span><i class="bi bi-ticket me-1"></i>$37/នាក់</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6 " style="transition-delay:0.2s">
+                    <div class="attraction-card-sr h-100">
+                        <div class="attraction-img-wrap">
+                            <img src="assets/image/Siem_Reap/angkorthom.jpg" alt="អង្គរធំ" class="attraction-img">
+                        </div>
+                        <div class="attraction-card-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0" style="color:var(--deep-mahogany);">អង្គរធំ</h5>
+                                <span class="attraction-tag">ប្រាសាទ</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 mb-3">
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-half text-warning small"></i>
+                                <span class="small ms-1" style="color:var(--camel-brown);">4.8</span>
+                            </div>
+                            <p class="small mb-3" style="color:var(--night-indigo); line-height:1.8;">
+                                ក្រុងអង្គរធំជាក្រុងចុងក្រោយបំផុតនិងយូរបំផុតរបស់អាណាចក្រខ្មែរ ដែលនៅរស់រានមានជីវិតមកដល់សព្វថ្ងៃ។
+                            </p>
+                            <div class="attraction-card-meta d-flex gap-3 text-muted small">
+                                <span><i class="bi bi-clock me-1"></i>ម៉ោង ៦ ព្រឹក</span>
+                                <span><i class="bi bi-ticket me-1"></i>$37/នាក់</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6 " style="transition-delay:0.3s">
+                    <div class="attraction-card-sr h-100">
+                        <div class="attraction-img-wrap">
+                            <img src="assets/image/Siem_Reap/Tonle sap.png" alt="បឹងទន្លេសាប" class="attraction-img">
+                        </div>
+                        <div class="attraction-card-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0" style="color:var(--deep-mahogany);">បឹងទន្លេសាប</h5>
+                                <span class="attraction-tag">ធម្មជាតិ</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 mb-3">
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star text-warning small"></i>
+                                <span class="small ms-1" style="color:var(--camel-brown);">4.5</span>
+                            </div>
+                            <p class="small mb-3" style="color:var(--night-indigo); line-height:1.8;">
+                                បឹងទន្លេសាបជាបឹងទឹកសាបធំបំផុតនៅអាស៊ីអាគ្នេយ៍ ដែលត្រូវបានស្គាល់ថាជា "បេះដូង" នៃប្រទេសកម្ពុជា។
+                            </p>
+                            <div class="attraction-card-meta d-flex gap-3 text-muted small">
+                                <span><i class="bi bi-clock me-1"></i>ពេញថ្ងៃ</span>
+                                <span><i class="bi bi-ticket me-1"></i>$20/ទូក</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-lg-4 col-md-6 " style="transition-delay:0.1s">
+                    <div class="attraction-card-sr h-100">
+                        <div class="attraction-img-wrap">
+                            <img src="assets/image/Siem_Reap/bayon.png" alt="ប្រាសាទបាយ័ន" class="attraction-img">
+                        </div>
+                        <div class="attraction-card-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0" style="color:var(--deep-mahogany);">ប្រាសាទបាយ័ន</h5>
+                                <span class="attraction-tag">ប្រាសាទ</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 mb-3">
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-half text-warning small"></i>
+                                <span class="small ms-1" style="color:var(--camel-brown);">4.7</span>
+                            </div>
+                            <p class="small mb-3" style="color:var(--night-indigo); line-height:1.8;">
+                                ប្រាសាទបាយ័នល្បីល្បាញ ដោយសារមុខចំនួន ២១៦ ដែលញញឹមនៅលើកំពូលប្រាំង។
+                            </p>
+                            <div class="attraction-card-meta d-flex gap-3 text-muted small">
+                                <span><i class="bi bi-clock me-1"></i>ទូទាំងថ្ងៃ</span>
+                                <span><i class="bi bi-ticket me-1"></i>$37/នាក់</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-lg-4 col-md-6 " style="transition-delay:0.2s">
+                    <div class="attraction-card-sr h-100">
+                        <div class="attraction-img-wrap">
+                            <img src="assets/image/Siem_Reap/Ta_Prohm,_Angkor,_Cambodia_-_ប្រាសាទតាព្រហ្ម,_អង្គរ,_កម្ពុជា_(10226286026).jpg"
+                                alt="ប្រាសាទតាព្រហ្ម" class="attraction-img">
+                        </div>
+                        <div class="attraction-card-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0" style="color:var(--deep-mahogany);">ប្រាសាទតាព្រហ្ម</h5>
+                                <span class="attraction-tag">ប្រាសាទ</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 mb-3">
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star text-warning small"></i>
+                                <span class="small ms-1" style="color:var(--camel-brown);">4.6</span>
+                            </div>
+                            <p class="small mb-3" style="color:var(--night-indigo); line-height:1.8;">
+                                ជាប្រាសាទព្រៃដ៏ល្បី ដែលត្រូវវល្លិ៍ Spung ស្ទាបព័ទ្ធ ហើយប្រើជាសំណុំទីតាំងខ្សែភាពយន្ត Tomb Raider។
+                            </p>
+                            <div class="attraction-card-meta d-flex gap-3 text-muted small">
+                                <span><i class="bi bi-clock me-1"></i>ម៉ោង ៧ ព្រឹក</span>
+                                <span><i class="bi bi-ticket me-1"></i>$37/នាក់</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-lg-4 col-md-6 " style="transition-delay:0.3s">
+                    <div class="attraction-card-sr h-100">
+                        <div class="attraction-img-wrap">
+                            <img src="assets/image/Siem_Reap/pubstreet.jpg" alt="" class="attraction-img">
+                        </div>
+                        <div class="attraction-card-content">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0" style="color:var(--deep-mahogany);">Pub Street</h5>
+                                <span class="attraction-tag">ទីផ្សារ</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 mb-3">
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star text-warning small"></i>
+                                <span class="small ms-1" style="color:var(--camel-brown);">4.3</span>
+                            </div>
+                            <p class="small mb-3" style="color:var(--night-indigo); line-height:1.8;">
+                                ទីតាំងសម្រាប់ញ៉ាំអាហារ ផឹក និងសប្បាយរីករាយក្នុងពេលយប់ ក្នុងក្រុងសៀមរាបដ៏រស់រវើក។
+                            </p>
+                            <div class="attraction-card-meta d-flex gap-3 text-muted small">
+                                <span><i class="bi bi-clock me-1"></i>ពេលយប់</span>
+                                <span><i class="bi bi-ticket me-1"></i>ឥតគិតថ្លៃ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ANGKOR FULLSCREEN FEATURE ===== -->
+    <section class="feature-section" id="angkor">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6  order-lg-1 order-2">
+                    <img src="assets/image/Siem_Reap/sunrise.png" alt="" class="feature-img w-100">
+                </div>
+                <div class="col-lg-6 text-white  order-lg-2 order-1">
+                    <p class="section-label" style="color:var(--golden-spice);">បទពិសោធពិសេស</p>
+                    <h2 style="font-size:3rem; margin-bottom:20px; color:var(--golden-spice);">
+                        ពន្លឺព្រះអាទិត្យនៅអង្គរវត្ត<br>
+                    </h2>
+                    <div class="divider-ornament" style="margin:12px 0 24px;">
+                        <i class="bi bi-stars fs-3" style="color:var(--amber-dune);"></i>
+                        <div style="flex:0; width:80px; height:1px; background:var(--amber-dune);"></div>
+                    </div>
+                    <p style="opacity:0.85; line-height:2; margin-bottom:20px;">
+                        ការឃើញពន្លឺព្រះអាទិត្យឡើងនៅពីក្រោយប្រាសាទអង្គរវត្ត
+                        ជាបទពិសោធមួយក្នុងចំណោមបទពិសោធដ៏ស្រស់ស្អាតបំផុត
+                        ដែលអ្នកទេសចរទូទាំងពិភពលោកស្វែងរក។
+                    </p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="d-flex align-items-start gap-3 mb-3">
+                            <i class="bi bi-check-circle-fill mt-1" style="color:var(--golden-spice);"></i>
+                            <span style="opacity:0.85;">ចូលទៅដល់ មុន ម៉ោង ៥ ព្រឹក ដើម្បីជ្រើសរើសទីតាំងល្អ</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 mb-3">
+                            <i class="bi bi-check-circle-fill mt-1" style="color:var(--golden-spice);"></i>
+                            <span style="opacity:0.85;">ភ្ជាប់ជាមួយមគ្គុទ្ទេសក៍ ដើម្បីទទួលបានព័ត៌មានផ្ទាល់</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-3">
+                            <i class="bi bi-check-circle-fill mt-1" style="color:var(--golden-spice);"></i>
+                            <span style="opacity:0.85;">យក​ម្ហូបអាហារ​ ឬ​កាហ្វេ ដើម្បី​អង្គុយ​រង់ចាំ</span>
+                        </li>
+                    </ul>
+                    <a href="booking.html" class="btn btn-hero-primary rounded-pill px-5 py-2">
+                        <i class="bi bi-calendar-check me-2"></i>កក់ជ្រើសរើសពេលវេលា
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOD SECTION ===== -->
+    <section class="food-section bg-temple-mix" id="food">
+        <div class="container">
+            <div class="text-center mb-5 ">
+                <p class="section-label">ម្ហូបពិសេស</p>
+                <h2 class="section-title-km">រសជាតិខ្មែរ នៅសៀមរាប</h2>
+                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3"
+                        style="color:var(--amber-dune);"></i></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 " style="transition-delay:0.1s">
+                    <div class="food-card h-100">
+                        <img src="assets/image/Siem_Reap/amoke.png" alt="" class="food-img">
+                        <div class="food-card-body">
+                            <h6 class="fw-bold">អាម៉ុកត្រី</h6>
+                            <p class="small mb-0">ម្ហូបជាតិខ្មែរ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 " style="transition-delay:0.2s">
+                    <div class="food-card h-100">
+                        <img src="assets/image/Siem_Reap/lort cha.png" alt="លត់ឆា" class="food-img">
+                        <div class="food-card-body">
+                            <h6 class="fw-bold">លត់ឆា</h6>
+                            <p class="small mb-0">មីខ្លី​ចៀន</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 " style="transition-delay:0.3s">
+                    <div class="food-card h-100">
+                        <img src="assets/image/Siem_Reap/bay sach jork.png" alt="បាយសាច់ជ្រូក" class="food-img">
+                        <div class="food-card-body">
+                            <h6 class="fw-bold">បាយសាច់ជ្រូក</h6>
+                            <p class="small mb-0">អាហារពេលព្រឹក</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 " style="transition-delay:0.4s">
+                    <div class="food-card h-100">
+                        <img src="assets/image/Siem_Reap/nombanh jok.jpg" alt="នំបញ្ចុក" class="food-img">
+                        <div class="food-card-body">
+                            <h6 class="fw-bold">នំបញ្ចុក</h6>
+                            <p class="small mb-0">មីខ្មែរប្រពៃណី</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="gallery-section bg-stone-deep" id="gallery">
+        <div class="container">
+            <div class="text-center mb-5 ">
+                <p class="section-label">វិចិត្រសាលធាម</p>
+                <h2 class="section-title-km text-white">មើលរូបភាព</h2>
+                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3"
+                        style="color:var(--amber-dune);"></i></div>
+            </div>
+            <div class="gallery-grid ">
+                <div class="gallery-item">
+                    <img src="assets/image/Siem_Reap/Gallery 1.jpg" alt="Gallery 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/Siem_Reap/Gallery 2.jpg" alt="Gallery 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/Siem_Reap/Gallery 3.jpg" alt="Gallery 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/Siem_Reap/Gallery 4.jpg" alt="Gallery 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/Siem_Reap/Gallery 5.jpg" alt="Gallery 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/Siem_Reap/Gallery 6.jpg" alt="Gallery 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/Siem_Reap/Gallery 7.jpg" alt="Gallery 7">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/Siem_Reap/Gallery 8.jpg" alt="Gallery 8">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/Siem_Reap/Gallery 9.jpg" alt="Gallery 9">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/Siem_Reap/Gallery 10.jpg" alt="Gallery 10">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/Siem_Reap/Gallery 11.jpg" alt="Gallery 11">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/image/Siem_Reap/Gallery 14.jpg" alt="Gallery 14">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/Siem_Reap/Gallery 15.jpg" alt="Gallery 15">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TRAVEL TIPS ===== -->
+    <section class="tips-section bg-saffron-glow" id="tips">
+        <div class="container">
+            <div class="text-center mb-5 ">
+                <p class="section-label">ការណែនាំ</p>
+                <h2 class="section-title-km">គន្លឹះទេសចរណ៍</h2>
+                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3"
+                        style="color:var(--amber-dune);"></i></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 " style="transition-delay:0.1s">
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="bi bi-calendar3"></i></div>
+                        <h6 class="fw-bold mb-2" style="color:var(--deep-mahogany);">ពេលល្អបំផុតដើម្បីទស្សនា</h6>
+                        <p class="small mb-0" style="color:var(--night-indigo); line-height:1.8;">
+                            ខែវិច្ឆិកា ដល់ ខែមេសា ជាពេលក្តៅស្ងួត
+                            ល្អបំផុតសម្រាប់ទស្សនា ប្រាសាទ និងធ្វើដំណើរ។
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 " style="transition-delay:0.2s">
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="bi bi-shirt"></i></div>
+                        <h6 class="fw-bold mb-2" style="color:var(--deep-mahogany);">ការស្លៀកពាក់</h6>
+                        <p class="small mb-0" style="color:var(--night-indigo); line-height:1.8;">
+                            ស្លៀកពាក់ដែលគ្របដណ្ដប់ ជង្គង់ និងស្មា
+                            នៅពេលចូលទស្សនាប្រាសាទ ដើម្បីគោរពវប្បធម៌។
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 " style="transition-delay:0.3s">
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="bi bi-bicycle"></i></div>
+                        <h6 class="fw-bold mb-2" style="color:var(--deep-mahogany);">ការដឹកជញ្ជូន</h6>
+                        <p class="small mb-0" style="color:var(--night-indigo); line-height:1.8;">
+                            ជើងផ្ទេរដោយ tuk-tuk ឬ កង់
+                            គឺជាមធ្យោបាយល្អបំផុតក្នុងការធ្វើ​ដំណើររវាងប្រាសាទ។
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 " style="transition-delay:0.1s">
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="bi bi-ticket-perforated"></i></div>
+                        <h6 class="fw-bold mb-2" style="color:var(--deep-mahogany);">លេខដំណើរ</h6>
+                        <p class="small mb-0" style="color:var(--night-indigo); line-height:1.8;">
+                            ប័ណ្ណចូលតំបន់អង្គរ: ១ ថ្ងៃ $37 · ៣ ថ្ងៃ $62 · ៧ ថ្ងៃ $72
+                            ទិញដោយផ្ទាល់នៅ Angkor Enterprise ប្រសើរជាង។
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 " style="transition-delay:0.2s">
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="bi bi-currency-dollar"></i></div>
+                        <h6 class="fw-bold mb-2" style="color:var(--deep-mahogany);">រូបិយប័ណ្ណ</h6>
+                        <p class="small mb-0" style="color:var(--night-indigo); line-height:1.8;">
+                            ប្រើ USD និង រៀល ខ្មែរ ហើយ ATM មាននៅក្នុងក្រុង
+                            ជៀសវាងការប្ដូររូបិយប័ណ្ណតាមភ្នាក់ងារ។
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 " style="transition-delay:0.3s">
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="bi bi-wifi"></i></div>
+                        <h6 class="fw-bold mb-2" style="color:var(--deep-mahogany);">អ៊ីនធឺណិត</h6>
+                        <p class="small mb-0" style="color:var(--night-indigo); line-height:1.8;">
+                            SIM Cards ក្នុងស្រុក (Smart, Cellcard, Metfone)
+                            ផ្ដល់ Data 4G ថ្លៃសមរម្យ ប្រហែល $5–10/ខែ។
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MAP CTA ===== -->
+    <section class="map-cta text-center text-white ">
+        <div class="container">
+            <p class="section-label" style="color:var(--golden-spice);">ត្រៀមខ្លួន?</p>
+            <h2 style="font-family:'Playfair Display',serif; font-size:2.5rem; margin-bottom:16px;">
+                ចាប់ផ្ដើមដំណើររបស់អ្នក
+            </h2>
+            <p style="opacity:0.8; max-width:500px; margin:0 auto 30px; line-height:1.8;">
+                ខេត្តសៀមរាបរង់ចាំអ្នក!<br>
+                ចុចប៊ូតុងខាងក្រោមដើម្បីស្វែងរក ឬ ចែករំលែកបទពិសោធ
+            </p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="phnompenh.html" class="btn btn-hero-outline rounded-pill px-5 py-2">
+                    <i class="bi bi-arrow-right me-2"></i>ទីក្រុងភ្នំពេញ
+                </a>
+                <a href="review.html" class="btn btn-hero-primary rounded-pill px-5 py-2">
+                    <i class="bi bi-star me-2"></i>វាយតម្លៃ
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Brand Essence -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="footer-brand mb-4">
+                        <img src="assets/image/new_logo_v2.png" alt="Logo" width="60" class="mb-3">
+                        <h5 class="text-white fw-bold">ទេសចរណ៍កម្ពុជា</h5>
+                    </div>
+                    <p class="footer-brand-text">
+                        ស្វែងយល់ពីភាពអស្ចារ្យនៃព្រះរាជាណាចក្រអច្ឆរិយៈ។ យើងខ្ញុំផ្តល់ជូននូវបទពិសោធន៍ទេសចរណ៍ដ៏ល្អបំផុត
+                        ដើម្បីបំពេញក្តីសុបិនរបស់អ្នកនៅក្នុងតំបន់អាសុីអាគ្នេយ៍។
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Destinations -->
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title">គោលដៅ</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">ភ្នំពេញ</a></li>
+                        <li><a href="sr.html">សៀមរាប</a></li>
+                        <li><a href="kampot.html">កំពត</a></li>
+                        <li><a href="kep.html">កែប</a></li>
+                        <li><a href="prea-sihanouk.html">ព្រះសីហនុ</a></li>
+                        <li><a href="battambang.html">បាត់ដំបង</a></li>
+                        <li><a href="mondulkiri.html">មណ្ឌលគិរី</a></li>
+                        <li><a href="koh-kong.html">កោះកុង</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title">សេវាកម្ម</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">សណ្ឋាគារ</a></li>
+                        <li><a href="#">ភោជនីយដ្ឋាន</a></li>
+                        <li><a href="#">មគ្គុទ្ទេសក៍</a></li>
+                        <li><a href="transportation.html">ការដឹកជញ្ជូន</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <h6 class="footer-title">ទំនាក់ទំនង</h6>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+៨៥៥ ១២ ២២៣ ៣២២</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@cambodiatourism.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>ភ្នំពេញ, ព្រះរាជាណាចក្រកម្ពុជា</span>
+                        </div>
+                        <div class="footer-contact-item align-items-start">
+                            <i class="fas fa-clock mt-1"></i>
+                            <div class="d-flex flex-column gap-1">
+                                <span>ចន្ទ - សុក្រ: ៨:០០ - ១៧:០០</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 5: Discover -->
+                <div class="col-lg-2">
+                    <h6 class="footer-title">ស្វែងយល់</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">វិចិត្រសាល</a></li>
+                        <li><a href="blog.html">ប្លុកទេសចរណ៍</a></li>
+                        <li><a href="#">មតិយោបល់</a></li>
+                        <li><a href="map.html">ផែនទី</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-white opacity-10 my-5">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                    <p class="mb-0 small text-white-50">&copy; ២០២៦ ទេសចរណ៍កម្ពុជារក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="trust-badges justify-content-center justify-content-md-end">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+
+        // Check for saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.classList.add(savedTheme);
+            updateIcon(savedTheme);
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                localStorage.setItem('theme', 'dark-mode');
+                updateIcon('dark-mode');
+            } else {
+                body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light-mode');
+                updateIcon('light-mode');
+            }
+        });
+
+        function updateIcon(theme) {
+            if (theme === 'light-mode') {
+                icon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
+            } else {
+                icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
+            }
+        }
+    </script>
+</body>
+
+</html>

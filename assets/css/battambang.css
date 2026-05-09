@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --deep-mahogany: #4A1C00;
+    --burnt-sienna: #7B2D00;
+    --desert-terracotta: #C0622A;
+    --amber-dune: #D4A054;
+    --golden-spice: #F2C078;
+    --parchment: #FEF0CD;
+    --sand-whisper: #FEF6E4;
+    --night-indigo: #3D405B;
+    --camel-brown: #9B6A3A;
+    --dark-oud: #2C1A0E;
+}
+
+body {
+    font-family: "Kantumruy Pro", "Roboto" !important;
+    background-color: var(--sand-whisper) !important;
+    color: var(--night-indigo) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.hero-section {
+    height: 100vh !important;
+    width: 100% !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../image_battambong/photo_2026-04-22_23-18-25.jpg) !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.scroll {
+    transition: 0.3s !important;
+}
+
+.scroll:hover {
+    transform: scale(1.03) !important;
+    background-color: rgba(0, 0, 255, 0.297) !important;
+    color: #f9d006 !important;
+}
+
+.img-food {
+    width: 100% !important;
+    height: 250px !important;
+    transition: 0.3s !important;
+    object-fit: cover !important;
+}
+
+.img-food:hover {
+    transform: scale(1.05);
+}
+
+.card-food {
+    transition: 0.3s !important;
+}
+
+.card-food:hover {
+    box-shadow: 1px 8px 20px rgb(189, 183, 183) !important;
+    transform: scale(1.02) !important;
+}
+
+.stat {
+    text-align: center !important;
+    position: relative !important;
+    padding: 0 20px !important;
+}
+
+.stat:not(:last-child)::after {
+    content: "" !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 10% !important;
+    height: 80% !important;
+    width: 2px !important;
+    background: linear-gradient(to bottom, #3f3601, #C9A227) !important;
+}
+.stats {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 60px !important;
+    padding: 40px 0 !important;
+    color: #796706 !important;
+}
+.booking{
+    transition: 0.3s !important;
+}
+.booking:hover{
+    transform: scale(1.02) !important;
+    background-color: #021bfa !important;
+    color: white !important;
+}
+.line {
+    font-weight: 350px !important;
+    width: 500px !important;
+    font-size: 50px !important;
+    border-bottom: 3px solid rgb(253, 141, 5) !important;
+    margin-left: 20px;
+}
+
+.line-1 {
+    font-weight: 350px !important;
+    width: 150px !important;
+    font-size: 50px !important;
+    border-bottom: 3px solid rgb(253, 141, 5) !important;
+    margin-left: 20px;
+}
+
+.line-2 {
+    font-weight: 350px !important;
+    width: 620px !important;
+    font-size: 50px !important;
+    border-bottom: 3px solid rgb(253, 141, 5) !important;
+    margin-left: 20px;
+}
+
+.hero-temple {
+    height: 100vh !important;
+    width: 100% !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../image_battambong/Battambang-3.jpg) !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: flex !important;
+    flex-direction: column !important;
+    border-radius: 20px !important;
+    margin-top: 70px !important;
+}
+
+.hero-picture {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../image_battambong/8332602001.jpg) !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: flex !important;
+    flex-direction: column !important;
+    border-radius: 100px !important;
+    margin-top: 70px !important;
+}
+
+.forest-bg {
+    width: 100% !important;
+    height: 200px !important;
+    background-image: url(../image_battambong/840281203.webp) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%) !important;
+}
+
+.profile-pic {
+    position: absolute !important;
+    transform: translateX(-50%) !important;
+    margin-left: 42% !important;
+    margin-top: -7% !important;
+}
+
+.profile-pic img {
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 50% !important;
+    border: 5px solid white !important;
+    object-fit: cover !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+    position: relative !important;
+}
+
+.button {
+    transition: 0.3s !important;
+}
+
+.button:hover {
+    transform: scale(1.03) !important;
+    background-color: brown !important;
+}
+
+.colum {
+    transition: 0.3s !important;
+}
+
+.colum:hover {
+    transform: scale(1.09) !important;
+
+}
+
+.card-wrapper {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    will-change: transform !important;
+    cursor: pointer !important;
+}
+
+.card-wrapper:hover {
+    transform: translateY(-18px) !important;
+}
+
+.card-wrapper.down:hover {
+    transform: translateY(18px) !important;
+}
+
+.card-wrapper .colum {
+    transition: transform 0.5s ease !important;
+}
+
+.card-wrapper:hover .colum {
+    transform: scale(1.05) !important;
+}

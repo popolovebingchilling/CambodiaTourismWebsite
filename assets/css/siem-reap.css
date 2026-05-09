@@ -1,0 +1,523 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+:root{
+    /* Primary Brand Identity (Directly from Logo) */
+    --royal-blue:        #0D2A43; /* Imperial Blue - Perfectly matched to Logo background */
+    --khmer-gold:        #D7B56D; /* Refined Light Gold - Sophisticated and not too yellow */
+    --angkor-stone:      #5D4037; /* Ancient Stone - For heritage elements */
+    --silk-saffron:      #E67E22; /* Cultural Saffron - For call-to-actions */
+    
+    /* Semantic Palette mapped to Brand Colors */
+    --deep-mahogany:     var(--royal-blue);
+    --burnt-sienna:      var(--angkor-stone);
+    --desert-terracotta: var(--silk-saffron);
+    --amber-dune:        var(--khmer-gold);
+    --golden-spice:      #E5C58B;
+    --parchment:         #F8F9FA;
+    --sand-whisper:      #FAF9F6;
+    --night-indigo:      #1A365D;
+    --camel-brown:       #8D6E63;
+    --dark-oud:          #07121C;
+}
+body{
+    font-family: "Kantumruy Pro", "Roboto" !important;
+    background-color: var(--sand-whisper) !important;
+    color: var(--night-indigo) !important;
+}       
+       /* ===== HERO ===== */
+        .sr-hero {
+            height: 100vh !important;
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(74, 28, 0, 0.6)),
+                url('../image/Siem_Reap/AngkorWat.jpg') center/cover no-repeat !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+
+        .sr-hero::after {
+            content: '' !important;
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            height: 120px !important;
+            background: linear-gradient(transparent, var(--sand-whisper)) !important;
+        }
+
+        .hero-scroll-line {
+            position: absolute !important;
+            bottom: 130px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 6px !important;
+            color: white !important;
+            animation: bounce 2s infinite !important;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0) !important;
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(10px) !important;
+            }
+        }
+
+        /* ===== STICKY SIDE NAV ===== */
+        .side-nav {
+            position: fixed !important;
+            right: 20px !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            z-index: 999 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 10px !important;
+        }
+
+        .side-dot {
+            width: 10px !important;
+            height: 10px !important;
+            border-radius: 50% !important;
+            background: var(--camel-brown) !important;
+            cursor: pointer !important;
+            transition: 0.3s !important;
+            border: 2px solid transparent !important;
+        }
+
+        .side-dot.active,
+        .side-dot:hover {
+            background: var(--khmer-gold) !important;
+            transform: scale(1.4) !important;
+            border-color: var(--amber-dune) !important;
+        }
+
+        /* ===== SECTION STYLES ===== */
+        .section-label {
+            font-size: 2.5rem !important;
+            letter-spacing: 4px !important;
+            text-transform: uppercase !important;
+            color: var(--khmer-gold) !important;
+            font-weight: 600 !important;
+        }
+
+        .section-title-km {
+            font-family: "Kantumruy Pro", sans-serif !important;
+            font-size: 2.2rem !important;
+            font-weight: 700 !important;
+            color: var(--deep-mahogany) !important;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--deep-mahogany) !important;
+        }
+
+        p {
+            color: var(--night-indigo) !important;
+            line-height: 1.8 !important;
+        }
+
+        .text-khmer-gold {
+            color: var(--khmer-gold) !important;
+        }
+
+        .text-saffron {
+            color: var(--silk-saffron) !important;
+        }
+
+        .divider-ornament {
+            display: flex !important;
+            align-items: center !important;
+            gap: 12px !important;
+            margin: 12px 0 24px !important;
+        }
+
+        .divider-ornament::before,
+        .divider-ornament::after {
+            content: '' !important;
+            flex: 1 !important;
+            height: 1px !important;
+            background: var(--amber-dune) !important;
+        }
+
+        .divider-ornament span {
+            color: var(--amber-dune) !important;
+            font-size: 1.2rem !important;
+        }
+
+        /* â”€â”€ Atmospheric Gradients for SR â”€â”€ */
+        .bg-temple-mix {
+            background: linear-gradient(135deg, var(--royal-blue) 0%, #1B4332 100%) !important; /* Jungle Mix */
+            position: relative !important;
+        }
+
+        .bg-stone-light {
+            background: #EAE8E3 !important; /* Refined Ancient Stone */
+            position: relative !important;
+        }
+
+        .bg-stone-deep {
+            background: linear-gradient(135deg, #1A1A1A 0%, #2C2621 100%) !important; /* Deep Heritage */
+            color: white !important;
+            position: relative !important;
+        }
+
+        .bg-stone-deep .section-title-km {
+            color: var(--khmer-gold) !important;
+        }
+
+        .bg-saffron-glow {
+            background: rgba(230, 126, 34, 0.03) !important; /* Subtle Saffron Wash */
+            position: relative !important;
+        }
+
+        .bg-temple-mix::after, .bg-stone-light::after, .bg-stone-deep::after, .bg-saffron-glow::after {
+            content: '' !important;
+            position: absolute !important;
+            inset: 0 !important;
+            background: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
+            opacity: 0.04 !important;
+            pointer-events: none !important;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-section {
+            padding: 100px 0 !important;
+            background: #EAE8E3 !important; /* Stone Light */
+            position: relative !important;
+        }
+
+        .about-section::after {
+            content: '' !important;
+            position: absolute !important;
+            inset: 0 !important;
+            background: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
+            opacity: 0.04 !important;
+            pointer-events: none !important;
+        }
+
+        .stat-box {
+            background: white !important;
+            border-radius: 12px !important;
+            padding: 24px !important;
+            text-align: center !important;
+            border-bottom: 4px solid var(--khmer-gold) !important;
+            box-shadow: 0 4px 20px rgba(74, 28, 0, 0.08) !important;
+            transition: transform 0.3s !important;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-6px) !important;
+        }
+
+        .stat-number {
+            font-size: 2.5rem !important;
+            font-weight: 700 !important;
+            color: var(--khmer-gold) !important;
+        }
+
+        /* ===== ATTRACTION CARDS ===== */
+        .attractions-section {
+            padding: 100px 0 !important;
+            background: #F2F0EB !important; /* Parchment/Stone Wash */
+            position: relative !important;
+        }
+
+        .attractions-section::before {
+            content: '' !important;
+            position: absolute !important;
+            top: 0; left: 0; right: 0 !important;
+            height: 1px !important;
+            background: linear-gradient(90deg, transparent, var(--khmer-gold), transparent) !important;
+            opacity: 0.3 !important;
+        }
+
+        .attraction-card-sr {
+            height: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            border-radius: 20px !important;
+            overflow: hidden !important;
+            box-shadow: 0 15px 35px rgba(13, 42, 67, 0.08) !important;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+            background: white !important;
+            border: 1px solid rgba(13, 42, 67, 0.05) !important;
+        }
+
+        .attraction-card-content {
+            padding: 24px !important;
+            flex-grow: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+
+        .attraction-card-meta {
+            margin-top: auto !important;
+            padding-top: 20px !important;
+            border-top: 1px solid rgba(13, 42, 67, 0.05) !important;
+            color: var(--camel-brown) !important;
+        }
+
+        .attraction-card-sr:hover {
+            transform: translateY(-10px) !important;
+            box-shadow: 0 20px 50px rgba(13, 42, 67, 0.2) !important;
+        }
+
+        .attraction-img {
+            height: 240px !important;
+            object-fit: cover !important;
+            width: 100% !important;
+            transition: transform 0.6s !important;
+        }
+
+        .attraction-card-sr:hover .attraction-img {
+            transform: scale(1.06) !important;
+        }
+
+        .attraction-img-wrap {
+            overflow: hidden !important;
+        }
+
+        .attraction-tag {
+            background: var(--khmer-gold) !important;
+            color: white !important;
+            font-size: 0.75rem !important;
+            padding: 4px 12px !important;
+            border-radius: 20px !important;
+        }
+
+        /* ===== FULLSCREEN FEATURE SECTION ===== */
+        .feature-section {
+            min-height: 90vh !important;
+            display: flex !important;
+            align-items: center !important;
+            background: linear-gradient(135deg, var(--deep-mahogany) 0%, var(--burnt-sienna) 100%) !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+
+        .feature-section::before {
+            content: '' !important;
+            position: absolute !important;
+            top: -100px !important;
+            right: -100px !important;
+            width: 500px !important;
+            height: 500px !important;
+            border-radius: 50% !important;
+            background: rgba(242, 192, 120, 0.08) !important;
+            pointer-events: none !important;
+        }
+
+        .feature-section::after {
+            content: '' !important;
+            position: absolute !important;
+            bottom: -150px !important;
+            left: -50px !important;
+            width: 400px !important;
+            height: 400px !important;
+            border-radius: 50% !important;
+            background: rgba(212, 160, 84, 0.06) !important;
+            pointer-events: none !important;
+        }
+
+        .feature-img {
+            border-radius: 20px !important;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5) !important;
+            transform: perspective(1000px) rotateY(-5deg) !important;
+            transition: transform 0.5s !important;
+        }
+
+        .feature-img:hover {
+            transform: perspective(1000px) rotateY(0deg) !important;
+        }
+
+        /* ===== FOOD SECTION ===== */
+        .food-section {
+            padding: 100px 0 !important;
+            background: linear-gradient(135deg, var(--royal-blue) 0%, #1B4332 100%) !important; /* Jungle Mix */
+            color: white !important;
+            position: relative !important;
+        }
+
+        .food-section::after {
+            content: '' !important;
+            position: absolute !important;
+            inset: 0 !important;
+            background: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
+            opacity: 0.04 !important;
+            pointer-events: none !important;
+        }
+
+        .food-section .section-title-km {
+            color: var(--khmer-gold) !important;
+        }
+
+        .food-section p {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        .food-card {
+            height: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            border-radius: 20px !important;
+            overflow: hidden !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            backdrop-filter: blur(15px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+        }
+
+        .food-card:hover {
+            transform: translateY(-8px) !important;
+            background: rgba(255, 255, 255, 0.12) !important;
+            border-color: var(--khmer-gold) !important;
+        }
+
+        .food-card-body {
+            padding: 20px !important;
+            flex-grow: 1 !important;
+        }
+
+        .food-card h6 {
+            color: var(--khmer-gold) !important;
+            font-weight: 700 !important;
+        }
+
+        .food-card p {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        .food-img {
+            height: 180px !important;
+            object-fit: cover !important;
+            width: 100% !important;
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery-section {
+            padding: 100px 0 !important;
+            background: linear-gradient(135deg, #1A1A1A 0%, #2C2621 100%) !important; /* Deep Heritage */
+            position: relative !important;
+        }
+
+        .gallery-section::after {
+            content: '' !important;
+            position: absolute !important;
+            inset: 0 !important;
+            background: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
+            opacity: 0.04 !important;
+            pointer-events: none !important;
+        }
+
+        .gallery-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            grid-template-rows: 200px 200px !important;
+            gap: 12px !important;
+        }
+
+        .gallery-item {
+            overflow: hidden !important;
+            border-radius: 12px !important;
+            cursor: pointer !important;
+        }
+
+        .gallery-item img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            transition: transform 0.5s !important;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1) !important;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: 1/2 !important;
+            grid-row: 1/3 !important;
+        }
+
+        .gallery-item:nth-child(4) {
+            grid-column: 3/4 !important;
+            grid-row: 1/3 !important;
+        }
+
+        /* ===== TIPS ===== */
+        .tips-section {
+            padding: 100px 0 !important;
+            background: rgba(230, 126, 34, 0.03) !important; /* Saffron Glow */
+            position: relative !important;
+        }
+
+        .tips-section::after {
+            content: '' !important;
+            position: absolute !important;
+            inset: 0 !important;
+            background: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
+            opacity: 0.04 !important;
+            pointer-events: none !important;
+        }
+
+        .tip-card {
+            height: 100% !important;
+            background: white !important;
+            border-radius: 20px !important;
+            padding: 32px !important;
+            border-bottom: 4px solid var(--khmer-gold) !important;
+            box-shadow: 0 10px 30px rgba(13, 42, 67, 0.05) !important;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+            border-left: none !important;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-8px) !important;
+            border-color: var(--silk-saffron) !important;
+            box-shadow: 0 20px 40px rgba(13, 42, 67, 0.12) !important;
+        }
+
+        .tip-card:hover {
+            transform: translateX(8px) !important;
+            border-color: var(--khmer-gold) !important;
+        }
+
+        .tip-icon {
+            font-size: 2rem !important;
+            color: var(--khmer-gold) !important;
+            margin-bottom: 12px !important;
+        }
+
+        /* ===== MAP CTA ===== */
+        .map-cta {
+            padding: 100px 0 !important;
+            background: linear-gradient(rgba(44, 26, 14, 0.88), rgba(44, 26, 14, 0.88)),
+                url('../image/Siem_Reap/siemreap-map-bg.png') center/cover no-repeat !important;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr !important;
+                grid-template-rows: auto !important;
+            }
+
+            .gallery-item:nth-child(1),
+            .gallery-item:nth-child(4) {
+                grid-column: auto !important;
+                grid-row: auto !important;
+            }
+
+            .side-nav {
+                display: none !important;
+            }
+        }
