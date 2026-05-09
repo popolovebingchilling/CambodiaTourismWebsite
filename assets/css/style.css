@@ -3,13 +3,10 @@
     padding: 0; margin: 0; box-sizing: border-box;
 }
 :root{
-    /* Primary Brand Identity (Directly from Logo) */
-    --royal-blue:        #0D2A43; /* Imperial Blue - Perfectly matched to Logo background */
-    --khmer-gold:        #D7B56D; /* Refined Light Gold - Sophisticated and not too yellow */
-    --angkor-stone:      #5D4037; /* Ancient Stone - For heritage elements */
-    --silk-saffron:      #E67E22; /* Cultural Saffron - For call-to-actions */
-    
-    /* Semantic Palette mapped to Brand Colors */
+    --royal-blue:        #0D2A43; 
+    --khmer-gold:        #D7B56D; 
+    --angkor-stone:      #5D4037; 
+    --silk-saffron:      #E67E22;
     --deep-mahogany:     var(--royal-blue);
     --burnt-sienna:      var(--angkor-stone);
     --desert-terracotta: var(--silk-saffron);
@@ -21,16 +18,8 @@
     --camel-brown:       #8D6E63;
     --dark-oud:          #07121C;
 }
-* {
+body{
     font-family: "Kantumruy Pro", sans-serif !important;
-}
-
-/* ── Icon Protection (DO NOT OVERWRITE) ── */
-i, .fas, .fab, .far, .bi, [class^="bi-"], [class*=" bi-"] {
-    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "bootstrap-icons", "FontAwesome" !important;
-}
-
-body {
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
 }
@@ -70,7 +59,7 @@ body.light-mode .navbar-brand img {
     background-color: transparent !important;
     filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1)) !important;
 }
-.nav-link{
+.navbar-nav .nav-link{
     color: rgba(255, 255, 255, 0.8) !important;
     font-family: 'Kantumruy Pro', sans-serif !important;
     font-weight: 500 !important;

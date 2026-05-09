@@ -1,35 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    padding: 0; margin: 0; box-sizing: border-box;
 }
-
-:root {
-    /* Beach Blue Theme */
+:root{
     --royal-blue:        #0D2A43; 
     --khmer-gold:        #D7B56D; 
-    --beach-blue:        #00B4D8; /* Crystal Clear Water */
-    --ocean-deep:        #0077B6; /* Deep Blue Sea */
-    --sand-gold:         #E9C46A; /* Warm Sand */
-    --sky-light:         #CAF0F8; /* Soft Sky */
-    
-    /* Semantic Palette */
+    --angkor-stone:      #5D4037; 
+    --silk-saffron:      #E67E22;
+    --deep-mahogany:     var(--royal-blue);
+    --burnt-sienna:      var(--angkor-stone);
+    --desert-terracotta: var(--silk-saffron);
+    --amber-dune:        var(--khmer-gold);
+    --golden-spice:      #E5C58B;
+    --parchment:         #F8F9FA;
     --sand-whisper:      #FAF9F6;
     --night-indigo:      #1A365D;
-    
-    /* Atmospheric Gradients for Beach Feel */
-    --bg-beach:          linear-gradient(135deg, var(--ocean-deep) 0%, var(--beach-blue) 100%);
-    --bg-sand-light:     linear-gradient(135deg, #FFF9E6 0%, #FAF9F6 100%);
+    --camel-brown:       #8D6E63;
+    --dark-oud:          #07121C;
 }
-
-body {
-    font-family: "Kantumruy Pro", "Roboto" !important;
+body{
+    font-family: "Kantumruy Pro", sans-serif !important;
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
-    overflow-x: hidden !important;
-    line-height: 1.7 !important;
 }
 
 /* ── Shared Utilities ── */

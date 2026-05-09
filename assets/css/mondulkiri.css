@@ -1,19 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    padding: 0; margin: 0; box-sizing: border-box;
 }
-
-:root {
-    /* Primary Brand Identity (Directly from Logo) */
-    --royal-blue:        #0D2A43; /* Imperial Blue - Perfectly matched to Logo background */
-    --khmer-gold:        #D7B56D; /* Refined Light Gold - Sophisticated and not too yellow */
-    --angkor-stone:      #5D4037; /* Ancient Stone - For heritage elements */
-    --silk-saffron:      #E67E22; /* Cultural Saffron - For call-to-actions */
-    
-    /* Semantic Palette mapped to Brand Colors */
+:root{
+    --royal-blue:        #0D2A43; 
+    --khmer-gold:        #D7B56D; 
+    --angkor-stone:      #5D4037; 
+    --silk-saffron:      #E67E22;
     --deep-mahogany:     var(--royal-blue);
     --burnt-sienna:      var(--angkor-stone);
     --desert-terracotta: var(--silk-saffron);
@@ -24,18 +17,13 @@
     --night-indigo:      #1A365D;
     --camel-brown:       #8D6E63;
     --dark-oud:          #07121C;
-
-    /* Atmospheric Gradients for Mondulkiri */
     --bg-mixed:          linear-gradient(135deg, var(--royal-blue) 0%, #1B4332 100%);
     --bg-dark-mixed:     linear-gradient(135deg, #051622 0%, #081C15 100%);
 }
-
-body {
-    font-family: "Kantumruy Pro", "Roboto" !important;
+body{
+    font-family: "Kantumruy Pro", sans-serif !important;
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
-    overflow-x: hidden !important;
-    line-height: 1.7 !important;
 }
 
 /* ── Shared Utilities ── */

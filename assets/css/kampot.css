@@ -2,52 +2,26 @@
 *{
     padding: 0; margin: 0; box-sizing: border-box;
 }
-:root {
-    /* Primary Brand Identity (Directly from Logo) */
-    --royal-blue:        #0D2A43 !important; /* Imperial Blue */
-    --khmer-gold:        #D7B56D !important; /* Refined Light Gold */
-    --angkor-stone:      #5D4037 !important; /* Ancient Stone */
-    --silk-saffron:      #E67E22 !important; /* Cultural Saffron */
-    
-    /* Semantic Palette mapped to Brand Colors */
-    --deep-mahogany:     var(--royal-blue) !important;
-    --burnt-sienna:      var(--angkor-stone) !important;
-    --desert-terracotta: var(--silk-saffron) !important;
-    --amber-dune:        var(--khmer-gold) !important;
-    --golden-spice:      #E5C58B !important;
-    --parchment:         #F8F9FA !important;
-    --sand-whisper:      #FAF9F6 !important;
-    --night-indigo:      #1A365D !important;
-    --camel-brown:       #8D6E63 !important;
-    --dark-oud:          #07121C !important;
-
-    /* Background Theming Utilities */
-    --bg-stone-light:    #EAE8E3 !important;
-    --bg-temple-mix:     linear-gradient(135deg, var(--royal-blue) 0%, #1B4332 100%) !important;
-    --bg-stone-deep:     linear-gradient(135deg, #1A1A1A 0%, #2C2621 100%) !important;
-    --bg-saffron-glow:   rgba(230, 126, 34, 0.03) !important;
-
-    /* Text & Contrast Utilities */
-    --text-primary:      #0D2A43 !important;
-    --text-secondary:     #4A5568 !important;
-    --text-tertiary:      #718096 !important;
-    --text-quaternary:    #A0AEC0 !important;
+:root{
+    --royal-blue:        #0D2A43; 
+    --khmer-gold:        #D7B56D; 
+    --angkor-stone:      #5D4037; 
+    --silk-saffron:      #E67E22;
+    --deep-mahogany:     var(--royal-blue);
+    --burnt-sienna:      var(--angkor-stone);
+    --desert-terracotta: var(--silk-saffron);
+    --amber-dune:        var(--khmer-gold);
+    --golden-spice:      #E5C58B;
+    --parchment:         #F8F9FA;
+    --sand-whisper:      #FAF9F6;
+    --night-indigo:      #1A365D;
+    --camel-brown:       #8D6E63;
+    --dark-oud:          #07121C;
 }
-
-* {
+body{
     font-family: "Kantumruy Pro", sans-serif !important;
-}
-
-/* ── Icon Protection (DO NOT OVERWRITE) ── */
-i, .fas, .fab, .far, .bi, [class^="bi-"], [class*=" bi-"] {
-    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "bootstrap-icons", "FontAwesome" !important;
-}
-
-body {
-    color: var(--dark-oud) !important;
-    overflow-x: hidden !important;
     background-color: var(--sand-whisper) !important;
-    line-height: 1.7 !important;
+    color: var(--night-indigo) !important;
 }
 
         /* ── Scrollbar ── */

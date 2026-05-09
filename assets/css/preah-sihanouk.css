@@ -1,30 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
 }
-
-:root {
-    --deep-mahogany: #4A1C00;
-    --burnt-sienna: #7B2D00;
-    --desert-terracotta: #C0622A;
-    --amber-dune: #D4A054;
-    --golden-spice: #F2C078;
-    --parchment: #FEF0CD;
-    --sand-whisper: #FEF6E4;
-    --night-indigo: #3D405B;
-    --camel-brown: #9B6A3A;
-    --dark-oud: #2C1A0E;
+:root{
+    --royal-blue:        #0D2A43; 
+    --khmer-gold:        #D7B56D; 
+    --angkor-stone:      #5D4037; 
+    --silk-saffron:      #E67E22;
+    --deep-mahogany:     var(--royal-blue);
+    --burnt-sienna:      var(--angkor-stone);
+    --desert-terracotta: var(--silk-saffron);
+    --amber-dune:        var(--khmer-gold);
+    --golden-spice:      #E5C58B;
+    --parchment:         #F8F9FA;
+    --sand-whisper:      #FAF9F6;
+    --night-indigo:      #1A365D;
+    --camel-brown:       #8D6E63;
+    --dark-oud:          #07121C;
 }
-
-body {
-    font-family: "Kantumruy Pro", "Roboto" !important;
+body{
+    font-family: "Kantumruy Pro", sans-serif !important;
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
 .hero-section {

@@ -1,15 +1,12 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     padding: 0; margin: 0; box-sizing: border-box;
 }
 :root{
-    /* Primary Brand Identity (Directly from Logo) */
-    --royal-blue:        #0D2A43; /* Imperial Blue - Perfectly matched to Logo background */
-    --khmer-gold:        #D7B56D; /* Refined Light Gold - Sophisticated and not too yellow */
-    --angkor-stone:      #5D4037; /* Ancient Stone - For heritage elements */
-    --silk-saffron:      #E67E22; /* Cultural Saffron - For call-to-actions */
-    
-    /* Semantic Palette mapped to Brand Colors */
+    --royal-blue:        #0D2A43; 
+    --khmer-gold:        #D7B56D; 
+    --angkor-stone:      #5D4037; 
+    --silk-saffron:      #E67E22;
     --deep-mahogany:     var(--royal-blue);
     --burnt-sienna:      var(--angkor-stone);
     --desert-terracotta: var(--silk-saffron);
@@ -22,7 +19,7 @@
     --dark-oud:          #07121C;
 }
 body{
-    font-family: "Kantumruy Pro", "Roboto" !important;
+    font-family: "Kantumruy Pro", sans-serif !important;
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
 }       

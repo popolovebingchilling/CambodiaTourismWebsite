@@ -1,36 +1,36 @@
-
-        :root {
-            --deep-mahogany: #4A1C00;
-            --burnt-sienna: #7B2D00;
-            --desert-terracotta: #C0622A;
-            --amber-dune: #D4A054;
-            --golden-spice: #F2C078;
-            --parchment: #FEF0CD;
-            --sand-whisper: #FEF6E4;
-            --camel-brown: #9B6A3A;
-            --dark-oud: #2C1A0E;
-            --card-bg: #FEF0CD;
-            --card-border: rgba(74, 28, 0, .15);
-            --card-hover-bg: #fff5db;
-            --card-hover-border: rgba(74, 28, 0, .25);
-            --card-title: #2C1A0E;
-            --card-text: #9B6A3A;
-            --card-shadow: 0 10px 25px rgba(111, 85, 70, .15);
-            --card-hover-shadow: 0 20px 40px rgba(74, 28, 0, .25);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Kantumruy Pro', sans-serif;
-            background-color: var(--sand-whisper);
-            color: var(--dark-oud);
-            overflow-x: hidden;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+:root{
+    --royal-blue:        #0D2A43; 
+    --khmer-gold:        #D7B56D; 
+    --angkor-stone:      #5D4037; 
+    --silk-saffron:      #E67E22;
+    --deep-mahogany:     var(--royal-blue);
+    --burnt-sienna:      var(--angkor-stone);
+    --desert-terracotta: var(--silk-saffron);
+    --amber-dune:        var(--khmer-gold);
+    --golden-spice:      #E5C58B;
+    --parchment:         #F8F9FA;
+    --sand-whisper:      #FAF9F6;
+    --night-indigo:      #1A365D;
+    --camel-brown:       #8D6E63;
+    --dark-oud:          #07121C;
+    --card-bg: #FEF0CD;
+    --card-border: rgba(74, 28, 0, .15);
+    --card-hover-bg: #fff5db;
+    --card-hover-border: rgba(74, 28, 0, .25);
+    --card-title: #2C1A0E;
+    --card-text: #9B6A3A;
+    --card-shadow: 0 10px 25px rgba(111, 85, 70, .15);
+    --card-hover-shadow: 0 20px 40px rgba(74, 28, 0, .25);
+}
+body{
+    font-family: "Kantumruy Pro", sans-serif !important;
+    background-color: var(--sand-whisper) !important;
+    color: var(--night-indigo) !important;
+}
 
         /* ── Scrollbar ── */
         ::-webkit-scrollbar { width: 8px; }
