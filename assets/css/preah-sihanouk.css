@@ -3,14 +3,9 @@
     padding: 0; margin: 0; box-sizing: border-box;
 }
 :root{
-    --royal-blue:        #0D2A43; 
-    --khmer-gold:        #D7B56D; 
+    --primary-color:     #0D2A43; 
+    --secondary-color:   #D7B56D; 
     --angkor-stone:      #5D4037; 
-    --silk-saffron:      #E67E22;
-    --deep-mahogany:     var(--royal-blue);
-    --burnt-sienna:      var(--angkor-stone);
-    --desert-terracotta: var(--silk-saffron);
-    --amber-dune:        var(--khmer-gold);
     --golden-spice:      #E5C58B;
     --parchment:         #F8F9FA;
     --sand-whisper:      #FAF9F6;
@@ -39,7 +34,7 @@ body{
     width: 170px !important;
     height: 400px !important;
     overflow: hidden !important;
-    border: 4px solid rgba(12, 8, 239, 0.941) !important;
+    border: 4px solid var(--primary-color) !important;
     transform: skewX(-10deg) !important;
     transition: all 0.4s ease !important;
 }
@@ -48,7 +43,7 @@ body{
     width: 170px !important;
     height: 400px !important;
     overflow: hidden !important;
-    border: 4px solid rgb(6, 67, 236) !important;
+    border: 4px solid var(--primary-color) !important;
     transform: skewX(10deg) !important;
     transition: all 0.4s ease !important;
 }
@@ -57,15 +52,15 @@ body{
 }
 .scroll:hover{
     transform: scale(1.03) !important;
-    background-color: rgba(0, 0, 255, 0.297) !important;
-    color: #f9d006 !important;
+    background-color: rgba(13, 42, 67, 0.3) !important;
+    color: var(--secondary-color) !important;
 }
 .center-piece {
     width: 450px !important;
     height: 400px !important;
     z-index: 10 !important;
     clip-path: polygon(10% 0%, 90% 0%, 75% 100%, 25% 100%) !important;
-    border: 4px solid rgb(6, 67, 236) !important;
+    border: 4px solid var(--primary-color) !important;
     margin-top: 120px !important;
 }
 
@@ -82,7 +77,7 @@ body{
     font-weight: 350px !important;
     width: 500px !important;
     font-size: 50px !important;
-    border-bottom: 3px solid rgb(67, 5, 253) !important;
+    border-bottom: 3px solid var(--primary-color) !important;
     margin-left: 20px;
 }
 
@@ -111,18 +106,12 @@ body{
     align-items: center !important;
     padding: 25px !important;
     width: 100% !important;
-
     background: rgba(255, 255, 255, 0.14) !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
-
     border: 1px solid rgba(255, 255, 255, 0.333) !important;
     border-radius: 12px !important;
-
     color: white !important;
-
-
-
 }
 
 .icon {
@@ -135,7 +124,7 @@ body{
     font-weight: 350px !important;
     width: 620px !important;
     font-size: 50px !important;
-    border-bottom: 3px solid rgb(5, 38, 253) !important;
+    border-bottom: 3px solid var(--primary-color) !important;
     margin-left: 20px;
 }
 
@@ -149,7 +138,7 @@ body{
 .bg-food {
     height: 192vh !important;
     width: 100% !important;
-    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url(../image_preah-sihanouk/987fceb8-e9c2-4704-ab47-4edb92ffa4f5.jpg) !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), url(../image_preah-sihanouk/987fceb8-e9c2-4704-ab47-4edb92ffa4f5.jpg))!important;
     background-size: 100% 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -171,6 +160,9 @@ body{
 
 .card-food {
     transition: 0.3s !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 .card-food:hover {
@@ -190,7 +182,7 @@ body{
     top: 10% !important;
     height: 80% !important;
     width: 2px !important;
-    background: linear-gradient(to bottom, #a88f02, #C9A227) !important;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color)) !important;
 }
 .stats {
     display: flex !important;
@@ -198,7 +190,7 @@ body{
     align-items: center !important;
     gap: 60px !important;
     padding: 40px 0 !important;
-    color: #062962 !important;
+    color: var(--primary-color) !important;
 }
 .wrapper {
     width: 100% !important;
@@ -236,7 +228,7 @@ body{
 }
 
 .card-auto>.row .icon {
-    background: #223 !important;
+    background: var(--dark-oud) !important;
     color: white !important;
     border-radius: 50% !important;
     width: 50px !important;
@@ -333,7 +325,7 @@ input:checked+label .description {
 
 .button:hover {
     transform: scale(1.03) !important;
-    background-color: brown !important;
+    background-color: var(--primary-color) !important;
 }
 
 .colum {

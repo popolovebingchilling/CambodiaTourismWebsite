@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ប្លុកទេសចរណ៍ | ទេសចរណ៍កម្ពុជា</title>
+    <!-- HTML CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
+    <!-- BOOTSTRAP THEME  -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <!-- BLOG CSS -->
+    <link rel="stylesheet" href="assets/css/blog.css">
+    <!-- FONT AWESOME FOR ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- BOOTSTRAP ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container py-2">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="assets/image/new_logo_v2.png" alt="Logo" width="45" height="45" class="me-2">
+                    <div class="d-flex flex-column lh-1">
+                        <span class="text-secondary small">ទេសចរណ៍កម្ពុជា</span>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                                data-bs-toggle="dropdown">គោលដៅ</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="sr.html">សៀមរាប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="#">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="battambang.html">បាត់ដំបង</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="mondulkiri.html">មណ្ឌលគិរី</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="koh-kong.html">កោះកុង</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                                data-bs-toggle="dropdown">សេវាកម្ម</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="hotels.html">សណ្ឋាគារ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="restaurants.html">ភោជនីយដ្ឋាន</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="guide.html">មគ្គុទ្ទេសក៍</a></li>
+                                <li><a class="dropdown-content dropdown-item"
+                                        href="transportation.html">ការដឹកជញ្ជូន</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link px-3" href="#">វិចិត្រសាល</a></li>
+                        <li class="nav-item"><a class="nav-link active px-3" href="blog.html">ប្លុក</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">មតិយោបល់</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex align-items-center gap-3">
+                    <button id="theme-toggle" class="btn btn-link text-white p-0 border-0 fs-5"
+                        title="ផ្លាស់ប្តូរពន្លឺ">
+                        <i class="bi bi-moon-stars-fill"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
+                    <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ── Blog Hero ── -->
+        <section class="blog-hero">
+            <div class="blog-hero-content" data-aos="fade-up">
+                <span class="section-badge mb-3 d-inline-block">រឿងរ៉ាវធ្វើដំណើរ</span>
+                <h1>ស្វែងយល់ពី <span>កម្ពុជា</span> តាមរយៈអត្ថបទ</h1>
+                <p>រុករកនូវរឿងរ៉ាវពិត បទពិសោធន៍ធ្វើដំណើរ និងការណែនាំដ៏ល្អបំផុតពីអ្នកជំនាញទេសចរណ៍ក្នុងតំបន់។</p>
+            </div>
+        </section>
+
+        <!-- ── Featured Post ── -->
+        <section class="featured-blog container" data-aos="fade-up" data-aos-delay="200">
+            <div class="featured-card">
+                <div class="featured-img">
+                    <img src="https://s3.ams.com.kh/infotainment/2024/12/Untitled-1-11.jpg" alt="Featured Post">
+                </div>
+                <div class="featured-content">
+                    <div class="featured-meta">
+                        <span class="featured-category">ប្រវត្តិសាស្ត្រ</span>
+                        <span class="featured-date">១០ មីនា, ២០២៦</span>
+                    </div>
+                    <h2>ដើរតាមគន្លងអង្គរ៖ ដំណើររុករកប្រាសាទដែលលាក់ខ្លួន</h2>
+                    <p>បទពិសោធន៍ថ្មីក្នុងការរុករកប្រាសាទបុរាណដែលមិនទាន់មានការជួសជុល និងសម្រស់បែបធម្មជាតិដែលហ៊ុមព័ទ្ធដោយព្រៃប្រឹក្សាដ៏ត្រជាក់ស្រស់បំព្រង។</p>
+                    <a href="blog-siem-reap.html" class="btn-royal px-4 py-2 rounded-pill fw-bold w-fit">អានអត្ថបទពេញ <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Blog Grid ── -->
+        <section class="blog-grid-section container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">អត្ថបទ<span>ថ្មីៗបំផុត</span></h2>
+                <div class="title-line mx-auto"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Blog 1: Preah Sihanouk -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card-premium">
+                        <div class="blog-img-box">
+                            <img src="assets/image/Preah-Sihanouk.jpg" alt="Preah Sihanouk">
+                            <span class="blog-badge">មគ្គុទ្ទេសក៍</span>
+                        </div>
+                        <div class="blog-content-premium">
+                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ២០ មីនា, ២០២៦</div>
+                            <h3>កោះសម្ងាត់ទាំង ៥ នៅខេត្តព្រះសីហនុ</h3>
+                            <p>ស្វែងយល់ពីកោះដែលស្ងប់ស្ងាត់ និងមានសម្រស់ស្រស់ស្អាតបំផុតដែលមិនទាន់មានមនុស្សស្គាល់ច្រើននៅក្នុងខេត្តព្រះសីហនុ។</p>
+                            <div class="blog-footer-premium">
+                                <a href="blog-preah-sihanouk.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
+                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ៥ នាទី</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 2: Kampot -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-card-premium">
+                        <div class="blog-img-box">
+                            <img src="https://amber-kampot.com/wp-content/uploads/2020/12/ingredients4.jpg" alt="Kampot">
+                            <span class="blog-badge">ម្ហូបអាហារ</span>
+                        </div>
+                        <div class="blog-content-premium">
+                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ១៥ មីនា, ២០២៦</div>
+                            <h3>រសជាតិម្រេចកំពត៖ អាថ៌កំបាំងម្ហូបខ្មែរ</h3>
+                            <p>ដំណើរទៅកាន់ចម្ការម្រេចដ៏ល្បីល្បាញ និងការស្វែងយល់ពីវិធីចម្អិនម្ហូបជាមួយម្រេចលំដាប់ពិភពលោកដែលអ្នកមិនគួររំលង។</p>
+                            <div class="blog-footer-premium">
+                                <a href="blog-kampot.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
+                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ៨ នាទី</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 3: Battambang -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-card-premium">
+                        <div class="blog-img-box">
+                            <img src="https://cdn.cc-times.com/kh.cc-times.com/media/44613/large/428600950_702823458693368_13739922186157254_n.jpg?1708487102" alt="Battambang">
+                            <span class="blog-badge">សិល្បៈ</span>
+                        </div>
+                        <div class="blog-content-premium">
+                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ០៥ មីនា, ២០២៦</div>
+                            <h3>បាត់ដំបង៖ ទីក្រុងនៃសិល្បៈ និងវប្បធម៌</h3>
+                            <p>ស្វែងយល់ពីមូលហេតុដែលបាត់ដំបងក្លាយជាមជ្ឈមណ្ឌលសិល្បៈដ៏សំខាន់ និងជាទីក្រុងដ៏ទាក់ទាញបំផុតរបស់កម្ពុជា។</p>
+                            <div class="blog-footer-premium">
+                                <a href="blog-battambang.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
+                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ៦ នាទី</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 4: Phnom Penh -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card-premium">
+                        <div class="blog-img-box">
+                            <img src="https://www.novotelphnompenhbkk1.com/wp-content/uploads/sites/53/2025/02/Things-to-do-in-Phnom-Penh.jpg" alt="Phnom Penh">
+                            <span class="blog-badge">ជីវិតរស់នៅ</span>
+                        </div>
+                        <div class="blog-content-premium">
+                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ០១ មីនា, ២០២៦</div>
+                            <h3>ភ្នំពេញពេលរាត្រី៖ សម្រស់រាជធានីសម័យថ្មី</h3>
+                            <p>ទិដ្ឋភាពដ៏ស្រស់ស្អាតនៃរាជធានីភ្នំពេញនៅពេលយប់ និងកន្លែងកម្សាន្តដែលពេញនិយមបំផុតសម្រាប់យុវវ័យសម័យថ្មី។</p>
+                            <div class="blog-footer-premium">
+                                <a href="blog-phnom-penh.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
+                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ៧ នាទី</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 5: Kep -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-card-premium">
+                        <div class="blog-img-box">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxHhYr-BtaHGTwuzkkIyqX1AQxoDZKuO_5VA&s" alt="Kep">
+                            <span class="blog-badge">ដំណើរកម្សាន្ត</span>
+                        </div>
+                        <div class="blog-content-premium">
+                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ២៥ កុម្ភៈ, ២០២៦</div>
+                            <h3>ផ្សារក្តាមកែប៖ គោលដៅសម្រាប់គ្រឿងសមុទ្រ</h3>
+                            <p>រសជាតិក្តាមស្រស់ៗ និងបរិយាកាសឆ្នេរសមុទ្រដ៏ស្ងប់ស្ងាត់ដែលអ្នកមិនគួររំលងនៅពេលទៅកម្សាន្តនៅខេត្តកែប។</p>
+                            <div class="blog-footer-premium">
+                                <a href="blog-kep.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
+                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ៤ នាទី</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 6: Mondulkiri -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-card-premium">
+                        <div class="blog-img-box">
+                            <img src="https://www.boboandchichi.com/wp-content/uploads/Three-Elephant-Pals.jpg" alt="Mondulkiri">
+                            <span class="blog-badge">ផ្សងព្រេង</span>
+                        </div>
+                        <div class="blog-content-premium">
+                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ២០ កុម្ភៈ, ២០២៦</div>
+                            <h3>មណ្ឌលគិរី៖ សម្រស់នៃភ្នំ និងសត្វដំរី</h3>
+                            <p>ដំណើរផ្សងព្រេងក្នុងព្រៃជ្រៅ និងការរស់នៅជាមួយសត្វដំរីតាមបែបធម្មជាតិពិតៗដែលអ្នកនឹងរកឃើញតែនៅមណ្ឌលគិរី។</p>
+                            <div class="blog-footer-premium">
+                                <a href="blog-mondulkiri.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
+                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ១០ នាទី</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 7: Koh Kong -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card-premium">
+                        <div class="blog-img-box">
+                            <img src="https://s5.kh1.co/d6/d681143a7204d14b47a7e6e91e68d8dcc74c169d.jpg" alt="Koh Kong">
+                            <span class="blog-badge">ធម្មជាតិ</span>
+                        </div>
+                        <div class="blog-content-premium">
+                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ១៥ កុម្ភៈ, ២០២៦</div>
+                            <h3>កោះកុង៖ ឋានសួគ៌អេកូទេសចរណ៍ដ៏ធំ</h3>
+                            <p>រុករកព្រៃកោងកាងដ៏ធំល្វឹងល្វើយ និងប្រព័ន្ធអេកូឡូស៊ីសមុទ្រដែលសម្បូរបែបបំផុតនៅក្នុងប្រទេសកម្ពុជា។</p>
+                            <div class="blog-footer-premium">
+                                <a href="blog-koh-kong.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
+                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ៩ នាទី</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 8: Siem Reap (Extra/Re-featured) -->
+                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-card-premium">
+                        <div class="blog-img-box">
+                            <img src="assets/image/siem-reap.png" alt="Siem Reap">
+                            <span class="blog-badge">ប្រវត្តិសាស្ត្រ</span>
+                        </div>
+                        <div class="blog-content-premium">
+                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ១០ កុម្ភៈ, ២០២៦</div>
+                            <h3>អង្គរវត្ត៖ បេតិកភណ្ឌដែលមិនចេះរីងស្ងួត</h3>
+                            <p>ស្វែងយល់ពីភាពអស្ចារ្យនៃប្រាសាទអង្គរវត្ត និងរឿងរ៉ាវប្រវត្តិសាស្ត្រដែលអ្នកមិនធ្លាប់ដឹងពីមុនមក។</p>
+                            <div class="blog-footer-premium">
+                                <a href="blog-siem-reap.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
+                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ១២ នាទី</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Newsletter Section ── -->
+        <section class="container" data-aos="zoom-in">
+            <div class="newsletter-section">
+                <div class="newsletter-content">
+                    <h2>ទទួលបានរឿងរ៉ាវថ្មីៗ</h2>
+                    <p>ចុះឈ្មោះដើម្បីទទួលបានអត្ថបទទេសចរណ៍ថ្មីៗ ការបញ្ចុះតម្លៃពិសេស និងការណែនាំពីគោលដៅទេសចរណ៍ល្អៗមុនគេ។</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="បញ្ចូលអាសយដ្ឋានអ៊ីមែលរបស់អ្នក" required>
+                        <button type="submit" class="btn-newsletter">ចុះឈ្មោះឥឡូវនេះ</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Brand Essence -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="footer-brand mb-4">
+                        <img src="assets/image/new_logo_v2.png" alt="Logo" width="60" class="mb-3">
+                        <h5 class="text-white fw-bold">ទេសចរណ៍កម្ពុជា</h5>
+                    </div>
+                    <p class="footer-brand-text">
+                        ស្វែងយល់ពីភាពអស្ចារ្យនៃព្រះរាជាណាចក្រអច្ឆរិយៈ។ យើងខ្ញុំផ្តល់ជូននូវបទពិសោធន៍ទេសចរណ៍ដ៏ល្អបំផុត
+                        ដើម្បីបំពេញក្តីសុបិនរបស់អ្នកនៅក្នុងតំបន់អាសុីអាគ្នេយ៍។
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Destinations -->
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title">គោលដៅ</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">ភ្នំពេញ</a></li>
+                        <li><a href="sr.html">សៀមរាប</a></li>
+                        <li><a href="kampot.html">កំពត</a></li>
+                        <li><a href="kep.html">កែប</a></li>
+                        <li><a href="prea-sihanouk.html">ព្រះសីហនុ</a></li>
+                        <li><a href="battambang.html">បាត់ដំបង</a></li>
+                        <li><a href="mondulkiri.html">មណ្ឌលគិរី</a></li>
+                        <li><a href="koh-kong.html">កោះកុង</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title">សេវាកម្ម</h6>
+                    <ul class="footer-links">
+                        <li><a href="hotels.html">សណ្ឋាគារ</a></li>
+                        <li><a href="restaurants.html">ភោជនីយដ្ឋាន</a></li>
+                        <li><a href="guide.html">មគ្គុទ្ទេសក៍</a></li>
+                        <li><a href="transportation.html">ការដឹកជញ្ជូន</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <h6 class="footer-title">ទំនាក់ទំនង</h6>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+៨៥៥ ១២ ២២៣ ៣២២</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@cambodiatourism.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>ភ្នំពេញ, ព្រះរាជាណាចក្រកម្ពុជា</span>
+                        </div>
+                        <div class="footer-contact-item align-items-start">
+                            <i class="fas fa-clock mt-1"></i>
+                            <div class="d-flex flex-column gap-1">
+                                <span>ចន្ទ - សុក្រ: ៨:០០ - ១៧:០០</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 5: Discover -->
+                <div class="col-lg-2">
+                    <h6 class="footer-title">ស្វែងយល់</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">វិចិត្រសាល</a></li>
+                        <li><a href="blog.html">ប្លុកទេសចរណ៍</a></li>
+                        <li><a href="#">មតិយោបល់</a></li>
+                        <li><a href="map.html">ផែនទី</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-white opacity-10 my-5">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                    <p class="mb-0 small text-white-50">&copy; ២០២៦ ទេសចរណ៍កម្ពុជារក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="trust-badges justify-content-center justify-content-md-end">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOOTSTRAP JAVA -->
+    <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS ANIMATION -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+
+        // Check for saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.classList.add(savedTheme);
+            updateIcon(savedTheme);
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                localStorage.setItem('theme', 'dark-mode');
+                updateIcon('dark-mode');
+            } else {
+                body.classList.add('light-mode');
+                localStorage.setItem('theme', 'light-mode');
+                updateIcon('light-mode');
+            }
+        });
+
+        function updateIcon(theme) {
+            if (theme === 'light-mode') {
+                icon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
+            } else {
+                icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
+            }
+        }
+    </script>
+</body>
+
+</html>

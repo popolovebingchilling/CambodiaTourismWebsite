@@ -3,22 +3,15 @@
     padding: 0; margin: 0; box-sizing: border-box;
 }
 :root{
-    --royal-blue:        #0D2A43; 
-    --khmer-gold:        #D7B56D; 
+    --primary-color:     #0D2A43; 
+    --secondary-color:   #D7B56D; 
     --angkor-stone:      #5D4037; 
-    --silk-saffron:      #E67E22;
-    --deep-mahogany:     var(--royal-blue);
-    --burnt-sienna:      var(--angkor-stone);
-    --desert-terracotta: var(--silk-saffron);
-    --amber-dune:        var(--khmer-gold);
     --golden-spice:      #E5C58B;
     --parchment:         #F8F9FA;
     --sand-whisper:      #FAF9F6;
     --night-indigo:      #1A365D;
     --camel-brown:       #8D6E63;
     --dark-oud:          #07121C;
-    --bg-mixed:          linear-gradient(135deg, var(--royal-blue) 0%, #1B4332 100%);
-    --bg-dark-mixed:     linear-gradient(135deg, #051622 0%, #081C15 100%);
 }
 body{
     font-family: "Kantumruy Pro", sans-serif !important;
@@ -65,11 +58,6 @@ body{
     animation: heroZoom 20s infinite alternate ease-in-out !important;
 }
 
-@keyframes heroZoom {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.1); }
-}
-
 .hero-overlay {
     position: absolute !important;
     inset: 0 !important;
@@ -85,7 +73,7 @@ body{
     font-weight: 700 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.3em !important;
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     margin-bottom: 20px !important;
     display: block !important;
 }
@@ -100,13 +88,12 @@ body{
 }
 
 .hero-title-main span {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
 }
 
 /* ── Mixed Background Sections ── */
 .explore-grid-container {
     padding: 100px 0 !important;
-    background: var(--bg-mixed) !important;
     color: white !important;
     position: relative !important;
 }
@@ -128,7 +115,7 @@ body{
     font-weight: 700 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.2em !important;
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     margin-bottom: 16px !important;
 }
 
@@ -151,7 +138,7 @@ body{
 
 .adventure-item:hover {
     transform: translateY(-6px) !important;
-    border-color: var(--khmer-gold) !important;
+    border-color: var(--secondary-color) !important;
     box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.4) !important;
 }
 
@@ -177,7 +164,7 @@ body{
 }
 
 .adventure-overlay h3 {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     font-size: 24px !important;
     font-weight: 700 !important;
     margin-bottom: 8px !important;
@@ -188,7 +175,7 @@ body{
     top: 20px !important;
     right: 20px !important;
     background: rgba(215, 181, 109, 0.9) !important;
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
     padding: 6px 16px !important;
     border-radius: 50px !important;
     font-size: 12px !important;
@@ -200,7 +187,6 @@ body{
 /* ── Taste Section ── */
 .taste-section {
     padding: 100px 0 !important;
-    background: var(--bg-dark-mixed) !important;
     color: white !important;
 }
 
@@ -243,7 +229,7 @@ body{
 }
 
 .food-card-body h4 {
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
     font-size: 18px !important;
     font-weight: 700 !important;
     margin-bottom: 12px !important;
@@ -260,7 +246,7 @@ body{
     width: 44px !important;
     height: 44px !important;
     background: rgba(215, 181, 109, 0.15) !important;
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -271,7 +257,6 @@ body{
 
 /* ── Cultural Section ── */
 .cultural-section {
-    background: linear-gradient(135deg, var(--royal-blue) 0%, #163A59 50%, var(--khmer-gold) 100%) !important;
     position: relative !important;
     overflow: hidden !important;
 }
@@ -299,7 +284,7 @@ body{
 .cultural-card:hover {
     transform: translateY(-10px) !important;
     background: rgba(255, 255, 255, 0.12) !important;
-    border-color: var(--khmer-gold) !important;
+    border-color: var(--secondary-color) !important;
     box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important;
 }
 
@@ -321,13 +306,12 @@ body{
 /* ── Stay Section ── */
 .stay-section {
     padding: 100px 0 !important;
-    background: #FFFFFF !important;
 }
 
 .lodge-premium-card {
     display: flex !important;
     flex-direction: column !important; /* Changed to vertical */
-    background: var(--royal-blue) !important;
+    background: var(--primary-color) !important;
     border-radius: 24px !important;
     overflow: hidden !important;
     color: white !important;
@@ -335,12 +319,13 @@ body{
     box-shadow: 0 10px 30px rgba(13, 42, 67, 0.1) !important;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
     border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    height: 100% !important;
 }
 
 .lodge-premium-card:hover {
     transform: translateY(-10px) !important;
     box-shadow: 0 40px 80px -20px rgba(13, 42, 67, 0.4) !important;
-    border-color: var(--khmer-gold) !important;
+    border-color: var(--secondary-color) !important;
 }
 
 .lodge-premium-img {
@@ -359,7 +344,7 @@ body{
 }
 
 .lodge-premium-info h3 {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     font-size: 28px !important;
     font-weight: 700 !important;
     margin-bottom: 12px !important;
@@ -373,7 +358,7 @@ body{
 .lodge-premium-tag {
     display: inline-block !important;
     background: rgba(215, 181, 109, 0.1) !important;
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     padding: 4px 12px !important;
     border-radius: 6px !important;
     font-size: 12px !important;
@@ -398,15 +383,15 @@ body{
     border: 1.5px solid transparent !important;
 }
 
-.btn-khmer-gold {
-    background: var(--khmer-gold) !important;
-    color: var(--royal-blue) !important;
-    border-color: var(--khmer-gold) !important;
+.btn-secondary-color {
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    border-color: var(--secondary-color) !important;
 }
 
-.btn-khmer-gold:hover {
+.btn-secondary-color:hover {
     background: white !important;
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
     transform: translateY(-5px) scale(1.05) !important;
     border-color: white !important;
 }
@@ -451,7 +436,6 @@ body{
 
 /* ── Map Section ── */
 .map-section {
-    background: linear-gradient(135deg, var(--royal-blue) 0%, #163A59 50%, var(--khmer-gold) 100%) !important;
     position: relative !important;
     overflow: hidden !important;
 }

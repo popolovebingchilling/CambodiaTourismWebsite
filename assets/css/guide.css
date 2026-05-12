@@ -3,28 +3,23 @@
     padding: 0; margin: 0; box-sizing: border-box;
 }
 :root{
-    --royal-blue:        #0D2A43; 
-    --khmer-gold:        #D7B56D; 
+    --primary-color:     #0D2A43; 
+    --secondary-color:   #D7B56D; 
     --angkor-stone:      #5D4037; 
-    --silk-saffron:      #E67E22;
-    --deep-mahogany:     var(--royal-blue);
-    --burnt-sienna:      var(--angkor-stone);
-    --desert-terracotta: var(--silk-saffron);
-    --amber-dune:        var(--khmer-gold);
     --golden-spice:      #E5C58B;
     --parchment:         #F8F9FA;
     --sand-whisper:      #FAF9F6;
     --night-indigo:      #1A365D;
     --camel-brown:       #8D6E63;
     --dark-oud:          #07121C;
-    --card-bg: #FEF0CD;
-    --card-border: rgba(74, 28, 0, .15);
-    --card-hover-bg: #fff5db;
-    --card-hover-border: rgba(74, 28, 0, .25);
-    --card-title: #2C1A0E;
-    --card-text: #9B6A3A;
-    --card-shadow: 0 10px 25px rgba(111, 85, 70, .15);
-    --card-hover-shadow: 0 20px 40px rgba(74, 28, 0, .25);
+    --card-bg: var(--parchment);
+    --card-border: rgba(13, 42, 67, 0.1);
+    --card-hover-bg: rgba(215, 181, 109, 0.05);
+    --card-hover-border: var(--secondary-color);
+    --card-title: var(--dark-oud);
+    --card-text: var(--camel-brown);
+    --card-shadow: 0 10px 25px rgba(13, 42, 67, 0.1);
+    --card-hover-shadow: 0 20px 40px rgba(13, 42, 67, 0.2);
 }
 body{
     font-family: "Kantumruy Pro", sans-serif !important;
@@ -35,8 +30,7 @@ body{
         /* ── Scrollbar ── */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--parchment); }
-        ::-webkit-scrollbar-thumb { background: var(--amber-dune); border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--desert-terracotta); }
+        ::-webkit-scrollbar-thumb { background: var(--secondary-color); border-radius: 10px; }
 
         /* ── Hero Section ── */
         .hero-section {
@@ -45,7 +39,7 @@ body{
             display: flex;
             align-items: center;
             overflow: hidden;
-            background: linear-gradient(100deg, var(--dark-oud) 0%, var(--deep-mahogany) 40%, var(--burnt-sienna) 100%);
+            background: linear-gradient(100deg, var(--dark-oud) 0%, var(--primary-color) 40%, var(--angkor-stone) 100%);
         }
         .hero-overlay {
             position: absolute;
@@ -66,7 +60,7 @@ body{
             display: inline-flex;
             align-items: center;
             gap: .5rem;
-            border: 1px solid rgba(212, 160, 84, .3);
+            border: 1px solid rgba(215, 181, 109, 0.3);
             color: var(--golden-spice);
             padding: .45rem 1.2rem;
             border-radius: 50px;
@@ -84,7 +78,7 @@ body{
         }
         .hero-desc {
             font-size: 1.15rem;
-            color: rgba(254, 240, 205, .75);
+            color: rgba(248, 249, 250, 0.75);
             max-width: 560px;
             line-height: 1.8;
             font-weight: 300;
@@ -99,26 +93,26 @@ body{
             transition: all .3s ease;
         }
         .btn-golden {
-            background: linear-gradient(135deg, var(--amber-dune), var(--golden-spice));
+            background: linear-gradient(135deg, var(--secondary-color), var(--golden-spice));
             color: var(--dark-oud);
             border: none;
-            box-shadow: 0 4px 20px rgba(212, 160, 84, .35);
+            box-shadow: 0 4px 20px rgba(215, 181, 109, 0.35);
         }
         .btn-golden:hover {
-            background: linear-gradient(135deg, var(--golden-spice), var(--amber-dune));
+            background: linear-gradient(135deg, var(--golden-spice), var(--secondary-color));
             color: var(--dark-oud);
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(212, 160, 84, .5);
+            box-shadow: 0 8px 30px rgba(215, 181, 109, 0.5);
         }
         .btn-outline-warm {
             background: transparent;
             color: var(--parchment);
-            border: 1.5px solid rgba(254, 240, 205, .35);
+            border: 1.5px solid rgba(248, 249, 250, 0.35);
         }
         .btn-outline-warm:hover {
-            background: rgba(254, 240, 205, .1);
+            background: rgba(248, 249, 250, 0.1);
             color: var(--parchment);
-            border-color: var(--amber-dune);
+            border-color: var(--secondary-color);
             transform: translateY(-2px);
         }
 
@@ -128,7 +122,7 @@ body{
             gap: 2.5rem;
             margin-top: 3.5rem;
             padding-top: 2.5rem;
-            border-top: 1px solid rgba(212, 160, 84, .15);
+            border-top: 1px solid rgba(215, 181, 109, 0.15);
         }
         .hero-stat-num {
             font-size: 2rem;
@@ -139,7 +133,7 @@ body{
         }
         .hero-stat-label {
             font-size: .85rem;
-            color: rgba(254, 240, 205, .55);
+            color: rgba(248, 249, 250, 0.55);
             font-weight: 400;
             margin-top: .35rem;
         }
@@ -153,13 +147,12 @@ body{
         }
         .float-decor-1 {
             width: 400px; height: 400px;
-            background: var(--amber-dune);
+            background: var(--secondary-color);
             top: -100px; right: -100px;
             animation: floatSlow 8s ease-in-out infinite;
         }
         .float-decor-2 {
             width: 250px; height: 250px;
-            background: var(--desert-terracotta);
             bottom: -50px; left: 10%;
             animation: floatSlow 10s ease-in-out infinite reverse;
         }
@@ -180,7 +173,6 @@ body{
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--desert-terracotta);
             margin-bottom: .75rem;
         }
         .section-label i {
@@ -219,7 +211,6 @@ body{
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--desert-terracotta), var(--amber-dune));
             opacity: 0;
             transition: opacity .4s ease;
         }
@@ -246,12 +237,10 @@ body{
         .guide-card:hover .card-icon-wrap {
             transform: scale(1.1) rotate(-3deg);
         }
-        .icon-visa { background: rgba(192, 98, 42, .12); color: var(--desert-terracotta); }
-        .icon-currency { background: rgba(212, 160, 84, .15); color: var(--amber-dune); }
-        .icon-season { background: rgba(123, 45, 0, .1); color: var(--burnt-sienna); }
-        .icon-culture { background: rgba(155, 106, 58, .12); color: var(--camel-brown); }
-        .icon-safety { background: rgba(74, 28, 0, .1); color: var(--deep-mahogany); }
-        .icon-budget { background: rgba(192, 98, 42, .12); color: var(--desert-terracotta); }
+        .icon-currency { background: rgba(215, 181, 109, 0.15); color: var(--secondary-color); }
+        .icon-season { background: rgba(13, 42, 67, 0.1); color: var(--primary-color); }
+        .icon-culture { background: rgba(215, 181, 109, 0.12); color: var(--secondary-color); }
+        .icon-safety { background: rgba(13, 42, 67, 0.1); color: var(--primary-color); }
 
         .guide-card .card-number {
             font-size: .75rem;
@@ -291,7 +280,7 @@ body{
             width: 6px;
             height: 6px;
             border-radius: 50%;
-            background: var(--amber-dune);
+            background: var(--secondary-color);
         }
 
         /* ── Season Timeline ── */
@@ -306,7 +295,6 @@ body{
             top: 8px;
             bottom: 8px;
             width: 2px;
-            background: linear-gradient(180deg, var(--amber-dune), var(--desert-terracotta), rgba(155, 106, 58, .3));
             border-radius: 2px;
         }
         .season-item {
@@ -320,23 +308,22 @@ body{
             width: 16px;
             height: 16px;
             border-radius: 50%;
-            border: 3px solid var(--amber-dune);
+            border: 3px solid var(--secondary-color);
             background: var(--card-bg);
             z-index: 1;
         }
         .season-item.best::before {
-            background: var(--amber-dune);
-            box-shadow: 0 0 0 4px rgba(212, 160, 84, .2);
+            background: var(--secondary-color);
+            box-shadow: 0 0 0 4px rgba(215, 181, 109, 0.2);
         }
         .season-months {
             font-size: .8rem;
             font-weight: 700;
-            color: var(--desert-terracotta);
             letter-spacing: .5px;
             margin-bottom: .2rem;
         }
         .season-item.best .season-months {
-            color: var(--amber-dune);
+            color: var(--secondary-color);
         }
         .season-desc {
             font-size: .9rem;
@@ -348,7 +335,7 @@ body{
             font-size: .65rem;
             font-weight: 700;
             color: var(--dark-oud);
-            background: linear-gradient(135deg, var(--amber-dune), var(--golden-spice));
+            background: linear-gradient(135deg, var(--secondary-color), var(--golden-spice));
             padding: .15rem .6rem;
             border-radius: 50px;
             margin-left: .5rem;
@@ -365,7 +352,7 @@ body{
             transition: background .3s ease;
         }
         .budget-tip:hover {
-            background: rgba(212, 160, 84, .08);
+            background: rgba(215, 181, 109, 0.08);
         }
         .budget-tip-icon {
             width: 40px;
@@ -373,7 +360,6 @@ body{
             min-width: 40px;
             border-radius: 10px;
             background: rgba(192, 98, 42, .1);
-            color: var(--desert-terracotta);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -388,7 +374,7 @@ body{
 
         /* ── CTA Section ── */
         .cta-section {
-            background: linear-gradient(160deg, var(--dark-oud), var(--deep-mahogany), var(--burnt-sienna));
+            background: linear-gradient(160deg, var(--dark-oud), var(--primary-color), var(--angkor-stone));
             position: relative;
             overflow: hidden;
         }
@@ -396,7 +382,7 @@ body{
             position: absolute;
             width: 500px; height: 500px;
             border-radius: 50%;
-            background: var(--amber-dune);
+            background: var(--secondary-color);
             opacity: .06;
             top: -200px; right: -100px;
         }
@@ -404,7 +390,6 @@ body{
             position: absolute;
             width: 300px; height: 300px;
             border-radius: 50%;
-            background: var(--desert-terracotta);
             opacity: .06;
             bottom: -100px; left: -50px;
         }
@@ -416,7 +401,7 @@ body{
         }
         .cta-desc {
             font-size: 1.05rem;
-            color: rgba(254, 240, 205, .65);
+            color: rgba(248, 249, 250, 0.65);
             font-weight: 300;
             line-height: 1.7;
             max-width: 500px;
@@ -429,14 +414,14 @@ body{
             width: 48px;
             height: 48px;
             border-radius: 14px;
-            background: linear-gradient(135deg, var(--amber-dune), var(--golden-spice));
+            background: linear-gradient(135deg, var(--secondary-color), var(--golden-spice));
             color: var(--dark-oud);
             border: none;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.2rem;
-            box-shadow: 0 4px 20px rgba(212, 160, 84, .35);
+            box-shadow: 0 4px 20px rgba(215, 181, 109, 0.35);
             opacity: 0;
             visibility: hidden;
             transform: translateY(20px);
@@ -451,7 +436,7 @@ body{
         }
         .scroll-top-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(212, 160, 84, .5);
+            box-shadow: 0 8px 30px rgba(215, 181, 109, 0.5);
         }
 
         /* ── Animations ── */

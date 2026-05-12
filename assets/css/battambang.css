@@ -3,14 +3,9 @@
     padding: 0; margin: 0; box-sizing: border-box;
 }
 :root{
-    --royal-blue:        #0D2A43; 
-    --khmer-gold:        #D7B56D; 
+    --primary-color:     #0D2A43; 
+    --secondary-color:   #D7B56D; 
     --angkor-stone:      #5D4037; 
-    --silk-saffron:      #E67E22;
-    --deep-mahogany:     var(--royal-blue);
-    --burnt-sienna:      var(--angkor-stone);
-    --desert-terracotta: var(--silk-saffron);
-    --amber-dune:        var(--khmer-gold);
     --golden-spice:      #E5C58B;
     --parchment:         #F8F9FA;
     --sand-whisper:      #FAF9F6;
@@ -27,7 +22,7 @@ body{
 .hero-section {
     height: 100vh !important;
     width: 100% !important;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../image_battambong/photo_2026-04-22_23-18-25.jpg) !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0), url(../image_battambong/photo_2026-04-22_23-18-25.jpg)) !important;
     background-size: 100% 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -41,8 +36,8 @@ body{
 
 .scroll:hover {
     transform: scale(1.03) !important;
-    background-color: rgba(0, 0, 255, 0.297) !important;
-    color: #f9d006 !important;
+    background-color: rgba(13, 42, 67, 0.3) !important;
+    color: var(--secondary-color) !important;
 }
 
 .img-food {
@@ -58,6 +53,9 @@ body{
 
 .card-food {
     transition: 0.3s !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 .card-food:hover {
@@ -78,7 +76,7 @@ body{
     top: 10% !important;
     height: 80% !important;
     width: 2px !important;
-    background: linear-gradient(to bottom, #3f3601, #C9A227) !important;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color)) !important;
 }
 .stats {
     display: flex !important;
@@ -86,21 +84,21 @@ body{
     align-items: center !important;
     gap: 60px !important;
     padding: 40px 0 !important;
-    color: #796706 !important;
+    color: var(--secondary-color) !important;
 }
 .booking{
     transition: 0.3s !important;
 }
 .booking:hover{
     transform: scale(1.02) !important;
-    background-color: #021bfa !important;
+    background-color: var(--primary-color) !important;
     color: white !important;
 }
 .line {
     font-weight: 350px !important;
     width: 500px !important;
     font-size: 50px !important;
-    border-bottom: 3px solid rgb(253, 141, 5) !important;
+    border-bottom: 3px solid var(--secondary-color) !important;
     margin-left: 20px;
 }
 
@@ -108,7 +106,7 @@ body{
     font-weight: 350px !important;
     width: 150px !important;
     font-size: 50px !important;
-    border-bottom: 3px solid rgb(253, 141, 5) !important;
+    border-bottom: 3px solid var(--secondary-color) !important;
     margin-left: 20px;
 }
 
@@ -116,14 +114,14 @@ body{
     font-weight: 350px !important;
     width: 620px !important;
     font-size: 50px !important;
-    border-bottom: 3px solid rgb(253, 141, 5) !important;
+    border-bottom: 3px solid var(--secondary-color) !important;
     margin-left: 20px;
 }
 
 .hero-temple {
     height: 100vh !important;
     width: 100% !important;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../image_battambong/Battambang-3.jpg) !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0), url(../image_battambong/Battambang-3.jpg)) !important;
     background-size: 100% 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -134,7 +132,7 @@ body{
 }
 
 .hero-picture {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../image_battambong/8332602001.jpg) !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0), url(../image_battambong/8332602001.jpg)) !important;
     background-size: 100% 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -176,7 +174,7 @@ body{
 
 .button:hover {
     transform: scale(1.03) !important;
-    background-color: brown !important;
+    background-color: var(--primary-color) !important;
 }
 
 .colum {

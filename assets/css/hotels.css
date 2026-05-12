@@ -3,14 +3,9 @@
     padding: 0; margin: 0; box-sizing: border-box;
 }
 :root{
-    --royal-blue:        #0D2A43; 
-    --khmer-gold:        #D7B56D; 
+    --primary-color:     #0D2A43; 
+    --secondary-color:   #D7B56D; 
     --angkor-stone:      #5D4037; 
-    --silk-saffron:      #E67E22;
-    --deep-mahogany:     var(--royal-blue);
-    --burnt-sienna:      var(--angkor-stone);
-    --desert-terracotta: var(--silk-saffron);
-    --amber-dune:        var(--khmer-gold);
     --golden-spice:      #E5C58B;
     --parchment:         #F8F9FA;
     --sand-whisper:      #FAF9F6;
@@ -27,7 +22,7 @@ body{
 .hero-section {
     height: 110vh !important;
     width: 100% !important;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../image_hotel/photo_2026-04-29_20-35-00.jpg) !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0), url(../image_hotel/photo_2026-04-29_20-35-00.jpg)) !important;
     background-size: 100% 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -38,50 +33,50 @@ body{
     font-weight: 350px !important;
     width: 620px !important;
     font-size: 50px !important;
-    border-bottom: 3px solid rgb(253, 141, 5) !important;
+    border-bottom: 3px solid var(--secondary-color) !important;
     
 }
 .find {
-    color: #2C1A0E !important;
+    color: var(--dark-oud) !important;
     border-radius: 10px !important;
     transition: 0.3s !important;
 }
 
 .find:hover {
     transform: scale(1.03) !important;
-    background-color: #fbb801 !important;
-    color: #130b01 !important;
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
 }
 
 /* Normal (inactive) tab */
 .nav-pills .nav-link {
     background-color: transparent !important;
-    color: #ffc107 !important;
+    color: var(--secondary-color) !important;
     /* yellow text */
-    border: 1px solid #ffc107 !important;
+    border: 1px solid var(--secondary-color) !important;
 }
 
 /* Active tab */
 .nav-pills .nav-link.active {
-    background-color: #fdc50d82 !important;
+    background-color: rgba(215, 181, 109, 0.5) !important;
     /* blue */
     color: white !important;
-    border-color: #fdad0d !important;
+    border-color: var(--secondary-color) !important;
 }
 
 /* Hover effect */
 .nav-pills .nav-link:hover {
-    background-color: #ffc107 !important;
+    background-color: var(--secondary-color) !important;
     color: black !important;
 }
 .btn{
-    color: #D4A054 !important;
+    color: var(--secondary-color) !important;
     padding: 3px 15px !important;
-    border:2px solid #C0622A !important;
+    border:2px solid var(--secondary-color) !important;
 }
 .btn:hover{
-    background-color: #C0622A !important;
-    color: #210d01 !important;
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
 }
 
 img {}
@@ -94,40 +89,40 @@ img:hover {
 .menu {
     width: 100% !important;
     height: auto !important;
-    background-color: #412311 !important;
+    background-color: var(--primary-color) !important;
 }
 
 .all {
-    color: #f7f5f1 !important;
+    color: var(--parchment) !important;
     border-radius: 4px !important;
     transition: 0.3s !important;
-    border: 2px solid #402f04 !important;
+    border: 2px solid var(--secondary-color) !important;
     transition: 0.03s !important;
 }
 
 .all:hover {
-    color: #312402 !important;
+    color: var(--primary-color) !important;
     border-radius: 4px !important;
     transition: 0.3s !important;
-    background-color: #D4A054 !important;
+    background-color: var(--secondary-color) !important;
     transform: scale(1.02) !important;
 }
 
 .hotel {
-    background-color: #341503c0 !important;
-    box-shadow: 0px 0px 10px 2px rgba(218, 165, 32, 0.274) !important;
+    background-color: var(--primary-color) !important;
+    box-shadow: 0px 0px 10px 2px rgba(215, 181, 109, 0.2) !important;
 
 }
 
 .hotel:hover {
-    border: 2px solid rgba(218, 165, 32, 0.52) !important;
+    border: 2px solid var(--secondary-color) !important;
 }
 
 .line {
     font-weight: 400px !important;
     width: 270px !important;
     font-size: 5px !important;
-    border-bottom: 1px solid rgb(253, 141, 5) !important;
+    border-bottom: 1px solid var(--secondary-color) !important;
 }
 
 .tab-pane {
