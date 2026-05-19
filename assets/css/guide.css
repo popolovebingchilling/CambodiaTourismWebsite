@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+        :root {
+            /* Primary Brand Identity (Directly from Logo) */
+            --royal-blue: #0D2A43;
+            /* Imperial Blue - Perfectly matched to Logo background */
+            --khmer-gold: #D7B56D;
+            /* Refined Light Gold - Sophisticated and not too yellow */
+            --angkor-stone: #5D4037;
+            /* Ancient Stone - For heritage elements */
+            --silk-saffron: #E67E22;
+            /* Cultural Saffron - For call-to-actions */
+
+            /* Semantic Palette mapped to Brand Colors */
+            --deep-mahogany: var(--royal-blue);
+            --burnt-sienna: var(--angkor-stone);
+            --desert-terracotta: var(--silk-saffron);
+            --amber-dune: var(--khmer-gold);
+            --golden-spice: #E5C58B;
+            --parchment: #F8F9FA;
+            --sand-whisper: #FAF9F6;
+            --night-indigo: #1A365D;
+            --camel-brown: #8D6E63;
+            --dark-oud: #07121C;
+             --card-bg: #070c2943;
+            --card-border: rgba(74, 28, 0, .15);
+            --card-hover-bg: #050f3a53;
+=======
 
         :root {
             --deep-mahogany: #4A1C00;
@@ -12,6 +39,7 @@
             --card-bg: #FEF0CD;
             --card-border: rgba(74, 28, 0, .15);
             --card-hover-bg: #fff5db;
+>>>>>>> b5d5700a916dc32686af85563e7d8df23f5f9090
             --card-hover-border: rgba(74, 28, 0, .25);
             --card-title: #2C1A0E;
             --card-text: #9B6A3A;
@@ -32,12 +60,15 @@
             overflow-x: hidden;
         }
 
+<<<<<<< HEAD
+=======
         /* ── Scrollbar ── */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--parchment); }
         ::-webkit-scrollbar-thumb { background: var(--amber-dune); border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--desert-terracotta); }
 
+>>>>>>> b5d5700a916dc32686af85563e7d8df23f5f9090
         /* ── Hero Section ── */
         .hero-section {
             position: relative;
@@ -47,11 +78,14 @@
             overflow: hidden;
             background: linear-gradient(100deg, var(--dark-oud) 0%, var(--deep-mahogany) 40%, var(--burnt-sienna) 100%);
         }
+<<<<<<< HEAD
+=======
         .hero-overlay {
             position: absolute;
             inset: 0;
             z-index: 1;
         }
+>>>>>>> b5d5700a916dc32686af85563e7d8df23f5f9090
         .hero-bg-img {
             position: absolute;
             inset: 0;
@@ -151,6 +185,37 @@
             opacity: .08;
             z-index: 0;
         }
+<<<<<<< HEAD
+
+        .float-decor-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--amber-dune);
+            top: -100px;
+            right: -100px;
+            animation: floatSlow 8s ease-in-out infinite;
+        }
+
+        .float-decor-2 {
+            width: 250px;
+            height: 250px;
+            background: var(--desert-terracotta);
+            bottom: -50px;
+            left: 10%;
+            animation: floatSlow 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes floatSlow {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-30px) scale(1.05);
+            }
+=======
         .float-decor-1 {
             width: 400px; height: 400px;
             background: var(--amber-dune);
@@ -166,6 +231,7 @@
         @keyframes floatSlow {
             0%, 100% { transform: translateY(0) scale(1); }
             50% { transform: translateY(-30px) scale(1.05); }
+>>>>>>> b5d5700a916dc32686af85563e7d8df23f5f9090
         }
 
         /* ── Section Common ── */
@@ -183,9 +249,17 @@
             color: var(--desert-terracotta);
             margin-bottom: .75rem;
         }
+<<<<<<< HEAD
+
         .section-label i {
             font-size: .7rem;
         }
+
+=======
+        .section-label i {
+            font-size: .7rem;
+        }
+>>>>>>> b5d5700a916dc32686af85563e7d8df23f5f9090
         .section-title {
             font-size: clamp(1.8rem, 4vw, 2.8rem);
             font-weight: 700;
@@ -229,9 +303,17 @@
             box-shadow: var(--card-hover-shadow);
             transform: translateY(-6px);
         }
+<<<<<<< HEAD
+
         .guide-card:hover::before {
             opacity: 1;
         }
+
+=======
+        .guide-card:hover::before {
+            opacity: 1;
+        }
+>>>>>>> b5d5700a916dc32686af85563e7d8df23f5f9090
         .card-icon-wrap {
             width: 56px;
             height: 56px;
@@ -243,6 +325,42 @@
             margin-bottom: 1.25rem;
             transition: transform .3s ease;
         }
+<<<<<<< HEAD
+
+        .guide-card:hover .card-icon-wrap {
+            transform: scale(1.1) rotate(-3deg);
+        }
+
+        .icon-visa {
+            background: rgba(192, 98, 42, .12);
+            color: var(--desert-terracotta);
+        }
+
+        .icon-currency {
+            background: rgba(212, 160, 84, .15);
+            color: var(--amber-dune);
+        }
+
+        .icon-season {
+            background: rgba(123, 45, 0, .1);
+            color: var(--burnt-sienna);
+        }
+
+        .icon-culture {
+            background: rgba(155, 106, 58, .12);
+            color: var(--camel-brown);
+        }
+
+        .icon-safety {
+            background: rgba(74, 28, 0, .1);
+            color: var(--deep-mahogany);
+        }
+
+        .icon-budget {
+            background: rgba(192, 98, 42, .12);
+            color: var(--desert-terracotta);
+        }
+=======
         .guide-card:hover .card-icon-wrap {
             transform: scale(1.1) rotate(-3deg);
         }
@@ -252,6 +370,7 @@
         .icon-culture { background: rgba(155, 106, 58, .12); color: var(--camel-brown); }
         .icon-safety { background: rgba(74, 28, 0, .1); color: var(--deep-mahogany); }
         .icon-budget { background: rgba(192, 98, 42, .12); color: var(--desert-terracotta); }
+>>>>>>> b5d5700a916dc32686af85563e7d8df23f5f9090
 
         .guide-card .card-number {
             font-size: .75rem;
@@ -335,9 +454,17 @@
             letter-spacing: .5px;
             margin-bottom: .2rem;
         }
+<<<<<<< HEAD
+
         .season-item.best .season-months {
             color: var(--amber-dune);
         }
+
+=======
+        .season-item.best .season-months {
+            color: var(--amber-dune);
+        }
+>>>>>>> b5d5700a916dc32686af85563e7d8df23f5f9090
         .season-desc {
             font-size: .9rem;
             color: var(--card-text);
@@ -364,9 +491,17 @@
             border-radius: 12px;
             transition: background .3s ease;
         }
+<<<<<<< HEAD
+
         .budget-tip:hover {
             background: rgba(212, 160, 84, .08);
         }
+
+=======
+        .budget-tip:hover {
+            background: rgba(212, 160, 84, .08);
+        }
+>>>>>>> b5d5700a916dc32686af85563e7d8df23f5f9090
         .budget-tip-icon {
             width: 40px;
             height: 40px;
@@ -392,6 +527,31 @@
             position: relative;
             overflow: hidden;
         }
+<<<<<<< HEAD
+
+        .cta-section::before {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: var(--amber-dune);
+            opacity: .06;
+            top: -200px;
+            right: -100px;
+        }
+
+        .cta-section::after {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: var(--desert-terracotta);
+            opacity: .06;
+            bottom: -100px;
+            left: -50px;
+        }
+
+=======
         .cta-section::before {
             position: absolute;
             width: 500px; height: 500px;
@@ -408,6 +568,7 @@
             opacity: .06;
             bottom: -100px; left: -50px;
         }
+>>>>>>> b5d5700a916dc32686af85563e7d8df23f5f9090
         .cta-title {
             font-size: clamp(1.6rem, 3.5vw, 2.4rem);
             font-weight: 700;
@@ -464,6 +625,47 @@
             opacity: 1;
             transform: translateY(0);
         }
+<<<<<<< HEAD
+
+        .fade-up.delay-1 {
+            transition-delay: .1s;
+        }
+
+        .fade-up.delay-2 {
+            transition-delay: .2s;
+        }
+
+        .fade-up.delay-3 {
+            transition-delay: .3s;
+        }
+
+        .fade-up.delay-4 {
+            transition-delay: .4s;
+        }
+
+        .fade-up.delay-5 {
+            transition-delay: .5s;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 767.98px) {
+            .hero-stats {
+                gap: 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            .hero-stat-num {
+                font-size: 1.5rem;
+            }
+
+            .section-padding {
+                padding: 3.5rem 0;
+            }
+
+            .guide-card {
+                padding: 1.5rem;
+            }
+=======
         .fade-up.delay-1 { transition-delay: .1s; }
         .fade-up.delay-2 { transition-delay: .2s; }
         .fade-up.delay-3 { transition-delay: .3s; }
@@ -476,4 +678,5 @@
             .hero-stat-num { font-size: 1.5rem; }
             .section-padding { padding: 3.5rem 0; }
             .guide-card { padding: 1.5rem; }
+>>>>>>> b5d5700a916dc32686af85563e7d8df23f5f9090
         }
