@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     padding: 0; margin: 0; box-sizing: border-box;
@@ -17,6 +18,44 @@ body{
     font-family: "Kantumruy Pro", sans-serif !important;
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
+=======
+:root {
+    --royal-blue: #0D2A43;
+    --khmer-gold: #D7B56D;
+    --angkor-stone: #5D4037;
+    --midnight-blue: #1A4A6E;
+    --reef-teal: #1B7A8C;
+    --lagoon: #2CA8A0;
+    --sea-glass: #6ECBBF;
+    --foam: #C4E8E4;
+    --morning-mist: #EEF7F6;
+    --sunset-amber: #D97E3B;
+
+    /* Global UI */
+    --card-bg: #ffffff;
+    --card-border: #dbe7e6;
+    --card-hover-bg: #f7fbfb;
+    --card-hover-border: #6ECBBF;
+    --card-shadow: 0 8px 24px rgba(13, 42, 67, 0.08);
+
+    --card-title: #0D2A43;
+    --card-text: #5D4037;
+
+    --primary-btn: #1B7A8C;
+    --primary-btn-hover: #166775;
+
+    --accent-color: #D7B56D;
+
+    --parchment: #ffffff;
+    --dark-oud: #0D2A43;
+
+    --desert-terracotta: #1B7A8C;
+    --burnt-sienna: #1A4A6E;
+    --camel-brown: #5D4037;
+    --amber-dune: #D7B56D;
+    --golden-spice: #D7B56D;
+    --sand-whisper: #EEF7F6;
+>>>>>>> d8d541c9817e3a96ed4acc9d3ccdea315779b7ac
 }
 
 

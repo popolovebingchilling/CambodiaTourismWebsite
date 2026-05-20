@@ -1176,6 +1176,7 @@ body.dark-mode .section-subtitle {
 }
 
 .btn-auth{
+    background-color: var(--primary-color) !important;
     color: white !important;
     padding: 12px !important;
     border-radius: 10px !important;

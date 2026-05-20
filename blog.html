@@ -87,29 +87,46 @@
     </header>
 
     <main>
-        <!-- ── Blog Hero ── -->
-        <section class="bg-mixed blog-hero">
-            <div class="blog-hero-content" data-aos="fade-up">
-                <span class="section-badge mb-3 d-inline-block">រឿងរ៉ាវធ្វើដំណើរ</span>
-                <h1>ស្វែងយល់ពី <span>កម្ពុជា</span> តាមរយៈអត្ថបទ</h1>
-                <p>រុករកនូវរឿងរ៉ាវពិត បទពិសោធន៍ធ្វើដំណើរ និងការណែនាំដ៏ល្អបំផុតពីអ្នកជំនាញទេសចរណ៍ក្នុងតំបន់។</p>
-            </div>
-        </section>
-
-        <!-- ── Featured Post ── -->
-        <section class="bg-mixed featured-blog container" data-aos="fade-up" data-aos-delay="200">
-            <div class="featured-card">
-                <div class="featured-img">
-                    <img src="https://s3.ams.com.kh/infotainment/2024/12/Untitled-1-11.jpg" alt="Featured Post">
+        <!-- ── Bento Hero Section ── -->
+        <section class="bg-mixed py-5 pt-lg-5 pb-lg-5">
+            <div class="container pt-5 mt-4">
+                <div class="text-center mb-5" data-aos="fade-down">
+                    <span class="badge bg-secondary text-white mb-3 px-4 py-2 rounded-pill shadow-sm" style="background: var(--secondary-color) !important; color: var(--primary-color) !important;">រឿងរ៉ាវធ្វើដំណើរ</span>
+                    <h1 class="display-3 fw-bold text-dark">ស្វែងយល់ពី <span class="text-primary-color" style="color: var(--secondary-color) !important;">កម្ពុជា</span></h1>
+                    <p class="text-muted fs-5 mt-3">រុករកនូវរឿងរ៉ាវពិត បទពិសោធន៍ធ្វើដំណើរ និងការណែនាំដ៏ល្អបំផុតពីអ្នកជំនាញទេសចរណ៍ក្នុងតំបន់។</p>
                 </div>
-                <div class="featured-content">
-                    <div class="featured-meta">
-                        <span class="featured-category">ប្រវត្តិសាស្ត្រ</span>
-                        <span class="featured-date">១០ មីនា, ២០២៦</span>
-                    </div>
-                    <h2>ដើរតាមគន្លងអង្គរ៖ ដំណើររុករកប្រាសាទដែលលាក់ខ្លួន</h2>
-                    <p>បទពិសោធន៍ថ្មីក្នុងការរុករកប្រាសាទបុរាណដែលមិនទាន់មានការជួសជុល និងសម្រស់បែបធម្មជាតិដែលហ៊ុមព័ទ្ធដោយព្រៃប្រឹក្សាដ៏ត្រជាក់ស្រស់បំព្រង។</p>
-                    <a href="blog-siem-reap.html" class="btn-royal px-4 py-2 rounded-pill fw-bold w-fit">អានអត្ថបទពេញ <i class="fas fa-arrow-right ms-2"></i></a>
+                
+                <div class="bento-hero-grid">
+                    <!-- Main Large Featured Post (Left, spans 2 columns, 2 rows) -->
+                    <a href="blog-siem-reap.html" class="bento-item main-bento" data-aos="fade-right">
+                        <img src="https://s3.ams.com.kh/infotainment/2024/12/Untitled-1-11.jpg" alt="Featured Post">
+                        <div class="bento-overlay">
+                            <span class="bento-category">ប្រវត្តិសាស្ត្រ</span>
+                            <h2>ដើរតាមគន្លងអង្គរ៖ ដំណើររុករកប្រាសាទដែលលាក់ខ្លួន</h2>
+                            <p>បទពិសោធន៍ថ្មីក្នុងការរុករកប្រាសាទបុរាណដែលមិនទាន់មានការជួសជុល និងសម្រស់បែបធម្មជាតិដែលហ៊ុមព័ទ្ធដោយព្រៃប្រឹក្សាដ៏ត្រជាក់ស្រស់បំព្រង។</p>
+                            <span class="bento-date">១០ មីនា, ២០២៦</span>
+                        </div>
+                    </a>
+
+                    <!-- Top Right Small Featured Post -->
+                    <a href="blog-kampot.html" class="bento-item sub-bento" data-aos="fade-left" data-aos-delay="100">
+                        <img src="https://amber-kampot.com/wp-content/uploads/2020/12/ingredients4.jpg" alt="Kampot Pepper">
+                        <div class="bento-overlay">
+                            <span class="bento-category">ម្ហូបអាហារ</span>
+                            <h3>រសជាតិម្រេចកំពត៖ អាថ៌កំបាំងម្ហូបខ្មែរ</h3>
+                            <span class="bento-date">១៥ មីនា, ២០២៦</span>
+                        </div>
+                    </a>
+
+                    <!-- Bottom Right Small Featured Post -->
+                    <a href="blog-koh-kong.html" class="bento-item sub-bento" data-aos="fade-left" data-aos-delay="200">
+                        <img src="https://s5.kh1.co/d6/d681143a7204d14b47a7e6e91e68d8dcc74c169d.jpg" alt="Koh Kong">
+                        <div class="bento-overlay">
+                            <span class="bento-category">ធម្មជាតិ</span>
+                            <h3>កោះកុង៖ ឋានសួគ៌អេកូទេសចរណ៍ដ៏ធំបំផុត</h3>
+                            <span class="bento-date">១៥ កុម្ភៈ, ២០២៦</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -288,16 +305,22 @@
             </div>
         </section>
 
-        <!-- ── Newsletter Section ── -->
-        <section class="bg-mixed container" data-aos="zoom-in">
-            <div class="newsletter-section">
-                <div class="newsletter-content">
-                    <h2>ទទួលបានរឿងរ៉ាវថ្មីៗ</h2>
-                    <p>ចុះឈ្មោះដើម្បីទទួលបានអត្ថបទទេសចរណ៍ថ្មីៗ ការបញ្ចុះតម្លៃពិសេស និងការណែនាំពីគោលដៅទេសចរណ៍ល្អៗមុនគេ។</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="បញ្ចូលអាសយដ្ឋានអ៊ីមែលរបស់អ្នក" required>
-                        <button type="submit" class="btn-newsletter">ចុះឈ្មោះឥឡូវនេះ</button>
-                    </form>
+        <!-- ── Cinematic Newsletter ── -->
+        <section class="bg-mixed cinematic-newsletter py-5">
+            <div class="container" data-aos="fade-up">
+                <div class="newsletter-banner shadow-lg">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 text-white mb-4 mb-lg-0">
+                            <h2 class="fw-bold mb-3">ទទួលបានរឿងរ៉ាវថ្មីៗ</h2>
+                            <p class="mb-0 opacity-75 fs-5">ចុះឈ្មោះដើម្បីទទួលបានអត្ថបទទេសចរណ៍ថ្មីៗ ការបញ្ចុះតម្លៃ និងការណែនាំមុនគេ។</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <form class="d-flex gap-2">
+                                <input type="email" class="form-control form-control-lg rounded-pill px-4 border-0" placeholder="អាសយដ្ឋានអ៊ីមែលរបស់អ្នក..." required>
+                                <button type="submit" class="btn rounded-pill px-4 fw-bold shadow-sm" style="background: var(--secondary-color); color: var(--primary-color);">ចុះឈ្មោះ</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
