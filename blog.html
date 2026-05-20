@@ -10,10 +10,8 @@
     <link rel="stylesheet" href="assets/css/blog.css">
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
-    <!-- BOOTSTRAP THEME  -->
+    <!-- BOOTSTRAP THEME  -->   
     <link rel="stylesheet" href="assets/css/theme.css">
-    <!-- BLOG CSS -->
-    <link rel="stylesheet" href="assets/css/blog.css">
     <!-- FONT AWESOME FOR ICON -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- BOOTSTRAP ICON -->
@@ -47,8 +45,8 @@
                             <a class="nav-link dropdown-toggle px-3" href="#" role="button"
                                 data-bs-toggle="dropdown">គោលដៅ</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-content dropdown-item" href="sr.html">សៀមរាប</a></li>
-                                <li><a class="dropdown-content dropdown-item" href="#">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="siem-reap.html">សៀមរាប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="phnompenh.html">ភ្នំពេញ</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a>
@@ -90,7 +88,7 @@
 
     <main>
         <!-- ── Blog Hero ── -->
-        <section class="blog-hero">
+        <section class="bg-mixed blog-hero">
             <div class="blog-hero-content" data-aos="fade-up">
                 <span class="section-badge mb-3 d-inline-block">រឿងរ៉ាវធ្វើដំណើរ</span>
                 <h1>ស្វែងយល់ពី <span>កម្ពុជា</span> តាមរយៈអត្ថបទ</h1>
@@ -99,7 +97,7 @@
         </section>
 
         <!-- ── Featured Post ── -->
-        <section class="featured-blog container" data-aos="fade-up" data-aos-delay="200">
+        <section class="bg-mixed featured-blog container" data-aos="fade-up" data-aos-delay="200">
             <div class="featured-card">
                 <div class="featured-img">
                     <img src="https://s3.ams.com.kh/infotainment/2024/12/Untitled-1-11.jpg" alt="Featured Post">
@@ -117,160 +115,172 @@
         </section>
 
         <!-- ── Blog Grid ── -->
-        <section class="blog-grid-section container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title">អត្ថបទ<span>ថ្មីៗបំផុត</span></h2>
-                <div class="title-line mx-auto"></div>
-            </div>
+        <section class="bg-mixed blog-grid-section py-5">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="badge bg-secondary text-white mb-2 px-3 py-2 rounded-pill">អត្ថបទថ្មីៗ</span>
+                    <h2 class="display-5 fw-bold text-dark">រឿងរ៉ាវសម្រស់កម្ពុជា</h2>
+                    <p class="text-muted">ស្វែងយល់ពីកម្ពុជាតាមរយៈអត្ថបទដែលបានរៀបចំយ៉ាងសម្រិតសម្រាំង</p>
+                </div>
 
-            <div class="row g-4">
-                <!-- Blog 1: Preah Sihanouk -->
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="blog-card-premium">
-                        <div class="blog-img-box">
-                            <img src="assets/image/Preah-Sihanouk.jpg" alt="Preah Sihanouk">
-                            <span class="blog-badge">មគ្គុទ្ទេសក៍</span>
-                        </div>
-                        <div class="blog-content-premium">
-                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ២០ មីនា, ២០២៦</div>
-                            <h3>កោះសម្ងាត់ទាំង ៥ នៅខេត្តព្រះសីហនុ</h3>
-                            <p>ស្វែងយល់ពីកោះដែលស្ងប់ស្ងាត់ និងមានសម្រស់ស្រស់ស្អាតបំផុតដែលមិនទាន់មានមនុស្សស្គាល់ច្រើននៅក្នុងខេត្តព្រះសីហនុ។</p>
-                            <div class="blog-footer-premium">
-                                <a href="blog-preah-sihanouk.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
-                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ៥ នាទី</span>
+                <div class="row g-4">
+                    <!-- Blog Post 1: Preah Sihanouk -->
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="blog-card-home">
+                            <div class="blog-img-wrapper">
+                                <img src="assets/image/Preah-Sihanouk.jpg" alt="Blog 1">
+                                <span class="blog-category">មគ្គុទ្ទេសក៍</span>
+                            </div>
+                            <div class="blog-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt me-1"></i> ២០ មីនា, ២០២៦</span>
+                                </div>
+                                <h4>កោះសម្ងាត់ទាំង ៥ នៅខេត្តព្រះសីហនុ</h4>
+                                <p>ស្វែងយល់ពីកោះដែលស្ងប់ស្ងាត់
+                                    និងមានសម្រស់ស្រស់ស្អាតបំផុតដែលមិនទាន់មានមនុស្សស្គាល់ច្រើន...</p>
+                                <a href="blog-preah-sihanouk.html" class="read-more-link">អានបន្ថែម <i
+                                        class="fas fa-chevron-right ms-1"></i></a>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Blog 2: Kampot -->
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="blog-card-premium">
-                        <div class="blog-img-box">
-                            <img src="https://amber-kampot.com/wp-content/uploads/2020/12/ingredients4.jpg" alt="Kampot">
-                            <span class="blog-badge">ម្ហូបអាហារ</span>
-                        </div>
-                        <div class="blog-content-premium">
-                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ១៥ មីនា, ២០២៦</div>
-                            <h3>រសជាតិម្រេចកំពត៖ អាថ៌កំបាំងម្ហូបខ្មែរ</h3>
-                            <p>ដំណើរទៅកាន់ចម្ការម្រេចដ៏ល្បីល្បាញ និងការស្វែងយល់ពីវិធីចម្អិនម្ហូបជាមួយម្រេចលំដាប់ពិភពលោកដែលអ្នកមិនគួររំលង។</p>
-                            <div class="blog-footer-premium">
-                                <a href="blog-kampot.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
-                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ៨ នាទី</span>
+                    <!-- Blog Post 2: Kampot -->
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="blog-card-home">
+                            <div class="blog-img-wrapper">
+                                <img src="https://amber-kampot.com/wp-content/uploads/2020/12/ingredients4.jpg"
+                                    alt="Blog 2">
+                                <span class="blog-category">ម្ហូបអាហារ</span>
+                            </div>
+                            <div class="blog-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt me-1"></i> ១៥ មីនា, ២០២៦</span>
+                                </div>
+                                <h4>រសជាតិម្រេចកំពត៖ អាថ៌កំបាំងម្ហូបខ្មែរ</h4>
+                                <p>ដំណើរទៅកាន់ចម្ការម្រេចដ៏ល្បីល្បាញ
+                                    និងការស្វែងយល់ពីវិធីចម្អិនម្ហូបជាមួយម្រេចលំដាប់ពិភពលោក...</p>
+                                <a href="blog-kampot.html" class="read-more-link">អានបន្ថែម <i
+                                        class="fas fa-chevron-right ms-1"></i></a>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Blog 3: Battambang -->
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class="blog-card-premium">
-                        <div class="blog-img-box">
-                            <img src="https://cdn.cc-times.com/kh.cc-times.com/media/44613/large/428600950_702823458693368_13739922186157254_n.jpg?1708487102" alt="Battambang">
-                            <span class="blog-badge">សិល្បៈ</span>
-                        </div>
-                        <div class="blog-content-premium">
-                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ០៥ មីនា, ២០២៦</div>
-                            <h3>បាត់ដំបង៖ ទីក្រុងនៃសិល្បៈ និងវប្បធម៌</h3>
-                            <p>ស្វែងយល់ពីមូលហេតុដែលបាត់ដំបងក្លាយជាមជ្ឈមណ្ឌលសិល្បៈដ៏សំខាន់ និងជាទីក្រុងដ៏ទាក់ទាញបំផុតរបស់កម្ពុជា។</p>
-                            <div class="blog-footer-premium">
-                                <a href="blog-battambang.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
-                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ៦ នាទី</span>
+                    <!-- Blog Post 3: Siem Reap -->
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="blog-card-home">
+                            <div class="blog-img-wrapper">
+                                <img src="https://s3.ams.com.kh/infotainment/2024/12/Untitled-1-11.jpg" alt="Blog 3">
+                                <span class="blog-category">ប្រវត្តិសាស្ត្រ</span>
+                            </div>
+                            <div class="blog-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt me-1"></i> ១០ មីនា, ២០២៦</span>
+                                </div>
+                                <h4>ដើរតាមគន្លងអង្គរ៖ ដំណើររុករកប្រាសាទ</h4>
+                                <p>បទពិសោធន៍ថ្មីក្នុងការរុករកប្រាសាទបុរាណដែលមិនទាន់មានការជួសជុល និងសម្រស់បែបធម្មជាតិ...
+                                </p>
+                                <a href="blog-siem-reap.html" class="read-more-link">អានបន្ថែម <i
+                                        class="fas fa-chevron-right ms-1"></i></a>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Blog 4: Phnom Penh -->
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="blog-card-premium">
-                        <div class="blog-img-box">
-                            <img src="https://www.novotelphnompenhbkk1.com/wp-content/uploads/sites/53/2025/02/Things-to-do-in-Phnom-Penh.jpg" alt="Phnom Penh">
-                            <span class="blog-badge">ជីវិតរស់នៅ</span>
-                        </div>
-                        <div class="blog-content-premium">
-                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ០១ មីនា, ២០២៦</div>
-                            <h3>ភ្នំពេញពេលរាត្រី៖ សម្រស់រាជធានីសម័យថ្មី</h3>
-                            <p>ទិដ្ឋភាពដ៏ស្រស់ស្អាតនៃរាជធានីភ្នំពេញនៅពេលយប់ និងកន្លែងកម្សាន្តដែលពេញនិយមបំផុតសម្រាប់យុវវ័យសម័យថ្មី។</p>
-                            <div class="blog-footer-premium">
-                                <a href="blog-phnom-penh.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
-                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ៧ នាទី</span>
+                    <!-- Blog Post 4: Battambang -->
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="blog-card-home">
+                            <div class="blog-img-wrapper">
+                                <img src="https://cdn.cc-times.com/kh.cc-times.com/media/44613/large/428600950_702823458693368_13739922186157254_n.jpg?1708487102"
+                                    alt="Blog 4">
+                                <span class="blog-category">សិល្បៈ</span>
+                            </div>
+                            <div class="blog-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt me-1"></i> ០៥ មីនា, ២០២៦</span>
+                                </div>
+                                <h4>បាត់ដំបង៖ ទីក្រុងនៃសិល្បៈ និងវប្បធម៌</h4>
+                                <p>ស្វែងយល់ពីមូលហេតុដែលបាត់ដំបងក្លាយជាមជ្ឈមណ្ឌលសិល្បៈដ៏សំខាន់របស់កម្ពុជា</p>
+                                <a href="blog-battambang.html" class="read-more-link">អានបន្ថែម <i
+                                        class="fas fa-chevron-right ms-1"></i></a>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Blog 5: Kep -->
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="blog-card-premium">
-                        <div class="blog-img-box">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxHhYr-BtaHGTwuzkkIyqX1AQxoDZKuO_5VA&s" alt="Kep">
-                            <span class="blog-badge">ដំណើរកម្សាន្ត</span>
-                        </div>
-                        <div class="blog-content-premium">
-                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ២៥ កុម្ភៈ, ២០២៦</div>
-                            <h3>ផ្សារក្តាមកែប៖ គោលដៅសម្រាប់គ្រឿងសមុទ្រ</h3>
-                            <p>រសជាតិក្តាមស្រស់ៗ និងបរិយាកាសឆ្នេរសមុទ្រដ៏ស្ងប់ស្ងាត់ដែលអ្នកមិនគួររំលងនៅពេលទៅកម្សាន្តនៅខេត្តកែប។</p>
-                            <div class="blog-footer-premium">
-                                <a href="blog-kep.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
-                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ៤ នាទី</span>
+                    <!-- Blog Post 5: Phnom Penh -->
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="blog-card-home">
+                            <div class="blog-img-wrapper">
+                                <img src="https://www.novotelphnompenhbkk1.com/wp-content/uploads/sites/53/2025/02/Things-to-do-in-Phnom-Penh.jpg"
+                                    alt="Blog 5">
+                                <span class="blog-category">ជីវិតរស់នៅ</span>
+                            </div>
+                            <div class="blog-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt me-1"></i> ០១ មីនា, ២០២៦</span>
+                                </div>
+                                <h4>ភ្នំពេញពេលរាត្រី៖ សម្រស់រាជធានីសម័យថ្មី</h4>
+                                <p>ទិដ្ឋភាពដ៏ស្រស់ស្អាតនៃរាជធានីភ្នំពេញនៅពេលយប់ និងកន្លែងកម្សាន្តដែលពេញនិយមបំផុត</p>
+                                <a href="blog-phnom-penh.html" class="read-more-link">អានបន្ថែម <i
+                                        class="fas fa-chevron-right ms-1"></i></a>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Blog 6: Mondulkiri -->
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class="blog-card-premium">
-                        <div class="blog-img-box">
-                            <img src="https://www.boboandchichi.com/wp-content/uploads/Three-Elephant-Pals.jpg" alt="Mondulkiri">
-                            <span class="blog-badge">ផ្សងព្រេង</span>
-                        </div>
-                        <div class="blog-content-premium">
-                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ២០ កុម្ភៈ, ២០២៦</div>
-                            <h3>មណ្ឌលគិរី៖ សម្រស់នៃភ្នំ និងសត្វដំរី</h3>
-                            <p>ដំណើរផ្សងព្រេងក្នុងព្រៃជ្រៅ និងការរស់នៅជាមួយសត្វដំរីតាមបែបធម្មជាតិពិតៗដែលអ្នកនឹងរកឃើញតែនៅមណ្ឌលគិរី។</p>
-                            <div class="blog-footer-premium">
-                                <a href="blog-mondulkiri.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
-                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ១០ នាទី</span>
+                    <!-- Blog Post 6: Kep -->
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="blog-card-home">
+                            <div class="blog-img-wrapper">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxHhYr-BtaHGTwuzkkIyqX1AQxoDZKuO_5VA&s"
+                                    alt="Blog 6">
+                                <span class="blog-category">ដំណើរកម្សាន្ត</span>
+                            </div>
+                            <div class="blog-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt me-1"></i> ២៥ កុម្ភៈ, ២០២៦</span>
+                                </div>
+                                <h4>ផ្សារក្តាមកែប៖ គោលដៅសម្រាប់អ្នកនិយមគ្រឿងសមុទ្រ</h4>
+                                <p>រសជាតិក្តាមស្រស់ៗ និងបរិយាកាសឆ្នេរសមុទ្រដ៏ស្ងប់ស្ងាត់ដែលអ្នកមិនគួររំលង</p>
+                                <a href="blog-kep.html" class="read-more-link">អានបន្ថែម <i
+                                        class="fas fa-chevron-right ms-1"></i></a>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Blog 7: Koh Kong -->
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="blog-card-premium">
-                        <div class="blog-img-box">
-                            <img src="https://s5.kh1.co/d6/d681143a7204d14b47a7e6e91e68d8dcc74c169d.jpg" alt="Koh Kong">
-                            <span class="blog-badge">ធម្មជាតិ</span>
-                        </div>
-                        <div class="blog-content-premium">
-                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ១៥ កុម្ភៈ, ២០២៦</div>
-                            <h3>កោះកុង៖ ឋានសួគ៌អេកូទេសចរណ៍ដ៏ធំ</h3>
-                            <p>រុករកព្រៃកោងកាងដ៏ធំល្វឹងល្វើយ និងប្រព័ន្ធអេកូឡូស៊ីសមុទ្រដែលសម្បូរបែបបំផុតនៅក្នុងប្រទេសកម្ពុជា។</p>
-                            <div class="blog-footer-premium">
-                                <a href="blog-koh-kong.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
-                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ៩ នាទី</span>
+                    <!-- Blog Post 7: Mondulkiri -->
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="blog-card-home">
+                            <div class="blog-img-wrapper">
+                                <img src="https://www.boboandchichi.com/wp-content/uploads/Three-Elephant-Pals.jpg"
+                                    alt="Blog 7">
+                                <span class="blog-category">ផ្សងព្រេង</span>
+                            </div>
+                            <div class="blog-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt me-1"></i> ២០ កុម្ភៈ, ២០២៦</span>
+                                </div>
+                                <h4>មណ្ឌលគិរី៖ សម្រស់នៃភ្នំ និងសត្វដំរី</h4>
+                                <p>ដំណើរផ្សងព្រេងក្នុងព្រៃជ្រៅ និងការរស់នៅជាមួយសត្វដំរីតាមបែបធម្មជាតិពិតៗ...</p>
+                                <a href="blog-mondulkiri.html" class="read-more-link">អានបន្ថែម <i
+                                        class="fas fa-chevron-right ms-1"></i></a>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Blog 8: Siem Reap (Extra/Re-featured) -->
-                <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="blog-card-premium">
-                        <div class="blog-img-box">
-                            <img src="assets/image/siem-reap.png" alt="Siem Reap">
-                            <span class="blog-badge">ប្រវត្តិសាស្ត្រ</span>
-                        </div>
-                        <div class="blog-content-premium">
-                            <div class="blog-date-premium"><i class="far fa-calendar-alt"></i> ១០ កុម្ភៈ, ២០២៦</div>
-                            <h3>អង្គរវត្ត៖ បេតិកភណ្ឌដែលមិនចេះរីងស្ងួត</h3>
-                            <p>ស្វែងយល់ពីភាពអស្ចារ្យនៃប្រាសាទអង្គរវត្ត និងរឿងរ៉ាវប្រវត្តិសាស្ត្រដែលអ្នកមិនធ្លាប់ដឹងពីមុនមក។</p>
-                            <div class="blog-footer-premium">
-                                <a href="blog-siem-reap.html" class="read-more-premium">អានបន្ថែម <i class="fas fa-arrow-right"></i></a>
-                                <span class="text-muted small"><i class="far fa-clock me-1"></i> ១២ នាទី</span>
+                    <!-- Blog Post 8: Koh Kong -->
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="blog-card-home">
+                            <div class="blog-img-wrapper">
+                                <img src="https://s5.kh1.co/d6/d681143a7204d14b47a7e6e91e68d8dcc74c169d.jpg"
+                                    alt="Blog 8">
+                                <span class="blog-category">ធម្មជាតិ</span>
+                            </div>
+                            <div class="blog-body">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt me-1"></i> ១៥ កុម្ភៈ, ២០២៦</span>
+                                </div>
+                                <h4>កោះកុង៖ ឋានសួគ៌អេកូទេសចរណ៍ដ៏ធំបំផុត</h4>
+                                <p>រុករកព្រៃកោងកាងដ៏ធំល្វឹងល្វើយ និងប្រព័ន្ធអេកូឡូស៊ីសមុទ្រដែលសម្បូរបែបបំផុត...</p>
+                                <a href="blog-koh-kong.html" class="read-more-link">អានបន្ថែម <i
+                                        class="fas fa-chevron-right ms-1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -279,7 +289,7 @@
         </section>
 
         <!-- ── Newsletter Section ── -->
-        <section class="container" data-aos="zoom-in">
+        <section class="bg-mixed container" data-aos="zoom-in">
             <div class="newsletter-section">
                 <div class="newsletter-content">
                     <h2>ទទួលបានរឿងរ៉ាវថ្មីៗ</h2>

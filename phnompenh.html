@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>រាជធានីភ្នំពេញ - ទេសចរណ៍កម្ពុជា</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- HTML CSS -->
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <link rel="stylesheet" href="assets/css/phnompenh.css">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
+    <!-- BOOTSTRAP THEME  -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <!-- FONT AWESOME FOR ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- BOOTSTRAP ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container py-2">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="assets/image/new_logo_v2.png" alt="Logo" width="45" height="45" class="me-2">
+                    <div class="d-flex flex-column lh-1">
+                        <span class="text-secondary small">ទេសចរណ៍កម្ពុជា</span>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link active rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                                data-bs-toggle="dropdown">គោលដៅ</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="siem-reap.html">សៀមរាប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="phnompenh.html">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="battambang.html">បាត់ដំបង</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="mondulkiri.html">មណ្ឌលគិរី</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="koh-kong.html">កោះកុង</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                                data-bs-toggle="dropdown">សេវាកម្ម</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="hotels.html">សណ្ឋាគារ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="restaurants.html">ភោជនីយដ្ឋាន</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="guide.html">មគ្គុទ្ទេសក៍</a></li>
+                                <li><a class="dropdown-content dropdown-item"
+                                        href="transportation.html">ការដឹកជញ្ជូន</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link px-3" href="#">វិចិត្រសាល</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex align-items-center gap-3">
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="btn btn-link text-white p-0 border-0 fs-5"
+                        title="ផ្លាស់ប្តូរពន្លឺ">
+                        <i class="bi bi-moon-stars-fill"></i>
+                    </button>
+                    <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
+                    <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- HERO -->
+    <section class="pp-hero" id="hero">
+        <div class="text-center text-white px-3" style="z-index:2;position:relative;">
+            <h1 class="reveal" style="animation-delay:0.2s;
+            font-size:clamp(2.8rem,7vw,5.5rem);text-shadow:0 4px 20px rgba(0,0,0,0.5);">
+                <span style="color:var(--golden-spice);">ភ្នំ</span>ពេញ
+            </h1>
+            <p class="reveal lead mb-4" style="animation-delay:0.4s;max-width:600px;margin:0 auto;opacity:0.9;">
+                រាជធានី · ប្រវត្តិ · វប្បធម៌ · ទីក្រុងទំនើប
+            </p>
+            <div class="reveal d-flex gap-3 justify-content-center flex-wrap" style="animation-delay:0.6s;">
+                <a href="#attractions" class="btn btn-hero-primary rounded-pill px-4 py-2">
+                    <i class="bi bi-compass me-2"></i>រុករកឥឡូវ
+                </a>
+                <a href="review.html" class="btn btn-hero-outline rounded-pill px-4 py-2">
+                    <i class="bi bi-star me-2"></i>ចែករំលែកបទពិសោធ
+                </a>
+            </div>
+            <div class="d-flex justify-content-center gap-4 mt-5 reveal" style="animation-delay:0.8s;">
+                <div class="text-center">
+                    <div style="font-size:1.8rem;font-weight:700;color:var(--golden-spice);">2M+</div>
+                    <div style="font-size:0.8rem;opacity:0.8;">ប្រជាជន</div>
+                </div>
+                <div style="width:1px;background:rgba(255,255,255,0.3);"></div>
+                <div class="text-center">
+                    <div style="font-size:1.8rem;font-weight:700;color:var(--golden-spice);">678 km²</div>
+                    <div style="font-size:0.8rem;opacity:0.8;">ផ្ទៃដី</div>
+                </div>
+                <div style="width:1px;background:rgba(255,255,255,0.3);"></div>
+                <div class="text-center">
+                    <div style="font-size:1.8rem;font-weight:700;color:var(--golden-spice);">1434</div>
+                    <div style="font-size:0.8rem;opacity:0.8;">ឆ្នាំបង្កើត</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-line">
+            <span style="font-size:0.75rem;letter-spacing:2px;">រំកិលចុះក្រោម</span>
+            <i class="bi bi-chevron-double-down"></i>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="bg-gradient-stone about-section" id="about">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal-left">
+                    <p class="section-label">អំពីរាជធានី</p>
+                    <h2 class="section-title-km">រាជធានីភ្នំពេញ</h2>
+                    <div class="divider-ornament"><i class="bi bi-stars fs-3" style="color:var(--secondary-color);"></i></div>
+                    <p class="mb-4" style="line-height:2;color:var(--night-indigo);">
+                        រាជធានីភ្នំពេញជាទីក្រុងធំបំផុត និងជារាជធានីនៃព្រះរាជាណាចក្រកម្ពុជា។
+                        ក្រុងនេះស្ថិតនៅចំណុចប្រសព្វនៃទន្លេ ទន្លេមេគង្គ ទន្លេបាសាក់ និងទន្លេសាប
+                        ហើយជាមជ្ឈមណ្ឌលនយោបាយ សេដ្ឋកិច្ច និងវប្បធម៌នៃប្រទេស។
+                    </p>
+                    <p style="line-height:2;color:var(--night-indigo);">
+                        ភ្នំពេញបញ្ចូលរួមនូវស្ថាបត្យកម្មបារាំង-ខ្មែរ ព្រះបរមរាជវាំង
+                        សារមន្ទីរជាតិ ហើយនិងជីវិតទីក្រុងដ៏រស់រវើក។
+                    </p>
+                    <a href="#attractions" class="btn btn-book-now mt-4 rounded-pill px-4">
+                        <i class="bi bi-arrow-down me-2"></i>ស្វែងយល់បន្ថែម
+                    </a>
+                </div>
+                <div class="col-lg-6 reveal-right">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <div class="stat-number">12</div>
+                                <p class="mb-0 small" style="color:var(--camel-brown);">ខណ្ឌ</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <div class="stat-number">2M+</div>
+                                <p class="mb-0 small" style="color:var(--camel-brown);">ប្រជាជន</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <div class="stat-number">590+</div>
+                                <p class="mb-0 small" style="color:var(--camel-brown);">ឆ្នាំប្រវត្តិ</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-box">
+                                <div class="stat-number">4</div>
+                                <p class="mb-0 small" style="color:var(--camel-brown);">ទន្លេប្រសព្វ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ATTRACTIONS -->
+    <section class="bg-gradient-dark attractions-section" id="attractions">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <h2 class="section-label">ទីតាំងកំសាន្ត</h2>
+                <h2 class="section-title-km">តំបន់ទេសចរណ៍ក្នុងភ្នំពេញ</h2>
+                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3"
+                        style="color:var(--secondary-color);"></i></div>
+            </div>
+            <div class="row g-4">
+
+                <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.1s">
+                    <div class="attraction-card-pp h-100">
+                        <div class="attraction-img-wrap">
+                            <img src="assets/image/phnom-penh.png" alt="ព្រះបរមរាជវាំង" class="attraction-img"
+                                onerror="this.src='https://placehold.co/400x240/4A1C00/FEF0CD?text=ព្រះបរមរាជវាំង'">
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0" style="color:var(--deep-mahogany);">ព្រះបរមរាជវាំង</h5>
+                                <span class="attraction-tag">ប្រវត្តិ</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 mb-3">
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <span class="small ms-1" style="color:var(--camel-brown);">5.0</span>
+                            </div>
+                            <p class="small mb-3" style="color:var(--night-indigo);line-height:1.8;">
+                                ទីលំនៅរបស់ព្រះបាទ នរោត្ដម សីហមុនី
+                                ជាស្ថាបត្យកម្មខ្មែរប្រពៃណីដ៏ស្រស់ស្អាត
+                                ដែលត្រូវតែទស្សនា។
+                            </p>
+                            <div class="d-flex gap-3 text-muted small">
+                                <span><i class="bi bi-clock me-1"></i>ម៉ោង ៨ ព្រឹក</span>
+                                <span><i class="bi bi-ticket me-1"></i>$10/នាក់</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.2s">
+                    <div class="attraction-card-pp h-100">
+                        <div class="attraction-img-wrap">
+                            <img src="../image/watphnom.jpg" alt="វត្តភ្នំ" class="attraction-img"
+                                onerror="this.src='https://placehold.co/400x240/7B2D00/FEF0CD?text=វត្តភ្នំ'">
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0" style="color:var(--deep-mahogany);">វត្តភ្នំ</h5>
+                                <span class="attraction-tag">វត្ត</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 mb-3">
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-half text-warning small"></i>
+                                <span class="small ms-1" style="color:var(--camel-brown);">4.7</span>
+                            </div>
+                            <p class="small mb-3" style="color:var(--night-indigo);line-height:1.8;">
+                                ប្រភពដើមនៃឈ្មោះ "ភ្នំពេញ"
+                                ប្រាសាទប្រវត្តិដែលបង្កើតឡើង
+                                ក្នុងឆ្នាំ ១៣៧២។
+                            </p>
+                            <div class="d-flex gap-3 text-muted small">
+                                <span><i class="bi bi-clock me-1"></i>ពេញមួយថ្ងៃ</span>
+                                <span><i class="bi bi-ticket me-1"></i>$1/នាក់</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.3s">
+                    <div class="attraction-card-pp h-100">
+                        <div class="attraction-img-wrap">
+                            <img src="../image/tuolsleng.jpg" alt="Tuol Sleng" class="attraction-img"
+                                onerror="this.src='https://placehold.co/400x240/3D405B/FEF0CD?text=Tuol+Sleng'">
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0" style="color:var(--deep-mahogany);">សារមន្ទីរ Tuol Sleng</h5>
+                                <span class="attraction-tag">ប្រវត្តិ</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 mb-3">
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star text-warning small"></i>
+                                <span class="small ms-1" style="color:var(--camel-brown);">4.5</span>
+                            </div>
+                            <p class="small mb-3" style="color:var(--night-indigo);line-height:1.8;">
+                                សារមន្ទីរ Genocide រំឭកដល់
+                                ប្រវត្តិឈឺចាប់នៃរបបខ្មែរក្រហម
+                                ១៩៧៥–១៩៧៩។
+                            </p>
+                            <div class="d-flex gap-3 text-muted small">
+                                <span><i class="bi bi-clock me-1"></i>ម៉ោង ៨ ព្រឹក</span>
+                                <span><i class="bi bi-ticket me-1"></i>$5/នាក់</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.1s">
+                    <div class="attraction-card-pp h-100">
+                        <div class="attraction-img-wrap">
+                            <img src="../image/centralmarket.jpg" alt="ផ្សារថ្មី" class="attraction-img"
+                                onerror="this.src='https://placehold.co/400x240/C0622A/FEF0CD?text=ផ្សារថ្មី'">
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0" style="color:var(--deep-mahogany);">ផ្សារថ្មី</h5>
+                                <span class="attraction-tag">ផ្សារ</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 mb-3">
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star text-warning small"></i>
+                                <span class="small ms-1" style="color:var(--camel-brown);">4.4</span>
+                            </div>
+                            <p class="small mb-3" style="color:var(--night-indigo);line-height:1.8;">
+                                ផ្សារ Art Deco បារាំង ដ៏ល្បី
+                                ជាកន្លែងទិញទំនិញ ក្រណាត់
+                                ចិញ្ចៀន និងស្ថាបត្យប្រពៃណី។
+                            </p>
+                            <div class="d-flex gap-3 text-muted small">
+                                <span><i class="bi bi-clock me-1"></i>ម៉ោង ៧ ព្រឹក</span>
+                                <span><i class="bi bi-ticket me-1"></i>ឥតគិតថ្លៃ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.2s">
+                    <div class="attraction-card-pp h-100">
+                        <div class="attraction-img-wrap">
+                            <img src="../image/riverfront.jpg" alt="ច្រាំងទន្លេ" class="attraction-img"
+                                onerror="this.src='https://placehold.co/400x240/D4A054/2C1A0E?text=ច្រាំងទន្លេ'">
+                         </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0" style="color:var(--deep-mahogany);">ច្រាំងទន្លេ</h5>
+                                <span class="attraction-tag">ទេសភាព</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 mb-3">
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-half text-warning small"></i>
+                                <span class="small ms-1" style="color:var(--camel-brown);">4.6</span>
+                            </div>
+                            <p class="small mb-3" style="color:var(--night-indigo);line-height:1.8;">
+                                ដើរលំហែ ថតរូប និងរីករាយ
+                                ជាមួយទស្សនីយភាពទន្លេ
+                                ពីព្រលឹមដល់ពេលយប់។
+                            </p>
+                            <div class="d-flex gap-3 text-muted small">
+                                <span><i class="bi bi-clock me-1"></i>ពេញមួយថ្ងៃ</span>
+                                <span><i class="bi bi-ticket me-1"></i>ឥតគិតថ្លៃ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.3s">
+                    <div class="attraction-card-pp h-100">
+                        <div class="attraction-img-wrap">
+                            <img src="../image/independence-monument.jpg" alt="វិមានឯករាជ្យ" class="attraction-img"
+                                onerror="this.src='https://placehold.co/400x240/9B6A3A/FEF0CD?text=វិមានឯករាជ្យ'">
+                        </div>
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5 class="fw-bold mb-0" style="color:var(--deep-mahogany);">វិមានឯករាជ្យ</h5>
+                                <span class="attraction-tag">ស្ថាបត្យ</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 mb-3">
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star-fill text-warning small"></i>
+                                <i class="bi bi-star text-warning small"></i>
+                                <span class="small ms-1" style="color:var(--camel-brown);">4.5</span>
+                            </div>
+                            <p class="small mb-3" style="color:var(--night-indigo);line-height:1.8;">
+                                ស្ថាបត្យកម្ម Naga ខ្មែរ
+                                សង់ក្នុងឆ្នាំ ១៩៥៨
+                                រំឭកដល់ឯករាជ្យភាព។
+                            </p>
+                            <div class="d-flex gap-3 text-muted small">
+                                <span><i class="bi bi-clock me-1"></i>ពេញមួយថ្ងៃ</span>
+                                <span><i class="bi bi-ticket me-1"></i>ឥតគិតថ្លៃ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ROYAL PALACE FEATURE -->
+    <section class="bg-gradient-royal feature-section" id="royal">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-white reveal-left">
+                    <p class="section-label" style="color:var(--golden-spice);">ស្ថានទីសំខាន់</p>
+                    <h2 style="font-size:2.8rem;margin-bottom:20px;">
+                        ព្រះបរម<br><span style="color:var(--golden-spice);">រាជវាំង</span>
+                    </h2>
+                    <div class="divider-ornament"><i class="bi bi-stars fs-3" style="color:var(--secondary-color);"></i></div>
+                    <p style="opacity:0.85;line-height:2;margin-bottom:20px;">
+                        ព្រះបរមរាជវាំងជាទីលំនៅរបស់ព្រះបាទ នរោត្ដម សីហមុនី
+                        ហើយជាតំណាងនៃស្ថាបត្យកម្មប្រពៃណីខ្មែរដ៏ស្រស់ស្អាតបំផុត
+                        ដែលទទួលបានការចូលទស្សនាពីភ្ញៀវជាច្រើន។
+                    </p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="d-flex align-items-start gap-3 mb-3">
+                            <i class="bi bi-gem mt-1" style="color:var(--golden-spice);"></i>
+                            <span style="opacity:0.85;">ព្រះស្រីដ៏ថ្លៃ Silver Pagoda</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-3 mb-3">
+                            <i class="bi bi-building mt-1" style="color:var(--golden-spice);"></i>
+                            <span style="opacity:0.85;">ព្រះវិហារ ថ្ម Emerald Buddha</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-3">
+                            <i class="bi bi-tree mt-1" style="color:var(--golden-spice);"></i>
+                            <span style="opacity:0.85;">សួនច្បារ និងទូត្រាពាង្ស</span>
+                        </li>
+                    </ul>
+                    <a href="booking.html" class="btn btn-hero-primary rounded-pill px-5 py-2">
+                        <i class="bi bi-calendar-check me-2"></i>កក់ជ្រើររ
+                    </a>
+                </div>
+                <div class="col-lg-6 reveal-right">
+                    <img src="../image/royalpalace-feature.jpg" alt="ព្រះបរមរាជវាំង" class="feature-img w-100"
+                        onerror="this.src='https://placehold.co/560x380/2C1A0E/F2C078?text=ព្រះបរមរាជវាំង'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTORY TIMELINE -->
+    <section class="bg-gradient-stone history-section" id="history">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <p class="section-label">ប្រវត្តិ</p>
+                <h2 class="section-title-km">ប្រវត្តិសង្ខេបភ្នំពេញ</h2>
+                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--secondary-color);"></i></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-7 reveal">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">ឆ្នាំ ១៣៧២</div>
+                            <div class="timeline-card">
+                                <h6 class="fw-bold mb-1" style="color:var(--deep-mahogany);">ការបង្កើតភ្នំពេញ</h6>
+                                <p class="small mb-0" style="color:var(--night-indigo);">
+                                    អ្នកស្រីពេញបានបង្កើតវត្តភ្នំ ហើយក្រុងភ្នំពេញបានចាប់ផ្ដើម។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">ឆ្នាំ ១៤៣២</div>
+                            <div class="timeline-card">
+                                <h6 class="fw-bold mb-1" style="color:var(--deep-mahogany);">រាជធានីត្រូវបានផ្លាស់ប្ដូរ
+                                </h6>
+                                <p class="small mb-0" style="color:var(--night-indigo);">
+                                    ភ្នំពេញក្លាយជារាជធានីផ្លូវការ ក្រោយពីការបោះបង់ចោលអង្គរ។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">ឆ្នាំ ១៨៦៣</div>
+                            <div class="timeline-card">
+                                <h6 class="fw-bold mb-1" style="color:var(--deep-mahogany);">សម័យអាណានិគម</h6>
+                                <p class="small mb-0" style="color:var(--night-indigo);">
+                                    ប្រទេសបារាំងបានកាន់កាប់ ហើយផ្លាស់ប្ដូរភ្នំពេញ ជាទីក្រុងទំនើប។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">ឆ្នាំ ១៩៥៣</div>
+                            <div class="timeline-card">
+                                <h6 class="fw-bold mb-1" style="color:var(--deep-mahogany);">ឯករាជ្យ</h6>
+                                <p class="small mb-0" style="color:var(--night-indigo);">
+                                    ព្រះបាទ នរោត្ដម សីហនុ ទទួលបានឯករាជ្យពីបារាំង។
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-year">ឆ្នាំ ១៩៩៣ – បច្ចុប្បន្ន</div>
+                            <div class="timeline-card">
+                                <h6 class="fw-bold mb-1" style="color:var(--deep-mahogany);">ការជួសជុល និងអភិវឌ្ឍ</h6>
+                                <p class="small mb-0" style="color:var(--night-indigo);">
+                                    ភ្នំពេញកំពុងលូតលាស់ ក្លាយជាទីក្រុងទំនើបដ៏ល្អ។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOD -->
+    <section class="bg-mixed food-section" id="food">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <p class="section-label">ម្ហូបពិសេស</p>
+                <h2 class="section-title-km">រសជាតិខ្មែរ នៅភ្នំពេញ</h2>
+                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--secondary-color);"></i></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 reveal" style="transition-delay:0.1s">
+                    <div class="food-card">
+                        <img src="../image/amok.jpg" alt="អាម៉ុក" class="food-img"
+                            onerror="this.src='https://placehold.co/300x180/C0622A/FEF0CD?text=អាម៉ុក'">
+                        <div class="p-3">
+                            <h6 class="fw-bold" style="color:var(--deep-mahogany);">អាម៉ុកត្រី</h6>
+                            <p class="small mb-0" style="color:var(--camel-brown);">ម្ហូបជាតិខ្មែរ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 reveal" style="transition-delay:0.2s">
+                    <div class="food-card">
+                        <img src="../image/kuyteav.jpg" alt="គុយទាវ" class="food-img"
+                            onerror="this.src='https://placehold.co/300x180/7B2D00/FEF0CD?text=គុយទាវ'">
+                        <div class="p-3">
+                            <h6 class="fw-bold" style="color:var(--deep-mahogany);">គុយទាវ</h6>
+                            <p class="small mb-0" style="color:var(--camel-brown);">ស៊ុបជើងជ្រូក</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 reveal" style="transition-delay:0.3s">
+                    <div class="food-card">
+                        <img src="../image/nom-banh-chok.jpg" alt="នំបញ្ចុក" class="food-img"
+                            onerror="this.src='https://placehold.co/300x180/D4A054/2C1A0E?text=នំបញ្ចុក'">
+                        <div class="p-3">
+                            <h6 class="fw-bold" style="color:var(--deep-mahogany);">នំបញ្ចុក</h6>
+                            <p class="small mb-0" style="color:var(--camel-brown);">មីខ្មែរប្រពៃណី</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 reveal" style="transition-delay:0.4s">
+                    <div class="food-card">
+                        <img src="../image/lort-cha.jpg" alt="លត់ចា" class="food-img"
+                            onerror="this.src='https://placehold.co/300x180/9B6A3A/FEF0CD?text=លត់ចា'">
+                        <div class="p-3">
+                            <h6 class="fw-bold" style="color:var(--deep-mahogany);">លត់ចា</h6>
+                            <p class="small mb-0" style="color:var(--camel-brown);">មីខ្លី​ចៀន</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="bg-gradient-dark gallery-section" id="gallery">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <p class="section-label">វិចិត្រសាល</p>
+                <h2 class="section-title-km">រូបភាពភ្នំពេញ</h2>
+                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--secondary-color);"></i></div>
+            </div>
+            <div class="gallery-grid reveal">
+                <div class="gallery-item">
+                    <img src="../image/pp-gallery1.jpg" alt="Gallery 1"
+                        onerror="this.src='https://placehold.co/300x400/4A1C00/FEF0CD?text=ទេសភាព+១'">
+                </div>
+                <div class="gallery-item">
+                    <img src="../image/pp-gallery2.jpg" alt="Gallery 2"
+                        onerror="this.src='https://placehold.co/300x200/C0622A/FEF0CD?text=ទេសភាព+២'">
+                </div>
+                <div class="gallery-item">
+                    <img src="../image/pp-gallery3.jpg" alt="Gallery 3"
+                        onerror="this.src='https://placehold.co/300x200/D4A054/2C1A0E?text=ទេសភាព+៣'">
+                </div>
+                <div class="gallery-item">
+                    <img src="../image/pp-gallery4.jpg" alt="Gallery 4"
+                        onerror="this.src='https://placehold.co/300x400/7B2D00/FEF0CD?text=ទេសភាព+៤'">
+                </div>
+                <div class="gallery-item">
+                    <img src="../image/pp-gallery5.jpg" alt="Gallery 5"
+                        onerror="this.src='https://placehold.co/300x200/9B6A3A/FEF0CD?text=ទេសភាព+៥'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIPS -->
+    <section class="bg-gradient-stone tips-section">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <p class="section-label">ការណែនាំ</p>
+                <h2 class="section-title-km">គន្លឹះទេសចរណ៍</h2>
+                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--secondary-color);"></i></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.1s">
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="bi bi-calendar3"></i></div>
+                        <h6 class="fw-bold mb-2" style="color:var(--deep-mahogany);">ពេលល្អបំផុត</h6>
+                        <p class="small mb-0" style="color:var(--night-indigo);line-height:1.8;">
+                            ខែវិច្ឆិកា ដល់ ខែមេសា ជារដូវក្តៅស្ងួត
+                            ល្អបំផុតសម្រាប់ការធ្វើដំណើរ។
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.2s">
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="bi bi-car-front"></i></div>
+                        <h6 class="fw-bold mb-2" style="color:var(--deep-mahogany);">ការដឹកជញ្ជូន</h6>
+                        <p class="small mb-0" style="color:var(--night-indigo);line-height:1.8;">
+                            Tuk-tuk, Grab, PassApp ជាមធ្យោបាយ
+                            ដ៏ងាយ និងរហ័សសម្រាប់ក្នុងក្រុង។
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.3s">
+                    <div class="tip-card">
+                        <div class="tip-icon"><i class="bi bi-currency-dollar"></i></div>
+                        <h6 class="fw-bold mb-2" style="color:var(--deep-mahogany);">រូបិយប័ណ្ណ</h6>
+                        <p class="small mb-0" style="color:var(--night-indigo);line-height:1.8;">
+                            ប្រើ USD និង រៀលខ្មែរ ក្នុងក្រុង
+                            ATM មាននៅគ្រប់ទីកន្លែង។
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gradient-royal cta-section text-center text-white reveal">
+        <div class="container">
+            <p class="section-label" style="color:var(--golden-spice);">ត្រៀមខ្លួន?</p>
+            <h2 style="font-size:2.5rem;margin-bottom:16px;">
+                ចាប់ផ្ដើមដំណើររបស់អ្នក
+            </h2>
+            <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--secondary-color);"></i></div>
+            <p style="opacity:0.8;max-width:500px;margin:0 auto 30px;line-height:1.8;">
+                រាជធានីភ្នំពេញរង់ចាំអ្នក ចុចប៊ូតុងខាងក្រោម ដើម្បីរុករក ឬ ចែករំលែកបទពិសោធ។
+            </p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="siemreap.html" class="btn btn-hero-outline rounded-pill px-5 py-2">
+                    <i class="bi bi-arrow-left me-2"></i>សៀមរាប
+                </a>
+                <a href="review.html" class="btn btn-hero-primary rounded-pill px-5 py-2">
+                    <i class="bi bi-star me-2"></i>វាយតម្លៃ
+                </a>
+            </div>
+        </div>
+    </section>
+
+      <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Brand Essence -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="footer-brand mb-4">
+                        <img src="assets/image/new_logo_v2.png" alt="Logo" width="60" class="mb-3">
+                        <h5 class="text-white fw-bold">ទេសចរណ៍កម្ពុជា</h5>
+                    </div>
+                    <p class="footer-brand-text">
+                        ស្វែងយល់ពីភាពអស្ចារ្យនៃព្រះរាជាណាចក្រអច្ឆរិយៈ។ យើងខ្ញុំផ្តល់ជូននូវបទពិសោធន៍ទេសចរណ៍ដ៏ល្អបំផុត
+                        ដើម្បីបំពេញក្តីសុបិនរបស់អ្នកនៅក្នុងតំបន់អាសុីអាគ្នេយ៍។
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Destinations -->
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title">គោលដៅ</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">ភ្នំពេញ</a></li>
+                        <li><a href="sr.html">សៀមរាប</a></li>
+                        <li><a href="kampot.html">កំពត</a></li>
+                        <li><a href="kep.html">កែប</a></li>
+                        <li><a href="prea-sihanouk.html">ព្រះសីហនុ</a></li>
+                        <li><a href="battambang.html">បាត់ដំបង</a></li>
+                        <li><a href="mondulkiri.html">មណ្ឌលគិរី</a></li>
+                        <li><a href="koh-kong.html">កោះកុង</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title">សេវាកម្ម</h6>
+                    <ul class="footer-links">
+                        <li><a href="hotels.html">សណ្ឋាគារ</a></li>
+                        <li><a href="restaurants.html">ភោជនីយដ្ឋាន</a></li>
+                        <li><a href="guide.html">មគ្គុទ្ទេសក៍</a></li>
+                        <li><a href="transportation.html">ការដឹកជញ្ជូន</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <h6 class="footer-title">ទំនាក់ទំនង</h6>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+៨៥៥ ១២ ២២៣ ៣២២</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@cambodiatourism.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>ភ្នំពេញ, ព្រះរាជាណាចក្រកម្ពុជា</span>
+                        </div>
+                        <div class="footer-contact-item align-items-start">
+                            <i class="fas fa-clock mt-1"></i>
+                            <div class="d-flex flex-column gap-1">
+                                <span>ចន្ទ - សុក្រ: ៨:០០ - ១៧:០០</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 5: Discover -->
+                <div class="col-lg-2">
+                    <h6 class="footer-title">ស្វែងយល់</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">វិចិត្រសាល</a></li>
+                        <li><a href="blog.html">ប្លុកទេសចរណ៍</a></li>
+                        <li><a href="#">មតិយោបល់</a></li>
+                        <li><a href="map.html">ផែនទី</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-white opacity-10 my-5">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                    <p class="mb-0 small text-white-50">&copy; ២០២៦ ទេសចរណ៍កម្ពុជារក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="trust-badges justify-content-center justify-content-md-end">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => observer.observe(el));
+
+        // Side Nav
+        const sections = ['hero', 'about', 'attractions', 'royal', 'history', 'food', 'gallery'];
+        const dots = document.querySelectorAll('.side-dot');
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const t = document.getElementById(dot.dataset.target);
+                if (t) t.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(id => {
+                const el = document.getElementById(id);
+                if (el && window.scrollY >= el.offsetTop - 200) current = id;
+            });
+            dots.forEach(dot => {
+                dot.classList.toggle('active', dot.dataset.target === current);
+            });
+        });
+    </script>
+    <script>
+        AOS.init();
+
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+
+        // Check for saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.classList.remove('light-mode', 'dark-mode');
+            body.classList.add(savedTheme);
+            updateIcon(savedTheme);
+        } else {
+            // Set default theme from HTML structure
+            if (body.classList.contains('light-mode')) {
+                localStorage.setItem('theme', 'light-mode');
+            } else {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+            }
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+                updateIcon('dark-mode');
+            } else {
+                body.classList.add('light-mode');
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light-mode');
+                updateIcon('light-mode');
+            }
+        });
+
+        function updateIcon(theme) {
+            if (theme === 'light-mode') {
+                icon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
+            } else {
+                icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
+            }
+        }
+    </script>
+</body>
+
+</html>

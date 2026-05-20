@@ -45,8 +45,8 @@
                             <a class="nav-link dropdown-toggle px-3" href="#" role="button"
                                 data-bs-toggle="dropdown">គោលដៅ</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-content dropdown-item" href="sr.html">សៀមរាប</a></li>
-                                <li><a class="dropdown-content dropdown-item" href="#">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="siem-reap.html">សៀមរាប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="phnompenh.html">ភ្នំពេញ</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a>
@@ -71,7 +71,7 @@
 
                         <li class="nav-item"><a class="nav-link px-3" href="#">វិចិត្រសាល</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
-                        <li class="nav-item"><a class="nav-link px-3" href="#">មតិយោបល់</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
                     </ul>
                 </div>
@@ -89,10 +89,9 @@
     </header>
 
     <main>
-        <section class="hero-bento bg-mixed text-white">
+        <section class="bg-mixed hero-bento">
             <div class="container py-5">
                 <div class="bento-grid">
-                    <!-- Main Card -->
                     <div class="bento-card card-main" data-aos="fade-right">
                         <div class="card-content">
                             <span class="badge-khmer">ព្រះរាជាណាចក្រកម្ពុជា</span>
@@ -103,67 +102,50 @@
                             <a href="booking.html" class="btn-bento">រៀបចំគម្រោង <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
-
-                    <!-- Destination 1: Siem Reap -->
                     <a href="sr.html" class="bento-card card-place" data-aos="zoom-in" data-aos-delay="100">
                         <img src="assets/image/siem-reap.png" alt="សៀមរាប">
                         <div class="card-label">សៀមរាប</div>
                     </a>
-
-                    <!-- Destination 2: Phnom Penh -->
                     <div class="bento-card card-place" data-aos="zoom-in" data-aos-delay="200">
                         <img src="assets/image/pp.jpg" alt="ភ្នំពេញ">
                         <div class="card-label">ភ្នំពេញ</div>
                     </div>
-
-                    <!-- Destination 3: Kampot -->
                     <div class="bento-card card-place" data-aos="zoom-in" data-aos-delay="300">
                         <img src="assets/image/kompot.jpg" alt="កំពត">
                         <div class="card-label">កំពត</div>
                     </div>
-
-                    <!-- Destination 4: Mondulkiri -->
-                    <div class="bento-card card-place" data-aos="zoom-in" data-aos-delay="400">
-                        <img src="assets/image/mondulkirinew.png" alt="មណ្ឌលគិរី">
-                        <div class="card-label">មណ្ឌលគិរី</div>
-                    </div>
-
-                    <!-- Destination 5: Kep -->
                     <div class="bento-card card-place" data-aos="zoom-in" data-aos-delay="500">
                         <img src="https://i0.wp.com/www.wandering-traveler.com/wp-content/uploads/2019/06/DSC_3698.jpg?resize=1140%2C760&ssl=1"
                             alt="កែប">
                         <div class="card-label">កែប</div>
                     </div>
-
-                    <!-- Destination 6: Preah Sihanouk -->
                     <div class="bento-card card-place" data-aos="zoom-in" data-aos-delay="600">
                         <img src="assets/image/Preah-Sihanouk.jpg" alt="ព្រះសីហនុ">
                         <div class="card-label">ព្រះសីហនុ</div>
                     </div>
-
-                    <!-- Destination 7: Koh Kong -->
-                    <div class="bento-card card-place animate__animated animate__fadeInUp animate__delay-1s">
-                        <img src="https://kampatour.com/pic/blog/images/koh%20kong%20(13)(1).jpg" alt="កោះកុង">
-                        <div class="card-label">កោះកុង</div>
-                    </div>
-
-                    <!-- Destination 8: Battambang -->
                     <div class="bento-card card-place animate__animated animate__fadeInRight animate__delay-1s">
                         <img src="assets/image/battambang.jpg" alt="បាត់ដំបង">
                         <div class="card-label">បាត់ដំបង</div>
+                    </div>
+                    <div class="bento-card card-place" data-aos="zoom-in" data-aos-delay="400">
+                        <img src="assets/image/mondulkirinew.png" alt="មណ្ឌលគិរី">
+                        <div class="card-label">មណ្ឌលគិរី</div>
+                    </div>
+                    <div class="bento-card card-place animate__animated animate__fadeInUp animate__delay-1s">
+                        <img src="https://kampatour.com/pic/blog/images/koh%20kong%20(13)(1).jpg" alt="កោះកុង">
+                        <div class="card-label">កោះកុង</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ── Popular Destinations Section ── -->
-        <section class="destinations-section bg-mixed text-white">
+        <section class="bg-mixed destinations-section">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
                     <span class="section-badge mb-2 d-inline-block">ទេសចរណ៍កម្ពុជា</span>
-                    <h2 class="section-title text-white">គោលដៅទេសចរណ៍<span>ពេញនិយម</span></h2>
+                    <h2 class="section-title">គោលដៅទេសចរណ៍<span>ពេញនិយម</span></h2>
                     <div class="title-line mx-auto"></div>
-                    <p class="section-subtitle text-white-50 mt-3">ស្វែងរកសម្រស់ដ៏អស្ចារ្យនៃព្រះរាជាណាចក្រកម្ពុជា
+                    <p class="section-subtitle mt-3">ស្វែងរកសម្រស់ដ៏អស្ចារ្យនៃព្រះរាជាណាចក្រកម្ពុជា
                         តាមរយៈតំបន់ទេសចរណ៍ដែលល្បីល្បាញបំផុត។</p>
                 </div>
 
@@ -179,7 +161,7 @@
                                         <h3>ប្រាសាទអង្គរវត្ត</h3>
                                         <p>ស្វែងយល់ពីអច្ឆរិយវត្ថុពិភពលោក
                                             និងបេតិកភណ្ឌវប្បធម៌ដ៏អស្ចារ្យដែលបានបន្សល់ទុកតាំងពីបុរាណកាល។</p>
-                                        <a href="sr.html" class="btn-explore">ស្វែងយល់បន្ថែម <i
+                                        <a href="siem-reap.html" class="btn-explore">ស្វែងយល់បន្ថែម <i
                                                 class="fas fa-arrow-right"></i></a>
                                     </div>
                                 </div>
@@ -187,7 +169,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 2: Phnom Penh -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="destination-card">
                             <div class="card-img-wrapper">
@@ -207,7 +188,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 3: Kampot -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="destination-card">
                             <div class="card-img-wrapper">
@@ -226,7 +206,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 4: Preah Sihanouk -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="destination-card">
                             <div class="card-img-wrapper">
@@ -245,7 +224,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 5: Mondulkiri -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="destination-card">
                             <div class="card-img-wrapper">
@@ -265,7 +243,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 6: Battambang -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="destination-card">
                             <div class="card-img-wrapper">
@@ -285,7 +262,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 7: Kep -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="destination-card">
                             <div class="card-img-wrapper">
@@ -304,7 +280,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 8: Koh Kong -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="destination-card">
                             <div class="card-img-wrapper">
@@ -325,19 +300,16 @@
             </div>
         </section>
 
-        <!-- ── Services Section ── -->
-        <section class="services-section bg-mixed text-white">
+        <section class="bg-mixed services-section">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
                     <span class="section-badge mb-2 d-inline-block">សេវាកម្មទេសចរណ៍</span>
-                    <h2 class="section-title text-white">បទពិសោធន៍<span>ដ៏ល្អឥតខ្ចោះ</span></h2>
+                    <h2 class="section-title">បទពិសោធន៍<span>ដ៏ល្អឥតខ្ចោះ</span></h2>
                     <div class="title-line mx-auto"></div>
-                    <p class="section-subtitle text-white-50 mt-3">យើងផ្តល់ជូននូវសេវាកម្មទេសចរណ៍គ្រប់ជ្រុងជ្រោយ
+                    <p class="section-subtitle mt-3">យើងផ្តល់ជូននូវសេវាកម្មទេសចរណ៍គ្រប់ជ្រុងជ្រោយ
                         ដើម្បីធានាថាដំណើរកម្សាន្តរបស់អ្នកមានភាពរលូន និងមិនអាចបំភ្លេចបាន។</p>
                 </div>
-
                 <div class="row g-4">
-                    <!-- Service 1: Hotels -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-card">
                             <div class="service-img-box">
@@ -350,13 +322,11 @@
                                 <h4>សណ្ឋាគារ</h4>
                                 <p>ស្នាក់នៅក្នុងសណ្ឋាគារលំដាប់ផ្កាយ ជាមួយនឹងផាសុកភាពខ្ពស់
                                     និងសេវាកម្មដ៏ល្អឯកទូទាំងប្រទេស។</p>
-                                <a href="#" class="btn-service">ស្វែងរកកន្លែងស្នាក់នៅ <i
+                                <a href="hotels.html" class="btn-service">ស្វែងរកកន្លែងស្នាក់នៅ <i
                                         class="fas fa-arrow-right ms-2"></i></a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Service 2: Restaurants -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="service-card">
                             <div class="service-img-box">
@@ -369,13 +339,11 @@
                                 <h4>ភោជនីយដ្ឋាន</h4>
                                 <p>រីករាយជាមួយរសជាតិអាហារខ្មែរពិតៗ
                                     និងអាហារអន្តរជាតិដ៏ឈ្ងុយឆ្ងាញ់ក្នុងបរិយាកាសដ៏រ៉ូមែនទិក។</p>
-                                <a href="#" class="btn-service">មើលបញ្ជីអាហារ <i
+                                <a href="restaurants.html" class="btn-service">មើលបញ្ជីអាហារ <i
                                         class="fas fa-arrow-right ms-2"></i></a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Service 3: Tour Guides -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="service-card">
                             <div class="service-img-box">
@@ -388,13 +356,11 @@
                                 <h4>មគ្គុទ្ទេសក៍</h4>
                                 <p>ស្វែងយល់ពីប្រវត្តិសាស្ត្រ និងវប្បធម៌ខ្មែរយ៉ាងស៊ីជម្រៅ
                                     ជាមួយមគ្គុទ្ទេសក៍អាជីពដែលរួសរាយរាក់ទាក់។</p>
-                                <a href="#" class="btn-service">ជ្រើសរើសមគ្គុទ្ទេសក៍ <i
+                                <a href="guide.html" class="btn-service">ជ្រើសរើសមគ្គុទ្ទេសក៍ <i
                                         class="fas fa-arrow-right ms-2"></i></a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Service 4: Transportation -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="service-card">
                             <div class="service-img-box">
@@ -417,24 +383,21 @@
             </div>
         </section>
 
-        <!-- ── Tour Guides Showcase Section ── -->
-        <section class="guides-showcase-section bg-mixed text-white">
+        <section class="bg-mixed guides-showcase-section">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
-                    <span class="section-badge mb-2 d-inline-block text-white">អ្នកជំនាញក្នុងតំបន់</span>
-                    <h2 class="section-title text-white">មគ្គុទ្ទេសក៍តាម<span>បណ្តាខេត្ត</span></h2>
+                    <span class="section-badge mb-2 d-inline-block">អ្នកជំនាញក្នុងតំបន់</span>
+                    <h2 class="section-title">មគ្គុទ្ទេសក៍តាម<span>បណ្តាខេត្ត</span></h2>
                     <div class="title-line mx-auto"></div>
-                    <p class="section-subtitle text-white-50 mt-3">ជួបជាមួយអ្នកជំនាញក្នុងតំបន់ដែលត្រៀមខ្លួនជាស្រេច
+                    <p class="section-subtitle mt-3">ជួបជាមួយអ្នកជំនាញក្នុងតំបន់ដែលត្រៀមខ្លួនជាស្រេច
                         ដើម្បីនាំអ្នកទៅកាន់កន្លែងដែលល្អបំផុត និងរឿងរ៉ាវដែលអ្នកមិនធ្លាប់ដឹង។</p>
                 </div>
 
                 <div class="row g-4">
-                    <!-- Province 1: Siem Reap -->
                     <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                         <div class="guide-province-card">
                             <div class="guide-avatar-box">
-                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop"
-                                    alt="សៀមរាប">
+                                <img src="assets/image/Panha.jpg">
                                 <span class="province-tag">សៀមរាប</span>
                             </div>
                             <div class="guide-info">
@@ -445,26 +408,10 @@
                         </div>
                     </div>
 
-                    <!-- Province 2: Phnom Penh -->
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="guide-province-card">
-                            <div class="guide-avatar-box">
-                                <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=1974&auto=format&fit=crop"
-                                    alt="ភ្នំពេញ">
-                                <span class="province-tag">ភ្នំពេញ</span>
-                            </div>
-                            <div class="guide-info">
-                                <h5>អ្នកជំនាញវប្បធម៌</h5>
-                                <p>ស្វែងយល់ពីការវិវត្តនៃរាជធានីភ្នំពេញ ពីសម័យកាលប្រវត្តិសាស្ត្ររហូតដល់សម័យទំនើប។</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Province 3: Kampot -->
                     <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
                         <div class="guide-province-card">
                             <div class="guide-avatar-box">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop"
+                                <img src="assets/image/Soama.jpg"
                                     alt="កំពត">
                                 <span class="province-tag">កំពត</span>
                             </div>
@@ -476,11 +423,10 @@
                         </div>
                     </div>
 
-                    <!-- Province 4: Preah Sihanouk -->
                     <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
                         <div class="guide-province-card">
                             <div class="guide-avatar-box">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1974&auto=format&fit=crop"
+                                <img src="assets/image/Makara.jpg"
                                     alt="ព្រះសីហនុ">
                                 <span class="province-tag">ព្រះសីហនុ</span>
                             </div>
@@ -491,11 +437,10 @@
                         </div>
                     </div>
 
-                    <!-- Province 5: Mondulkiri -->
                     <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                         <div class="guide-province-card">
                             <div class="guide-avatar-box">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop"
+                                <img src="assets/image/Pouly.jpg" style="object-position: top;"
                                     alt="មណ្ឌលគិរី">
                                 <span class="province-tag">មណ្ឌលគិរី</span>
                             </div>
@@ -506,11 +451,24 @@
                         </div>
                     </div>
 
-                    <!-- Province 6: Battambang -->
                     <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                         <div class="guide-province-card">
                             <div class="guide-avatar-box">
-                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop"
+                                <img src="assets/image/Panha.jpg"
+                                    alt="ភ្នំពេញ">
+                                <span class="province-tag">ភ្នំពេញ</span>
+                            </div>
+                            <div class="guide-info">
+                                <h5>អ្នកជំនាញវប្បធម៌</h5>
+                                <p>ស្វែងយល់ពីការវិវត្តនៃរាជធានីភ្នំពេញ ពីសម័យកាលប្រវត្តិសាស្ត្ររហូតដល់សម័យទំនើប។</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="guide-province-card">
+                            <div class="guide-avatar-box">
+                                <img src="assets/image/Makara.jpg"
                                     alt="បាត់ដំបង">
                                 <span class="province-tag">បាត់ដំបង</span>
                             </div>
@@ -521,11 +479,10 @@
                         </div>
                     </div>
 
-                    <!-- Province 7: Kep -->
                     <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
                         <div class="guide-province-card">
                             <div class="guide-avatar-box">
-                                <img src="https://img.freepik.com/free-photo/lifestyle-beauty-fashion-people-emotions-concept-young-asian-female-office-manager-ceo-with-pleased-expression-standing-white-background-smiling-with-arms-crossed-chest_1258-59329.jpg?semt=ais_hybrid&w=740&q=80"
+                                <img src="assets/image/Soama.jpg"
                                     alt="កែប">
                                 <span class="province-tag">កែប</span>
                             </div>
@@ -537,11 +494,10 @@
                         </div>
                     </div>
 
-                    <!-- Province 8: Koh Kong -->
                     <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
                         <div class="guide-province-card">
                             <div class="guide-avatar-box">
-                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop"
+                                <img src="assets/image/Pouly.jpg" style="object-position: top;"
                                     alt="កោះកុង">
                                 <span class="province-tag">កោះកុង</span>
                             </div>
@@ -552,22 +508,19 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
 
-        <!-- ── Royal Gallery Section ── -->
-        <section class="royal-gallery-section bg-mixed text-white">
+        <section class="bg-mixed royal-gallery-section">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
                     <span class="section-badge mb-2 d-inline-block">ទិដ្ឋភាពកម្ពុជា</span>
-                    <h2 class="section-title text-white">វិចិត្រសាល<span>រូបភាព</span></h2>
+                    <h2 class="section-title">វិចិត្រសាល<span>រូបភាព</span></h2>
                     <div class="title-line mx-auto"></div>
-                    <p class="section-subtitle text-white-50 mt-3">ទស្សនាសម្រស់ដ៏អស្ចារ្យនៃធម្មជាតិ វប្បធម៌
+                    <p class="section-subtitle mt-3">ទស្សនាសម្រស់ដ៏អស្ចារ្យនៃធម្មជាតិ វប្បធម៌
                         និងជីវភាពរស់នៅរបស់ប្រជាជនកម្ពុជា តាមរយៈកែវភ្នែកអ្នកថតរូប។</p>
                 </div>
 
                 <div class="row g-4" data-aos="fade-up">
-                    <!-- Item 1 -->
                     <div class="col-lg-3 col-md-6">
                         <div class="gallery-item">
                             <img src="assets/image/siem-reap.png" alt="សៀមរាប">
@@ -579,7 +532,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Item 2 -->
                     <div class="col-lg-3 col-md-6">
                         <div class="gallery-item">
                             <img src="assets/image/phnom-penh.png" alt="ភ្នំពេញ">
@@ -591,7 +543,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Item 3 -->
                     <div class="col-lg-3 col-md-6">
                         <div class="gallery-item">
                             <img src="assets/image/Preah-Sihanouk.jpg" alt="ព្រះសីហនុ">
@@ -603,19 +554,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Item 4 -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="gallery-item">
-                            <img src="assets/image/battambang.jpg" alt="បាត់ដំបង">
-                            <div class="gallery-overlay">
-                                <div class="overlay-text">
-                                    <span>សិល្បៈ និងវប្បធម៌</span>
-                                    <h6>ខេត្តបាត់ដំបង</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 5 -->
                     <div class="col-lg-3 col-md-6">
                         <div class="gallery-item">
                             <img src="assets/image/mondulkirinew.png" alt="មណ្ឌលគិរី">
@@ -627,7 +565,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Item 6 -->
                     <div class="col-lg-3 col-md-6">
                         <div class="gallery-item">
                             <img src="assets/image/kompot.jpg" alt="កំពត">
@@ -639,7 +576,17 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Item 7 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="gallery-item">
+                            <img src="assets/image/battambang.jpg" alt="បាត់ដំបង">
+                            <div class="gallery-overlay">
+                                <div class="overlay-text">
+                                    <span>សិល្បៈ និងវប្បធម៌</span>
+                                    <h6>ខេត្តបាត់ដំបង</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="gallery-item">
                             <img src="assets/image/kep.png" alt="កែប">
@@ -651,7 +598,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Item 8 -->
                     <div class="col-lg-3 col-md-6">
                         <div class="gallery-item">
                             <img src="assets/image/kohkong.jpg" alt="កោះកុង">
@@ -664,29 +610,24 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="#" class="btn-royal px-5 py-3 rounded-pill fw-bold">មើលរូបភាពទាំងអស់ <i
-                        class="fas fa-images ms-2"></i></a>
-            </div>
+                <div class="text-center mt-8">
+                    <a href="#" class="btn-royal px-5 py-3 rounded-pill fw-bold text-decoration-none">មើលរូបភាពទាំងអស់ <i
+                            class="fas fa-images ms-2"></i></a>
+                </div>
             </div>
         </section>
 
-        <!-- ── Latest Blog Stories Section ── -->
-        <section class="latest-blog-section bg-mixed text-white">
+        <section class="bg-mixed latest-blog-section">
             <div class="container">
-                <div class="d-flex justify-content-between align-items-end mb-5" data-aos="fade-up">
+                <div class="text-center mb-5" data-aos="fade-up">
                     <div>
                         <span class="section-badge mb-2 d-inline-block">អត្ថបទទេសចរណ៍</span>
-                        <h2 class="section-title text-white">រឿងរ៉ាវ<span>ធ្វើដំណើរ</span></h2>
-                        <div class="title-line"></div>
+                        <h2 class="section-title">រឿងរ៉ាវ<span>ធ្វើដំណើរ</span></h2>
+                        <div class="title-line mx-auto"></div>
                     </div>
-                    <a href="blog.html" class="btn-explore d-none d-md-flex">មើលអត្ថបទទាំងអស់ <i
-                            class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="row g-4">
-                    <!-- Blog Post 1: Preah Sihanouk -->
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="blog-card-home">
                             <div class="blog-img-wrapper">
@@ -853,13 +794,13 @@
 
 
         <!-- ── Travelers Testimonials Section ── -->
-        <section class="testimonials-section bg-mixed text-white py-5">
+        <section class="bg-mixed testimonials-section py-5">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
                     <span class="section-badge mb-2 d-inline-block">ការវាយតម្លៃ</span>
-                    <h2 class="section-title text-white">មតិយោបល់<span>អ្នកប្រើប្រាស់</span></h2>
+                    <h2 class="section-title">មតិយោបល់<span>អ្នកប្រើប្រាស់</span></h2>
                     <div class="title-line mx-auto"></div>
-                    <p class="section-subtitle text-white-50 mt-3">
+                    <p class="section-subtitle mt-3">
                         ស្តាប់នូវបទពិសោធន៍ពិតៗពីអ្នកធ្វើដំណើរដែលបានប្រើប្រាស់សេវាកម្មរបស់យើង។</p>
                 </div>
 
@@ -931,13 +872,13 @@
         </section>
 
         <!-- ── Cinematic Map Explorer Section ── -->
-        <section class="map-explorer-section bg-mixed text-white py-5">
+        <section class="bg-mixed map-explorer-section py-5">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
                     <span class="section-badge mb-2 d-inline-block">ផែនទីអន្តរកម្ម</span>
-                    <h2 class="section-title text-white">ស្វែងយល់ពី<span>អាណាចក្រកម្ពុជា</span></h2>
+                    <h2 class="section-title">ស្វែងយល់ពី<span>អាណាចក្រកម្ពុជា</span></h2>
                     <div class="title-line mx-auto"></div>
-                    <p class="section-subtitle text-white-50 mt-3">ជ្រើសរើសខេត្តគោលដៅរបស់អ្នក ដើម្បីមើលទីតាំងច្បាស់លាស់
+                    <p class="section-subtitle mt-3">ជ្រើសរើសខេត្តគោលដៅរបស់អ្នក ដើម្បីមើលទីតាំងច្បាស់លាស់
                         និងរៀបចំដំណើររុករក។</p>
                 </div>
 

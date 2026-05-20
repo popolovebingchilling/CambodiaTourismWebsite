@@ -22,70 +22,54 @@
             --deep-navy: #0D2A43;
             --soft-cream: #FDFBF7;
             --text-dark: #1A1A1A;
+            --glass-bg: rgba(255, 255, 255, 0.95);
         }
-
-        .new-style-hero {
-            height: 75vh;
-            position: relative;
+        
+        .royal-hero {
+            padding: 120px 0 160px;
             background: var(--deep-navy);
+            position: relative;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
         }
 
-        .new-style-hero img {
+        .royal-hero::before {
+            content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.6;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1500835556837-99ac94a94552?q=80&w=1974&auto=format&fit=crop') center/cover;
+            opacity: 0.3;
             filter: grayscale(20%);
         }
 
-        .hero-title-box {
+        .royal-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent, var(--deep-navy));
+        }
+
+        .hero-content {
             position: relative;
             z-index: 10;
-            max-width: 900px;
-            padding: 0 20px;
         }
 
-        .hero-title-box .category-tag {
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 0.9rem;
-            color: var(--accent-gold);
-            margin-bottom: 20px;
-            display: block;
-            font-weight: 700;
-        }
-
-        .hero-title-box h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 8vw, 5rem);
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 30px;
-        }
-
-        .article-main-container {
+        /* Glass Article Card */
+        .glass-article-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
             margin-top: -100px;
             position: relative;
-            z-index: 20;
-            background: white;
-            border-radius: 30px 30px 0 0;
-            box-shadow: 0 -20px 50px rgba(0,0,0,0.1);
-            padding: 80px 0;
+            z-index: 30;
+            padding: 60px;
         }
 
         .editorial-content {
             font-size: 1.15rem;
-            line-height: 2;
-            color: #333;
+            line-height: 2.1;
+            color: #2c3e50;
         }
 
         .editorial-content p.dropcap::first-letter {
@@ -98,75 +82,80 @@
             font-weight: 900;
         }
 
-        .quote-v2 {
-            border-left: 5px solid var(--accent-gold);
-            padding: 40px;
-            background: #f9f9f9;
-            margin: 60px 0;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-style: italic;
-            color: var(--deep-navy);
-            position: relative;
-        }
-
-        .quote-v2::after {
-            content: '\f10e';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            bottom: 20px;
-            right: 30px;
-            font-size: 3rem;
-            opacity: 0.1;
-        }
-
-        .image-showcase {
-            margin: 80px 0;
-            border-radius: 20px;
+        /* Highlight Cards (The col-6 requirement) */
+        .highlight-card {
+            background: white;
+            border-radius: 25px;
             overflow: hidden;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+            height: 100%;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        .image-showcase img {
+        .highlight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(13, 42, 67, 0.15);
+            border-color: var(--accent-gold);
+        }
+
+        .highlight-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .highlight-img img {
             width: 100%;
-            transition: transform 1s ease;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
         }
 
-        .image-showcase:hover img {
-            transform: scale(1.05);
+        .highlight-card:hover .highlight-img img {
+            transform: scale(1.1);
         }
 
-        .sidebar-sticky {
-            position: sticky;
-            top: 100px;
+        .highlight-body {
+            padding: 25px;
         }
 
-        .widget-v2 {
-            border-bottom: 1px solid #eee;
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-        }
-
-        .widget-v2 h5 {
+        .highlight-title {
+            color: var(--deep-navy);
             font-weight: 800;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            color: var(--accent-gold);
+            margin-bottom: 15px;
+            font-size: 1.25rem;
         }
-        
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .glass-article-card {
+                padding: 30px 20px;
+                margin-top: -60px;
+                border-radius: 30px;
+            }
+            .royal-hero {
+                padding: 80px 0 120px;
+            }
+        }
+
         /* Dark Mode Support */
-        body.dark-mode .article-main-container {
-            background: #0D2A43;
-            color: #f0f0f0;
+        body.dark-mode .glass-article-card {
+            background: rgba(13, 42, 67, 0.9);
+            color: #ecf0f1;
+            border-color: rgba(255, 255, 255, 0.1);
         }
         body.dark-mode .editorial-content {
-            color: #ccc;
+            color: #dcdde1;
         }
-        body.dark-mode .widget-v2 {
+        body.dark-mode .highlight-card {
+            background: #153e5f;
             border-color: rgba(255,255,255,0.1);
+        }
+        body.dark-mode .highlight-title {
+            color: white;
+        }
+        body.dark-mode .highlight-body p {
+            color: #bdc3c7;
         }
     </style>
 </head>
@@ -181,90 +170,255 @@
                         <span class="text-secondary small">ទេសចរណ៍កម្ពុជា</span>
                     </div>
                 </a>
-                <div class="ms-auto d-flex align-items-center gap-3">
-                    <a href="blog.html" class="btn btn-link text-white text-decoration-none small d-none d-md-block">ត្រឡប់ទៅប្លុក</a>
-                    <button id="theme-toggle" class="btn btn-link text-white p-0 border-0 fs-5">
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                                data-bs-toggle="dropdown">គោលដៅ</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="siem-reap.html">សៀមរាប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="phnompenh.html">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="battambang.html">បាត់ដំបង</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="mondulkiri.html">មណ្ឌលគិរី</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="koh-kong.html">កោះកុង</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                                data-bs-toggle="dropdown">សេវាកម្ម</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="hotels.html">សណ្ឋាគារ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="restaurants.html">ភោជនីយដ្ឋាន</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="guide.html">មគ្គុទ្ទេសក៍</a></li>
+                                <li><a class="dropdown-content dropdown-item"
+                                        href="transportation.html">ការដឹកជញ្ជូន</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link px-3" href="#">វិចិត្រសាល</a></li>
+                        <li class="nav-item"><a class="nav-link active px-3" href="blog.html">ប្លុក</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex align-items-center gap-3">
+                    <button id="theme-toggle" class="btn btn-link text-white p-0 border-0 fs-5" title="ផ្លាស់ប្តូរពន្លឺ">
                         <i class="bi bi-moon-stars-fill"></i>
                     </button>
+                    <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
+                    <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section class="new-style-hero">
-            <img src="assets/image/siem-reap.png" alt="Siem Reap">
-            <div class="hero-title-box" data-aos="zoom-out">
-                <span class="category-tag">បេតិកភណ្ឌពិភពលោក</span>
-                <h1>អង្គរវត្ត៖ បេតិកភណ្ឌ<br>ដែលមិនចេះរីងស្ងួត</h1>
-                <div class="d-flex justify-content-center gap-4 mt-4 small opacity-75">
-                    <span><i class="far fa-calendar me-2"></i>១០ កុម្ភៈ, ២០២៦</span>
-                    <span><i class="far fa-clock me-2"></i>អាន ១២ នាទី</span>
+    <main >
+        <!-- ── Royal Hero Header ── -->
+        <section class="bg-mixed royal-hero text-center" data-aos="fade-down">
+            <div class="container hero-content">
+                <span class="badge bg-secondary text-white mb-3 px-4 py-2 rounded-pill shadow-sm">បេតិកភណ្ឌពិភពលោក</span>
+                <h1 class="display-3 fw-bold text-white mb-4">អង្គរវត្ត៖ បេតិកភណ្ឌដែលមិនចេះរីងស្ងួត</h1>
+                <div class="d-flex justify-content-center align-items-center gap-4 text-white-50">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar-alt text-white-50 me-2"></i>
+                        <span>១៥ មករា, ២០២៦</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock text-white-50 me-2"></i>
+                        <span>១០ នាទី ក្នុងការអាន</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="article-main-container">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 editorial-content">
-                        <p class="dropcap">អង្គរវត្តមិនត្រឹមតែជាប្រាសាទបុរាណដ៏អស្ចារ្យបំផុតនៅក្នុងពិភពលោកប៉ុណ្ណោះទេ ប៉ុន្តែវាគឺជាដួងព្រលឹង និងជាមោទនភាពជាតិដ៏ខ្ពង់ខ្ពស់របស់ប្រជាជនកម្ពុជាគ្រប់រូប។ ក្នុងអត្ថបទនេះ យើងនឹងនាំអ្នកទៅរុករកនូវភាពអស្ចារ្យដែលមិនចេះរីងស្ងួត និងរឿងរ៉ាវថ្មីៗដែលអ្នកប្រហែលជាមិនធ្លាប់ដឹង។</p>
+        <section class="bg-mixed pb-5 pt-1">
+            <div class="container mb-5">
+                <article class="glass-article-card shadow-lg">
+                    <div class="editorial-content">
+                                <div class="row g-lg-5 g-4">
+                                    <!-- Column 1: Introduction and Architecture -->
+                                    <div class="col-12 col-md-6" data-aos="fade-right">
+                                        <p class="dropcap">អង្គរវត្តមិនត្រឹមតែជាប្រាសាទបុរាណដ៏អស្ចារ្យបំផុតនៅក្នុងពិភពលោកប៉ុណ្ណោះទេ ប៉ុន្តែវាគឺជាដួងព្រលឹង និងជាមោទនភាពជាតិដ៏ខ្ពង់ខ្ពស់របស់ប្រជាជនកម្ពុជាគ្រប់រូប។ ក្នុងអត្ថបទនេះ យើងនឹងនាំអ្នកទៅរុករកនូវភាពអស្ចារ្យដែលមិនចេះរីងស្ងួត និងរឿងរ៉ាវថ្មីៗដែលអ្នកប្រហែលជាមិនធ្លាប់ដឹង។</p>
+                
+                                        <p>សាងសង់ឡើងក្នុងសតវត្សទី១២ ដោយព្រះបាទសូរ្យវរ្ម័នទី២ អង្គរវត្តត្រូវបានឧទ្ទិសដល់ព្រះវិស្ណុ។ វាគឺជាសំណង់សាសនាដ៏ធំបំផុតនៅលើពិភពលោក ដែលត្រូវបានរៀបចំឡើងយ៉ាងល្អឥតខ្ចោះតាមក្បួនតម្រាខ្មែរបុរាណ និងមានតុល្យភាពយ៉ាងពិសេសជាមួយធម្មជាតិជុំវិញ។</p>
 
-                        <p>សាងសង់ឡើងក្នុងសតវត្សទី១២ ដោយព្រះបាទសូរ្យវរ្ម័នទី២ អង្គរវត្តត្រូវបានឧទ្ទិសដល់ព្រះវិស្ណុ។ វាគឺជាសំណង់សាសនាដ៏ធំបំផុតនៅលើពិភពលោក ដែលត្រូវបានរៀបចំឡើងយ៉ាងល្អឥតខ្ចោះតាមក្បួនតម្រាខ្មែរបុរាណ និងមានតុល្យភាពយ៉ាងពិសេសជាមួយធម្មជាតិជុំវិញ។</p>
+                                        <div class="rounded-4 overflow-hidden shadow-sm my-4">
+                                            <img src="https://images.unsplash.com/photo-1544376798-89aa6b82c6cd?q=80&w=1000&auto=format&fit=crop" class="img-fluid w-100" alt="Angkor Detail">
+                                        </div>
 
-                        <div class="image-showcase" data-aos="fade-up">
-                            <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?q=80&w=1974&auto=format&fit=crop" alt="Angkor Detail">
-                            <div class="p-3 text-center small text-muted bg-light">ចម្លាក់អប្សរាដ៏រស់រវើកនៅលើជញ្ជាំងប្រាសាទអង្គរវត្ត</div>
-                        </div>
+                                        <h2 class="fw-bold mb-4 mt-5">ស្ថាបត្យកម្ម និងនិមិត្តរូប</h2>
+                                        <p>គ្រប់ផ្នែកទាំងអស់នៃអង្គរវត្តសុទ្ធតែមានអត្ថន័យ។ កំពូលប្រាសាទទាំង ៥ តំណាងឱ្យភ្នំព្រះសុមេរុ ដែលជាមជ្ឈមណ្ឌលនៃចក្រវាលក្នុងជំនឿព្រហ្មញ្ញសាសនា។</p>
+                                    </div>
 
-                        <h2>ស្ថាបត្យកម្ម និងនិមិត្តរូប</h2>
-                        <p>គ្រប់ផ្នែកទាំងអស់នៃអង្គរវត្តសុទ្ធតែមានអត្ថន័យ។ កំពូលប្រាសាទទាំង ៥ តំណាងឱ្យភ្នំព្រះសុមេរុ ដែលជាមជ្ឈមណ្ឌលនៃចក្រវាលក្នុងជំនឿព្រហ្មញ្ញសាសនា។ ខណៈដែលកសិណទឹកដែលព័ទ្ធជុំវិញប្រាសាទ តំណាងឱ្យមហាសមុទ្រដែលព័ទ្ធជុំវិញពិភពលោក។</p>
+                                    <!-- Column 2: Architecture Continued and Sunrise -->
+                                    <div class="col-12 col-md-6" data-aos="fade-left">
+                                        <div class="bg-light p-4 rounded-4 border-start border-4 border-warning mb-5 shadow-sm">
+                                            <p class="h5 fst-italic mb-0 text-dark">"អង្គរវត្តគឺជាសក្ខីភាពនៃភាពឆ្លាតវៃ និងការតស៊ូរបស់បុព្វបុរសខ្មែរ។"</p>
+                                        </div>
 
-                        <div class="quote-v2" data-aos="fade-left">
-                            "អង្គរវត្តគឺជាសក្ខីភាពនៃភាពឆ្លាតវៃ និងការតស៊ូរបស់បុព្វបុរសខ្មែរ ដែលបានបន្សល់ទុកនូវបេតិកភណ្ឌដ៏អស្ចារ្យសម្រាប់មនុស្សជាតិទាំងមូល។"
-                        </div>
+                                        <p>ខណៈដែលកសិណទឹកដែលព័ទ្ធជុំវិញប្រាសាទ តំណាងឱ្យមហាសមុទ្រដែលព័ទ្ធជុំវិញពិភពលោក។ ប្រាសាទនេះត្រូវបានសាងសង់ដោយថ្មភក់ និងថ្មបាយក្រៀម ដែលត្រូវបានដឹកជញ្ជូនមកពីភ្នំគូលែន។</p>
+                
+                                        <h2 class="fw-bold mb-4 mt-5">ការទស្សនាពេលព្រឹកព្រលឹម</h2>
+                                        <p>បទពិសោធន៍ដែលមិនអាចរំលងបានគឺការទស្សនាថ្ងៃរះនៅអង្គរវត្ត។ នៅពេលដែលពន្លឺព្រះអាទិត្យចាប់ផ្តើមជះមកលើកំពូលប្រាសាទ វានឹងបង្កើតបានជាទិដ្ឋភាពដ៏អស្ចារ្យដែលមិនអាចរកអ្វីមកប្រៀបផ្ទឹមបាន។</p>
 
-                        <h2>ការទស្សនាពេលព្រឹកព្រលឹម</h2>
-                        <p>បទពិសោធន៍ដែលមិនអាចរំលងបានគឺការទស្សនាថ្ងៃរះនៅអង្គរវត្ត។ នៅពេលដែលពន្លឺព្រះអាទិត្យចាប់ផ្តើមជះមកលើកំពូលប្រាសាទ វានឹងបង្កើតបានជាទិដ្ឋភាពដ៏អស្ចារ្យដែលមិនអាចរកអ្វីមកប្រៀបផ្ទឹមបាន។ វាគឺជាពេលវេលាដ៏ពិសិដ្ឋបំផុត ដែលធ្វើឱ្យអ្នកមានអារម្មណ៍ថាបានត្រឡប់ទៅកាន់សម័យកាលដ៏រុងរឿងកាលពី ៨០០ ឆ្នាំមុន។</p>
-                    </div>
+                                        <div class="rounded-4 overflow-hidden shadow-sm my-4">
+                                            <img src="https://images.unsplash.com/photo-1500835556837-99ac94a94552?q=80&w=1000&auto=format&fit=crop" class="img-fluid w-100" alt="Angkor Sunrise">
+                                        </div>
 
-                    <div class="col-lg-3 offset-lg-1">
-                        <div class="sidebar-sticky">
-                            <div class="widget-v2">
-                                <h5>អ្នកនិពន្ធ</h5>
-                                <div class="d-flex align-items-center gap-3">
-                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1974&auto=format&fit=crop" width="50" height="50" class="rounded-circle" alt="Author">
-                                    <div>
-                                        <h6 class="mb-0 fw-bold">វិច្ឆិកា</h6>
-                                        <span class="small text-muted">អ្នកសរសេរប្លុក</span>
+                                        <p>វាគឺជាពេលវេលាដ៏ពិសិដ្ឋបំផុត ដែលធ្វើឱ្យអ្នកមានអារម្មណ៍ថាបានត្រឡប់ទៅកាន់សម័យកាលដ៏រុងរឿងកាលពី ៨០០ ឆ្នាំមុន។</p>
                                     </div>
                                 </div>
                             </div>
+            </article>
+        </section>
 
-                            <div class="widget-v2">
-                                <h5>ពេញនិយម</h5>
-                                <div class="d-flex flex-column gap-4">
-                                    <a href="#" class="text-decoration-none text-dark d-flex gap-3">
-                                        <div class="fw-bold text-muted">01</div>
-                                        <h6 class="small mb-0">កោះសម្ងាត់ទាំង ៥ នៅខេត្តព្រះសីហនុ</h6>
-                                    </a>
-                                    <a href="#" class="text-decoration-none text-dark d-flex gap-3">
-                                        <div class="fw-bold text-muted">02</div>
-                                        <h6 class="small mb-0">រសជាតិម្រេចកំពត៖ អាថ៌កំបាំងម្ហូបខ្មែរ</h6>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <section class="bg-mixed py-5 mt-5">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="section-badge mb-2 d-inline-block text-white" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2);">កន្លែងលេចធ្លោ</span>
+                    <h2 class="section-title" style="color: white !important;">កន្លែងដែលគួរទស្សនានៅ<span>សៀមរាប</span></h2>
+                    <div class="title-line mx-auto" style="background-color: white;"></div>
+                </div>
+                <div class="row g-4">
+                                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="highlight-card">
+                                            <div class="highlight-img">
+                                                <img src="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?q=80&w=1000&auto=format&fit=crop" alt="Bayon">
+                                            </div>
+                                            <div class="highlight-body">
+                                                <h4 class="highlight-title">ប្រាសាទបាយ័ន</h4>
+                                                <p class="small text-muted mb-0">ល្បីល្បាញដោយសារព្រហ្មមុខបួនញញឹមដាក់អ្នកទស្សនាពីគ្រប់ទិសទី។</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                        <div class="highlight-card">
+                                            <div class="highlight-img">
+                                                <img src="https://images.unsplash.com/photo-1544376798-89aa6b82c6cd?q=80&w=1000&auto=format&fit=crop" alt="Ta Prohm">
+                                            </div>
+                                            <div class="highlight-body">
+                                                <h4 class="highlight-title">ប្រាសាទតាព្រហ្ម</h4>
+                                                <p class="small text-muted mb-0">ប្រាសាទដែលហ៊ុមព័ទ្ធដោយឫសឈើយក្ស បង្កើតបានជាទិដ្ឋភាពអាថ៌កំបាំង។</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                        <div class="highlight-card">
+                                            <div class="highlight-img">
+                                                <img src="https://images.unsplash.com/photo-1580795478093-6202476569cc?q=80&w=1000&auto=format&fit=crop" alt="Floating Village">
+                                            </div>
+                                            <div class="highlight-body">
+                                                <h4 class="highlight-title">ភូមិបណ្តែតទឹក</h4>
+                                                <p class="small text-muted mb-0">ស្វែងយល់ពីជីវភាពរស់នៅរបស់ប្រជាជនលើបឹងទន្លេសាប។</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                        <div class="highlight-card">
+                                            <div class="highlight-img">
+                                                <img src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?q=80&w=1000&auto=format&fit=crop" alt="Pub Street">
+                                            </div>
+                                            <div class="highlight-body">
+                                                <h4 class="highlight-title">ផាប់ស្ទ្រីត (Pub Street)</h4>
+                                                <p class="small text-muted mb-0">តំបន់កម្សាន្តពេលរាត្រីដ៏រស់រវើកបំផុតនៅក្នុងក្រុងសៀមរាប។</p>
+                                            </div>
+                                        </div>
+                                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer py-5 bg-dark text-white">
-        <div class="container text-center">
-            <img src="assets/image/new_logo_v2.png" alt="Logo" width="60" class="mb-4">
-            <p class="opacity-50 small">&copy; ២០២៦ ទេសចរណ៍កម្ពុជារក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="footer-brand mb-4">
+                        <img src="assets/image/new_logo_v2.png" alt="Logo" width="60" class="mb-3">
+                        <h5 class="text-white fw-bold">ទេសចរណ៍កម្ពុជា</h5>
+                    </div>
+                    <p class="footer-brand-text text-white-50 small">
+                        ស្វែងយល់ពីភាពអស្ចារ្យនៃព្រះរាជាណាចក្រអច្ឆរិយៈ។ យើងខ្ញុំផ្តល់ជូននូវបទពិសោធន៍ទេសចរណ៍ដ៏ល្អបំផុត
+                        ដើម្បីបំពេញក្តីសុបិនរបស់អ្នកនៅក្នុងតំបន់អាសុីអាគ្នេយ៍។
+                    </p>
+                    <div class="social-links d-flex gap-3">
+                        <a href="#" class="social-btn text-white opacity-75"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn text-white opacity-75"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn text-white opacity-75"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-btn text-white opacity-75"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title text-white fw-bold mb-4">គោលដៅ</h6>
+                    <ul class="footer-links list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="#" class="text-white-50 text-decoration-none">ភ្នំពេញ</a></li>
+                        <li><a href="siem-reap.html" class="text-white-50 text-decoration-none">សៀមរាប</a></li>
+                        <li><a href="kampot.html" class="text-white-50 text-decoration-none">កំពត</a></li>
+                        <li><a href="kep.html" class="text-white-50 text-decoration-none">កែប</a></li>
+                        <li><a href="prea-sihanouk.html" class="text-white-50 text-decoration-none">ព្រះសីហនុ</a></li>
+                        <li><a href="battambang.html" class="text-white-50 text-decoration-none">បាត់ដំបង</a></li>
+                        <li><a href="mondulkiri.html" class="text-white-50 text-decoration-none">មណ្ឌលគិរី</a></li>
+                        <li><a href="koh-kong.html" class="text-white-50 text-decoration-none">កោះកុង</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title text-white fw-bold mb-4">សេវាកម្ម</h6>
+                    <ul class="footer-links list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="hotels.html" class="text-white-50 text-decoration-none">សណ្ឋាគារ</a></li>
+                        <li><a href="restaurants.html" class="text-white-50 text-decoration-none">ភោជនីយដ្ឋាន</a></li>
+                        <li><a href="guide.html" class="text-white-50 text-decoration-none">មគ្គុទ្ទេសក៍</a></li>
+                        <li><a href="transportation.html" class="text-white-50 text-decoration-none">ការដឹកជញ្ជូន</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <h6 class="footer-title text-white fw-bold mb-4">ទំនាក់ទំនង</h6>
+                    <div class="footer-contact d-flex flex-column gap-3 small text-white-50">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone-alt me-2"></i>
+                            <span>+៨៥៥ ១២ ២២៣ ៣២២</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope me-2"></i>
+                            <span>info@cambodiatourism.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            <span>ភ្នំពេញ, ព្រះរាជាណាចក្រកម្ពុជា</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="footer-title text-white fw-bold mb-4">ស្វែងយល់</h6>
+                    <ul class="footer-links list-unstyled d-flex flex-column gap-2 small">
+                        <li><a href="#" class="text-white-50 text-decoration-none">វិចិត្រសាល</a></li>
+                        <li><a href="blog.html" class="text-white-50 text-decoration-none">ប្លុកទេសចរណ៍</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">មតិយោបល់</a></li>
+                        <li><a href="map.html" class="text-white-50 text-decoration-none">ផែនទី</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-white opacity-10 my-5">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                    <p class="mb-0 small text-white-50">&copy; ២០២៦ ទេសចរណ៍កម្ពុជារក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+                </div>
+            </div>
         </div>
     </footer>
 

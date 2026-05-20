@@ -2,16 +2,28 @@
 *{
     padding: 0; margin: 0; box-sizing: border-box;
 }
-:root{
-    --primary-color:     #0D2A43; 
-    --secondary-color:   #D7B56D; 
-    --angkor-stone:      #5D4037; 
-    --golden-spice:      #E5C58B;
-    --parchment:         #F8F9FA;
-    --sand-whisper:      #FAF9F6;
-    --night-indigo:      #1A365D;
-    --camel-brown:       #8D6E63;
-    --dark-oud:          #07121C;
+:root {
+    /* Primary Brand Identity (Directly from Logo) */
+    --royal-blue: #0D2A43;
+    --khmer-gold: #D7B56D;
+    --angkor-stone: #5D4037;
+    --silk-saffron: #E67E22;
+
+    /* Primary color compatibility mappings */
+    --primary-color: #0D2A43;
+    --secondary-color: #D7B56D;
+
+    /* Semantic Palette mapped to Brand Colors */
+    --deep-mahogany: var(--royal-blue);
+    --burnt-sienna: var(--angkor-stone);
+    --desert-terracotta: var(--silk-saffron);
+    --amber-dune: var(--khmer-gold);
+    --golden-spice: #E5C58B;
+    --parchment: #F8F9FA;
+    --sand-whisper: #FAF9F6;
+    --night-indigo: #1A365D;
+    --camel-brown: #8D6E63;
+    --dark-oud: #07121C;
 }
 body{
     font-family: "Kantumruy Pro", sans-serif !important;
@@ -44,28 +56,47 @@ body{
     color: white !important;
     text-align: center !important;
     overflow: hidden !important;
+    background-image: url('../image/mondulkirinew.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
 
-.hero-video-bg {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    z-index: -2 !important;
-    opacity: 0.8 !important;
-    animation: heroZoom 20s infinite alternate ease-in-out !important;
-}
-
-.hero-overlay {
+/* Premium 4-Sided Cinematic Vignette Overlay */
+.wild-hero::before {
+    content: '' !important;
     position: absolute !important;
     inset: 0 !important;
-    background: radial-gradient(circle at center, 
-        rgba(13, 42, 67, 0.2) 20%, 
-        rgba(13, 42, 67, 0.6) 60%, 
-        rgba(13, 42, 67, 0.95) 100%) !important; /* 4-Sided Cinematic Vignette */
-    z-index: -1 !important;
+    background: 
+        /* Top Shadow: Blends page header softly with banner */
+        linear-gradient(to bottom, rgba(7, 18, 28, 0.85) 0%, transparent 22%),
+        /* Bottom Shadow: Adds visual depth at viewport lower boundary */
+        linear-gradient(to top, rgba(7, 18, 28, 0.95) 0%, transparent 25%),
+        /* Left Shadow: Creates anamorphic matte framing on the left */
+        linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+        /* Right Shadow: Creates anamorphic matte framing on the right */
+        linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+        /* Central Spotlight: High-contrast vignette centered on image */
+        radial-gradient(circle at center, rgba(13, 42, 67, 0.65) 0%, rgba(7, 18, 28, 0.8) 50%, rgba(7, 18, 28, 0.95) 100%) !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+.wild-hero::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 120px !important;
+    background: linear-gradient(transparent, var(--primary-color)) !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+}
+
+.wild-hero > .hero-content {
+    position: relative !important;
+    z-index: 3 !important;
 }
 
 .hero-tagline {
@@ -330,13 +361,13 @@ body{
 
 .lodge-premium-img {
     width: 100% !important; /* Full width for vertical layout */
-    height: 250px !important;
+    height: 200px !important;
     object-fit: cover !important;
 }
 
 .lodge-premium-info {
     width: 100% !important; /* Full width for vertical layout */
-    padding: 30px !important;
+    padding: 25px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
@@ -345,7 +376,7 @@ body{
 
 .lodge-premium-info h3 {
     color: var(--secondary-color) !important;
-    font-size: 28px !important;
+    font-size: 22px !important;
     font-weight: 700 !important;
     margin-bottom: 12px !important;
 }
@@ -394,6 +425,20 @@ body{
     color: var(--primary-color) !important;
     transform: translateY(-5px) scale(1.05) !important;
     border-color: white !important;
+}
+
+.btn-khmer-gold {
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.btn-khmer-gold:hover {
+    background: white !important;
+    color: var(--primary-color) !important;
+    transform: translateY(-5px) scale(1.05) !important;
+    border-color: white !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
 /* ── Animations ── */
@@ -467,4 +512,63 @@ body{
 
 .map-wrapper:hover iframe {
     filter: grayscale(0) contrast(1.1) !important;
+}
+
+/* 4-Sided Cinematic Vignette Overlay for Adventure items */
+.adventure-item::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.75) 100%) !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+    transition: all 0.5s ease !important;
+}
+
+.adventure-item:hover::after {
+    background: radial-gradient(circle, transparent 30%, rgba(0, 0, 0, 0.85) 100%) !important;
+}
+
+/* ========================================================
+   SECTION PADDING AND HIGH CONTRAST DARK OVERRIDES FOR BG-MIXED
+   ======================================================== */
+.bg-mixed {
+    color: #ffffff !important;
+}
+
+.bg-mixed h1, .bg-mixed h2, .bg-mixed h3, .bg-mixed h4, .bg-mixed h5, .bg-mixed h6 {
+    color: #ffffff !important;
+}
+
+.bg-mixed p, .bg-mixed span, .bg-mixed li {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.bg-mixed .section-label {
+    color: var(--secondary-color) !important;
+}
+
+.bg-mixed h2.text-center.fw-bold {
+    color: #ffffff !important;
+}
+
+.cultural-card-content h5 {
+    color: var(--secondary-color) !important;
+}
+
+.cultural-card-content p {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Fix text color on white cards inside .bg-mixed */
+.bg-mixed .food-card h1, .bg-mixed .food-card h2, .bg-mixed .food-card h3, .bg-mixed .food-card h4, .bg-mixed .food-card h5, .bg-mixed .food-card h6 {
+    color: var(--night-indigo) !important;
+}
+
+.bg-mixed .food-card p, .bg-mixed .food-card li {
+    color: rgba(0, 0, 0, 0.6) !important;
+}
+
+.bg-mixed .food-card span {
+    color: var(--night-indigo);
 }

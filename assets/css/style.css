@@ -13,12 +13,17 @@
     --camel-brown:       #8D6E63;
     --dark-oud:          #07121C;
 }
+.text-primary-color {
+    color: var(--primary-color) !important;
+}
+.text-golden-spice {
+    color: var(--golden-spice) !important;
+}
 body{
     font-family: "Kantumruy Pro", sans-serif !important;
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
 }
-
 .bg-gradient-stone {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--angkor-stone) 100%) !important;
 }
@@ -31,12 +36,10 @@ body{
 .bg-mixed {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-oud) 40%, var(--angkor-stone) 100%) !important;
 }
-
 header {
     background-color: var(--primary-color) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
-
 .navbar-brand {
     background: transparent !important;
 }
@@ -47,11 +50,9 @@ header {
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2) )!important;
 }
-
 header:hover .navbar-brand img {
     transform: scale(1.05) rotate(2deg) !important;
 }
-
 body.light-mode .navbar-brand img {
     background-color: transparent !important;
     filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1)) !important;
@@ -64,7 +65,6 @@ body.light-mode .navbar-brand img {
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
     position: relative !important;
 }
-
 .nav-link::after {
     content: '' !important;
     position: absolute !important;
@@ -77,16 +77,13 @@ body.light-mode .navbar-brand img {
     transform: translateX(-50%) scaleX(0) !important; /* Scale to 0 */
     opacity: 0 !important; /* Fully invisible */
 }
-
 .nav-link:hover{
     color: var(--secondary-color) !important;
 }
-
 .nav-link:hover::after, .nav-link.active::after { 
     transform: translateX(-50%) scaleX(1) !important;
     opacity: 1 !important;
 }
-
 .nav-link.active { 
     color: var(--secondary-color) !important;
     font-weight: 600 !important;
@@ -101,7 +98,6 @@ body.light-mode .navbar-brand img {
     background-color: white !important;
     color: var(--primary-color) !important;
 }
-
 .hero-bento {
     min-height: 100vh !important;
     position: relative !important;
@@ -113,7 +109,6 @@ body.light-mode .navbar-brand img {
     background-attachment: fixed !important;
     overflow: hidden !important;
 }
-
 .hero-bento::before {
     content: '' !important;
     position: absolute !important;
@@ -125,7 +120,6 @@ body.light-mode .navbar-brand img {
         rgba(13, 42, 67, 0.85) 100%) !important;
     z-index: 1 !important;
 }
-
 .bento-grid {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
@@ -134,7 +128,6 @@ body.light-mode .navbar-brand img {
     position: relative !important;
     z-index: 2 !important;
 }
-
 .bento-card {
     position: relative !important;
     border-radius: 30px !important;
@@ -144,7 +137,6 @@ body.light-mode .navbar-brand img {
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important;
     box-shadow: 0 15px 40px rgba(13, 42, 67, 0.4) !important; /* Atmospheric Blue Shadow */
 }
-
 .card-main {
     grid-column: span 2 !important;
     grid-row: span 2 !important;
@@ -157,14 +149,12 @@ body.light-mode .navbar-brand img {
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important;
 }
-
 .card-main:hover {
     background: transparent !important; 
     backdrop-filter: blur(30px) !important;
     -webkit-backdrop-filter: blur(30px) !important;
     border-color: var(--secondary-color) !important;
 }
-
 .card-main .badge-khmer {
     background: var(--secondary-color) !important;
     color: var(--primary-color) !important;
@@ -177,7 +167,6 @@ body.light-mode .navbar-brand img {
     margin-bottom: 30px !important; 
     letter-spacing: 1px !important;
 }
-
 .card-main .title-bento {
     font-size: clamp(30px, 3.5vw, 42px) !important; 
     font-weight: 800 !important;
@@ -187,7 +176,6 @@ body.light-mode .navbar-brand img {
     color: white !important;
     letter-spacing: -0.2px !important;
 }
-
 .card-main p {
     font-size: 15px !important; 
     line-height: 1.8 !important;
@@ -195,7 +183,6 @@ body.light-mode .navbar-brand img {
     margin-bottom: 40px !important;
     max-width: 95% !important;
 }
-
 .btn-bento {
     background: var(--secondary-color) !important;
     color: var(--primary-color) !important;
@@ -209,18 +196,15 @@ body.light-mode .navbar-brand img {
     align-items: center !important;
     gap: 10px !important;
 }
-
 .btn-bento:hover {
     background: white !important;
     transform: scale(1.05) !important;
     box-shadow: 0 10px 25px rgba(215, 181, 109, 0.4) !important;
 }
-
 .card-place {
     cursor: pointer !important;
     position: relative !important;
 }
-
 .card-place::after {
     content: '' !important;
     position: absolute !important;
@@ -232,14 +216,12 @@ body.light-mode .navbar-brand img {
     z-index: 2 !important;
     transition: all 0.4s ease !important;
 }
-
 .card-place:hover::after {
     background: radial-gradient(circle at center, 
         transparent 10%, 
         rgba(13, 42, 67, 0.4) 50%, 
         rgba(13, 42, 67, 1) 100%) !important;
 }
-
 .card-place img {
     width: 100% !important;
     height: 100% !important;
@@ -248,22 +230,18 @@ body.light-mode .navbar-brand img {
     filter: brightness(0.75) contrast(1.1) !important; 
     transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
-
 .card-place:hover img {
     filter: brightness(0.9) contrast(1.1) !important; 
 }
-
 .bento-card:hover {
     transform: translateY(-12px) scale(1.02) !important;
     box-shadow: 0 40px 80px -20px rgba(13, 42, 67, 0.8), 
                 0 0 20px rgba(215, 181, 109, 0.2) !important; 
     border-color: var(--secondary-color) !important;
 }
-
 .bento-card:hover img {
     transform: scale(1.15) rotate(1deg) !important;
 }
-
 .card-label {
     position: absolute !important;
     bottom: 25px !important;
@@ -278,7 +256,6 @@ body.light-mode .navbar-brand img {
     text-shadow: 0 2px 4px rgba(0,0,0,0.5) !important;
     transition: all 0.4s ease !important;
 }
-
 .card-label::before {
     content: '' !important;
     width: 20px !important;
@@ -290,18 +267,15 @@ body.light-mode .navbar-brand img {
     transform: translateY(0) !important;
     opacity: 1 !important;
 }
-
 .destinations-section {
     background-color: var(--sand-whisper) !important;
     position: relative !important;
     overflow: hidden !important;
     padding: 100px 0 !important;
 }
-
 body.dark-mode .destinations-section {
     background-color: var(--dark-oud) !important;
 }
-
 .section-badge {
     background: rgba(215, 181, 109, 0.1) !important;
     color: var(--secondary-color) !important;
@@ -312,7 +286,6 @@ body.dark-mode .destinations-section {
     letter-spacing: 1px !important;
     border: 1px solid rgba(215, 181, 109, 0.2) !important;
 }
-
 .section-title {
     font-family: "Kantumruy Pro", sans-serif !important;
     font-size: clamp(28px, 4vw, 42px) !important;
@@ -320,22 +293,18 @@ body.dark-mode .destinations-section {
     color: var(--primary-color) !important;
     margin-top: 15px !important;
 }
-
 body.dark-mode .section-title {
     color: white !important;
 }
-
 .section-title span {
     color: var(--secondary-color) !important;
 }
-
 .title-line {
     width: 80px !important;
     height: 4px !important;
     background: var(--secondary-color) !important;
     border-radius: 2px !important;
 }
-
 .section-subtitle {
     max-width: 600px !important;
     margin-left: auto !important;
@@ -344,12 +313,9 @@ body.dark-mode .section-title {
     opacity: 0.7 !important;
     font-size: 16px !important;
 }
-
 body.dark-mode .section-subtitle {
     color: rgba(255, 255, 255, 0.7) !important;
 }
-
-/* Destination Cards */
 .destination-card {
     border-radius: 25px !important;
     overflow: hidden !important;
@@ -358,14 +324,12 @@ body.dark-mode .section-subtitle {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
-
 .card-img-wrapper {
     width: 100% !important;
     height: 100% !important;
     position: relative !important;
     overflow: hidden !important;
 }
-
 .card-img-wrapper img {
     width: 100% !important;
     height: 100% !important;
@@ -373,7 +337,6 @@ body.dark-mode .section-subtitle {
     filter: brightness(0.8) contrast(1.1) !important; 
     transition: all 1s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
-
 .card-overlay {
     position: absolute !important;
     inset: 0 !important;
@@ -388,20 +351,16 @@ body.dark-mode .section-subtitle {
     transition: all 0.4s ease !important;
     z-index: 2 !important;
 }
-
 .overlay-content {
     transform: translateY(60px) !important;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
-
 .destination-card:hover .overlay-content {
     transform: translateY(0) !important;
 }
-
 .destination-card:hover img {
     transform: scale(1.1) !important;
 }
-
 .loc-badge {
     background: transparent !important; /* Removed solid background as requested */
     color: var(--secondary-color) !important;
@@ -416,11 +375,9 @@ body.dark-mode .section-subtitle {
     box-shadow: none !important;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5) !important;  
 }
-
 .loc-badge i {
     font-size: 14px !important;
 }
-
 .overlay-content h3 {
     color: white !important;
     font-size: 22px !important; /* Slightly smaller for tighter fit */
@@ -433,7 +390,6 @@ body.dark-mode .section-subtitle {
     overflow: hidden !important;
     line-height: 1.1 !important;
 }
-
 .overlay-content p {
     color: rgba(255, 255, 255, 0.8) !important;
     font-size: 13px !important; /* Slightly smaller */
@@ -448,11 +404,9 @@ body.dark-mode .section-subtitle {
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
 }
-
 .destination-card:hover .overlay-content p {
     opacity: 1 !important;
 }
-
 .btn-explore {
     color: var(--secondary-color) !important;
     text-decoration: none !important;
@@ -463,7 +417,6 @@ body.dark-mode .section-subtitle {
     gap: 10px !important;
     transition: 0.3s !important;
 }
-
 .btn-explore:hover {
     color: white !important;
 }
@@ -471,15 +424,12 @@ body.dark-mode .section-subtitle {
     transform: translateY(-10px) !important;
     box-shadow: 0 30px 60px rgba(13, 42, 67, 0.3) !important;
 }
-
-/* ── Services Section ── */
 .services-section {
     background: linear-gradient(135deg, var(--primary-color) 0%, #153e5f 100%) !important;
     padding: 100px 0 !important;
     position: relative !important;
     overflow: hidden !important;
 }
-
 .services-section::before {
     content: '' !important;
     position: absolute !important;
@@ -490,7 +440,6 @@ body.dark-mode .section-subtitle {
     background-image: radial-gradient(circle at 20% 30%, rgba(215, 181, 109, 0.05) 0%, transparent 50%),
                       radial-gradient(circle at 80% 70%, rgba(215, 181, 109, 0.05) 0%, transparent 50%) !important;
 }
-
 .service-card {
     background: white !important;
     border-radius: 35px !important;
@@ -501,19 +450,16 @@ body.dark-mode .section-subtitle {
     flex-direction: column !important;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
 }
-
 .service-card:hover {
     transform: translateY(-10px) !important;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2) !important;
 }
-
 .service-img-box {
     width: 100% !important;
     height: 50% !important; /* Exactly half */
     overflow: hidden !important;
     position: relative !important;
 }
-
 .service-img-box::after {
     content: '' !important;
     position: absolute !important;
@@ -522,11 +468,9 @@ body.dark-mode .section-subtitle {
     transition: all 0.5s ease !important;
     pointer-events: none !important;
 }
-
 .service-card:hover .service-img-box::after {
     background: transparent !important;
 }
-
 .service-img-box img {
     width: 100% !important;
     height: 100% !important;
@@ -534,12 +478,10 @@ body.dark-mode .section-subtitle {
     transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1) !important;
     filter: brightness(0.9) !important;
 }
-
 .service-card:hover .service-img-box img {
     transform: scale(1.15) !important;
     filter: brightness(1.1) !important;
 }
-
 .service-content {
     padding: 30px !important;
     height: 50% !important;
@@ -548,7 +490,6 @@ body.dark-mode .section-subtitle {
     justify-content: center !important;
     text-align: left !important; /* Move text to side */
 }
-
 .service-icon-box {
     width: 50px !important;
     height: 50px !important;
@@ -564,21 +505,18 @@ body.dark-mode .section-subtitle {
     box-shadow: 0 5px 15px rgba(215, 181, 109, 0.2) !important;
     flex-shrink: 0 !important;
 }
-
 .service-card:hover .service-icon-box {
     background: var(--primary-color) !important;
     color: var(--secondary-color) !important;
     transform: translateY(-5px) rotate(8deg) !important;
     box-shadow: 0 12px 25px rgba(13, 42, 67, 0.2) !important;
 }
-
 .guides-showcase-section {
     background-color: var(--sand-whisper) !important;
     padding: 100px 0 !important;
     position: relative !important;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color) 50%, var(--secondary-color) 100%) !important;
 }
-
 .guide-province-card {
     background: white !important;
     border-radius: 30px !important;
@@ -589,20 +527,17 @@ body.dark-mode .section-subtitle {
     height: 100% !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
 }
-
 .guide-province-card:hover {
     transform: translateY(-12px) !important;
     box-shadow: 0 25px 50px rgba(13, 42, 67, 0.1) !important;
     border-color: var(--secondary-color) !important;
 }
-
 .guide-avatar-box {
     width: 120px !important;
     height: 120px !important;
     margin: 0 auto 25px !important;
     position: relative !important;
 }
-
 .guide-avatar-box img {
     width: 100% !important;
     height: 100% !important;
@@ -612,12 +547,10 @@ body.dark-mode .section-subtitle {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
     transition: all 0.4s ease !important;
 }
-
 .guide-province-card:hover .guide-avatar-box img {
     border-color: var(--secondary-color) !important;
     transform: scale(1.05) !important;
 }
-
 .province-tag {
     position: absolute !important;
     bottom: 5px !important;
@@ -631,40 +564,32 @@ body.dark-mode .section-subtitle {
     border: 2px solid white !important;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
 }
-
 .guide-info h5 {
     font-size: 18px !important;
     font-weight: 700 !important;
     color: var(--primary-color) !important;
     margin-bottom: 12px !important;
 }
-
 .guide-info p {
     font-size: 14px !important;
     line-height: 1.6 !important;
     color: #555 !important;
     margin-bottom: 0 !important;
 }
-
-/* ── Royal Gallery Bento Grid ── */
 .royal-gallery-section {
     padding: 100px 0 !important;
     background: white !important;
 }
-
-/* ── Royal Gallery Section ── */
 .royal-gallery-section {
     padding: 100px 0 !important;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-oud) 40%, var(--angkor-stone) 100%) !important;
 }
-
 .gallery-bento-grid {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
     grid-auto-rows: 250px !important; /* Flexible rows */
     gap: 20px !important;
 }
-
 .gallery-item {
     position: relative !important;
     border-radius: 25px !important;
@@ -673,15 +598,12 @@ body.dark-mode .section-subtitle {
     height: 300px !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
 }
-
 .item-large {
     grid-row: span 2 !important;
 }
-
 .item-wide {
     grid-column: span 2 !important;
 }
-
 .gallery-item img {
     width: 100% !important;
     height: 100% !important;
@@ -692,11 +614,9 @@ body.dark-mode .section-subtitle {
         rgba(13, 42, 67, 0.5) 60%, 
         rgba(13, 42, 67, 0.95) 100%) !important; 
 }
-
 .gallery-item:hover img {
     transform: scale(1.15) rotate(1deg) !important;
 }
-
 .gallery-overlay {
     position: absolute !important;
     inset: 0 !important;
@@ -708,12 +628,10 @@ body.dark-mode .section-subtitle {
     transition: all 0.4s ease !important;
     transform: translateY(20px) !important;
 }
-
 .gallery-item:hover .gallery-overlay {
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
-
 .overlay-text span {
     color: var(--secondary-color) !important;
     font-size: 12px !important;
@@ -723,14 +641,12 @@ body.dark-mode .section-subtitle {
     display: block !important;
     margin-bottom: 5px !important;
 }
-
 .overlay-text h6 {
     color: white !important;
     font-size: 20px !important;
     font-weight: 700 !important;
     margin: 0 !important;
 }
-
 @media (max-width: 992px) {
     .gallery-bento-grid {
         grid-template-columns: repeat(2, 1fr) !important;
@@ -739,7 +655,6 @@ body.dark-mode .section-subtitle {
     .item-large { grid-row: span 2 !important; }
     .item-wide { grid-column: span 2 !important; }
 }
-
 @media (max-width: 576px) {
     .gallery-bento-grid {
         display: flex !important;
@@ -750,13 +665,10 @@ body.dark-mode .section-subtitle {
         height: 250px !important;
     }
 }
-
-/* ── Latest Blog Section ── */
 .latest-blog-section {
     background-color: white !important;
     padding: 100px 0 !important;
 }
-
 .blog-card-home {
     background: white !important;
     border-radius: 25px !important;
@@ -767,30 +679,25 @@ body.dark-mode .section-subtitle {
     display: flex !important;
     flex-direction: column !important;
 }
-
 .blog-card-home:hover {
     transform: translateY(-10px) !important;
     box-shadow: 0 20px 40px rgba(13, 42, 67, 0.1) !important;
     border-color: var(--secondary-color) !important;
 }
-
 .blog-img-wrapper {
     height: 230px !important;
     position: relative !important;
     overflow: hidden !important;
 }
-
 .blog-img-wrapper img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
     transition: transform 1s ease !important;
 }
-
 .blog-card-home:hover .blog-img-wrapper img {
     transform: scale(1.1) !important;
 }
-
 .blog-category {
     position: absolute !important;
     top: 20px !important;
@@ -803,14 +710,12 @@ body.dark-mode .section-subtitle {
     font-weight: 700 !important;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
 }
-
 .blog-body {
     padding: 30px !important;
     flex-grow: 1 !important;
     display: flex !important;
     flex-direction: column !important;
 }
-
 .blog-meta {
     display: flex !important;
     gap: 20px !important;
@@ -818,7 +723,6 @@ body.dark-mode .section-subtitle {
     color: #888 !important;
     margin-bottom: 15px !important;
 }
-
 .blog-body h4 {
     font-size: 20px !important;
     font-weight: 700 !important;
@@ -830,7 +734,6 @@ body.dark-mode .section-subtitle {
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
 }
-
 .blog-body p {
     font-size: 14px !important;
     line-height: 1.7 !important;
@@ -838,7 +741,6 @@ body.dark-mode .section-subtitle {
     margin-bottom: 25px !important;
     flex-grow: 1 !important;
 }
-
 .read-more-link {
     color: var(--secondary-color) !important;
     text-decoration: none !important;
@@ -848,12 +750,10 @@ body.dark-mode .section-subtitle {
     align-items: center !important;
     transition: 0.3s !important;
 }
-
 .read-more-link:hover {
     color: var(--primary-color) !important;
     transform: translateX(5px) !important;
 }
-
 .btn-explore {
     color: var(--primary-color) !important;
     text-decoration: none !important;
@@ -863,18 +763,14 @@ body.dark-mode .section-subtitle {
     gap: 10px !important;
     transition: 0.3s !important;
 }
-
 .btn-explore:hover {
     color: var(--secondary-color) !important;
     transform: translateX(5px) !important;
 }
-
-/* ── Testimonials Section ── */
 .testimonials-section {
     padding: 100px 0 !important;
     background-color: var(--sand-whisper) !important;
 }
-
 .testimonial-card {
     background: white !important;
     padding: 40px !important;
@@ -887,13 +783,11 @@ body.dark-mode .section-subtitle {
     border: 1px solid rgba(0, 0, 0, 0.05) !important;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
 }
-
 .testimonial-card:hover {
     transform: translateY(-10px) !important;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2) !important;
     border-color: var(--secondary-color) !important;
 }
-
 .testi-quote {
     font-size: 40px !important;
     color: var(--secondary-color) !important;
@@ -902,13 +796,11 @@ body.dark-mode .section-subtitle {
     top: 30px !important;
     right: 30px !important;
 }
-
 .testi-rating {
     color: #ffc107 !important;
     margin-bottom: 20px !important;
     font-size: 14px !important;
 }
-
 .testi-text {
     font-size: 16px !important;
     line-height: 1.8 !important;
@@ -917,13 +809,11 @@ body.dark-mode .section-subtitle {
     margin-bottom: 30px !important;
     flex-grow: 1 !important;
 }
-
 .testi-user {
     display: flex !important;
     align-items: center !important;
     gap: 15px !important;
 }
-
 .testi-user img {
     width: 60px !important;
     height: 60px !important;
@@ -931,30 +821,24 @@ body.dark-mode .section-subtitle {
     object-fit: cover !important;
     border: 2px solid var(--secondary-color) !important;
 }
-
 .user-info h6 {
     margin: 0 !important;
     font-weight: 700 !important;
     color: var(--primary-color) !important;
 }
-
 .user-info span {
     font-size: 12px !important;
     color: #888 !important;
 }
-
-/* ── Interactive Map Section ── */
 .interactive-map-section {
     padding: 100px 0 150px !important;
     background-color: var(--sand-whisper) !important;
 }
-
 .map-wrapper {
     position: relative !important;
     max-width: 1100px !important;
     margin: 0 auto !important;
 }
-
 .map-container-home {
     border-radius: 40px !important;
     overflow: hidden !important;
@@ -1488,6 +1372,7 @@ body.dark-mode .section-subtitle {
 .card {
     transition: transform 0.3s ease;
     border-radius: 12px;
+    color: black;
 }
 .card:hover {
     transform: translateY(-8px);
@@ -1587,6 +1472,7 @@ body.dark-mode .section-subtitle {
     background-color: var(--primary-color) !important;
     border: 1px solid var(--secondary-color) !important;
     color: white !important;
+    text-decoration: none !important;
     transition: all 0.4s ease !important;
 }
 
@@ -1827,4 +1713,51 @@ body.dark-mode .section-subtitle {
     padding: 20px;
     border-radius: 20px;
 }
+}
+
+/* 4-Sided Cinematic Vignette Overlay */
+/* Applied to common image wrappers across the site */
+.card-img-wrapper::after,
+.service-img-box::after,
+.gallery-item::after,
+.blog-img-wrapper::after,
+.highlight-img::after,
+.rounded-4.overflow-hidden::after,
+.attraction-img-wrap::after,
+.about-img-wrap::after,
+.food-card-img::after,
+.beach-card-img::after,
+.nimg::after,
+.card-place::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.85) 100%) !important;
+    pointer-events: none !important;
+    z-index: 5 !important;
+    border-radius: inherit !important;
+    mix-blend-mode: multiply !important;
+    transition: all 0.5s ease !important;
+}
+
+/* Ensure wrappers are relative */
+.card-img-wrapper,
+.service-img-box,
+.gallery-item,
+.blog-img-wrapper,
+.highlight-img,
+.rounded-4.overflow-hidden,
+.attraction-img-wrap,
+.about-img-wrap,
+.food-card-img,
+.beach-card-img,
+.nimg,
+.card-place {
+    position: relative !important;
+}
+
+/* Vignette for standalone images using mask-image for soft fade */
+img.img-fluid:not(.logo), img.feature-img, img.img-food, img.attraction-img, img.lodge-premium-img, img.cultural-card-img {
+    -webkit-mask-image: radial-gradient(ellipse at center, black 65%, rgba(0,0,0,0.15) 100%) !important;
+    mask-image: radial-gradient(ellipse at center, black 65%, rgba(0,0,0,0.15) 100%) !important;
 }

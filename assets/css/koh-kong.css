@@ -2,16 +2,29 @@
 *{
     padding: 0; margin: 0; box-sizing: border-box;
 }
-:root{
-    --primary-color:     #0D2A43; 
-    --secondary-color:   #D7B56D; 
-    --angkor-stone:      #5D4037; 
-    --golden-spice:      #E5C58B;
-    --parchment:         #F8F9FA;
-    --sand-whisper:      #FAF9F6;
-    --night-indigo:      #1A365D;
-    --camel-brown:       #8D6E63;
-    --dark-oud:          #07121C;
+:root {
+    /* Primary Brand Identity (Directly from Logo) */
+    --royal-blue: #0D2A43;
+    --khmer-gold: #D7B56D;
+    --angkor-stone: #5D4037;
+    --silk-saffron: #E67E22;
+
+    /* Primary color compatibility mappings */
+    --primary-color: #0D2A43;
+    --secondary-color: #D7B56D;
+
+    /* Semantic Palette mapped to Brand Colors */
+    --deep-mahogany: var(--royal-blue);
+    --burnt-sienna: var(--angkor-stone);
+    --desert-terracotta: var(--silk-saffron);
+    --amber-dune: var(--khmer-gold);
+    --golden-spice: #E5C58B;
+    --parchment: #F8F9FA;
+    --sand-whisper: #FAF9F6;
+    --night-indigo: #1A365D;
+    --camel-brown: #8D6E63;
+    --dark-oud: #07121C;
+    --beach-blue: #00B4D8;
 }
 body{
     font-family: "Kantumruy Pro", sans-serif !important;
@@ -26,6 +39,12 @@ body{
     overflow: hidden !important;
 }
 
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 60px 0 !important;
+    }
+}
+
 /* ── Immersive Hero ── */
 .wild-hero {
     min-height: 100vh !important;
@@ -38,44 +57,66 @@ body{
     color: white !important;
     text-align: center !important;
     overflow: hidden !important;
+    background-image: url('../image/kohkong.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
 }
 
-.hero-video-bg {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    z-index: -2 !important;
-}
-
-.hero-overlay {
+/* Premium 4-Sided Cinematic Vignette Overlay */
+.wild-hero::before {
+    content: '' !important;
     position: absolute !important;
     inset: 0 !important;
-    background: linear-gradient(to bottom, 
-        rgba(13, 42, 67, 0.7) 0%, 
-        rgba(13, 42, 67, 0.3) 50%, 
-        var(--primary-color) 100%) !important;
-    z-index: -1 !important;
+    background: 
+        /* Top Shadow: Blends page header softly with banner */
+        linear-gradient(to bottom, rgba(7, 18, 28, 0.85) 0%, transparent 22%),
+        /* Bottom Shadow: Adds visual depth at viewport lower boundary */
+        linear-gradient(to top, rgba(7, 18, 28, 0.95) 0%, transparent 25%),
+        /* Left Shadow: Creates anamorphic matte framing on the left */
+        linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+        /* Right Shadow: Creates anamorphic matte framing on the right */
+        linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+        /* Central Spotlight: High-contrast vignette centered on image */
+        radial-gradient(circle at center, rgba(13, 42, 67, 0.65) 0%, rgba(7, 18, 28, 0.8) 50%, rgba(7, 18, 28, 0.95) 100%) !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+.wild-hero::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 120px !important;
+    background: linear-gradient(transparent, var(--primary-color)) !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+}
+
+.wild-hero > .hero-content {
+    position: relative !important;
+    z-index: 3 !important;
 }
 
 .hero-tagline {
-    font-size: 12px !important;
+    font-size: 11px !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.4em !important;
+    letter-spacing: 0.3em !important;
     color: var(--secondary-color) !important;
     margin-bottom: 20px !important;
     display: block !important;
 }
 
 .hero-title-main {
-    font-size: clamp(40px, 8vw, 90px) !important;
+    font-size: clamp(36px, 8vw, 84px) !important;
     font-weight: 700 !important;
     line-height: 1.1 !important;
+    letter-spacing: -0.03em !important;
     margin-bottom: 30px !important;
-    text-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
 }
 
 .hero-title-main span {
@@ -86,6 +127,16 @@ body{
 .explore-grid-container {
     padding: 100px 0 !important;
     color: white !important;
+    position: relative !important;
+}
+
+.explore-grid-container::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
+    opacity: 0.05 !important;
+    pointer-events: none !important;
 }
 
 .section-label {
@@ -100,26 +151,34 @@ body{
     margin-bottom: 16px !important;
 }
 
-/* ── Adventure Cards ── */
+/* ── Unique Adventure Cards ── */
 .adventure-item {
     position: relative !important;
-    border-radius: 24px !important;
+    border-radius: 20px !important;
     overflow: hidden !important;
-    height: 480px !important;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+    height: 450px !important;
+    border: 1px solid rgba(215, 181, 109, 0.2) !important;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+    margin-bottom: 24px !important;
+}
+
+@media (max-width: 768px) {
+    .adventure-item {
+        height: 220px !important;
+    }
 }
 
 .adventure-item:hover {
-    transform: translateY(-10px) !important;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.4) !important;
+    transform: translateY(-6px) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.4) !important;
 }
 
 .adventure-item img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    transition: transform 1.2s ease !important;
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .adventure-item:hover img {
@@ -129,134 +188,147 @@ body{
 .adventure-overlay {
     position: absolute !important;
     inset: 0 !important;
-    background: linear-gradient(to top, rgba(13, 42, 67, 0.9) 0%, transparent 70%) !important;
-    padding: 30px !important;
+    background: linear-gradient(to top, rgba(13, 42, 67, 0.8) 10%, transparent 70%) !important;
+    padding: 24px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-end !important;
 }
 
+.adventure-overlay h3 {
+    color: var(--secondary-color) !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    margin-bottom: 8px !important;
+}
+
+.adventure-tag {
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+    background: rgba(215, 181, 109, 0.9) !important;
+    color: var(--primary-color) !important;
+    padding: 6px 16px !important;
+    border-radius: 50px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    backdrop-filter: blur(5px) !important;
+    z-index: 2 !important;
+}
+
 /* ── Taste Section ── */
 .taste-section {
     padding: 100px 0 !important;
+    color: white !important;
 }
 
 .food-card {
     background: white !important;
+    border: 1px solid rgba(13, 42, 67, 0.05) !important;
     border-radius: 24px !important;
-    padding: 35px !important;
-    box-shadow: 0 10px 30px rgba(13, 42, 67, 0.05) !important;
-    transition: all 0.4s ease !important;
-    border: 1px solid rgba(215, 181, 109, 0.1) !important;
+    padding: 0 !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
     height: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 30px rgba(13, 42, 67, 0.03) !important;
 }
 
 .food-card:hover {
     transform: translateY(-8px) !important;
-    box-shadow: 0 20px 40px rgba(13, 42, 67, 0.1) !important;
-    border-color: var(--secondary-color) !important;
+    box-shadow: 0 30px 60px rgba(13, 42, 67, 0.1) !important;
+}
+
+.food-img-wrapper {
+    height: 220px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+.food-img-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.6s ease !important;
+}
+
+.food-card:hover .food-img-wrapper img {
+    transform: scale(1.1) !important;
+}
+
+.food-card-body {
+    padding: 24px !important;
+    background: white !important;
+}
+
+.food-card-body h4 {
+    color: var(--primary-color) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin-bottom: 12px !important;
+}
+
+.food-card-body p {
+    color: var(--night-indigo) !important;
+    opacity: 0.8 !important;
+    font-size: 14px !important;
+    margin-bottom: 0 !important;
 }
 
 .food-icon {
-    font-size: 28px !important;
+    width: 44px !important;
+    height: 44px !important;
+    background: rgba(215, 181, 109, 0.15) !important;
     color: var(--secondary-color) !important;
-    margin-bottom: 20px !important;
-}
-
-/* ── Stay Section ── */
-.stay-section {
-}
-
-.lodge-premium-card {
-    display: flex !important;
-    background: var(--night-indigo) !important;
-    border-radius: 24px !important;
-    overflow: hidden !important;
-    color: white !important;
-    margin-bottom: 40px !important;
-    transition: all 0.5s ease !important;
-}
-
-.lodge-premium-card:hover {
-    transform: scale(1.02) !important;
-    box-shadow: 0 30px 60px rgba(13, 42, 67, 0.3) !important;
-}
-
-.lodge-premium-img {
-    width: 50% !important;
-    object-fit: cover !important;
-    min-height: 350px !important;
-}
-
-.lodge-premium-info {
-    width: 50% !important;
-    padding: 50px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-}
-
-.hotel-rating {
     display: flex !important;
     align-items: center !important;
-    gap: 8px !important;
-    margin-bottom: 15px !important;
-}
-
-.rating-score {
-    background: var(--secondary-color) !important;
-    color: var(--primary-color) !important;
-    padding: 4px 10px !important;
-    border-radius: 8px !important;
-    font-weight: 700 !important;
-    font-size: 14px !important;
-}
-
-.hotel-price {
+    justify-content: center !important;
+    border-radius: 12px !important;
     font-size: 18px !important;
-    font-weight: 700 !important;
+    margin-bottom: 16px !important;
+}
+
+/* ── Activity Mini Cards (Glassmorphism matching cultural section) ── */
+.activity-mini-card {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    height: 100% !important;
+    padding: 30px 24px !important;
+}
+
+.activity-mini-card:hover {
+    transform: translateY(-10px) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.activity-mini-card h5 {
     color: var(--secondary-color) !important;
-    margin-bottom: 20px !important;
+    font-weight: 700 !important;
 }
 
-.hotel-amenities {
-    display: flex !important;
-    gap: 15px !important;
-    margin-bottom: 25px !important;
-    opacity: 0.8 !important;
+.activity-mini-card p {
+    color: rgba(255, 255, 255, 0.8) !important;
 }
 
-.amenity-item {
-    font-size: 18px !important;
-    color: white !important;
-}
-
-/* ── Reveal Animations ── */
-.btn-secondary-color {
-    background: var(--secondary-color) !important;
-    color: white !important;
-    border: none !important;
-}
-
-.btn-secondary-color:hover {
-    background: var(--primary-color) !important;
-    color: white !important;
-    transform: translateY(-3px) !important;
-}
-
+/* ── Gourmet card grid ── */
 .food-explore-card {
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
     border: 1px solid rgba(215, 181, 109, 0.05) !important;
     height: 100% !important;
     display: flex !important;
     flex-direction: column !important;
+    border-radius: 24px !important;
 }
 
 .food-explore-card:hover {
     transform: translateY(-12px) !important;
     box-shadow: 0 40px 80px rgba(13, 42, 67, 0.15) !important;
+    border-color: var(--secondary-color) !important;
 }
 
 .food-explore-card img {
@@ -267,17 +339,139 @@ body{
     transform: scale(1.05) !important;
 }
 
-/* ── Reveal Animations ── */
+/* ── Stay Section (Responsive Vertical Card Grid) ── */
+.stay-section {
+    padding: 100px 0 !important;
+}
+
+.lodge-premium-card {
+    display: flex !important;
+    flex-direction: column !important; /* Changed to vertical */
+    background: var(--primary-color) !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    color: white !important;
+    margin-bottom: 0 !important; /* Handled by grid gap */
+    box-shadow: 0 10px 30px rgba(13, 42, 67, 0.1) !important;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    height: 100% !important;
+}
+
+.lodge-premium-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 40px 80px -20px rgba(13, 42, 67, 0.4) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.lodge-premium-img {
+    width: 100% !important; /* Full width for vertical layout */
+    height: 240px !important;
+    object-fit: cover !important;
+}
+
+.lodge-premium-info {
+    width: 100% !important; /* Full width for vertical layout */
+    padding: 25px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    flex-grow: 1 !important;
+}
+
+.lodge-premium-info h3 {
+    color: var(--secondary-color) !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    margin-bottom: 12px !important;
+}
+
+.lodge-premium-info p {
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+}
+
+.lodge-premium-tag {
+    display: inline-block !important;
+    background: rgba(215, 181, 109, 0.1) !important;
+    color: var(--secondary-color) !important;
+    padding: 4px 12px !important;
+    border-radius: 6px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    margin-bottom: 15px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+/* ── Buttons ── */
+.btn-khmer {
+    padding: 14px 32px !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    text-decoration: none !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    border: 1.5px solid transparent !important;
+}
+
+.btn-secondary-color {
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.btn-secondary-color:hover {
+    background: white !important;
+    color: var(--primary-color) !important;
+    transform: translateY(-5px) scale(1.05) !important;
+    border-color: white !important;
+}
+
+.btn-khmer-gold {
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.btn-khmer-gold:hover {
+    background: white !important;
+    color: var(--primary-color) !important;
+    transform: translateY(-5px) scale(1.05) !important;
+    border-color: white !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ── Animations ── */
 .reveal {
     opacity: 0 !important;
     transform: translateY(30px) !important;
-    transition: all 0.8s ease-out !important;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out !important;
 }
 
 .reveal.active {
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
+
+/* ── Image Refinement ── */
+.img-fluid {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(13, 42, 67, 0.15) !important;
+}
+
+.reveal-delay-1 { transition-delay: 0.1s !important; }
+.reveal-delay-2 { transition-delay: 0.2s !important; }
+.reveal-delay-3 { transition-delay: 0.3s !important; }
 
 /* -- Modal Enhancements -- */
 .shadow-2xl {
@@ -299,7 +493,95 @@ body{
     box-shadow: 0 15px 30px rgba(13, 42, 67, 0.3) !important;
 }
 
-.modal-content {
-    background-color: #ffffff !important;
-    border: none !important;
+/* ── Map Section ── */
+.map-section {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.map-section::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
+    opacity: 0.08 !important;
+    pointer-events: none !important;
+}
+
+.map-wrapper {
+    position: relative !important;
+    z-index: 1 !important;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+.map-wrapper:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 30px 60px -15px rgba(13, 42, 67, 0.2) !important;
+}
+
+.map-wrapper iframe {
+    filter: grayscale(0.2) contrast(1.1) !important;
+    transition: all 0.5s ease !important;
+}
+
+.map-wrapper:hover iframe {
+    filter: grayscale(0) contrast(1.1) !important;
+}
+
+/* 4-Sided Cinematic Vignette Overlay for Adventure items */
+.adventure-item::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.75) 100%) !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+    transition: all 0.5s ease !important;
+}
+
+.adventure-item:hover::after {
+    background: radial-gradient(circle, transparent 30%, rgba(0, 0, 0, 0.85) 100%) !important;
+}
+
+/* ========================================================
+   SECTION PADDING AND HIGH CONTRAST DARK OVERRIDES FOR BG-MIXED
+   ======================================================== */
+.bg-mixed {
+    color: #ffffff !important;
+}
+
+.bg-mixed h1, .bg-mixed h2, .bg-mixed h3, .bg-mixed h4, .bg-mixed h5, .bg-mixed h6 {
+    color: #ffffff !important;
+}
+
+.bg-mixed p, .bg-mixed span, .bg-mixed li {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.bg-mixed .section-label {
+    color: var(--secondary-color) !important;
+}
+
+.bg-mixed h2.text-center.fw-bold {
+    color: #ffffff !important;
+}
+
+/* Fix text color on white cards inside .bg-mixed */
+.bg-mixed .bg-white h1, .bg-mixed .bg-white h2, .bg-mixed .bg-white h3, .bg-mixed .bg-white h4, .bg-mixed .bg-white h5, .bg-mixed .bg-white h6,
+.bg-mixed .food-card h1, .bg-mixed .food-card h2, .bg-mixed .food-card h3, .bg-mixed .food-card h4, .bg-mixed .food-card h5, .bg-mixed .food-card h6,
+.bg-mixed .food-explore-card h1, .bg-mixed .food-explore-card h2, .bg-mixed .food-explore-card h3, .bg-mixed .food-explore-card h4, .bg-mixed .food-explore-card h5, .bg-mixed .food-explore-card h6,
+.bg-mixed [style*="var(--bg-sand-light)"] h1, .bg-mixed [style*="var(--bg-sand-light)"] h2, .bg-mixed [style*="var(--bg-sand-light)"] h3, .bg-mixed [style*="var(--bg-sand-light)"] h4, .bg-mixed [style*="var(--bg-sand-light)"] h5, .bg-mixed [style*="var(--bg-sand-light)"] h6 {
+    color: var(--night-indigo) !important;
+}
+
+.bg-mixed .bg-white p, .bg-mixed .bg-white li,
+.bg-mixed .food-card p, .bg-mixed .food-card li,
+.bg-mixed .food-explore-card p, .bg-mixed .food-explore-card li,
+.bg-mixed [style*="var(--bg-sand-light)"] p, .bg-mixed [style*="var(--bg-sand-light)"] li {
+    color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Disable the !important override for spans in white cards so inline styles can work */
+.bg-mixed .bg-white span, .bg-mixed .food-card span, .bg-mixed .food-explore-card span, .bg-mixed [style*="var(--bg-sand-light)"] span {
+    color: var(--night-indigo);
 }

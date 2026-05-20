@@ -20,14 +20,57 @@ body{
 }
 
 .hero-section {
-    height: 100vh !important;
+    position: relative !important;
+    min-height: 100vh !important;
+    height: auto !important;
     width: 100% !important;
     background-image: url(../image_preah-sihanouk/360_F_294111387_577OL7DUxO84ptyyvMCo2z6Ul9WVuiyp.jpg) !important;
-    background-size: 100% 100% !important;
+    background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     display: flex !important;
-    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    padding-top: 100px !important;
+    padding-bottom: 80px !important;
+}
+
+/* Premium 4-Sided Cinematic Vignette Overlay */
+.hero-section::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: 
+        /* Top Shadow: Blends page header softly with banner */
+        linear-gradient(to bottom, rgba(7, 18, 28, 0.85) 0%, transparent 22%),
+        /* Bottom Shadow: Adds visual depth at viewport lower boundary */
+        linear-gradient(to top, rgba(7, 18, 28, 0.95) 0%, transparent 25%),
+        /* Left Shadow: Creates anamorphic matte framing on the left */
+        linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+        /* Right Shadow: Creates anamorphic matte framing on the right */
+        linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+        /* Central Spotlight: High-contrast vignette centered on image */
+        radial-gradient(circle at center, rgba(13, 42, 67, 0.15) 0%, rgba(7, 18, 28, 0.5) 50%, rgba(7, 18, 28, 0.75) 100%) !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+.hero-section::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 120px !important;
+    background: linear-gradient(transparent, var(--dark-oud)) !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+}
+
+.hero-section > .container {
+    position: relative !important;
+    z-index: 3 !important;
 }
 
 .gallery {
@@ -106,12 +149,20 @@ body{
     align-items: center !important;
     padding: 25px !important;
     width: 100% !important;
+    height: 100% !important;
     background: rgba(255, 255, 255, 0.14) !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
     border: 1px solid rgba(255, 255, 255, 0.333) !important;
     border-radius: 12px !important;
     color: white !important;
+    transition: all 0.3s ease !important;
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.22) !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25) !important;
 }
 
 .icon {
@@ -136,7 +187,9 @@ body{
 }
 
 .bg-food {
-    height: 192vh !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    padding-bottom: 60px !important;
     width: 100% !important;
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), url(../image_preah-sihanouk/987fceb8-e9c2-4704-ab47-4edb92ffa4f5.jpg))!important;
     background-size: 100% 100% !important;
@@ -207,7 +260,7 @@ body{
 }
 
 .card-auto {
-    width: 80px !important;
+    width: 110px !important;
     border-radius: .75rem !important;
     background-size: cover !important;
     cursor: pointer !important;
@@ -230,12 +283,16 @@ body{
 .card-auto>.row .icon {
     background: var(--dark-oud) !important;
     color: white !important;
-    border-radius: 50% !important;
-    width: 50px !important;
+    border-radius: 25px !important;
+    width: 85px !important;
+    height: 50px !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    margin: 15px !important;
+    margin: 15px 10px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-align: center !important;
 }
 
 .card-auto>.row>.description {
@@ -335,4 +392,284 @@ input:checked+label .description {
 .colum:hover {
     transform: scale(1.09) !important;
 
+}
+
+/* ========================================================
+   CARDS EQUAL HEIGHTS SYSTEM
+   ======================================================== */
+
+/* Force rows in matching card sections to stretch column layouts */
+.glass-card-row > [class*="col-"],
+.food-card-row > [class*="col-"],
+.tab-content .row > [class*="col-"] {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+/* Glass Card layout corrections for perfect stretching and internal distribution */
+.glass-card {
+    height: 100% !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: stretch !important; /* Ensure image and text wrapper stretch equally */
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Specific image wrapper styling inside Glass Cards to safely override inline width/height */
+.glass-card > .card {
+    width: 220px !important;
+    height: 100% !important;
+    min-height: 160px !important;
+    flex-shrink: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+.glass-card > .card img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+}
+
+/* Make sure the text container next to the image fills the space and separates elements nicely */
+.glass-card > div:last-child {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    flex-grow: 1 !important;
+    height: 100% !important;
+    margin-left: 20px !important;
+    padding: 10px 0 !important;
+}
+
+/* Force details button to sit aligned to start at the bottom */
+.glass-card > div:last-child button {
+    align-self: flex-start !important;
+    margin-top: auto !important;
+}
+
+/* Accommodation card and popular food card stretching rules */
+.tab-content .card,
+.card-food {
+    height: 100% !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    margin-bottom: 30px !important; /* Standardize bottom spacing between rows */
+}
+
+.tab-content .card:hover,
+.card-food:hover {
+    transform: translateY(-8px) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.tab-content .card img {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+}
+
+.tab-content .card .card-body,
+.card-food .card-body {
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 20px !important;
+}
+
+.tab-content .card .card-body h4 {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+}
+
+.tab-content .card .card-body p {
+    font-size: 0.9rem !important;
+    color: rgba(255, 255, 255, 0.75) !important;
+    line-height: 1.5 !important;
+}
+
+.tab-content .card .card-footer,
+.card-food .card-footer {
+    margin-top: auto !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 12px 20px !important;
+}
+
+/* Make red discount tags gold inside accommodations and food cards */
+.tab-content .card .card-footer p[style*="background-color"],
+.card-food .card-footer p[style*="background-color"] {
+    background-color: var(--secondary-color) !important;
+    color: var(--dark-oud) !important;
+    font-weight: bold !important;
+    font-size: 0.75rem !important;
+    padding: 4px 10px !important;
+    border-radius: 4px !important;
+}
+
+/* ========================================================
+   SECTION PADDING AND HIGH CONTRAST DARK OVERRIDES
+   ======================================================== */
+
+/* General Professional Vertical Section Padding */
+section.bg-mixed {
+    padding: 100px 0 !important;
+}
+
+section.bg {
+    padding: 0 !important; /* Keep fullscreen empty banner section clean! */
+}
+
+/* Global High-Contrast Fixes for Dark Gradient Sections ( Siem Reap Style ) */
+.bg-mixed {
+    color: #ffffff !important;
+    background-color: var(--dark-oud) !important;
+}
+
+.bg-mixed h1, .bg-mixed h2, .bg-mixed h3, .bg-mixed h4, .bg-mixed h5, .bg-mixed h6 {
+    color: #ffffff !important;
+}
+
+.bg-mixed p, .bg-mixed span, .bg-mixed li {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Specific golden ornaments and secondary highlights */
+.bg-mixed .section-label,
+.bg-mixed h2.text-center.fw-bold,
+.bg-mixed h5 {
+    color: var(--secondary-color) !important;
+}
+
+/* ========================================================
+   HERO QUICK LINK CARDS (GLASSMORPHISM & EQUAL HEIGHTS)
+   ======================================================== */
+.hero-quick-link-card {
+    background: rgba(13, 42, 67, 0.45) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 14px !important;
+    padding: 20px !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    text-decoration: none !important;
+}
+
+.hero-quick-link-card:hover {
+    background: rgba(13, 42, 67, 0.65) !important;
+    border-color: var(--secondary-color) !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+.quick-link-icon-box {
+    width: 54px !important;
+    height: 54px !important;
+    background: rgba(215, 181, 109, 0.1) !important;
+    border: 2px solid var(--secondary-color) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--secondary-color) !important;
+    font-size: 1.5rem !important;
+    flex-shrink: 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.hero-quick-link-card:hover .quick-link-icon-box {
+    background: var(--secondary-color) !important;
+    color: #0d2a43 !important;
+    transform: scale(1.08) rotate(5deg) !important;
+    box-shadow: 0 0 15px rgba(215, 181, 109, 0.4) !important;
+}
+
+.quick-link-content {
+    margin-left: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+}
+
+.quick-link-title {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 1.05rem !important;
+    margin-bottom: 4px !important;
+    transition: color 0.3s ease !important;
+}
+
+.hero-quick-link-card:hover .quick-link-title {
+    color: var(--secondary-color) !important;
+}
+
+.quick-link-desc {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.8rem !important;
+    margin-bottom: 8px !important;
+    line-height: 1.3 !important;
+}
+
+.quick-link-action {
+    color: var(--secondary-color) !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    transition: all 0.3s ease !important;
+}
+
+.hero-quick-link-card:hover .quick-link-action {
+    color: #ffffff !important;
+    transform: translateX(3px) !important;
+}
+
+/* ========================================================
+   NAV TABS CUSTOMIZATION (Primary / Secondary Colors)
+   ======================================================== */
+.nav-tabs .nav-link {
+    color: var(--secondary-color) !important;
+    background-color: rgba(13, 42, 67, 0.4) !important; /* Slightly transparent primary */
+    border: 1px solid rgba(215, 181, 109, 0.3) !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: rgba(13, 42, 67, 0.7) !important;
+    border-color: var(--secondary-color) !important;
+    color: #ffffff !important;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
 }

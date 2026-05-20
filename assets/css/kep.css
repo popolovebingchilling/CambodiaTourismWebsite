@@ -12,6 +12,19 @@
     --night-indigo:      #1A365D;
     --camel-brown:       #8D6E63;
     --dark-oud:          #07121C;
+
+    /* Body Background Variable (Light Mode Default) */
+    --body-bg:           var(--sand-whisper);
+
+    /* Card Styling Variables (Light Mode Default) */
+    --card-bg:           #ffffff;
+    --card-border:       rgba(13, 42, 67, 0.06);
+    --card-shadow:       0 15px 35px rgba(13, 42, 67, 0.08);
+    --card-hover-bg:     #ffffff;
+    --card-hover-border: var(--secondary-color);
+    --card-hover-shadow: 0 20px 45px rgba(13, 42, 67, 0.15);
+    --card-title:        var(--primary-color);
+    --card-text:         var(--night-indigo);
 }
 body{
     font-family: "Kantumruy Pro", sans-serif !important;
@@ -26,30 +39,44 @@ body{
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            background: url('../image/kep.png') center/cover no-repeat !important;
         }
 
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
+        /* Premium 4-Sided Cinematic Vignette Overlay */
+        .hero-section::before {
+            content: '' !important;
+            position: absolute !important;
+            inset: 0 !important;
+            background: 
+                /* Top Shadow: Blends page header softly with banner */
+                linear-gradient(to bottom, rgba(7, 18, 28, 0.85) 0%, transparent 22%),
+                /* Bottom Shadow: Adds visual depth at viewport lower boundary */
+                linear-gradient(to top, rgba(7, 18, 28, 0.95) 0%, transparent 25%),
+                /* Left Shadow: Creates anamorphic matte framing on the left */
+                linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+                /* Right Shadow: Creates anamorphic matte framing on the right */
+                linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+                /* Central Spotlight: High-contrast vignette centered on image */
+                radial-gradient(circle at center, rgba(13, 42, 67, 0.15) 0%, rgba(7, 18, 28, 0.5) 50%, rgba(7, 18, 28, 0.75) 100%) !important;
+            z-index: 1 !important;
+            pointer-events: none !important;
         }
 
-        .hero-bg img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.55) saturate(1.2);
-        }
-
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            z-index: 1;
+        .hero-section::after {
+            content: '' !important;
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            height: 120px !important;
+            background: linear-gradient(transparent, var(--sand-whisper)) !important;
+            z-index: 2 !important;
+            pointer-events: none !important;
         }
 
         .hero-content {
             position: relative;
-            z-index: 2;
+            z-index: 3;
             text-align: center;
             padding: 2rem;
             max-width: 820px;
@@ -82,6 +109,7 @@ body{
         }
 
         .hero-title span {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--golden-spice) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -145,7 +173,7 @@ body{
             bottom: 2.5rem;
             left: 50%;
             transform: translateX(-50%);
-            z-index: 2;
+            z-index: 3;
             color: rgba(254, 240, 205, 0.5);
             font-size: 1.5rem;
             animation: bounce 2s infinite;
@@ -386,6 +414,8 @@ body{
         .food-card-body {
             padding: 1.5rem;
             flex-grow: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
         }
 
         .food-card-body h4 {
@@ -406,7 +436,7 @@ body{
             display: flex;
             align-items: center;
             gap: 8px;
-            margin-top: 1rem;
+            margin-top: auto !important;
             padding-top: 1rem;
             border-top: 1px solid rgba(215, 181, 109, 0.08);
         }
@@ -423,7 +453,7 @@ body{
 
         /* ───── Beach Cards ───── */
         .beach-section {
-            background: linear-gradient(180deg, var(--parchment), var(--sand-whisper);
+            background: linear-gradient(180deg, var(--parchment), var(--sand-whisper));
             position: relative;
         }
 
@@ -493,6 +523,8 @@ body{
         .beach-card-body {
             padding: 1.5rem 1.5rem 1.8rem;
             flex-grow: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
         }
 
         .beach-card-body p {
@@ -507,15 +539,23 @@ body{
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
+            margin-top: auto !important;
         }
 
         .beach-tag {
-            background: rgba(192, 98, 42, 0.08);
+            background: rgba(215, 181, 109, 0.1);
             padding: 5px 14px;
             border-radius: 50px;
             font-size: 0.82rem;
-            font-weight: 500;
-            border: 1px solid rgba(192, 98, 42, 0.12);
+            font-weight: 600;
+            border: 1px solid rgba(215, 181, 109, 0.25);
+            color: var(--secondary-color) !important;
+            transition: all 0.3s ease;
+        }
+        .beach-tag:hover {
+            background: var(--secondary-color);
+            color: var(--primary-color) !important;
+            transform: translateY(-2px);
         }
 
         /* ───── Nature / Relax Section ───── */
@@ -705,3 +745,101 @@ body{
                 padding: 4rem 0;
             }
         }
+
+/* ===== DARK MODE VARIABLE OVERRIDES ===== */
+body.dark-mode {
+    --card-bg:           rgba(13, 42, 67, 0.45);
+    --card-border:       rgba(255, 255, 255, 0.1);
+    --card-shadow:       0 15px 35px rgba(0, 0, 0, 0.3);
+    --card-hover-bg:     rgba(13, 42, 67, 0.65);
+    --card-hover-border: var(--golden-spice);
+    --card-hover-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+    --card-title:        #ffffff;
+    --card-text:         rgba(255, 255, 255, 0.9);
+}
+
+/* ===== HIGH-CONTRAST GLOBAL FIXES FOR DARK SECTIONS ===== */
+
+/* Define the list of all dark section wrapper containers */
+.hero-section,
+.bg-gradient-royal,
+.bg-gradient-dark,
+.bg-mixed,
+.bg-gradient-stone {
+    color: #ffffff !important;
+}
+
+/* Force all headings and subtitles inside dark sections to be crisp white */
+.hero-section h1, .hero-section h2, .hero-section h3, .hero-section h4, .hero-section h5, .hero-section h6,
+.bg-gradient-royal h1, .bg-gradient-royal h2, .bg-gradient-royal h3, .bg-gradient-royal h4, .bg-gradient-royal h5, .bg-gradient-royal h6,
+.bg-gradient-dark h1, .bg-gradient-dark h2, .bg-gradient-dark h3, .bg-gradient-dark h4, .bg-gradient-dark h5, .bg-gradient-dark h6,
+.bg-mixed h1, .bg-mixed h2, .bg-mixed h3, .bg-mixed h4, .bg-mixed h5, .bg-mixed h6,
+.bg-gradient-stone h1, .bg-gradient-stone h2, .bg-gradient-stone h3, .bg-gradient-stone h4, .bg-gradient-stone h5, .bg-gradient-stone h6 {
+    color: #ffffff !important;
+}
+
+/* Force all paragraphs, descriptions, list items, and general text to be light */
+.hero-section p, .hero-section span, .hero-section li,
+.bg-gradient-royal p, .bg-gradient-royal span, .bg-gradient-royal li,
+.bg-gradient-dark p, .bg-gradient-dark span, .bg-gradient-dark li,
+.bg-mixed p, .bg-mixed span, .bg-mixed li,
+.bg-gradient-stone p, .bg-gradient-stone span, .bg-gradient-stone li {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Preserve gold highlights and brand yellow/amber elements */
+.hero-section .section-label,
+.bg-gradient-royal .section-label,
+.bg-gradient-dark .section-label,
+.bg-mixed .section-label,
+.bg-gradient-stone .section-label {
+    color: var(--secondary-color) !important;
+}
+
+/* Specific details for Hero stats and scroll guide icons */
+.hero-scroll-line span,
+.hero-scroll-line i {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+.hero-section .text-center div[style*="color:var(--golden-spice)"] {
+    color: var(--golden-spice) !important;
+}
+
+/* Specific food card high contrast elements */
+.food-card h4, .food-card h5, .food-card h6 {
+    color: var(--parchment) !important;
+}
+.food-card p {
+    color: rgba(254, 240, 205, 0.7) !important;
+}
+
+/* Specific beach card elements */
+.beach-card h4, .beach-card h5, .beach-card h6 {
+    color: var(--card-title) !important;
+}
+.beach-card p {
+    color: var(--card-text) !important;
+}
+
+/* Ensure beach tag elements are styled correctly inside dark sections */
+.beach-card .beach-tag {
+    color: var(--secondary-color) !important;
+    background: rgba(215, 181, 109, 0.1) !important;
+    border-color: rgba(215, 181, 109, 0.25) !important;
+}
+.beach-card .beach-tag:hover {
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+}
+
+/* Specific nature list high contrast elements */
+.bg-mixed .nature-list li .nl-title {
+    color: var(--golden-spice) !important;
+}
+.bg-mixed .nature-list li .nl-desc {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+.bg-mixed .nature-list li i {
+    color: var(--secondary-color) !important;
+    background: rgba(215, 181, 109, 0.1) !important;
+}

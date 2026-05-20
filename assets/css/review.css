@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+:root{
+    --primary-color:     #0D2A43; 
+    --secondary-color:   #D7B56D; 
+    --angkor-stone:      #5D4037; 
+    --golden-spice:      #E5C58B;
+    --parchment:         #F8F9FA;
+    --sand-whisper:      #FAF9F6;
+    --night-indigo:      #1A365D;
+    --camel-brown:       #8D6E63;
+    --dark-oud:          #07121C;
+}
+body{
+    font-family: "Kantumruy Pro", sans-serif !important;
+    background-color: var(--sand-whisper) !important;
+    color: var(--night-indigo) !important;
+}
+.reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity .7s ease, transform .7s ease
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .review-hero {
+            height: 55vh;
+            background: linear-gradient(rgba(0, 0, 0, .55), rgba(74, 28, 0, .65)), url('../image/review-banner.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden
+        }
+
+        .review-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(transparent, var(--sand-whisper))
+        }
+
+        .section-label {
+            font-size: .75rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--desert-terracotta);
+            font-weight: 600
+        }
+
+        .section-title-km {
+            font-family: "Kantumruy Pro", sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--deep-mahogany)
+        }
+
+        .divider-ornament {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 10px 0 24px
+        }
+
+        .divider-ornament::before,
+        .divider-ornament::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--amber-dune)
+        }
+
+        .divider-ornament span {
+            color: var(--amber-dune);
+            font-size: 1.1rem
+        }
+
+        .rating-overview {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 40px rgba(74, 28, 0, .12);
+            padding: 40px;
+            text-align: center
+        }
+
+        .big-score {
+            font-size: 5rem;
+            font-weight: 800;
+            color: var(--desert-terracotta);
+            line-height: 1
+        }
+
+        .big-stars {
+            font-size: 1.8rem;
+            color: #f59e0b;
+            letter-spacing: 4px
+        }
+
+        .bar-label {
+            font-size: .85rem;
+            color: var(--night-indigo);
+            min-width: 60px
+        }
+
+        .bar-track {
+            flex: 1;
+            height: 10px;
+            background: #f0e8d8;
+            border-radius: 10px;
+            overflow: hidden
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(90deg, var(--desert-terracotta), var(--amber-dune));
+            transition: width 1s ease
+        }
+
+        .bar-count {
+            font-size: .8rem;
+            color: var(--camel-brown);
+            min-width: 30px;
+            text-align: right
+        }
+
+        .star-picker {
+            display: flex;
+            gap: 6px;
+            justify-content: center
+        }
+
+        .star-picker i {
+            font-size: 2.2rem;
+            color: #d1c4a8;
+            cursor: pointer;
+            transition: color .2s, transform .2s
+        }
+
+        .star-picker i:hover,
+        .star-picker i.active {
+            color: #f59e0b;
+            transform: scale(1.2)
+        }
+
+        .form-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 40px rgba(74, 28, 0, .1);
+            padding: 40px
+        }
+
+        .form-control,
+        .form-select {
+            border: 1.5px solid #e8ddd0 !important;
+            border-radius: 10px !important;
+            padding: 12px !important;
+            font-family: "Kantumruy Pro", sans-serif;
+            transition: border-color .3s !important
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--desert-terracotta) !important;
+            box-shadow: 0 0 0 3px rgba(192, 98, 42, .12) !important
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, var(--desert-terracotta), var(--burnt-sienna));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 12px 40px;
+            font-weight: 600;
+            transition: transform .2s, box-shadow .2s
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(123, 45, 0, .35);
+            color: white
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(74, 28, 0, .08);
+            padding: 28px;
+            border-left: 5px solid var(--amber-dune);
+            transition: transform .3s, border-color .3s;
+            animation: fadeIn .5s ease
+        }
+
+        .review-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--desert-terracotta)
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        .reviewer-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0
+        }
+
+        .review-stars {
+            color: #f59e0b;
+            font-size: .9rem
+        }
+
+        .review-tag {
+            background: var(--parchment);
+            color: var(--desert-terracotta);
+            font-size: .7rem;
+            padding: 3px 10px;
+            border-radius: 20px;
+            border: 1px solid var(--amber-dune)
+        }
+
+        .like-btn {
+            background: none;
+            border: 1.5px solid #e8ddd0;
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: .8rem;
+            color: var(--camel-brown);
+            cursor: pointer;
+            transition: all .2s
+        }
+
+        .like-btn:hover,
+        .like-btn.liked {
+            background: var(--parchment);
+            border-color: var(--desert-terracotta);
+            color: var(--desert-terracotta)
+        }
+
+        .filter-tab {
+            background: white;
+            border: 1.5px solid #e8ddd0;
+            border-radius: 30px;
+            padding: 6px 18px;
+            font-size: .85rem;
+            color: var(--night-indigo);
+            cursor: pointer;
+            transition: all .2s
+        }
+
+        .filter-tab.active,
+        .filter-tab:hover {
+            background: var(--desert-terracotta);
+            border-color: var(--desert-terracotta);
+            color: white
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--camel-brown)
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            opacity: .4;
+            margin-bottom: 16px;
+            display: block
+        }
+
+        .toast-box {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            background: var(--deep-mahogany);
+            color: white;
+            padding: 14px 24px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, .3);
+            display: none;
+            align-items: center;
+            gap: 10px
+        }
+
+        .av-1 {
+            background: var(--desert-terracotta)
+        }
+
+        .av-2 {
+            background: var(--night-indigo)
+        }
+
+        .av-3 {
+            background: var(--burnt-sienna)
+        }
+
+        .av-4 {
+            background: var(--camel-brown)
+        }
+
+        .av-5 {
+            background: #5c8a6e
+        }
+
+        .review-section {
+            padding: 80px 0;
+            background: var(--sand-whisper)
+        }
+
+        .form-section {
+            padding: 80px 0;
+            background: var(--parchment)
+        }

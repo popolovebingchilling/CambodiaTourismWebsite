@@ -17,6 +17,7 @@ body{
     font-family: "Kantumruy Pro", sans-serif !important;
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
+    overflow-x: hidden;
 }
 /* ── Blog Hero Section ── */
 .blog-hero {
@@ -157,31 +158,183 @@ body.dark-mode .featured-content h2 {
     color: white;
 }
 
-.featured-content p {
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-body.dark-mode .featured-content p {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* ── Blog Grid ── */
+/* ── Unique Blog Grid ── */
 .blog-grid-section {
-    padding: 0 0 100px 0;
+    padding: 80px 0;
 }
 
-.blog-card-premium {
+/* ── Editorial Card (Normal yet Unique) ── */
+.editorial-card {
     background: white;
-    border-radius: 30px;
+    border: 1px solid #eee;
+    border-radius: 0; /* Sharp corners for unique editorial look */
+    transition: all 0.4s ease;
+    position: relative;
     overflow: hidden;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.editorial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    border-color: var(--secondary-color);
+}
+
+.editorial-img-box {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+}
+
+.editorial-img-box img {
+    width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 15px 35px rgba(13, 42, 67, 0.08);
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.editorial-card:hover .editorial-img-box img {
+    transform: scale(1.08);
+}
+
+.editorial-tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: white;
+    color: var(--primary-color);
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+.editorial-date {
+    font-size: 13px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.editorial-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.editorial-card:hover .editorial-title {
+    color: var(--secondary-color);
+}
+
+.editorial-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.editorial-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+.editorial-card:hover .editorial-link::after {
+    width: 100%;
+}
+
+/* Vertical Line Accent (The Unique Touch) */
+.editorial-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 3px;
+    background: var(--secondary-color);
+    transition: height 0.4s ease;
+    z-index: 3;
+}
+
+.editorial-card:hover::before {
+    height: 100%;
+}
+
+.blog-card-unique h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+body.dark-mode .blog-card-unique h3 {
+    color: white;
+}
+
+.blog-card-unique p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+body.dark-mode .blog-card-unique p {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.blog-card-unique .blog-link {
+    margin-top: auto;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .blog-card-unique .blog-link {
+    color: var(--secondary-color);
+}
+
+.blog-card-unique .blog-link i {
+    transition: transform 0.3s ease;
+}
+
+.blog-card-unique:hover .blog-link {
+    color: var(--secondary-color);
+}
+
+.blog-card-unique:hover .blog-link i {
+    transform: translateX(5px);
+}
+
+/* Staggered effect for cards */
+@media (min-width: 992px) {
+    .blog-col:nth-child(even) {
+        margin-top: 40px;
+    }
 }
 
 body.dark-mode .blog-card-premium {
