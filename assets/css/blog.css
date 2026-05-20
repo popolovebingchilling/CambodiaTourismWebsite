@@ -591,3 +591,174 @@ body.dark-mode .read-more-premium {
         padding: 15px;
     }
 }
+
+/* =========================================
+   NEW BENTO HERO & CINEMATIC NEWSLETTER
+   ========================================= */
+
+/* ── Bento Hero Section ── */
+.bento-hero-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 280px);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.bento-item {
+    position: relative;
+    border-radius: 35px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+body.dark-mode .bento-item {
+    border-color: rgba(255,255,255,0.1);
+}
+
+.bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.2, 1, 0.2, 1);
+    filter: brightness(0.9);
+}
+
+.bento-item:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.75);
+}
+
+.bento-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(13, 42, 67, 0.95) 0%, rgba(13, 42, 67, 0.4) 50%, transparent 100%);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    transition: all 0.4s ease;
+}
+
+.bento-item:hover .bento-overlay {
+    background: linear-gradient(to top, rgba(13, 42, 67, 1) 0%, rgba(13, 42, 67, 0.5) 60%, transparent 100%);
+}
+
+.main-bento {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.sub-bento {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.sub-bento .bento-overlay {
+    padding: 30px;
+}
+
+.bento-category {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 15px;
+    width: fit-content;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.main-bento h2 {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.sub-bento h3 {
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.main-bento p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.bento-date {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.bento-date::before {
+    content: '\f133';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+}
+
+@media (max-width: 992px) {
+    .bento-hero-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .main-bento {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 450px;
+    }
+    .sub-bento {
+        height: 300px;
+    }
+}
+
+/* ── Cinematic Newsletter ── */
+.newsletter-banner {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-oud) 100%);
+    border-radius: 40px;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(215, 181, 109, 0.15) 0%, transparent 70%);
+    z-index: 1;
+}
+
+.newsletter-banner .row {
+    position: relative;
+    z-index: 2;
+}
+
+.newsletter-banner input:focus {
+    box-shadow: 0 0 0 4px rgba(215, 181, 109, 0.2);
+}
+
+@media (max-width: 992px) {
+    .newsletter-banner {
+        padding: 40px 30px;
+    }
+}
