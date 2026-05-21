@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koh Kong - Coastal Paradise | Cambodia Tourism</title>
+    <title>កោះកុង | ទេសចរណ៍កម្ពុជា</title>
     <!-- HTML CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/koh-kong.css">
@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- BOOTSTRAP ICON -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -37,16 +39,15 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav gap-2">
                         <li class="nav-item">
-                            <a class="nav-link active rounded-pill px-3" href="index.html">ទំព័រដើម</a>   
-                     </li>
-               <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
+                            <a class="nav-link active rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                        </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle px-3" href="#" role="button"
                                 data-bs-toggle="dropdown">គោលដៅ</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-content dropdown-item" href="sr.html">សៀមរាប</a></li>
-                                <li><a class="dropdown-content dropdown-item" href="#">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="siem-reap.html">សៀមរាប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="phnompenh.html">ភ្នំពេញ</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a>
@@ -60,26 +61,25 @@
                             <a class="nav-link dropdown-toggle px-3" href="#" role="button"
                                 data-bs-toggle="dropdown">សេវាកម្ម</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-content dropdown-item" href="#">សណ្ឋាគារ</a></li>
-                                <li><a class="dropdown-content dropdown-item" href="#">ភោជនីយដ្ឋាន</a></li>
-                                <li><a class="dropdown-content dropdown-item" href="#">មគ្គុទ្ទេសក៍</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="hotels.html">សណ្ឋាគារ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="restaurants.html">ភោជនីយដ្ឋាន</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="guide.html">មគ្គុទ្ទេសក៍</a></li>
                                 <li><a class="dropdown-content dropdown-item"
                                         href="transportation.html">ការដឹកជញ្ជូន</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link px-3" href="#">មគ្គុទ្ទេសក៍</a></li>
-                        <li class="nav-item"><a class="nav-link px-3" href="#">វិចិត្រសាល</a></li>
+
+
+                        <li class="nav-item"><a class="nav-link px-3" href="vikjittsal.html">វិចិត្រសាល</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
-                        <li class="nav-item"><a class="nav-link px-3" href="#">មតិយោបល់</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
                     </ul>
                 </div>
                 <div class="d-none d-lg-flex align-items-center gap-3">
-                    <!-- Theme Toggle Button -->
-                    <button id="theme-toggle" class="btn btn-link text-white p-0 border-0 fs-5"
-                        title="ផ្លាស់ប្តូរពន្លឺ">
-                        <i class="bi bi-moon-stars-fill"></i>
-                    </button>
+                    
                     <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
                 </div>
@@ -95,7 +95,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content container">
             <span class="hero-tagline">ឋានសួគ៌សមុទ្រកោះកុង</span>
-            <h1 class="hero-title-main">កោះស្តេច <span>Crystal Waters</span></h1>
+            <h1 class="hero-title-main">កោះកុង</h1>
             <p class="mb-5 opacity-75 text-white mx-auto" style="max-width: 700px;">
                 ស្វែងយល់ពីភាពអស្ចារ្យនៃកោះស្តេច និងឆ្នេរសមុទ្រដ៏ស្រស់បំព្រងក្នុងខេត្តកោះកុង
                 ដែលជាជម្រកនៃទឹកសមុទ្រថ្លាដូចគ្រីស្តាល់ និងខ្សាច់សក្បុស។
@@ -107,93 +107,92 @@
     </section>
 
     <!-- ── COASTAL DESCRIPTION ── -->
-    <section class="section-padding" style="background: white;">
+    <section class="bg-mixed section-padding">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 reveal">
-                    <span class="section-label" style="color: var(--beach-blue);">Coastal Escape</span>
-                    <h2 class="display-5 fw-bold mb-4" style="color: var(--royal-blue);">សម្រស់ឆ្នេរខ្សាច់
-                        និងកោះធម្មជាតិ</h2>
-                    <p class="lead mb-4">កោះកុងមិនត្រឹមតែជាតំបន់ព្រៃភ្នំប៉ុណ្ណោះទេ
-                        ប៉ុន្តែវាក៏ជាគោលដៅទេសចរណ៍មាត់សមុទ្រដ៏ទាក់ទាញបំផុតមួយក្នុងប្រទេសកម្ពុជា។</p>
-                    <p class="text-muted">
-                        កោះស្តេច (Koh Sdach) គឺជាត្បូងពេជ្រដែលលាក់ខ្លួនក្នុងខេត្តកោះកុង។
-                        ទីនេះល្បីល្បាញដោយសារទឹកសមុទ្រថ្លាឈ្វេងដែលអាចមើលឃើញផ្កាថ្ម និងហ្វូងត្រីចម្រុះពណ៌។ ក្រៅពីកោះស្តេច
-                        អ្នកក៏អាចកម្សាន្តនៅកោះកុងក្រៅ និងឆ្នេរសមុទ្រដ៏ស្ងប់ស្ងាត់ជាច្រើនទៀតដែលផ្តល់នូវភាពឯកជន
-                        និងភាពស្រស់ស្រាយយ៉ាងពិតប្រាកដ។
-                    </p>
+                    <div class="pe-lg-5">
+                        <span class="section-label" style="color: var(--khmer-gold);">សម្រស់តំបន់ឆ្នេរ</span>
+                        <h2 class="display-5 fw-bold mb-4" style="color: white;">សម្រស់ឆ្នេរខ្សាច់ និងកោះធម្មជាតិ</h2>
+                        <p class="lead text-white-50 mb-4">កោះកុងមិនត្រឹមតែល្បីល្បាញដោយសារព្រៃកោងកាង និងតំបន់អភិរក្សធម្មជាតិប៉ុណ្ណោះទេ ប៉ុន្តែក៏ជាជម្រកនៃកោះ និងឆ្នេរសមុទ្រដ៏ស្រស់បំព្រងបំផុតនៅក្នុងប្រទេសកម្ពុជាផងដែរ。</p>
+                        <p class="text-white-50">ការធ្វើដំណើរមកកាន់ទីនេះ លោកអ្នកនឹងបានគយគន់ផ្ទៃសមុទ្រខៀវស្រងាត់ ឆ្នេរខ្សាច់សក្បុស និងទទួលបានបទពិសោធន៍សម្រាកលម្អែកាយយ៉ាងស្ងប់ស្ងាត់ឆ្ងាយពីភាពអ៊ូអរនៃទីក្រុង。</p>
+                    </div>
                 </div>
-                <div class="col-lg-6 reveal">
-                    <img src="assets/image/kohsdach.png"
-                        class="img-fluid rounded-5 shadow-lg" alt="Koh Sdach View">
+                <div class="col-lg-6 reveal reveal-delay-2">
+                    <img src="assets/image/kohsdach.png" class="img-fluid rounded-5 shadow-lg" alt="Koh Kong Island">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ── ISLAND EXPLORE GRID ── -->
-    <section class="explore-grid-container" id="explore">
+    <section class="bg-mixed explore-grid-container" id="explore">
         <div class="container">
-            <div class="text-center mb-5 reveal">
-                <span class="section-label" style="color: var(--khmer-gold);">Beach Destinations</span>
-                <h2 class="display-5 fw-bold mt-2">តំបន់កម្សាន្តមាត់សមុទ្រ</h2>
+            <div class="row align-items-end mb-5 reveal">
+                <div class="col-lg-6">
+                    <span class="section-label">ការស្វែងយល់ដ៏វិសេស</span>
+                    <h2 class="display-5 fw-bold mt-2" style="color: var(--khmer-gold);">តំបន់កម្សាន្តមាត់សមុទ្រ</h2>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <p class="opacity-75">រៀបចំដំណើរកម្សាន្តរបស់អ្នកជាមួយតំបន់អច្ឆរិយៈមាត់សមុទ្រទាំងនេះ</p>
+                </div>
             </div>
 
             <div class="row g-4">
-                <div class="col-lg-8">
+                <div class="col-lg-7">
                     <div class="adventure-item reveal">
+                        <span class="adventure-tag">មុជទឹក</span>
                         <img src="https://q-xx.bstatic.com/xdata/images/hotel/840x460/505525375.jpg?k=f56f125156a39d1ae2ef135c2c3af9383fa32fd1f5595f8c1754d79fa6c64e0a&o="
                             alt="Koh Sdach snorkeling">
                         <div class="adventure-overlay">
-                            <h3>កោះស្តេច (King Island)</h3>
-                            <p class="text-white-50">ទីតាំងដ៏ល្អបំផុតសម្រាប់ការមុជទឹកមើលផ្កាថ្ម
-                                និងការទទួលទានអាហារសមុទ្រស្រស់ៗពីអ្នកនេសាទក្នុងតំបន់។</p>
+                            <h3>កោះស្តេច</h3>
+                            <p class="text-white-50">ទីតាំងដ៏ល្អបំផុតសម្រាប់ការមុជទឹកមើលផ្កាថ្ម និងការទទួលទានអាហារសមុទ្រស្រស់ៗពីអ្នកនេសាទក្នុងតំបន់。</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-5">
                     <div class="adventure-item reveal">
-                        <img src="https://demo.cambodia.gov.kh/wp-content/uploads/2021/04/%E1%9E%80%E1%9F%84%E1%9F%87%E1%9E%80%E1%9E%BB%E1%9E%84-%E1%9E%86%E1%9F%81%E1%9F%92%E1%9E%93%E1%9E%9A%E1%9E%80%E1%9F%84%E1%9F%87%E1%9E%99%E1%9F%89-%E1%9E%AC%E1%9E%86%E1%9F%81%E1%9F%92%E1%9E%93%E1%9E%9A%E1%9E%94%E1%9F%89%E1%9E%B6%E1%9E%80%E1%9F%8B%E1%9E%81%E1%9F%92%E1%9E%9B%E1%9E%84.jpg"
+                        <span class="adventure-tag">ឆ្នេរសមុទ្រ</span>
+                        <img src="https://demo.cambodia.gov.kh/wp-content/uploads/2021/04/%E1%9E%80%E1%9F%84%E1%9F%87%E1%9E%8ក%E1%9E%BB%E1%9E%84-%E1%9E%86%E1%9F%81%E1%9F%92%E1%9E%93%E1%9E%9area-yeas-or-beach.jpg"
                             alt="Koh Kong Beach">
                         <div class="adventure-overlay">
                             <h3>ឆ្នេរប៉ាក់ខ្លង</h3>
-                            <p class="text-white-50">ឆ្នេរសមុទ្រដ៏វែងអន្លាយដែលមានខ្សាច់ម៉ដ្ឋ និងដើមដូងខ្ពស់ៗ
-                                ផ្តល់នូវបរិយាកាសដ៏រ៉ូមែនទិក។</p>
+                            <p class="text-white-50">ឆ្នេរសមុទ្រដ៏វែងអន្លាយដែលមានខ្សាច់ម៉ដ្ឋ និងដើមដូងខ្ពស់ៗ ផ្តល់នូវបរិយាកាសដ៏រ៉ូមែនទិក。</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="adventure-item reveal">
+                        <span class="adventure-tag">កោះធម្មជាតិ</span>
                         <img src="https://static.information.gov.kh/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNHlXQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f3c888f6780f282320a054b5e5e6ab11b2b02208/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNT1RBd2VEWXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--70cbddbba2e46c7ca8ac0c1f8b8316d88752e16d/EB2CDF9E-4936-4B9A-91DB-90C07FA.jpeg"
                             alt="Island Hopping">
                         <div class="adventure-overlay">
                             <h3>កោះស្មាច់</h3>
-                            <p class="text-white-50">កោះតូចមួយដែលស្ងប់ស្ងាត់បំផុត ល្អសម្រាប់ការដើរលេងតាមឆ្នេរ
-                                និងការគយគន់ថ្ងៃលិច។</p>
+                            <p class="text-white-50">កោះតូចមួយដែលស្ងប់ស្ងាត់បំផុត ល្អសម្រាប់ការដើរលេងតាមឆ្នេរ និងការគយគន់ថ្ងៃលិច。</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="adventure-item reveal">
+                        <span class="adventure-tag">ការផ្សងព្រេង</span>
                         <img src="https://asset.cambodia.gov.kh/tourism/2023/11/Lr_52.jpeg"
                             alt="Beach Resort">
                         <div class="adventure-overlay">
-                            <h3>កោះកុងក្រៅ   </h3>
-                            <p class="text-white-50">កោះដ៏ធំដែលមានឆ្នេរខ្សាច់សស្អាតៗជាច្រើន
-                                និងទឹកធ្លាក់ដែលហូរចូលទៅក្នុងសមុទ្រដោយផ្ទាល់។</p>
+                            <h3>កោះកុងក្រៅ</h3>
+                            <p class="text-white-50">កោះដ៏ធំដែលមានឆ្នេរខ្សាច់សស្អាតៗជាច្រើន និងទឹកធ្លាក់ដែលហូរចូលទៅក្នុងសមុទ្រដោយផ្ទាល់。</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- ── ISLAND ACTIVITIES ── -->
-    <section class="section-padding" style="background: #f0f9ff;">
+    <section class="section-padding bg-mixed text-white">
         <div class="container">
             <div class="text-center mb-5 reveal">
-                <span class="section-label" style="color: var(--beach-blue);">Island Adventures</span>
-                <h2 class="display-5 fw-bold mt-2" style="color: var(--royal-blue);">សកម្មភាពកម្សាន្តដែលមិនគួររំលង</h2>
+                <span class="section-label" style="color: var(--khmer-gold);">Island Adventures</span>
+                <h2 class="display-5 fw-bold mt-2" style="color: white;">សកម្មភាពកម្សាន្តដែលមិនគួររំលង</h2>
             </div>
             <div class="row g-4">
                 <div class="col-md-3 reveal">
@@ -207,7 +206,7 @@
                 <div class="col-md-3 reveal reveal-delay-1">
                     <div class="activity-mini-card p-4 bg-white rounded-4 shadow-sm text-center border-0 h-100">
                         <div class="activity-icon mb-3" style="font-size: 2.5rem; color: var(--beach-blue);"><i
-                                class="fas fa-kayak"></i></div>
+                                class="fas fa-ship"></i></div>
                         <h5 class="fw-bold mb-2">ជិះកាយ៉ាក់</h5>
                         <p class="small text-muted mb-0">កម្សាន្តតាមដងព្រែក និងព្រៃកោងកាងដ៏ស្ងប់ស្ងាត់។</p>
                     </div>
@@ -233,7 +232,7 @@
     </section>
 
     <!-- ── SEAFOOD TASTE ── -->
-    <section class="taste-section">
+    <section class="taste-section bg-mixed text-white">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 reveal">
@@ -247,9 +246,9 @@
                     </div>
                 </div>
                 <div class="col-lg-6 reveal">
-                    <span class="section-label" style="color: var(--beach-blue);">Ocean Flavors</span>
-                    <h2 class="display-5 fw-bold mb-4" style="color: var(--royal-blue);">រសជាតិគ្រឿងសមុទ្រស្រស់ៗ</h2>
-                    <p class="mb-5 text-muted">រីករាយជាមួយអាហារសមុទ្រដែលទើបតែចាប់បានថ្មីៗពីសមុទ្រកោះកុង
+                    <span class="section-label" style="color: var(--khmer-gold);">រសជាតិគ្រឿងសមុទ្រ</span>
+                    <h2 class="display-5 fw-bold mb-4" style="color: white;">រសជាតិគ្រឿងសមុទ្រស្រស់ៗ</h2>
+                    <p class="mb-5 text-white-50">រីករាយជាមួយអាហារសមុទ្រដែលទើបតែចាប់បានថ្មីៗពីសមុទ្រកោះកុង
                         ផ្សំជាមួយទឹកត្រីកោះកុងដ៏ល្បីល្បាញ។</p>
                     <div class="food-card mb-4">
                         <div class="d-flex align-items-center gap-3">
@@ -277,11 +276,11 @@
     </section>
 
     <!-- ── CULINARY EXPLORATION ── -->
-    <section class="section-padding" style="background: var(--bg-sand-light);">
+    <section class="section-padding bg-mixed text-white">
         <div class="container">
             <div class="text-center mb-5 reveal">
-                <span class="section-label" style="color: var(--beach-blue);">Gourmet Journey</span>
-                <h2 class="display-5 fw-bold mt-2" style="color: var(--royal-blue);">ស្វែងយល់ពីរសជាតិដើមកោះកុង</h2>
+                <span class="section-label" style="color: var(--khmer-gold);">ដំណើរសិល្បៈម្ហូបអាហារ</span>
+                <h2 class="display-5 fw-bold mt-2" style="color: white;">ស្វែងយល់ពីរសជាតិដើមកោះកុង</h2>
                 <p class="opacity-75 mt-3 mx-auto" style="max-width: 700px;">
                     ការធ្វើដំណើរមកកាន់កោះកុង និងកោះស្តេច នឹងមិនពេញលេញឡើយ ប្រសិនបើអ្នកមិនទាន់បានសាកល្បងអាហារសមុទ្រស្រស់ៗ
                     និងទឹកត្រីកោះកុងដ៏ល្បីល្បាញ។
@@ -336,12 +335,12 @@
     </section>
 
     <!-- ── TRAVELER ESSENTIALS ── -->
-    <section class="section-padding bg-white">
+    <section class="section-padding bg-mixed text-white">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-5 reveal">
-                    <span class="section-label" style="color: var(--khmer-gold);">Traveler's Guide</span>
-                    <h2 class="display-6 fw-bold mb-4" style="color: var(--royal-blue);">
+                    <span class="section-label" style="color: var(--khmer-gold);">ព័ត៌មានអ្នកដំណើរ</span>
+                    <h2 class="display-6 fw-bold mb-4" style="color: white;">
                         ព័ត៌មានចាំបាច់សម្រាប់ការធ្វើដំណើរ</h2>
                     <p class="text-muted mb-4">ដើម្បីឱ្យដំណើរកម្សាន្តរបស់អ្នកកាន់តែរលូន
                         សូមពិនិត្យមើលគន្លឹះសំខាន់ៗមួយចំនួនខាងក្រោម៖</p>
@@ -397,61 +396,57 @@
     </section>
 
     <!-- ── BEACH STAY ── -->
-    <section class="stay-section section-padding">
+    <section class="stay-section section-padding bg-mixed text-white">
         <div class="container">
             <div class="text-center mb-5 reveal">
-                <span class="section-label" style="color: var(--beach-blue);">កន្លែងស្នាក់នៅ</span>
-                <h2 class="display-5 fw-bold mt-2" style="color: var(--royal-blue);">ស្នាក់នៅក្បែរទឹកសមុទ្រ</h2>
+                <span class="section-label" style="color: var(--khmer-gold);">កន្លែងស្នាក់នៅ</span>
+                <h2 class="display-5 fw-bold mt-2" style="color: white;">ស្នាក់នៅក្បែរទឹកសមុទ្រ</h2>
             </div>
 
-            <div class="lodge-premium-card reveal" style="cursor:pointer;" data-bs-toggle="modal"
-                data-bs-target="#kohSdachModal">
-                <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/646894427.jpg?k=012852d779fdde5a3d6442d8e452f59ba0280fb94af9a75d2d52f8b900d317ad&o=" class="lodge-premium-img"
-                    alt="Mad Monkey Resort">
-                <div class="lodge-premium-info">
-                    <div class="hotel-rating">
-                        <span class="rating-score">9.2</span>
-                        <span class="text-white-50 small">ល្អឥតខ្ចោះ (៤៥០ ការវាយតម្លៃ)</span>
+            <div class="row g-4 justify-content-center">
+                <!-- Koh Sdach Resort -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="lodge-premium-card reveal h-100" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#kohSdachModal">
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/646894427.jpg?k=012852d779fdde5a3d6442d8e452f59ba0280fb94af9a75d2d52f8b900d317ad&o=" class="lodge-premium-img" alt="Mad Monkey Resort">
+                        <div class="lodge-premium-info">
+                            <span class="lodge-premium-tag">រមណីយដ្ឋាន</span>
+                            <h3>កោះស្តេច រីសត</h3>
+                            <p class="opacity-75 mt-3 mb-4">បទពិសោធន៍ស្នាក់នៅកម្រិតខ្ពស់នៅលើកោះស្តេច ជាមួយទិដ្ឋភាពសមុទ្រដ៏ធំល្វឹងល្វើយ និងសេវាកម្មទូកកម្សាន្តឯកជន。</p>
+                            <div class="fw-bold text-warning mb-2 fs-5">$១២០ - $២៥០ <span class="fs-6 text-white-50 fw-normal">/ យប់</span></div>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div class="text-warning small">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="small opacity-75"><i class="fas fa-location-dot me-1"></i>កោះស្តេច, កោះកុង</span>
+                            </div>
+                            <button class="btn-khmer btn-khmer-gold w-100">មើលលម្អិត</button>
+                        </div>
                     </div>
-                    <h3>Koh Sdach Resort</h3>
-                    <div class="hotel-price">$១២០ - $២៥០ / យប់</div>
-                    <p class="opacity-75 mb-4">បទពិសោធន៍ស្នាក់នៅកម្រិតខ្ពស់នៅលើកោះស្តេច
-                        ជាមួយទិដ្ឋភាពសមុទ្រដ៏ធំល្វឹងល្វើយ និងសេវាកម្មទូកកម្សាន្តឯកជន។</p>
-                    <div class="hotel-amenities">
-                        <div class="amenity-item" title="Free Wi-Fi"><i class="fas fa-wifi"></i></div>
-                        <div class="amenity-item" title="Swimming Pool"><i class="fas fa-swimming-pool"></i></div>
-                        <div class="amenity-item" title="Private Beach"><i class="fas fa-umbrella-beach"></i></div>
-                        <div class="amenity-item" title="Restaurant"><i class="fas fa-utensils"></i></div>
-                    </div>
-                    <button class="btn btn-info text-white py-2 px-4 rounded-3 w-50">មើលលម្អិត</button>
                 </div>
-            </div>
 
-            <div class="lodge-premium-card reveal" style="cursor:pointer;" data-bs-toggle="modal"
-                data-bs-target="#sixSensesModal">
-                <div class="lodge-premium-info">
-                    <div class="hotel-rating">
-                        <span class="rating-score">9.8</span>
-                        <span class="text-white-50 small">ល្អឥតខ្ចោះបំផុត (១២០ ការវាយតម្លៃ)</span>
+                <!-- Six Senses Resort -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="lodge-premium-card reveal h-100" style="cursor:pointer;" data-bs-toggle="modal" data-bs-target="#sixSensesModal">
+                        <img src="https://pix10.agoda.net/hotelImages/30125300/-1/9602bdd8a00801f2fa65a9469cce63a8.jpg?ca=27&ce=0&s=414x232" class="lodge-premium-img" alt="Luxury Resort">
+                        <div class="lodge-premium-info">
+                            <span class="lodge-premium-tag">ប្រណីតបំផុត</span>
+                            <h3>ស៊ីកសេនស៍ រីសត</h3>
+                            <p class="opacity-75 mt-3 mb-4">រមណីយដ្ឋានប្រណីតលំដាប់ពិភពលោកលើកោះឯកជន ដែលផ្តល់នូវភាពឯកជនខ្ពស់បំផុត និងការព្យាបាលស្ប៉ាបែបធម្មជាតិ。</p>
+                            <div class="fw-bold text-warning mb-2 fs-5">$៦៥០ - $១,២០០ <span class="fs-6 text-white-50 fw-normal">/ យប់</span></div>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div class="text-warning small">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <span class="small opacity-75"><i class="fas fa-location-dot me-1"></i>កោះក្របី, កោះកុង</span>
+                            </div>
+                            <button class="btn-khmer btn-khmer-gold w-100">មើលលម្អិត</button>
+                        </div>
                     </div>
-                    <h3>Koh Sdach Resort</h3>
-                    <div class="hotel-price">$៦៥០ - $១,២០០ / យប់</div>
-                    <p class="opacity-75 mb-4">រមណីយដ្ឋានប្រណីតលំដាប់ពិភពលោកលើកោះឯកជន ដែលផ្តល់នូវភាពឯកជនខ្ពស់បំផុត
-                        និងការព្យាបាលស្ប៉ាបែបធម្មជាតិ។</p>
-                    <div class="hotel-amenities">
-                        <div class="amenity-item" title="Private Pool"><i class="fas fa-water"></i></div>
-                        <div class="amenity-item" title="Luxury Spa"><i class="fas fa-spa"></i></div>
-                        <div class="amenity-item" title="Yoga Class"><i class="fas fa-om"></i></div>
-                        <div class="amenity-item" title="Eco Friendly"><i class="fas fa-leaf"></i></div>
-                    </div>
-                    <button class="btn btn-info text-white py-2 px-4 rounded-3 w-50">មើលលម្អិត</button>
                 </div>
-                <img src="https://pix10.agoda.net/hotelImages/30125300/-1/9602bdd8a00801f2fa65a9469cce63a8.jpg?ca=27&ce=0&s=414x232" class="lodge-premium-img"
-                    alt="Luxury Resort">
             </div>
         </div>
     </section>
-
+    
     <!-- ── MODALS ── -->
 
     <!-- Koh Sdach Resort Modal -->
@@ -468,7 +463,7 @@
                     <div class="position-absolute bottom-0 start-0 p-5 w-100"
                         style="background: linear-gradient(transparent, rgba(13, 42, 67, 0.9));">
                         <span class="badge bg-info mb-3 px-3 py-2 rounded-pill fw-bold">រមណីយដ្ឋាន</span>
-                        <h2 class="text-white fw-bold display-6 mb-0">Mad Monkey Resort</h2>
+                        <h2 class="text-white fw-bold display-6 mb-0">រមណីយដ្ឋាន ម៉ែដ ម៉ង់គី</h2>
                     </div>
                 </div>
                 <div class="modal-body p-5">
@@ -554,7 +549,7 @@
                     <div class="position-absolute bottom-0 start-0 p-5 w-100"
                         style="background: linear-gradient(transparent, rgba(13, 42, 67, 0.9));">
                         <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold">ប្រណីតបំផុត</span>
-                        <h2 class="text-white fw-bold display-6 mb-0">Koh Sdach Resort</h2>
+                        <h2 class="text-white fw-bold display-6 mb-0">រមណីយដ្ឋាន ស៊ីកសេនស៍</h2>
                     </div>
                 </div>
                 <div class="modal-body p-5">
@@ -781,9 +776,9 @@
                 <div class="col-6 col-lg-2 mb-5 mb-lg-0">
                     <h6 class="footer-title">សេវាកម្ម</h6>
                     <ul class="footer-links">
-                        <li><a href="#">សណ្ឋាគារ</a></li>
-                        <li><a href="#">ភោជនីយដ្ឋាន</a></li>
-                        <li><a href="#">មគ្គុទ្ទេសក៍</a></li>
+                        <li><a href="hotels.html">សណ្ឋាគារ</a></li>
+                        <li><a href="restaurants.html">ភោជនីយដ្ឋាន</a></li>
+                        <li><a href="guide.html">មគ្គុទ្ទេសក៍</a></li>
                         <li><a href="transportation.html">ការដឹកជញ្ជូន</a></li>
                     </ul>
                 </div>
@@ -843,34 +838,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-        const icon = themeToggle.querySelector('i');
-
-        // Check for saved theme
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            body.classList.add(savedTheme);
-            updateIcon(savedTheme);
-        }
-
-        themeToggle.addEventListener('click', () => {
-            if (body.classList.contains('light-mode')) {
-                body.classList.remove('light-mode');
-                localStorage.setItem('theme', 'dark-mode');
-                updateIcon('dark-mode');
-            } else {
-                body.classList.add('light-mode');
-                localStorage.setItem('theme', 'light-mode');
-                updateIcon('light-mode');
-            }
-        });
-
-        function updateIcon(theme) {
-            if (theme === 'light-mode') {
-                icon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
-            } else {
+    <script> else {
                 icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
             }
         }

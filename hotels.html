@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="km">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>សណ្ឋាគារ | ទេសចរណ៍កម្ពុជា</title>
     <!-- HTML CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/hotels.css">
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
     <!-- BOOTSTRAP THEME  -->
     <link rel="stylesheet" href="assets/css/theme.css">
     <!-- FONT AWESOME FOR ICON -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- BOOTSTRAP ICON -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- SWIPER -->
@@ -22,30 +23,95 @@
 </head>
 
 <body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container py-2">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="assets/image/new_logo_v2.png" alt="Logo" width="45" height="45" class="me-2">
+                    <div class="d-flex flex-column lh-1">
+                        <span class="text-secondary small">ទេសចរណ៍កម្ពុជា</span>
+                    </div>
+                </a>
 
-    <section class="hero-section">
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link active rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                                data-bs-toggle="dropdown">គោលដៅ</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="siem-reap.html">សៀមរាប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="phnompenh.html">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="battambang.html">បាត់ដំបង</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="mondulkiri.html">មណ្ឌលគិរី</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="koh-kong.html">កោះកុង</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                                data-bs-toggle="dropdown">សេវាកម្ម</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="hotels.html">សណ្ឋាគារ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="restaurants.html">ភោជនីយដ្ឋាន</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="guide.html">មគ្គុទ្ទេសក៍</a></li>
+                                <li><a class="dropdown-content dropdown-item"
+                                        href="transportation.html">ការដឹកជញ្ជូន</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item"><a class="nav-link px-3" href="vikjittsal.html">វិចិត្រសាល</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex align-items-center gap-3">
+                    
+                    <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
+                    <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="bg-mixed hero-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card bg-transparent border-0 align-items-center justify-content-center">
-                        <h5 class="text text-center rounded-5"
-                            style="padding: 4px; border: 2px solid rgba(218, 165, 32, 0.478); color: rgba(255, 217, 0, 0.354); display: inline-block;width: 300px; margin-top: 120px;">
-                            សូមស្វាគមន៍មកកាន់ប្រទេសកម្ពុជា</h5>
-                        <h1 style="font-size: 100px; color: rgb(242, 211, 171);">ទេស<span
-                                style="color: rgb(157, 113, 56);">ចរណ៍</span></h1>
-                        <h1 style="font-size: 110px; color: rgb(235, 197, 146);">កម្ពុជា</h1>
-                        <p style="font-size: 20px; color: rgb(241, 186, 114);margin-top: 20PX;">DISCOVER THE INGDOM OF
-                            WONDER</p>
+                        <span class="welcome-badge">
+                            <i class="fa-brands fa-galactic-senate"></i> សូមស្វាគមន៍មកកាន់ប្រទេសកម្ពុជា <i
+                                class="fa-brands fa-galactic-senate"></i>
+                        </span>
+                        <h1 class="hero-title-main">ទេស<span>ចរណ៍</span>កម្ពុជា</h1>
+                        <p class="hero-subtitle">DISCOVER THE KINGDOM OF WONDER</p>
                         <div class="d-flex">
-                            <a href="#find" class="text-decoration-none find"
-                                style="padding: 6px 14px; background-color: rgba(233, 179, 3, 0.479);">ស្វែងរកសណ្ឋាគារ</a>
+                            <a href="#find" class="find">
+                                <i class="fa-solid fa-hotel"></i> ស្វែងរកសណ្ឋាគារ
+                            </a>
                         </div>
-                        <div class="container mt-5">
-                            <div class="d-flex mt-0">
-                                <p class="line-2"></p>
-                                <div class="fw-bold fs-1" style="color: rgb(248, 199, 3);"><i
-                                        class="fa-brands fa-galactic-senate"></i></div>
-                                <p class="line-2"></p>
+                        <div class="container mt-4">
+                            <div class="d-flex align-items-center justify-content-center gap-3 w-100">
+                                <span class="line-2"></span>
+                                <div class="fs-3" style="color: var(--secondary-color) !important;">
+                                    <i class="fa-brands fa-galactic-senate"></i>
+                                </div>
+                                <span class="line-2"></span>
                             </div>
                         </div>
                     </div>
@@ -54,7 +120,7 @@
         </div>
     </section>
     <div id="find">
-        <section class="menu">
+        <section class="bg-mixed menu">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -93,7 +159,7 @@
                                                 <p class="line-2"></p>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -140,7 +206,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -296,7 +362,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -340,7 +406,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -496,7 +562,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -540,7 +606,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -696,7 +762,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2 mb-5">
 
                                                 <div class="p-3">
@@ -739,7 +805,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -897,7 +963,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="container ">
+                                <div class="container">
                                     <div class="d-flex mt-0">
                                         <p class="line-2"></p>
                                         <div class="fw-bold fs-1" style="color: rgb(248, 199, 3);"><i
@@ -911,7 +977,7 @@
                                     <h3 class="mt-4" style="color: rgb(214, 156, 19);">សណ្ឋាគារល្បីៗនៅទីក្រុងភ្នំពេញ
                                     </h3>
                                     <div class="row" style="margin-top: 10px;">
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -957,7 +1023,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -1113,7 +1179,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -1157,7 +1223,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -1313,7 +1379,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -1357,7 +1423,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -1513,7 +1579,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -1556,7 +1622,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -1712,7 +1778,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -1755,7 +1821,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -1911,7 +1977,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -1954,7 +2020,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -2110,7 +2176,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -2153,7 +2219,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -2309,8 +2375,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
-                                            <div class="card hotel mt-5 rounded-2 ">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
+                                            <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
                                                     <img src="assets/image_hotel/about-the-peninsula-phnom-penh-2.webp"
@@ -2352,7 +2418,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -2508,7 +2574,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2 mb-5">
 
                                                 <div class="p-3">
@@ -2551,7 +2617,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -2707,7 +2773,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2 mb-5">
 
                                                 <div class="p-3">
@@ -2750,7 +2816,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -2913,7 +2979,7 @@
                                 <div class="tab-pane fade" id="siemreap-pane" tabindex="0">
                                     <h3 class="mt-4" style="color: rgb(214, 156, 19);">សណ្ឋាគារល្បីៗនៅក្រុងសៀមរាប</h3>
                                     <div class="row" style="margin-top: 10px;width: 100%;border-radius: 8px;">
-                                        <div class="col-lg-3">
+                                        <div class="col-12 col-md-6 col-lg-3">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3" data-aos="zoom-in">
@@ -2960,7 +3026,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -3116,7 +3182,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -3160,7 +3226,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -3316,7 +3382,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -3360,7 +3426,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -3516,7 +3582,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2 mb-5">
 
                                                 <div class="p-3">
@@ -3559,7 +3625,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -3715,7 +3781,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2 mb-5">
 
                                                 <div class="p-3">
@@ -3758,7 +3824,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -3914,7 +3980,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2 mb-5">
 
                                                 <div class="p-3">
@@ -3957,7 +4023,7 @@
                                                                                     <p class="line-1"
                                                                                         style="margin-top: 15px; ">
                                                                                     </p>
-                                                                                    <p class=" fw-bold"
+                                                                                    <p class="fw-bold"
                                                                                         style="color: rgb(165, 130, 42);">
                                                                                         ព័ត៍មានលម្អិត
                                                                                     </p>
@@ -4121,7 +4187,7 @@
                                 <div class="tab-pane fade" id="luxury-pane" tabindex="0">
                                     <h3 class="text-white mt-4">Luxury Hotels</h3>
                                     <div class="row" style="margin-top: 10px;">
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -4167,7 +4233,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -4318,7 +4384,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3" data-aos="zoom-in">
+                                        <div class="col-12 col-md-6 col-lg-3" data-aos="zoom-in">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -4362,7 +4428,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -4518,7 +4584,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-12 col-md-6 col-lg-3">
                                             <div class="card hotel mt-5 rounded-2">
 
                                                 <div class="p-3">
@@ -4562,7 +4628,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -4718,7 +4784,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-12 col-md-6 col-lg-3">
                                             <div class="card hotel mt-5 rounded-2 mb-5">
 
                                                 <div class="p-3">
@@ -4761,7 +4827,7 @@
                                                                                 <p class="line-1"
                                                                                     style="margin-top: 15px; ">
                                                                                 </p>
-                                                                                <p class=" fw-bold"
+                                                                                <p class="fw-bold"
                                                                                     style="color: rgb(165, 130, 42);">
                                                                                     ព័ត៍មានលម្អិត
                                                                                 </p>
@@ -4933,7 +4999,10 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    AOS.init();
+    AOS.init(); else {
+            icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
+        }
+    }
 </script>
 
 </html>

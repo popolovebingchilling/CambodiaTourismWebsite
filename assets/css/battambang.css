@@ -1,41 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
 }
-
-:root {
-    --deep-mahogany: #4A1C00;
-    --burnt-sienna: #7B2D00;
-    --desert-terracotta: #C0622A;
-    --amber-dune: #D4A054;
-    --golden-spice: #F2C078;
-    --parchment: #FEF0CD;
-    --sand-whisper: #FEF6E4;
-    --night-indigo: #3D405B;
-    --camel-brown: #9B6A3A;
-    --dark-oud: #2C1A0E;
+:root{
+    --primary-color:     #0D2A43; 
+    --secondary-color:   #D7B56D; 
+    --angkor-stone:      #5D4037; 
+    --golden-spice:      #E5C58B;
+    --parchment:         #F8F9FA;
+    --sand-whisper:      #FAF9F6;
+    --night-indigo:      #1A365D;
+    --camel-brown:       #8D6E63;
+    --dark-oud:          #07121C;
 }
-
-body {
-    font-family: "Kantumruy Pro", "Roboto" !important;
+body{
+    font-family: "Kantumruy Pro", sans-serif !important;
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
 .hero-section {
-    height: 100vh !important;
+    position: relative !important;
+    min-height: 100vh !important;
+    height: auto !important;
     width: 100% !important;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../image_battambong/photo_2026-04-22_23-18-25.jpg) !important;
-    background-size: 100% 100% !important;
+    background-image: url(../image_battambong/photo_2026-04-22_23-18-25.jpg) !important;
+    background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     display: flex !important;
-    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    padding-top: 100px !important;
+    padding-bottom: 80px !important;
+}
+
+/* Premium 4-Sided Cinematic Vignette Overlay */
+.hero-section::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: 
+        /* Top Shadow: Blends page header softly with banner */
+        linear-gradient(to bottom, rgba(7, 18, 28, 0.85) 0%, transparent 22%),
+        /* Bottom Shadow: Adds visual depth at viewport lower boundary */
+        linear-gradient(to top, rgba(7, 18, 28, 0.95) 0%, transparent 25%),
+        /* Left Shadow: Creates anamorphic matte framing on the left */
+        linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+        /* Right Shadow: Creates anamorphic matte framing on the right */
+        linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+        /* Central Spotlight: High-contrast vignette centered on image */
+        radial-gradient(circle at center, rgba(13, 42, 67, 0.15) 0%, rgba(7, 18, 28, 0.5) 50%, rgba(7, 18, 28, 0.75) 100%) !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+.hero-section::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 120px !important;
+    background: linear-gradient(transparent, var(--dark-oud)) !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+}
+
+.hero-section > .container {
+    position: relative !important;
+    z-index: 3 !important;
 }
 
 .scroll {
@@ -44,89 +79,334 @@ body {
 
 .scroll:hover {
     transform: scale(1.03) !important;
-    background-color: rgba(0, 0, 255, 0.297) !important;
-    color: #f9d006 !important;
+    background-color: rgba(13, 42, 67, 0.3) !important;
+    color: var(--secondary-color) !important;
 }
 
-.img-food {
-    width: 100% !important;
-    height: 250px !important;
-    transition: 0.3s !important;
-    object-fit: cover !important;
+/* ========================================================
+   HERO QUICK LINK CARDS (GLASSMORPHISM & EQUAL HEIGHTS)
+   ======================================================== */
+.hero-quick-link-card {
+    background: rgba(13, 42, 67, 0.45) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 14px !important;
+    padding: 20px !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    text-decoration: none !important;
 }
 
-.img-food:hover {
-    transform: scale(1.05);
+.hero-quick-link-card:hover {
+    background: rgba(13, 42, 67, 0.65) !important;
+    border-color: var(--secondary-color) !important;
+    transform: translateY(-5px) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4) !important;
 }
 
+.quick-link-icon-box {
+    width: 54px !important;
+    height: 54px !important;
+    background: rgba(215, 181, 109, 0.1) !important;
+    border: 2px solid var(--secondary-color) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--secondary-color) !important;
+    font-size: 1.5rem !important;
+    flex-shrink: 0 !important;
+    transition: all 0.3s ease !important;
+}
+
+.hero-quick-link-card:hover .quick-link-icon-box {
+    background: var(--secondary-color) !important;
+    color: #0d2a43 !important;
+    transform: scale(1.08) rotate(5deg) !important;
+    box-shadow: 0 0 15px rgba(215, 181, 109, 0.4) !important;
+}
+
+.quick-link-content {
+    margin-left: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+}
+
+.quick-link-title {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 1.05rem !important;
+    margin-bottom: 4px !important;
+    transition: color 0.3s ease !important;
+}
+
+.hero-quick-link-card:hover .quick-link-title {
+    color: var(--secondary-color) !important;
+}
+
+.quick-link-desc {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.8rem !important;
+    margin-bottom: 8px !important;
+    line-height: 1.3 !important;
+}
+
+.quick-link-action {
+    color: var(--secondary-color) !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    transition: all 0.3s ease !important;
+}
+
+.hero-quick-link-card:hover .quick-link-action {
+    color: #ffffff !important;
+    transform: translateX(3px) !important;
+}
+
+/* ========================================================
+   CARDS EQUAL HEIGHTS SYSTEM
+   ======================================================== */
+
+/* Force rows in matching card sections to stretch column layouts */
+.food-card-row > [class*="col-"],
+.tab-content .row > [class*="col-"] {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+/* Accommodation card and popular food card stretching rules */
+.tab-content .card,
+.tab-content .glass-article-card,
 .card-food {
-    transition: 0.3s !important;
+    height: 100% !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    margin-top: 0 !important; /* Normalize margins */
+    margin-bottom: 30px !important; /* Standardize bottom spacing between rows */
 }
 
+.tab-content .card:hover,
+.tab-content .glass-article-card:hover,
 .card-food:hover {
-    box-shadow: 1px 8px 20px rgb(189, 183, 183) !important;
-    transform: scale(1.02) !important;
+    transform: translateY(-8px) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Standardized image container with zoom effect */
+.tab-content .card img,
+.tab-content .glass-article-card img,
+.card-food img,
+.card-food .img-food {
+    width: 100% !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    border-radius: 16px 16px 0 0 !important;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.tab-content .card:hover img,
+.tab-content .glass-article-card:hover img,
+.card-food:hover img,
+.card-food:hover .img-food {
+    transform: scale(1.05) !important;
+}
+
+.tab-content .card .card-body,
+.tab-content .glass-article-card .card-body,
+.card-food .card-body {
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: 20px !important;
+}
+
+.tab-content .card .card-body h4,
+.tab-content .glass-article-card .card-body h4,
+.card-food .card-body h4 {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+}
+
+.tab-content .card .card-body p,
+.tab-content .glass-article-card .card-body p,
+.card-food .card-body p {
+    font-size: 0.9rem !important;
+    color: rgba(255, 255, 255, 0.75) !important;
+    line-height: 1.5 !important;
+}
+
+.tab-content .card .card-footer,
+.tab-content .glass-article-card .card-footer,
+.card-food .card-footer {
+    margin-top: auto !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 12px 20px !important;
+}
+
+/* Red discount tags become gold matching the aesthetic */
+.tab-content .card .card-footer p[style*="background-color"],
+.tab-content .glass-article-card .card-footer p[style*="background-color"],
+.card-food .card-footer p[style*="background-color"],
+.tab-content .card .card-body div[style*="background-color"],
+.tab-content .glass-article-card .card-body div[style*="background-color"],
+.card-food .card-body div[style*="background-color"] {
+    background-color: var(--secondary-color) !important;
+    color: var(--dark-oud) !important;
+    font-weight: bold !important;
+    font-size: 0.75rem !important;
+    padding: 4px 10px !important;
+    border-radius: 4px !important;
+}
+
+/* ========================================================
+   SECTION PADDING AND HIGH CONTRAST DARK OVERRIDES
+   ======================================================== */
+
+section.bg-mixed {
+    padding: 100px 0 !important;
+}
+
+.bg-mixed {
+    color: #ffffff !important;
+    background-color: var(--dark-oud) !important;
+}
+
+.bg-mixed h1, .bg-mixed h2, .bg-mixed h3, .bg-mixed h4, .bg-mixed h5, .bg-mixed h6 {
+    color: #ffffff !important;
+}
+
+.bg-mixed p, .bg-mixed span, .bg-mixed li {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.bg-mixed .section-label,
+.bg-mixed h2.text-center.fw-bold,
+.bg-mixed h5 {
+    color: var(--secondary-color) !important;
+}
+
+/* ========================================================
+   PREMIUM STATS SECTION STYLING
+   ======================================================== */
+.stats {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 24px !important;
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    gap: 30px !important;
+    padding: 50px 30px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+    margin-top: 20px !important;
 }
 
 .stat {
     text-align: center !important;
+    flex: 1 !important;
     position: relative !important;
-    padding: 0 20px !important;
+    transition: all 0.3s ease !important;
 }
 
+.stat:hover {
+    transform: translateY(-5px) !important;
+}
+
+.stat .number {
+    font-size: clamp(2rem, 4vw, 3.5rem) !important;
+    font-weight: 800 !important;
+    background: linear-gradient(135deg, #ffffff 0%, var(--secondary-color) 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    margin-bottom: 8px !important;
+    letter-spacing: -1px !important;
+}
+
+.stat .label {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 0 !important;
+}
+
+/* Vertical divider lines between stats */
 .stat:not(:last-child)::after {
     content: "" !important;
     position: absolute !important;
-    right: 0 !important;
-    top: 10% !important;
-    height: 80% !important;
-    width: 2px !important;
-    background: linear-gradient(to bottom, #3f3601, #C9A227) !important;
-}
-.stats {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 60px !important;
-    padding: 40px 0 !important;
-    color: #796706 !important;
+    right: -15px !important;
+    top: 15% !important;
+    height: 70% !important;
+    width: 1px !important;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.15), transparent) !important;
 }
 .booking{
     transition: 0.3s !important;
 }
 .booking:hover{
     transform: scale(1.02) !important;
-    background-color: #021bfa !important;
+    background-color: var(--primary-color) !important;
     color: white !important;
 }
 .line {
-    font-weight: 350px !important;
-    width: 500px !important;
-    font-size: 50px !important;
-    border-bottom: 3px solid rgb(253, 141, 5) !important;
-    margin-left: 20px;
+    display: inline-block !important;
+    width: 200px !important;
+    max-width: 35% !important;
+    height: 0 !important;
+    border-bottom: 3px solid var(--secondary-color) !important;
+    margin: 0 !important;
+    align-self: center !important;
 }
 
 .line-1 {
-    font-weight: 350px !important;
-    width: 150px !important;
-    font-size: 50px !important;
-    border-bottom: 3px solid rgb(253, 141, 5) !important;
-    margin-left: 20px;
+    display: inline-block !important;
+    width: 100px !important;
+    max-width: 25% !important;
+    height: 0 !important;
+    border-bottom: 3px solid var(--secondary-color) !important;
+    margin: 0 !important;
+    align-self: center !important;
 }
 
 .line-2 {
-    font-weight: 350px !important;
-    width: 620px !important;
-    font-size: 50px !important;
-    border-bottom: 3px solid rgb(253, 141, 5) !important;
-    margin-left: 20px;
+    display: inline-block !important;
+    width: 250px !important;
+    max-width: 40% !important;
+    height: 0 !important;
+    border-bottom: 3px solid var(--secondary-color) !important;
+    margin: 0 !important;
+    align-self: center !important;
 }
 
 .hero-temple {
     height: 100vh !important;
     width: 100% !important;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../image_battambong/Battambang-3.jpg) !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0), url(../image_battambong/Battambang-3.jpg)) !important;
     background-size: 100% 100% !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -137,14 +417,25 @@ body {
 }
 
 .hero-picture {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(../image_battambong/8332602001.jpg) !important;
-    background-size: 100% 100% !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../image_battambong/8332602001.jpg) !important;
+    background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     display: flex !important;
     flex-direction: column !important;
-    border-radius: 100px !important;
-    margin-top: 70px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 24px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Gallery Zoom Interaction */
+.gallery-img-item {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+.glass-article-card:hover .gallery-img-item {
+    transform: scale(1.08) !important;
 }
 
 .forest-bg {
@@ -158,9 +449,10 @@ body {
 
 .profile-pic {
     position: absolute !important;
+    bottom: -50px !important;
+    left: 50% !important;
     transform: translateX(-50%) !important;
-    margin-left: 42% !important;
-    margin-top: -7% !important;
+    margin: 0 !important;
 }
 
 .profile-pic img {
@@ -179,7 +471,7 @@ body {
 
 .button:hover {
     transform: scale(1.03) !important;
-    background-color: brown !important;
+    background-color: var(--primary-color) !important;
 }
 
 .colum {
@@ -211,4 +503,257 @@ body {
 
 .card-wrapper:hover .colum {
     transform: scale(1.05) !important;
+}
+
+/* ========================================================
+   CINEMATIC SKEWED GALLERY SYSTEM (HERO BANNER)
+   ======================================================== */
+.gallery {
+    width: 170px !important;
+    height: 400px !important;
+    overflow: hidden !important;
+    border: 4px solid var(--secondary-color) !important; /* Gold border to match Battambang's theme */
+    transform: skewX(-10deg) !important;
+    border-radius: 20px !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.gallery img {
+    width: 100% !important;
+    height: 400px !important;
+    object-fit: cover !important;
+    transform: skewX(10deg) scale(1.15) !important; /* Counter skew image so it remains upright */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.gallery:hover {
+    transform: skewX(-10deg) translateY(-10px) !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 20px 40px rgba(215, 181, 109, 0.3) !important;
+}
+
+.gallery:hover img {
+    transform: skewX(10deg) scale(1.25) !important;
+}
+
+/* ========================================================
+   POPULAR LODGING & DETAILS MODALS (CINEMATIC THEME)
+   ======================================================== */
+
+/* Center Modal Titles & Add Gold Accents */
+.modal-header .d-flex {
+    width: 100% !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important;
+}
+
+.modal-header .line-1 {
+    font-weight: 350 !important;
+    width: 60px !important;
+    height: 3px !important;
+    font-size: 1px !important;
+    line-height: 1px !important;
+    max-width: 100% !important;
+    border-bottom: 3px solid var(--secondary-color) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Glassmorphic Features Badges Inside Modals */
+.modal-body .row .col-12 .card .row .col-12.col-md-6.col-lg-3 .card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    backdrop-filter: blur(10px) !important;
+    color: #ffffff !important;
+    text-align: center !important;
+    padding: 10px !important;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15) !important;
+}
+
+.modal-body .row .col-12 .card .row .col-12.col-md-6.col-lg-3 .card p {
+    color: #ffffff !important;
+    margin: 0 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px;
+}
+
+.modal-body .row .col-12 .card .row .col-12.col-md-6.col-lg-3 .card:hover {
+    transform: translateY(-4px) !important;
+    background: rgba(212, 175, 55, 0.1) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.25) !important;
+}
+
+/* Modal Inner Main Card Layout Fixes */
+.modal-body .row .col-12 .card {
+    background: rgba(20, 30, 45, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    backdrop-filter: blur(15px) !important;
+    padding: 15px !important;
+    color: #ffffff !important;
+}
+
+/* Glassmorphic Card Text Color Adjustments inside #stay */
+#stay .glass-article-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+#stay .glass-article-card:hover {
+    transform: translateY(-8px) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25) !important;
+}
+
+#stay .glass-article-card .card-body h4 {
+    color: var(--secondary-color) !important;
+    font-weight: bold !important;
+    font-size: 1.3rem !important;
+}
+
+#stay .glass-article-card .card-body p {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+}
+
+/* Standardize card titles for a professional appearance */
+#stay .glass-article-card h3 {
+    color: var(--secondary-color) !important;
+    font-weight: bold !important;
+}
+
+/* Center all title flex lines and icons globally */
+.d-flex:has(> .line),
+.d-flex:has(> .line-1),
+.d-flex:has(> .line-2) {
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important;
+    width: 100% !important;
+    margin: 15px auto !important;
+}
+
+/* Fix popular food section title color */
+.bg-mixed h1.food-section-province-name,
+.food-section-province-name {
+    color: var(--secondary-color) !important;
+}
+.bg-mixed h1 span.food-section-province-label,
+.food-section-province-label {
+    color: var(--secondary-color) !important;
+}
+
+/* Temple list card enhancements - equalized & smooth transitions */
+.temple-list-item {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 24px !important;
+    padding: 20px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 20px !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    margin-bottom: 24px !important;
+}
+
+.temple-list-item:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: var(--secondary-color) !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3) !important;
+    transform: translateY(-4px) !important;
+}
+
+.temple-img-wrapper {
+    width: 300px !important;
+    height: 190px !important;
+    flex-shrink: 0 !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+    transition: all 0.4s ease !important;
+}
+
+.temple-img-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.temple-list-item:hover .temple-img-wrapper img {
+    transform: scale(1.08) !important;
+}
+
+.temple-info {
+    flex-grow: 1 !important;
+    color: aliceblue !important;
+}
+
+.temple-info h5 {
+    color: var(--secondary-color) !important;
+    font-weight: bold !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 12px !important;
+}
+
+.temple-info p {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 8px !important;
+}
+
+/* Ensure buttons match visually and have a clean design */
+.temple-info .buttonv,
+.temple-info .button {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    font-weight: bold !important;
+    padding: 8px 24px !important;
+    border-radius: 10px !important;
+    transition: all 0.3s ease !important;
+    margin-top: 10px !important;
+}
+
+.temple-info .buttonv:hover,
+.temple-info .button:hover {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: var(--primary-color) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(215, 181, 109, 0.4) !important;
+}
+
+@media (max-width: 768px) {
+    .temple-list-item {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    .temple-img-wrapper {
+        width: 100% !important;
+        height: 220px !important;
+    }
+}
+
+/* Force dark theme body background to prevent white gaps/lines during margins */
+body {
+    background-color: var(--primary-color) !important;
+}
+
+/* Popular Food Section consistent spacing (margin/padding) */
+#food section.bg-mixed {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
 }

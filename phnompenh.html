@@ -5,432 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>រាជធានីភ្នំពេញ - ទេសចរណ៍កម្ពុជា</title>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- HTML CSS -->
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <link rel="stylesheet" href="assets/css/phnompenh.css">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
+    <!-- BOOTSTRAP THEME  -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <!-- FONT AWESOME FOR ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- BOOTSTRAP ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .reveal {
-            opacity: 0;
-            transform: translateY(60px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .reveal-left {
-            opacity: 0;
-            transform: translateX(-60px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .reveal-left.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .reveal-right {
-            opacity: 0;
-            transform: translateX(60px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .reveal-right.visible {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        /* HERO */
-        .pp-hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(44, 26, 14, 0.65)),
-                url('../image/phnompenh-hero.jpg') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .pp-hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 120px;
-            background: linear-gradient(transparent, var(--sand-whisper));
-        }
-
-        .hero-scroll-line {
-            position: absolute;
-            bottom: 130px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            color: white;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-
-            0%,
-            100% {
-                transform: translateX(-50%) translateY(0);
-            }
-
-            50% {
-                transform: translateX(-50%) translateY(10px);
-            }
-        }
-
-        /* SIDE NAV */
-        .side-nav {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 999;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .side-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--camel-brown);
-            cursor: pointer;
-            transition: 0.3s;
-            border: 2px solid transparent;
-        }
-
-        .side-dot.active,
-        .side-dot:hover {
-            background: var(--desert-terracotta);
-            transform: scale(1.4);
-            border-color: var(--amber-dune);
-        }
-
-        /* SHARED */
-        .section-label {
-            font-size: 2.5rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--desert-terracotta);
-            font-weight: 600;
-        }
-
-        .section-title-km {
-            font-family: "Kantumruy Pro", sans-serif;
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--deep-mahogany);
-        }
-
-        .divider-ornament {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin: 12px 0 24px;
-        }
-
-        .divider-ornament::before,
-        .divider-ornament::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: var(--amber-dune);
-        }
-
-        .divider-ornament span {
-            color: var(--amber-dune);
-            font-size: 1.2rem;
-        }
-
-        /* ABOUT */
-        .about-section {
-            padding: 100px 0;
-            background: var(--sand-whisper);
-        }
-
-        .stat-box {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
-            text-align: center;
-            border-bottom: 4px solid var(--desert-terracotta);
-            box-shadow: 0 4px 20px rgba(74, 28, 0, 0.08);
-            transition: transform 0.3s;
-        }
-
-        .stat-box:hover {
-            transform: translateY(-6px);
-        }
-
-        .stat-number {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--desert-terracotta);
-        }
-
-        /* ATTRACTIONS */
-        .attractions-section {
-            padding: 100px 0;
-            background: var(--parchment);
-        }
-
-        .attraction-card-pp {
-            border-radius: 16px;
-            overflow: hidden;
-            background: white;
-            box-shadow: 0 8px 32px rgba(74, 28, 0, 0.12);
-            transition: transform 0.4s, box-shadow 0.4s;
-        }
-
-        .attraction-card-pp:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(74, 28, 0, 0.2);
-        }
-
-        .attraction-img-wrap {
-            overflow: hidden;
-        }
-
-        .attraction-img {
-            height: 240px;
-            object-fit: cover;
-            width: 100%;
-            transition: transform 0.6s;
-        }
-
-        .attraction-card-pp:hover .attraction-img {
-            transform: scale(1.06);
-        }
-
-        .attraction-tag {
-            background: var(--desert-terracotta);
-            color: white;
-            font-size: 0.75rem;
-            padding: 4px 12px;
-            border-radius: 20px;
-        }
-
-        /* FEATURE */
-        .feature-section {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, var(--night-indigo) 0%, var(--deep-mahogany) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-section::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            left: -100px;
-            width: 450px;
-            height: 450px;
-            border-radius: 50%;
-            background: rgba(242, 192, 120, 0.07);
-            pointer-events: none;
-        }
-
-        .feature-img {
-            border-radius: 20px;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
-            transform: perspective(1000px) rotateY(5deg);
-            transition: transform 0.5s;
-        }
-
-        .feature-img:hover {
-            transform: perspective(1000px) rotateY(0deg);
-        }
-
-        /* HISTORY */
-        .history-section {
-            padding: 100px 0;
-            background: var(--sand-whisper);
-        }
-
-        .timeline {
-            position: relative;
-            padding-left: 40px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 16px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--amber-dune);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 36px;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: -31px;
-            top: 6px;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: var(--desert-terracotta);
-            border: 3px solid var(--amber-dune);
-        }
-
-        .timeline-year {
-            font-size: 0.78rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            color: var(--desert-terracotta);
-            margin-bottom: 4px;
-        }
-
-        .timeline-card {
-            background: white;
-            border-radius: 12px;
-            padding: 20px 24px;
-            box-shadow: 0 4px 16px rgba(74, 28, 0, 0.08);
-            border-left: 4px solid var(--amber-dune);
-            transition: border-color 0.3s, transform 0.3s;
-        }
-
-        .timeline-card:hover {
-            border-color: var(--desert-terracotta);
-            transform: translateX(6px);
-        }
-
-        /* FOOD */
-        .food-section {
-            padding: 100px 0;
-            background: var(--parchment);
-        }
-
-        .food-card {
-            border-radius: 12px;
-            overflow: hidden;
-            background: white;
-            box-shadow: 0 4px 20px rgba(74, 28, 0, 0.08);
-            transition: transform 0.3s;
-        }
-
-        .food-card:hover {
-            transform: translateY(-6px);
-        }
-
-        .food-img {
-            height: 180px;
-            object-fit: cover;
-            width: 100%;
-        }
-
-        /* GALLERY */
-        .gallery-section {
-            padding: 100px 0;
-            background: var(--sand-whisper);
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 200px 200px;
-            gap: 12px;
-        }
-
-        .gallery-item-pp {
-            overflow: hidden;
-            border-radius: 12px;
-            cursor: pointer;
-        }
-
-        .gallery-item-pp img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .gallery-item-pp:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-item-pp:nth-child(1) {
-            grid-column: 1/2;
-            grid-row: 1/3;
-        }
-
-        .gallery-item-pp:nth-child(4) {
-            grid-column: 3/4;
-            grid-row: 1/3;
-        }
-
-        /* TIPS */
-        .tips-section {
-            padding: 100px 0;
-            background: var(--parchment);
-        }
-
-        .tip-card {
-            background: white;
-            border-radius: 16px;
-            padding: 28px;
-            border-left: 5px solid var(--amber-dune);
-            box-shadow: 0 4px 20px rgba(74, 28, 0, 0.07);
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .tip-card:hover {
-            transform: translateX(8px);
-            border-color: var(--desert-terracotta);
-        }
-
-        .tip-icon {
-            font-size: 2rem;
-            color: var(--desert-terracotta);
-            margin-bottom: 12px;
-        }
-
-        /* CTA */
-        .cta-section {
-            padding: 100px 0;
-            background: linear-gradient(rgba(44, 26, 14, 0.88), rgba(44, 26, 14, 0.88)),
-                url('../image/phnompenh-river.jpg') center/cover no-repeat;
-        }
-
-        @media (max-width:768px) {
-            .gallery-grid {
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto;
-            }
-
-            .gallery-item-pp:nth-child(1),
-            .gallery-item-pp:nth-child(4) {
-                grid-column: auto;
-                grid-row: auto;
-            }
-
-            .side-nav {
-                display: none;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -454,12 +51,13 @@
                         <li class="nav-item">
                             <a class="nav-link active rounded-pill px-3" href="index.html">ទំព័រដើម</a>
                         </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle px-3" href="#" role="button"
                                 data-bs-toggle="dropdown">គោលដៅ</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-content dropdown-item" href="siem-reap.html">សៀមរាប</a></li>
-                                <li><a class="dropdown-content dropdown-item" href="#">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="phnompenh.html">ភ្នំពេញ</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a>
@@ -473,26 +71,25 @@
                             <a class="nav-link dropdown-toggle px-3" href="#" role="button"
                                 data-bs-toggle="dropdown">សេវាកម្ម</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-content dropdown-item" href="#">សណ្ឋាគារ</a></li>
-                                <li><a class="dropdown-content dropdown-item" href="#">ភោជនីយដ្ឋាន</a></li>
-                                <li><a class="dropdown-content dropdown-item" href="#">មគ្គុទ្ទេសក៍</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="hotels.html">សណ្ឋាគារ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="restaurants.html">ភោជនីយដ្ឋាន</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="guide.html">មគ្គុទ្ទេសក៍</a></li>
                                 <li><a class="dropdown-content dropdown-item"
                                         href="transportation.html">ការដឹកជញ្ជូន</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link px-3" href="#">មគ្គុទ្ទេសក៍</a></li>
-                        <li class="nav-item"><a class="nav-link px-3" href="#">វិចិត្រសាល</a></li>
+
+
+                        <li class="nav-item"><a class="nav-link px-3" href="vikjittsal.html">វិចិត្រសាល</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
-                        <li class="nav-item"><a class="nav-link px-3" href="#">មតិយោបល់</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
                     </ul>
                 </div>
                 <div class="d-none d-lg-flex align-items-center gap-3">
-                    <!-- Theme Toggle Button -->
-                    <button id="theme-toggle" class="btn btn-link text-white p-0 border-0 fs-5"
-                        title="ផ្លាស់ប្តូរពន្លឺ">
-                        <i class="bi bi-moon-stars-fill"></i>
-                    </button>
+                    
                     <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
                 </div>
@@ -548,12 +145,13 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="about-section" id="about">
+    <section class="bg-gradient-stone about-section" id="about">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 reveal-left">
                     <p class="section-label">អំពីរាជធានី</p>
                     <h2 class="section-title-km">រាជធានីភ្នំពេញ</h2>
+                    <div class="divider-ornament"><i class="bi bi-stars fs-3" style="color:var(--secondary-color);"></i></div>
                     <div class="divider-ornament"><i class="bi bi-stars fs-3" style="color:var(--amber-dune);"></i></div>
                     <p class="mb-4" style="line-height:2;color:var(--night-indigo);">
                         រាជធានីភ្នំពេញជាទីក្រុងធំបំផុត និងជារាជធានីនៃព្រះរាជាណាចក្រកម្ពុជា។
@@ -601,19 +199,25 @@
     </section>
 
     <!-- ATTRACTIONS -->
-    <section class="attractions-section" id="attractions">
+    <section class="bg-gradient-dark attractions-section" id="attractions">
         <div class="container">
             <div class="text-center mb-5 reveal">
                 <p class="section-label">ទីតាំងកំសាន្ត</p>
                 <h2 class="section-title-km">តំបន់ទេសចរណ៍ក្នុងភ្នំពេញ</h2>
-                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--amber-dune);"></i></div>
+                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3"
+                        style="color:var(--secondary-color);"></i></div>
             </div>
             <div class="row g-4">
 
                 <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.1s">
                     <div class="attraction-card-pp h-100">
                         <div class="attraction-img-wrap">
+<<<<<<< HEAD
+                            <img src="assets/image/phnom-penh.png" alt="ព្រះបរមរាជវាំង" class="attraction-img"
+                                onerror="this.src='https://placehold.co/400x240/4A1C00/FEF0CD?text=ព្រះបរមរាជវាំង'">
+=======
                             <img src="../image/royalpalace.jpg" alt="ព្រះបរមរាជវាំង" class="attraction-img">
+>>>>>>> d8d541c9817e3a96ed4acc9d3ccdea315779b7ac
                         </div>
                         <div class="p-4">
                             <div class="d-flex justify-content-between align-items-start mb-2">
@@ -644,7 +248,12 @@
                 <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.2s">
                     <div class="attraction-card-pp h-100">
                         <div class="attraction-img-wrap">
+<<<<<<< HEAD
+                            <img src="https://image-tc.galaxy.tf/wijpeg-6lp8rr31vfvdy41ubtpqdgihd/wat-phnom-pagoda.jpg" alt="វត្តភ្នំ" class="attraction-img"
+                                onerror="this.src='https://placehold.co/400x240/7B2D00/FEF0CD?text=វត្តភ្នំ'">
+=======
                             <img src="../image/watphnom.jpg" alt="វត្តភ្នំ" class="attraction-img">
+>>>>>>> d8d541c9817e3a96ed4acc9d3ccdea315779b7ac
                         </div>
                         <div class="p-4">
                             <div class="d-flex justify-content-between align-items-start mb-2">
@@ -675,7 +284,12 @@
                 <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.3s">
                     <div class="attraction-card-pp h-100">
                         <div class="attraction-img-wrap">
+<<<<<<< HEAD
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Tuol_Sleng.jpg" alt="Tuol Sleng" class="attraction-img"
+                                onerror="this.src='https://placehold.co/400x240/3D405B/FEF0CD?text=Tuol+Sleng'">
+=======
                             <img src="../image/tuolsleng.jpg" alt="Tuol Sleng" class="attraction-img">
+>>>>>>> d8d541c9817e3a96ed4acc9d3ccdea315779b7ac
                         </div>
                         <div class="p-4">
                             <div class="d-flex justify-content-between align-items-start mb-2">
@@ -706,7 +320,12 @@
                 <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.1s">
                     <div class="attraction-card-pp h-100">
                         <div class="attraction-img-wrap">
+<<<<<<< HEAD
+                            <img src="https://www.gocambodia.tours/wp-content/uploads/2024/07/Central-Market-Phsar-Thmei-Cambodia-tour-package.jpg" alt="ផ្សារថ្មី" class="attraction-img"
+                                onerror="this.src='https://placehold.co/400x240/C0622A/FEF0CD?text=ផ្សារថ្មី'">
+=======
                             <img src="../image/centralmarket.jpg" alt="ផ្សារថ្មី" class="attraction-img">
+>>>>>>> d8d541c9817e3a96ed4acc9d3ccdea315779b7ac
                         </div>
                         <div class="p-4">
                             <div class="d-flex justify-content-between align-items-start mb-2">
@@ -737,8 +356,14 @@
                 <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.2s">
                     <div class="attraction-card-pp h-100">
                         <div class="attraction-img-wrap">
+<<<<<<< HEAD
+                            <img src="assets/image/tonle.jpg" alt="ច្រាំងទន្លេ" class="attraction-img"
+                                onerror="this.src='https://placehold.co/400x240/D4A054/2C1A0E?text=ច្រាំងទន្លេ'">
+                         </div>
+=======
                             <img src="../image/riverfront.jpg" alt="ច្រាំងទន្លេ" class="attraction-img">
                         </div>
+>>>>>>> d8d541c9817e3a96ed4acc9d3ccdea315779b7ac
                         <div class="p-4">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <h5 class="fw-bold mb-0" style="color:var(--deep-mahogany);">ច្រាំងទន្លេ</h5>
@@ -768,7 +393,12 @@
                 <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.3s">
                     <div class="attraction-card-pp h-100">
                         <div class="attraction-img-wrap">
+<<<<<<< HEAD
+                            <img src="assets/image/independencemoment.jpg" alt="វិមានឯករាជ្យ" class="attraction-img"
+                                onerror="this.src='https://placehold.co/400x240/9B6A3A/FEF0CD?text=វិមានឯករាជ្យ'">
+=======
                             <img src="../image/independence-monument.jpg" alt="វិមានឯករាជ្យ" class="attraction-img">
+>>>>>>> d8d541c9817e3a96ed4acc9d3ccdea315779b7ac
                         </div>
                         <div class="p-4">
                             <div class="d-flex justify-content-between align-items-start mb-2">
@@ -801,7 +431,7 @@
     </section>
 
     <!-- ROYAL PALACE FEATURE -->
-    <section class="feature-section" id="royal">
+    <section class="bg-gradient-royal feature-section" id="royal">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 text-white reveal-left">
@@ -809,7 +439,7 @@
                     <h2 style="font-family:'Playfair Display',serif;font-size:2.8rem;margin-bottom:20px;">
                         ព្រះបរម<br><span style="color:var(--golden-spice);">រាជវាំង</span>
                     </h2>
-                    <div style="width:80px;height:2px;background:var(--amber-dune);margin-bottom:24px;"></div>
+                    <div class="divider-ornament"><i class="bi bi-stars fs-3" style="color:var(--secondary-color);"></i></div>
                     <p style="opacity:0.85;line-height:2;margin-bottom:20px;">
                         ព្រះបរមរាជវាំងជាទីលំនៅរបស់ព្រះបាទ នរោត្ដម សីហមុនី
                         ហើយជាតំណាងនៃស្ថាបត្យកម្មប្រពៃណីខ្មែរដ៏ស្រស់ស្អាតបំផុត
@@ -834,19 +464,24 @@
                     </a>
                 </div>
                 <div class="col-lg-6 reveal-right">
+<<<<<<< HEAD
+                    <img src="assets/image/kingdom.jpg" alt="ព្រះបរមរាជវាំង" class="feature-img w-100"
+                        onerror="this.src='https://placehold.co/560x380/2C1A0E/F2C078?text=ព្រះបរមរាជវាំង'">
+=======
                     <img src="../image/royalpalace-feature.jpg" alt="ព្រះបរមរាជវាំង" class="feature-img w-100">
+>>>>>>> d8d541c9817e3a96ed4acc9d3ccdea315779b7ac
                 </div>
             </div>
         </div>
     </section>
 
     <!-- HISTORY TIMELINE -->
-    <section class="history-section" id="history">
+    <section class="bg-gradient-stone history-section" id="history">
         <div class="container">
             <div class="text-center mb-5 reveal">
                 <p class="section-label">ប្រវត្តិ</p>
                 <h2 class="section-title-km">ប្រវត្តិសង្ខេបភ្នំពេញ</h2>
-                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--amber-dune);"></i></div>
+                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--secondary-color);"></i></div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-7 reveal">
@@ -909,17 +544,22 @@
     </section>
 
     <!-- FOOD -->
-    <section class="food-section" id="food">
+    <section class="bg-mixed food-section" id="food">
         <div class="container">
             <div class="text-center mb-5 reveal">
                 <p class="section-label">ម្ហូបពិសេស</p>
                 <h2 class="section-title-km">រសជាតិខ្មែរ នៅភ្នំពេញ</h2>
-                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--amber-dune);"></i></div>
+                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--secondary-color);"></i></div>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 reveal" style="transition-delay:0.1s">
                     <div class="food-card">
+<<<<<<< HEAD
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlD_EnnmwF-icOfcpRMYYYbSkxfIL_5fxp4Q&s" alt="អាម៉ុក" class="food-img"
+                            onerror="this.src='https://placehold.co/300x180/C0622A/FEF0CD?text=អាម៉ុក'">
+=======
                         <img src="../image/amok.jpg" alt="អាម៉ុក" class="food-img">
+>>>>>>> d8d541c9817e3a96ed4acc9d3ccdea315779b7ac
                         <div class="p-3">
                             <h6 class="fw-bold" style="color:var(--deep-mahogany);">អាម៉ុកត្រី</h6>
                             <p class="small mb-0" style="color:var(--camel-brown);">ម្ហូបជាតិខ្មែរ</p>
@@ -928,7 +568,12 @@
                 </div>
                 <div class="col-lg-3 col-md-6 reveal" style="transition-delay:0.2s">
                     <div class="food-card">
+<<<<<<< HEAD
+                        <img src="https://media.urbanistnetwork.com/saigoneer/article-images/2022/12/30/hu-tieu/00b.jpg" alt="គុយទាវ" class="food-img"
+                            onerror="this.src='https://placehold.co/300x180/7B2D00/FEF0CD?text=គុយទាវ'">
+=======
                         <img src="../image/kuyteav.jpg" alt="គុយទាវ" class="food-img">
+>>>>>>> d8d541c9817e3a96ed4acc9d3ccdea315779b7ac
                         <div class="p-3">
                             <h6 class="fw-bold" style="color:var(--deep-mahogany);">គុយទាវ</h6>
                             <p class="small mb-0" style="color:var(--camel-brown);">ស៊ុបជើងជ្រូក</p>
@@ -937,7 +582,12 @@
                 </div>
                 <div class="col-lg-3 col-md-6 reveal" style="transition-delay:0.3s">
                     <div class="food-card">
+<<<<<<< HEAD
+                        <img src="https://kohsantepheap.tv/wp-content/uploads/2020/07/8Q3A0210.jpg" alt="នំបញ្ចុក" class="food-img"
+                            onerror="this.src='https://placehold.co/300x180/D4A054/2C1A0E?text=នំបញ្ចុក'">
+=======
                         <img src="../image/nom-banh-chok.jpg" alt="នំបញ្ចុក" class="food-img">
+>>>>>>> d8d541c9817e3a96ed4acc9d3ccdea315779b7ac
                         <div class="p-3">
                             <h6 class="fw-bold" style="color:var(--deep-mahogany);">នំបញ្ចុក</h6>
                             <p class="small mb-0" style="color:var(--camel-brown);">មីខ្មែរប្រពៃណី</p>
@@ -946,9 +596,14 @@
                 </div>
                 <div class="col-lg-3 col-md-6 reveal" style="transition-delay:0.4s">
                     <div class="food-card">
+<<<<<<< HEAD
+                        <img src="https://images.deliveryhero.io/image/fd-kh/LH/n8ha-listing.jpg" alt="លត់ចា" class="food-img"
+                            onerror="this.src='https://placehold.co/300x180/9B6A3A/FEF0CD?text=លត់ចា'">
+=======
                         <img src="../image/lort-cha.jpg" alt="លត់ចា" class="food-img">
+>>>>>>> d8d541c9817e3a96ed4acc9d3ccdea315779b7ac
                         <div class="p-3">
-                            <h6 class="fw-bold" style="color:var(--deep-mahogany);">លត់ចា</h6>
+                            <h6 class="fw-bold" style="color:var(--deep-mahogany);">លត់ឆា</h6>
                             <p class="small mb-0" style="color:var(--camel-brown);">មីខ្លី​ចៀន</p>
                         </div>
                     </div>
@@ -958,14 +613,39 @@
     </section>
 
     <!-- GALLERY -->
-    <section class="gallery-section" id="gallery">
+    <section class="bg-gradient-dark gallery-section" id="gallery">
         <div class="container">
             <div class="text-center mb-5 reveal">
                 <p class="section-label">វិចិត្រសាល</p>
                 <h2 class="section-title-km">រូបភាពភ្នំពេញ</h2>
-                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--amber-dune);"></i></div>
+                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--secondary-color);"></i></div>
             </div>
             <div class="gallery-grid reveal">
+<<<<<<< HEAD
+                <div class="gallery-item">
+                    <img src="assets/image/kingdom.jpg" alt="Gallery 1"
+                        onerror="this.src='https://placehold.co/300x400/4A1C00/FEF0CD?text=ទេសភាព+១'">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/image/tonle.jpg" alt="Gallery 2"
+                        onerror="this.src='https://placehold.co/300x200/C0622A/FEF0CD?text=ទេសភាព+២'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://www.holidify.com/images/cmsuploads/compressed/Phnom_Penh_283349776611829_20201121151127.jpg" alt="Gallery 3"
+                        onerror="this.src='https://placehold.co/300x200/D4A054/2C1A0E?text=ទេសភាព+៣'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://motogirltour.com/wp-content/uploads/2025/04/phnom-penh-city.jpg" alt="Gallery 4"
+                        onerror="this.src='https://placehold.co/300x400/7B2D00/FEF0CD?text=ទេសភាព+៤'">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/57/bf/d5/caption.jpg?w=1200&h=1200&s=1" alt="Gallery 5"
+                        onerror="this.src='https://placehold.co/300x200/9B6A3A/FEF0CD?text=ទេសភាព+៥'">
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/image/kohnorea.jpg" alt="Gallery 5"
+                        onerror="this.src='https://placehold.co/300x200/9B6A3A/FEF0CD?text=ទេសភាព+៥'">
+=======
                 <div class="gallery-item-pp">
                     <img src="../image/pp-gallery1.jpg" alt="Gallery 1">
                 </div>
@@ -980,18 +660,19 @@
                 </div>
                 <div class="gallery-item-pp">
                     <img src="../image/pp-gallery5.jpg" alt="Gallery 5" >
+>>>>>>> d8d541c9817e3a96ed4acc9d3ccdea315779b7ac
                 </div>
             </div>
         </div>
     </section>
 
     <!-- TIPS -->
-    <section class="tips-section">
+    <section class="bg-gradient-stone tips-section">
         <div class="container">
             <div class="text-center mb-5 reveal">
                 <p class="section-label">ការណែនាំ</p>
                 <h2 class="section-title-km">គន្លឹះទេសចរណ៍</h2>
-                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--amber-dune);"></i></div>
+                <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--secondary-color);"></i></div>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 reveal" style="transition-delay:0.1s">
@@ -1029,12 +710,13 @@
     </section>
 
     <!-- CTA -->
-    <section class="cta-section text-center text-white reveal">
+    <section class="bg-gradient-royal cta-section text-center text-white reveal">
         <div class="container">
             <p class="section-label" style="color:var(--golden-spice);">ត្រៀមខ្លួន?</p>
             <h2 style="font-family:'Playfair Display',serif;font-size:2.5rem;margin-bottom:16px;">
                 ចាប់ផ្ដើមដំណើររបស់អ្នក
             </h2>
+            <div class="divider-ornament justify-content-center"><i class="bi bi-stars fs-3" style="color:var(--secondary-color);"></i></div>
             <p style="opacity:0.8;max-width:500px;margin:0 auto 30px;line-height:1.8;">
                 រាជធានីភ្នំពេញរង់ចាំអ្នក ចុចប៊ូតុងខាងក្រោម ដើម្បីរុករក ឬ ចែករំលែកបទពិសោធ។
             </p>
@@ -1048,7 +730,9 @@
             </div>
         </div>
     </section>
-    <footer class="footer py-5">
+<<<<<<< HEAD
+
+      <footer class="footer py-5">
         <div class="container">
             <div class="row">
                 <!-- Column 1: Brand Essence -->
@@ -1088,9 +772,9 @@
                 <div class="col-6 col-lg-2 mb-5 mb-lg-0">
                     <h6 class="footer-title">សេវាកម្ម</h6>
                     <ul class="footer-links">
-                        <li><a href="#">សណ្ឋាគារ</a></li>
-                        <li><a href="#">ភោជនីយដ្ឋាន</a></li>
-                        <li><a href="#">មគ្គុទ្ទេសក៍</a></li>
+                        <li><a href="hotels.html">សណ្ឋាគារ</a></li>
+                        <li><a href="restaurants.html">ភោជនីយដ្ឋាន</a></li>
+                        <li><a href="guide.html">មគ្គុទ្ទេសក៍</a></li>
                         <li><a href="transportation.html">ការដឹកជញ្ជូន</a></li>
                     </ul>
                 </div>
@@ -1176,6 +860,12 @@
                 dot.classList.toggle('active', dot.dataset.target === current);
             });
         });
+    </script>
+    <script>
+        AOS.init(); else {
+                icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
+            }
+        }
     </script>
 </body>
 

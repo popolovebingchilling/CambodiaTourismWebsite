@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="km">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>បាត់ដំបង | ទេសចរណ៍កម្ពុជា</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/blog-detail.css">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --accent-gold: #D7B56D;
+            --deep-navy: #0D2A43;
+            --soft-cream: #FDFBF7;
+            --text-dark: #1A1A1A;
+            --glass-bg: rgba(255, 255, 255, 0.95);
+        }
+        
+        .royal-hero {
+            padding: 120px 0 160px;
+            background: var(--deep-navy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .royal-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1596707258356-8a033afb4b9b?q=80&w=1974&auto=format&fit=crop') center/cover;
+            opacity: 0.3;
+            filter: grayscale(20%);
+        }
+
+        .royal-hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent, var(--deep-navy));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Glass Article Card */
+        .glass-article-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            margin-top: -100px;
+            position: relative;
+            z-index: 30;
+            padding: 60px;
+        }
+
+        .editorial-content {
+            font-size: 1.15rem;
+            line-height: 2.1;
+            color: #2c3e50;
+        }
+
+        .editorial-content p.dropcap::first-letter {
+            float: left;
+            font-size: 5rem;
+            line-height: 1;
+            padding: 10px 15px 0 0;
+            color: var(--accent-gold);
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+
+        /* Highlight Cards (The col-6 requirement) */
+        .highlight-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            height: 100%;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(13, 42, 67, 0.15);
+            border-color: var(--accent-gold);
+        }
+
+        .highlight-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .highlight-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .highlight-card:hover .highlight-img img {
+            transform: scale(1.1);
+        }
+
+        .highlight-body {
+            padding: 25px;
+        }
+
+        .highlight-title {
+            color: var(--deep-navy);
+            font-weight: 800;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .glass-article-card {
+                padding: 30px 20px;
+                margin-top: -60px;
+                border-radius: 30px;
+            }
+            .royal-hero {
+                padding: 80px 0 120px;
+            }
+        }
+
+        /* Dark Mode Support */
+        body.dark-mode .glass-article-card {
+            background: rgba(13, 42, 67, 0.9);
+            color: #ecf0f1;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        body.dark-mode .editorial-content {
+            color: #dcdde1;
+        }
+        body.dark-mode .highlight-card {
+            background: #153e5f;
+            border-color: rgba(255,255,255,0.1);
+        }
+        body.dark-mode .highlight-title {
+            color: white;
+        }
+        body.dark-mode .highlight-body p {
+            color: #bdc3c7;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container py-2">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="assets/image/new_logo_v2.png" alt="Logo" width="45" height="45" class="me-2">
+                    <div class="d-flex flex-column lh-1">
+                        <span class="text-secondary small">ទេសចរណ៍កម្ពុជា</span>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link active rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                                data-bs-toggle="dropdown">គោលដៅ</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="siem-reap.html">សៀមរាប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="phnompenh.html">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="battambang.html">បាត់ដំបង</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="mondulkiri.html">មណ្ឌលគិរី</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="koh-kong.html">កោះកុង</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                                data-bs-toggle="dropdown">សេវាកម្ម</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="hotels.html">សណ្ឋាគារ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="restaurants.html">ភោជនីយដ្ឋាន</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="guide.html">មគ្គុទ្ទេសក៍</a></li>
+                                <li><a class="dropdown-content dropdown-item"
+                                        href="transportation.html">ការដឹកជញ្ជូន</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item"><a class="nav-link px-3" href="vikjittsal.html">វិចិត្រសាល</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex align-items-center gap-3">
+                    
+                    <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
+                    <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main >
+        <!-- ── Royal Hero Header ── -->
+        <section class="bg-mixed royal-hero text-center" data-aos="fade-down">
+            <div class="container hero-content">
+                <span class="badge bg-secondary text-white mb-3 px-4 py-2 rounded-pill shadow-sm">ទីក្រុងវប្បធម៌</span>
+                <h1 class="display-3 fw-bold text-white mb-4">បាត់ដំបង៖ ជង្រុកស្រូវនិងសិល្បៈកម្ពុជា</h1>
+                <div class="d-flex justify-content-center align-items-center gap-4 text-white-50">
+                    <div class="article-meta-item">
+                        <i class="far fa-calendar-alt text-white-50 me-2"></i>
+                        <span>២៨ ឧសភា, ២០២៦</span>
+                    </div>
+                    <div class="article-meta-item">
+                        <i class="far fa-clock text-white-50 me-2"></i>
+                        <span>១០ នាទី ក្នុងការអាន</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-mixed py-5">
+            <div class="container">
+            <article class="glass-article-card shadow-lg">
+                <div class="editorial-content">
+                                <div class="row g-lg-5 g-4">
+                                    <!-- Column 1: Introduction and Architecture -->
+                                    <div class="col-12 col-md-6" data-aos="fade-right">
+                                        <p class="dropcap">បាត់ដំបងជាខេត្តដែលល្បីល្បាញដោយសារការអភិរក្សអគាររចនាបថបារាំងបានយ៉ាងល្អ និងជាជង្រុកស្រូវដ៏ធំបំផុតរបស់ប្រទេសកម្ពុជា។ ទីក្រុងនេះមានភាពស្ងប់ស្ងាត់ ប៉ុន្តែពោរពេញទៅដោយភាពច្នៃប្រឌិតនិងសិល្បៈ។</p>
+                
+                                        <p>អ្នកទេសចរតែងតែស្ញប់ស្ញែងនឹងភាពច្នៃប្រឌិតនៃសិល្បៈសហសម័យដែលរីកដុះដាលនៅក្នុងខេត្តមួយនេះ ជាពិសេសតាមរយៈសាលាសិល្បៈហ្វារពន្លឺសិល្បៈ។</p>
+
+                                        <div class="rounded-4 overflow-hidden shadow-sm my-4">
+                                            <img src="https://images.unsplash.com/photo-1596707258356-8a033afb4b9b?q=80&w=1000&auto=format&fit=crop" class="img-fluid w-100" style="height: 280px; object-fit: cover;" alt="battambang details">
+                                        </div>
+
+                                        <h2 class="fw-bold mb-4 mt-5">ភាពអស្ចារ្យនៃធម្មជាតិនិងប្រាសាទបុរាណ</h2>
+                                        <p>ភ្នំសំពៅមិនត្រឹមតែជាទីតាំងប្រវត្តិសាស្ត្រទេ ប៉ុន្តែវាក៏ជាកន្លែងដែលអ្នកអាចទស្សនាហ្វូងសត្វប្រចៀវរាប់លានក្បាលហោះចេញពីរូងនៅពេលល្ងាច ដែលជាទិដ្ឋភាពដ៏អស្ចារ្យ។</p>
+                                    </div>
+
+                                    <!-- Column 2: Architecture Continued and Sunrise -->
+                                    <div class="col-12 col-md-6" data-aos="fade-left">
+                                        <div class="bg-light p-4 rounded-4 border-start border-4 border-warning mb-5 shadow-sm">
+                                            <p class="h5 fst-italic mb-0 text-dark">"បាត់ដំបងគឺជាបេះដូងនៃសិល្បៈកម្ពុជា ជាកន្លែងដែលទេពកោសល្យនិងប្រវត្តិសាស្ត្រជួបគ្នា។"</p>
+                                        </div>
+
+                                        <p>ការធ្វើដំណើរតាមរទេះភ្លើងឫស្សី (Bamboo Train) គឺជាបទពិសោធន៍ដ៏រំភើបនិងប្លែកភ្នែក ដែលទាក់ទាញភ្ញៀវទេសចរអន្តរជាតិជាច្រើនឱ្យមកសាកល្បង។</p>
+                
+                                        <h2 class="fw-bold mb-4 mt-5">ការទស្សនាពេលព្រឹកព្រលឹម</h2>
+                                        <p>បទពិសោធន៍ដែលមិនអាចរំលងបានគឺការទស្សនាថ្ងៃរះនៅអង្គរវត្ត។ នៅពេលដែលពន្លឺព្រះអាទិត្យចាប់ផ្តើមជះមកលើកំពូលប្រាសាទ វានឹងបង្កើតបានជាទិដ្ឋភាពដ៏អស្ចារ្យដែលមិនអាចរកអ្វីមកប្រៀបផ្ទឹមបាន។</p>
+
+                                        <div class="rounded-4 overflow-hidden shadow-sm my-4">
+                                            <img src="https://images.unsplash.com/photo-1598144062035-7798369ff203?q=80&w=1000&auto=format&fit=crop" class="img-fluid w-100" style="height: 280px; object-fit: cover;" alt="battambang highlights">
+                                        </div>
+
+                                        <p>ប្រាសាទបាណន់ដែលតាំងនៅលើកំពូលភ្នំ ក៏ជាទីតាំងដ៏ពិសិដ្ឋដែលផ្តល់នូវទេសភាពដ៏ស្រស់ស្អាតនៃខេត្តបាត់ដំបងពីទីខ្ពស់។</p>
+                                    </div>
+                                </div>
+                            </div>
+            </article>
+            </div>
+        </section>
+
+        <section class="bg-mixed py-5">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <span class="section-badge mb-2 d-inline-block text-white" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2);">កន្លែងលេចធ្លោ</span>
+                    <h2 class="section-title" style="color: white !important;">កន្លែងដែលគួរទស្សនានៅ<span>បាត់ដំបង</span></h2>
+                    <div class="title-line mx-auto" style="background-color: white;"></div>
+                </div>
+                <div class="row g-4">
+                                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                        <div class="highlight-card">
+                                            <div class="highlight-img">
+                                                <img src="https://images.unsplash.com/photo-1596707258356-8a033afb4b9b?q=80&w=1000&auto=format&fit=crop" alt="រទេះភ្លើងឫស្សី">
+                                            </div>
+                                            <div class="highlight-body">
+                                                <h4 class="highlight-title">រទេះភ្លើងឫស្សី</h4>
+                                                <p class="small text-muted mb-0">ការជិះរទេះភ្លើងឫស្សីតែមួយគត់ក្នុងពិភពលោក ដែលជាបទពិសោធន៍ដ៏រំភើប។</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                        <div class="highlight-card">
+                                            <div class="highlight-img">
+                                                <img src="https://images.unsplash.com/photo-1598144062035-7798369ff203?q=80&w=1000&auto=format&fit=crop" alt="ភ្នំសំពៅ និង ល្អាងប្រចៀវ">
+                                            </div>
+                                            <div class="highlight-body">
+                                                <h4 class="highlight-title">ភ្នំសំពៅ និង ល្អាងប្រចៀវ</h4>
+                                                <p class="small text-muted mb-0">គយគន់ហ្វូងប្រចៀវរាប់លានក្បាលហោះចេញពីរូងនៅពេលល្ងាច។</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                        <div class="highlight-card">
+                                            <div class="highlight-img">
+                                                <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=1000&auto=format&fit=crop" alt="ហ្វារពន្លឺសិល្បៈ">
+                                            </div>
+                                            <div class="highlight-body">
+                                                <h4 class="highlight-title">ហ្វារពន្លឺសិល្បៈ</h4>
+                                                <p class="small text-muted mb-0">ទស្សនាការសម្តែងសៀក និងសិល្បៈចម្រុះដ៏រស់រវើកនិងពោរពេញដោយអត្ថន័យ។</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                        <div class="highlight-card">
+                                            <div class="highlight-img">
+                                                <img src="https://images.unsplash.com/photo-1615961633544-77dbddc0b0db?q=80&w=1000&auto=format&fit=crop" alt="ប្រាសាទបាណន់">
+                                            </div>
+                                            <div class="highlight-body">
+                                                <h4 class="highlight-title">ប្រាសាទបាណន់</h4>
+                                                <p class="small text-muted mb-0">ប្រាសាទបុរាណដែលស្ថិតនៅលើកំពូលភ្នំ ផ្តល់នូវទេសភាពដ៏ស្រស់ស្អាតបំផុត។</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Brand Essence -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="footer-brand mb-4">
+                        <img src="assets/image/new_logo_v2.png" alt="Logo" width="60" class="mb-3">
+                        <h5 class="text-white fw-bold">ទេសចរណ៍កម្ពុជា</h5>
+                    </div>
+                    <p class="footer-brand-text">
+                        ស្វែងយល់ពីភាពអស្ចារ្យនៃព្រះរាជាណាចក្រអច្ឆរិយៈ។ យើងខ្ញុំផ្តល់ជូននូវបទពិសោធន៍ទេសចរណ៍ដ៏ល្អបំផុត
+                        ដើម្បីបំពេញក្តីសុបិនរបស់អ្នកនៅក្នុងតំបន់អាសុីអាគ្នេយ៍។
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Destinations -->
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title">គោលដៅ</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">ភ្នំពេញ</a></li>
+                        <li><a href="sr.html">សៀមរាប</a></li>
+                        <li><a href="kampot.html">កំពត</a></li>
+                        <li><a href="kep.html">កែប</a></li>
+                        <li><a href="prea-sihanouk.html">ព្រះសីហនុ</a></li>
+                        <li><a href="battambang.html">បាត់ដំបង</a></li>
+                        <li><a href="mondulkiri.html">មណ្ឌលគិរី</a></li>
+                        <li><a href="koh-kong.html">កោះកុង</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title">សេវាកម្ម</h6>
+                    <ul class="footer-links">
+                        <li><a href="hotels.html">សណ្ឋាគារ</a></li>
+                        <li><a href="restaurants.html">ភោជនីយដ្ឋាន</a></li>
+                        <li><a href="guide.html">មគ្គុទ្ទេសក៍</a></li>
+                        <li><a href="transportation.html">ការដឹកជញ្ជូន</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <h6 class="footer-title">ទំនាក់ទំនង</h6>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+៨៥៥ ១២ ២២៣ ៣២២</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@cambodiatourism.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>ភ្នំពេញ, ព្រះរាជាណាចក្រកម្ពុជា</span>
+                        </div>
+                        <div class="footer-contact-item align-items-start">
+                            <i class="fas fa-clock mt-1"></i>
+                            <div class="d-flex flex-column gap-1">
+                                <span>ចន្ទ - សុក្រ: ៨:០០ - ១៧:០០</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 5: Discover -->
+                <div class="col-lg-2">
+                    <h6 class="footer-title">ស្វែងយល់</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">វិចិត្រសាល</a></li>
+                        <li><a href="blog.html">ប្លុកទេសចរណ៍</a></li>
+                        <li><a href="#">មតិយោបល់</a></li>
+                        <li><a href="map.html">ផែនទី</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-white opacity-10 my-5">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                    <p class="mb-0 small text-white-50">&copy; ២០២៦ ទេសចរណ៍កម្ពុជារក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="trust-badges justify-content-center justify-content-md-end">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
+    </script>
+</body>
+</html>

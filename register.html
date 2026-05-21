@@ -7,14 +7,17 @@
     <title>ចុះឈ្មោះ | ទេសចរណ៍កម្ពុជា</title>
     <!-- HTML CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/register.css">
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
     <!-- BOOTSTRAP THEME  -->
     <link rel="stylesheet" href="assets/css/theme.css">
     <!-- FONT AWESOME FOR ICON -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- BOOTSTRAP ICON -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -36,15 +39,15 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav gap-2">
                         <li class="nav-item">
-                            <a class="nav-link rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                            <a class="nav-link active rounded-pill px-3" href="index.html">ទំព័រដើម</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>      
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle px-3" href="#" role="button"
                                 data-bs-toggle="dropdown">គោលដៅ</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-content dropdown-item" href="sr.html">សៀមរាប</a></li>
-                                <li><a class="dropdown-content dropdown-item" href="#">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="siem-reap.html">សៀមរាប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="phnompenh.html">ភ្នំពេញ</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a>
@@ -58,21 +61,25 @@
                             <a class="nav-link dropdown-toggle px-3" href="#" role="button"
                                 data-bs-toggle="dropdown">សេវាកម្ម</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-content dropdown-item" href="#">សណ្ឋាគារ</a></li>
-                                <li><a class="dropdown-content dropdown-item" href="#">ភោជនីយដ្ឋាន</a></li>
-                                <li><a class="dropdown-content dropdown-item" href="#">មគ្គុទ្ទេសក៍</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="hotels.html">សណ្ឋាគារ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="restaurants.html">ភោជនីយដ្ឋាន</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="guide.html">មគ្គុទ្ទេសក៍</a></li>
                                 <li><a class="dropdown-content dropdown-item"
                                         href="transportation.html">ការដឹកជញ្ជូន</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link px-3" href="#">មគ្គុទ្ទេសក៍</a></li>
-                        <li class="nav-item"><a class="nav-link px-3" href="#">វិចិត្រសាល</a></li>
+
+
+                        <li class="nav-item"><a class="nav-link px-3" href="vikjittsal.html">វិចិត្រសាល</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
-                        <li class="nav-item"><a class="nav-link px-3" href="#">មតិយោបល់</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
                     </ul>
                 </div>
                 <div class="d-none d-lg-flex align-items-center gap-3">
+                    
                     <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
                 </div>
@@ -80,7 +87,7 @@
         </nav>
     </header>
 
-    <main class="auth-wrapper">
+    <main class="bg-mixed auth-wrapper">
         <div class="container d-flex justify-content-center">
             <div class="auth-card d-flex flex-column flex-md-row">
                 <!-- Image Side -->
@@ -195,9 +202,9 @@
                 <div class="col-6 col-lg-2 mb-5 mb-lg-0">
                     <h6 class="footer-title">សេវាកម្ម</h6>
                     <ul class="footer-links">
-                        <li><a href="#">សណ្ឋាគារ</a></li>
-                        <li><a href="#">ភោជនីយដ្ឋាន</a></li>
-                        <li><a href="#">មគ្គុទ្ទេសក៍</a></li>
+                        <li><a href="hotels.html">សណ្ឋាគារ</a></li>
+                        <li><a href="restaurants.html">ភោជនីយដ្ឋាន</a></li>
+                        <li><a href="guide.html">មគ្គុទ្ទេសក៍</a></li>
                         <li><a href="transportation.html">ការដឹកជញ្ជូន</a></li>
                     </ul>
                 </div>
@@ -258,34 +265,7 @@
 
     <!-- BOOTSTRAP JAVA -->
     <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-        const icon = themeToggle.querySelector('i');
-
-        // Check for saved theme
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            body.classList.add(savedTheme);
-            updateIcon(savedTheme);
-        }
-
-        themeToggle.addEventListener('click', () => {
-            if (body.classList.contains('light-mode')) {
-                body.classList.remove('light-mode');
-                localStorage.setItem('theme', 'dark-mode');
-                updateIcon('dark-mode');
-            } else {
-                body.classList.add('light-mode');
-                localStorage.setItem('theme', 'light-mode');
-                updateIcon('light-mode');
-            }
-        });
-
-        function updateIcon(theme) {
-            if (theme === 'light-mode') {
-                icon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
-            } else {
+    <script> else {
                 icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
             }
         }

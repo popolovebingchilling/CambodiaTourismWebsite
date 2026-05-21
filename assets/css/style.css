@@ -3,17 +3,9 @@
     padding: 0; margin: 0; box-sizing: border-box;
 }
 :root{
-    /* Primary Brand Identity (Directly from Logo) */
-    --royal-blue:        #0D2A43; /* Imperial Blue - Perfectly matched to Logo background */
-    --khmer-gold:        #D7B56D; /* Refined Light Gold - Sophisticated and not too yellow */
-    --angkor-stone:      #5D4037; /* Ancient Stone - For heritage elements */
-    --silk-saffron:      #E67E22; /* Cultural Saffron - For call-to-actions */
-    
-    /* Semantic Palette mapped to Brand Colors */
-    --deep-mahogany:     var(--royal-blue);
-    --burnt-sienna:      var(--angkor-stone);
-    --desert-terracotta: var(--silk-saffron);
-    --amber-dune:        var(--khmer-gold);
+    --primary-color:     #0D2A43; 
+    --secondary-color:   #D7B56D; 
+    --angkor-stone:      #5D4037; 
     --golden-spice:      #E5C58B;
     --parchment:         #F8F9FA;
     --sand-whisper:      #FAF9F6;
@@ -21,36 +13,33 @@
     --camel-brown:       #8D6E63;
     --dark-oud:          #07121C;
 }
-* {
+.text-primary-color {
+    color: var(--primary-color) !important;
+}
+.text-golden-spice {
+    color: var(--golden-spice) !important;
+}
+body{
     font-family: "Kantumruy Pro", sans-serif !important;
-}
-
-/* ── Icon Protection (DO NOT OVERWRITE) ── */
-i, .fas, .fab, .far, .bi, [class^="bi-"], [class*=" bi-"] {
-    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "bootstrap-icons", "FontAwesome" !important;
-}
-
-body {
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
 }
-/* ── Royal Glass Navigation ── */
+.bg-gradient-stone {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--angkor-stone) 100%) !important;
+}
+.bg-gradient-dark {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-oud) 100%) !important;
+}
+.bg-gradient-royal {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color) 50%, var(--secondary-color) 100%) !important;
+}
+.bg-mixed {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-oud) 40%, var(--angkor-stone) 100%) !important;
+}
 header {
-    background-color: var(--royal-blue) !important;
+    background-color: var(--primary-color) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
-
-header::before {
-    content: '' !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    height: 3px !important;
-    background: linear-gradient(90deg, transparent, var(--khmer-gold), transparent) !important;
-    opacity: 0.8 !important;
-}
-
 .navbar-brand {
     background: transparent !important;
 }
@@ -59,18 +48,16 @@ header::before {
     border-radius: 10px !important;
     padding: 0 !important;
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2)) !important;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2) )!important;
 }
-
 header:hover .navbar-brand img {
     transform: scale(1.05) rotate(2deg) !important;
 }
-
 body.light-mode .navbar-brand img {
     background-color: transparent !important;
     filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1)) !important;
 }
-.nav-link{
+.navbar-nav .nav-link{
     color: rgba(255, 255, 255, 0.8) !important;
     font-family: 'Kantumruy Pro', sans-serif !important;
     font-weight: 500 !important;
@@ -78,7 +65,6 @@ body.light-mode .navbar-brand img {
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
     position: relative !important;
 }
-
 .nav-link::after {
     content: '' !important;
     position: absolute !important;
@@ -86,37 +72,32 @@ body.light-mode .navbar-brand img {
     height: 2px !important;
     bottom: 2px !important;
     left: 50% !important;
-    background: var(--khmer-gold) !important;
+    background: var(--secondary-color) !important;
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
     transform: translateX(-50%) scaleX(0) !important; /* Scale to 0 */
     opacity: 0 !important; /* Fully invisible */
 }
-
 .nav-link:hover{
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
 }
-
-.nav-link:hover::after, 
-.nav-link.active::after { 
+.nav-link:hover::after, .nav-link.active::after { 
     transform: translateX(-50%) scaleX(1) !important;
     opacity: 1 !important;
 }
-
 .nav-link.active { 
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     font-weight: 600 !important;
 }
 .btn-book-now{
-    background-color: var(--khmer-gold) !important;
-    color: var(--royal-blue) !important;
-    border: 1px solid var(--khmer-gold) !important;
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--secondary-color) !important;
     transition: 0.3s !important;
 }
 .btn-book-now:hover{
     background-color: white !important;
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
 }
-/* ── Modern Bento Grid Style ── */
 .hero-bento {
     min-height: 100vh !important;
     position: relative !important;
@@ -128,7 +109,6 @@ body.light-mode .navbar-brand img {
     background-attachment: fixed !important;
     overflow: hidden !important;
 }
-
 .hero-bento::before {
     content: '' !important;
     position: absolute !important;
@@ -140,7 +120,6 @@ body.light-mode .navbar-brand img {
         rgba(13, 42, 67, 0.85) 100%) !important;
     z-index: 1 !important;
 }
-
 .bento-grid {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
@@ -149,7 +128,6 @@ body.light-mode .navbar-brand img {
     position: relative !important;
     z-index: 2 !important;
 }
-
 .bento-card {
     position: relative !important;
     border-radius: 30px !important;
@@ -159,42 +137,38 @@ body.light-mode .navbar-brand img {
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important;
     box-shadow: 0 15px 40px rgba(13, 42, 67, 0.4) !important; /* Atmospheric Blue Shadow */
 }
-
 .card-main {
     grid-column: span 2 !important;
     grid-row: span 2 !important;
-    background: transparent !important; /* Removed background as requested */
+    background: transparent !important; 
     color: white !important;
-    padding: 60px !important; /* Increased padding for smoothness */
+    padding: 60px !important; 
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important;
 }
-
 .card-main:hover {
-    background: transparent !important; /* Fully transparent on hover as requested */
+    background: transparent !important; 
     backdrop-filter: blur(30px) !important;
     -webkit-backdrop-filter: blur(30px) !important;
-    border-color: var(--khmer-gold) !important;
+    border-color: var(--secondary-color) !important;
 }
-
 .card-main .badge-khmer {
-    background: var(--khmer-gold) !important;
-    color: var(--royal-blue) !important;
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
     padding: 8px 20px !important;
     border-radius: 50px !important;
     font-weight: 700 !important;
-    font-size: 13px !important; /* Slightly smaller */
+    font-size: 13px !important; 
     width: fit-content !important;
-    margin-top: 1px !important; /* Added margin top */
-    margin-bottom: 30px !important; /* Increased margin bottom */
+    margin-top: 1px !important; 
+    margin-bottom: 30px !important; 
     letter-spacing: 1px !important;
 }
-
 .card-main .title-bento {
-    font-size: clamp(30px, 3.5vw, 42px) !important; /* Smaller size as requested */
+    font-size: clamp(30px, 3.5vw, 42px) !important; 
     font-weight: 800 !important;
     line-height: 1.2 !important;
     margin-bottom: 25px !important;
@@ -202,18 +176,16 @@ body.light-mode .navbar-brand img {
     color: white !important;
     letter-spacing: -0.2px !important;
 }
-
 .card-main p {
-    font-size: 15px !important; /* Smaller size as requested */
+    font-size: 15px !important; 
     line-height: 1.8 !important;
     opacity: 0.85 !important;
     margin-bottom: 40px !important;
     max-width: 95% !important;
 }
-
 .btn-bento {
-    background: var(--khmer-gold) !important;
-    color: var(--royal-blue) !important;
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
     padding: 12px 30px !important;
     border-radius: 15px !important;
     font-weight: 700 !important;
@@ -224,18 +196,15 @@ body.light-mode .navbar-brand img {
     align-items: center !important;
     gap: 10px !important;
 }
-
 .btn-bento:hover {
     background: white !important;
     transform: scale(1.05) !important;
     box-shadow: 0 10px 25px rgba(215, 181, 109, 0.4) !important;
 }
-
 .card-place {
     cursor: pointer !important;
     position: relative !important;
 }
-
 .card-place::after {
     content: '' !important;
     position: absolute !important;
@@ -243,47 +212,41 @@ body.light-mode .navbar-brand img {
     background: radial-gradient(circle at center, 
         rgba(13, 42, 67, 0.2) 20%, 
         rgba(13, 42, 67, 0.5) 60%, 
-        rgba(13, 42, 67, 0.95) 100%) !important; /* Darker 4-Sided Vignette */
+        rgba(13, 42, 67, 0.95) 100%) !important; 
     z-index: 2 !important;
     transition: all 0.4s ease !important;
 }
-
 .card-place:hover::after {
     background: radial-gradient(circle at center, 
         transparent 10%, 
         rgba(13, 42, 67, 0.4) 50%, 
         rgba(13, 42, 67, 1) 100%) !important;
 }
-
 .card-place img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
     z-index: 1 !important;
-    filter: brightness(0.75) contrast(1.1) !important; /* Darkened for text focus */
+    filter: brightness(0.75) contrast(1.1) !important; 
     transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
-
 .card-place:hover img {
-    filter: brightness(0.9) contrast(1.1) !important; /* Lighten slightly on hover */
+    filter: brightness(0.9) contrast(1.1) !important; 
 }
-
 .bento-card:hover {
     transform: translateY(-12px) scale(1.02) !important;
     box-shadow: 0 40px 80px -20px rgba(13, 42, 67, 0.8), 
-                0 0 20px rgba(215, 181, 109, 0.2) !important; /* Enhanced Blue Glow with subtle Gold hint */
-    border-color: var(--khmer-gold) !important;
+                0 0 20px rgba(215, 181, 109, 0.2) !important; 
+    border-color: var(--secondary-color) !important;
 }
-
 .bento-card:hover img {
     transform: scale(1.15) rotate(1deg) !important;
 }
-
 .card-label {
     position: absolute !important;
     bottom: 25px !important;
     left: 20px !important;
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     font-weight: 700 !important;
     font-size: 15px !important;
     z-index: 3 !important;
@@ -293,34 +256,29 @@ body.light-mode .navbar-brand img {
     text-shadow: 0 2px 4px rgba(0,0,0,0.5) !important;
     transition: all 0.4s ease !important;
 }
-
 .card-label::before {
     content: '' !important;
     width: 20px !important;
     height: 1.5px !important;
-    background: var(--khmer-gold) !important;
+    background: var(--secondary-color) !important;
     display: inline-block !important;
 }
 .bento-card:hover .card-label {
     transform: translateY(0) !important;
     opacity: 1 !important;
 }
-
-/* ── Popular Destinations Section ── */
 .destinations-section {
     background-color: var(--sand-whisper) !important;
     position: relative !important;
     overflow: hidden !important;
     padding: 100px 0 !important;
 }
-
 body.dark-mode .destinations-section {
     background-color: var(--dark-oud) !important;
 }
-
 .section-badge {
     background: rgba(215, 181, 109, 0.1) !important;
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     padding: 8px 20px !important;
     border-radius: 50px !important;
     font-weight: 700 !important;
@@ -328,30 +286,25 @@ body.dark-mode .destinations-section {
     letter-spacing: 1px !important;
     border: 1px solid rgba(215, 181, 109, 0.2) !important;
 }
-
 .section-title {
     font-family: "Kantumruy Pro", sans-serif !important;
     font-size: clamp(28px, 4vw, 42px) !important;
     font-weight: 800 !important;
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
     margin-top: 15px !important;
 }
-
 body.dark-mode .section-title {
     color: white !important;
 }
-
 .section-title span {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
 }
-
 .title-line {
     width: 80px !important;
     height: 4px !important;
-    background: var(--khmer-gold) !important;
+    background: var(--secondary-color) !important;
     border-radius: 2px !important;
 }
-
 .section-subtitle {
     max-width: 600px !important;
     margin-left: auto !important;
@@ -360,12 +313,9 @@ body.dark-mode .section-title {
     opacity: 0.7 !important;
     font-size: 16px !important;
 }
-
 body.dark-mode .section-subtitle {
     color: rgba(255, 255, 255, 0.7) !important;
 }
-
-/* Destination Cards */
 .destination-card {
     border-radius: 25px !important;
     overflow: hidden !important;
@@ -374,29 +324,26 @@ body.dark-mode .section-subtitle {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
-
 .card-img-wrapper {
     width: 100% !important;
     height: 100% !important;
     position: relative !important;
     overflow: hidden !important;
 }
-
 .card-img-wrapper img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    filter: brightness(0.8) contrast(1.1) !important; /* Unified Cinematic Look */
+    filter: brightness(0.8) contrast(1.1) !important; 
     transition: all 1s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
-
 .card-overlay {
     position: absolute !important;
     inset: 0 !important;
     background: radial-gradient(circle at center, 
         rgba(13, 42, 67, 0.1) 20%, 
         rgba(13, 42, 67, 0.4) 60%, 
-        rgba(13, 42, 67, 0.95) 100%) !important; /* 4-Sided Cinematic Vignette */
+        rgba(13, 42, 67, 0.95) 100%) !important; 
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-end !important;
@@ -404,23 +351,19 @@ body.dark-mode .section-subtitle {
     transition: all 0.4s ease !important;
     z-index: 2 !important;
 }
-
 .overlay-content {
     transform: translateY(60px) !important;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
-
 .destination-card:hover .overlay-content {
     transform: translateY(0) !important;
 }
-
 .destination-card:hover img {
     transform: scale(1.1) !important;
 }
-
 .loc-badge {
     background: transparent !important; /* Removed solid background as requested */
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     padding: 0 !important;
     font-size: 14px !important;
     font-weight: 700 !important;
@@ -432,11 +375,9 @@ body.dark-mode .section-subtitle {
     box-shadow: none !important;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5) !important;  
 }
-
 .loc-badge i {
     font-size: 14px !important;
 }
-
 .overlay-content h3 {
     color: white !important;
     font-size: 22px !important; /* Slightly smaller for tighter fit */
@@ -449,7 +390,6 @@ body.dark-mode .section-subtitle {
     overflow: hidden !important;
     line-height: 1.1 !important;
 }
-
 .overlay-content p {
     color: rgba(255, 255, 255, 0.8) !important;
     font-size: 13px !important; /* Slightly smaller */
@@ -464,13 +404,11 @@ body.dark-mode .section-subtitle {
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
 }
-
 .destination-card:hover .overlay-content p {
     opacity: 1 !important;
 }
-
 .btn-explore {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     text-decoration: none !important;
     font-weight: 700 !important;
     font-size: 15px !important;
@@ -479,7 +417,6 @@ body.dark-mode .section-subtitle {
     gap: 10px !important;
     transition: 0.3s !important;
 }
-
 .btn-explore:hover {
     color: white !important;
 }
@@ -487,15 +424,12 @@ body.dark-mode .section-subtitle {
     transform: translateY(-10px) !important;
     box-shadow: 0 30px 60px rgba(13, 42, 67, 0.3) !important;
 }
-
-/* ── Services Section ── */
 .services-section {
-    background: linear-gradient(135deg, var(--royal-blue) 0%, #153e5f 100%) !important;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #153e5f 100%) !important;
     padding: 100px 0 !important;
     position: relative !important;
     overflow: hidden !important;
 }
-
 .services-section::before {
     content: '' !important;
     position: absolute !important;
@@ -506,7 +440,6 @@ body.dark-mode .section-subtitle {
     background-image: radial-gradient(circle at 20% 30%, rgba(215, 181, 109, 0.05) 0%, transparent 50%),
                       radial-gradient(circle at 80% 70%, rgba(215, 181, 109, 0.05) 0%, transparent 50%) !important;
 }
-
 .service-card {
     background: white !important;
     border-radius: 35px !important;
@@ -517,19 +450,16 @@ body.dark-mode .section-subtitle {
     flex-direction: column !important;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
 }
-
 .service-card:hover {
     transform: translateY(-10px) !important;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2) !important;
 }
-
 .service-img-box {
     width: 100% !important;
     height: 50% !important; /* Exactly half */
     overflow: hidden !important;
     position: relative !important;
 }
-
 .service-img-box::after {
     content: '' !important;
     position: absolute !important;
@@ -538,11 +468,9 @@ body.dark-mode .section-subtitle {
     transition: all 0.5s ease !important;
     pointer-events: none !important;
 }
-
 .service-card:hover .service-img-box::after {
     background: transparent !important;
 }
-
 .service-img-box img {
     width: 100% !important;
     height: 100% !important;
@@ -550,12 +478,10 @@ body.dark-mode .section-subtitle {
     transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1) !important;
     filter: brightness(0.9) !important;
 }
-
 .service-card:hover .service-img-box img {
     transform: scale(1.15) !important;
     filter: brightness(1.1) !important;
 }
-
 .service-content {
     padding: 30px !important;
     height: 50% !important;
@@ -564,12 +490,11 @@ body.dark-mode .section-subtitle {
     justify-content: center !important;
     text-align: left !important; /* Move text to side */
 }
-
 .service-icon-box {
     width: 50px !important;
     height: 50px !important;
-    background: var(--khmer-gold) !important;
-    color: var(--royal-blue) !important;
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
     border-radius: 14px !important;
     display: flex !important;
     align-items: center !important;
@@ -580,21 +505,18 @@ body.dark-mode .section-subtitle {
     box-shadow: 0 5px 15px rgba(215, 181, 109, 0.2) !important;
     flex-shrink: 0 !important;
 }
-
 .service-card:hover .service-icon-box {
-    background: var(--royal-blue) !important;
-    color: var(--khmer-gold) !important;
+    background: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
     transform: translateY(-5px) rotate(8deg) !important;
     box-shadow: 0 12px 25px rgba(13, 42, 67, 0.2) !important;
 }
-
-/* ── Tour Guides Showcase ── */
 .guides-showcase-section {
     background-color: var(--sand-whisper) !important;
     padding: 100px 0 !important;
     position: relative !important;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color) 50%, var(--secondary-color) 100%) !important;
 }
-
 .guide-province-card {
     background: white !important;
     border-radius: 30px !important;
@@ -605,20 +527,17 @@ body.dark-mode .section-subtitle {
     height: 100% !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
 }
-
 .guide-province-card:hover {
     transform: translateY(-12px) !important;
     box-shadow: 0 25px 50px rgba(13, 42, 67, 0.1) !important;
-    border-color: var(--khmer-gold) !important;
+    border-color: var(--secondary-color) !important;
 }
-
 .guide-avatar-box {
     width: 120px !important;
     height: 120px !important;
     margin: 0 auto 25px !important;
     position: relative !important;
 }
-
 .guide-avatar-box img {
     width: 100% !important;
     height: 100% !important;
@@ -628,17 +547,15 @@ body.dark-mode .section-subtitle {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
     transition: all 0.4s ease !important;
 }
-
 .guide-province-card:hover .guide-avatar-box img {
-    border-color: var(--khmer-gold) !important;
+    border-color: var(--secondary-color) !important;
     transform: scale(1.05) !important;
 }
-
 .province-tag {
     position: absolute !important;
     bottom: 5px !important;
     right: -10px !important;
-    background: var(--royal-blue) !important;
+    background: var(--primary-color) !important;
     color: white !important;
     padding: 4px 12px !important;
     border-radius: 50px !important;
@@ -647,40 +564,32 @@ body.dark-mode .section-subtitle {
     border: 2px solid white !important;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
 }
-
 .guide-info h5 {
     font-size: 18px !important;
     font-weight: 700 !important;
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
     margin-bottom: 12px !important;
 }
-
 .guide-info p {
     font-size: 14px !important;
     line-height: 1.6 !important;
     color: #555 !important;
     margin-bottom: 0 !important;
 }
-
-/* ── Royal Gallery Bento Grid ── */
 .royal-gallery-section {
     padding: 100px 0 !important;
     background: white !important;
 }
-
-/* ── Royal Gallery Section ── */
 .royal-gallery-section {
     padding: 100px 0 !important;
-    background-color: var(--sand-whisper) !important;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-oud) 40%, var(--angkor-stone) 100%) !important;
 }
-
 .gallery-bento-grid {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
     grid-auto-rows: 250px !important; /* Flexible rows */
     gap: 20px !important;
 }
-
 .gallery-item {
     position: relative !important;
     border-radius: 25px !important;
@@ -689,26 +598,25 @@ body.dark-mode .section-subtitle {
     height: 300px !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;
 }
-
 .item-large {
     grid-row: span 2 !important;
 }
-
 .item-wide {
     grid-column: span 2 !important;
 }
-
 .gallery-item img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
     transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    background: radial-gradient(circle at center, 
+        rgba(13, 42, 67, 0.2) 20%, 
+        rgba(13, 42, 67, 0.5) 60%, 
+        rgba(13, 42, 67, 0.95) 100%) !important; 
 }
-
 .gallery-item:hover img {
     transform: scale(1.15) rotate(1deg) !important;
 }
-
 .gallery-overlay {
     position: absolute !important;
     inset: 0 !important;
@@ -720,14 +628,12 @@ body.dark-mode .section-subtitle {
     transition: all 0.4s ease !important;
     transform: translateY(20px) !important;
 }
-
 .gallery-item:hover .gallery-overlay {
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
-
 .overlay-text span {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     font-size: 12px !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
@@ -735,14 +641,12 @@ body.dark-mode .section-subtitle {
     display: block !important;
     margin-bottom: 5px !important;
 }
-
 .overlay-text h6 {
     color: white !important;
     font-size: 20px !important;
     font-weight: 700 !important;
     margin: 0 !important;
 }
-
 @media (max-width: 992px) {
     .gallery-bento-grid {
         grid-template-columns: repeat(2, 1fr) !important;
@@ -751,7 +655,6 @@ body.dark-mode .section-subtitle {
     .item-large { grid-row: span 2 !important; }
     .item-wide { grid-column: span 2 !important; }
 }
-
 @media (max-width: 576px) {
     .gallery-bento-grid {
         display: flex !important;
@@ -762,13 +665,10 @@ body.dark-mode .section-subtitle {
         height: 250px !important;
     }
 }
-
-/* ── Latest Blog Section ── */
 .latest-blog-section {
     background-color: white !important;
     padding: 100px 0 !important;
 }
-
 .blog-card-home {
     background: white !important;
     border-radius: 25px !important;
@@ -779,50 +679,43 @@ body.dark-mode .section-subtitle {
     display: flex !important;
     flex-direction: column !important;
 }
-
 .blog-card-home:hover {
     transform: translateY(-10px) !important;
     box-shadow: 0 20px 40px rgba(13, 42, 67, 0.1) !important;
-    border-color: var(--khmer-gold) !important;
+    border-color: var(--secondary-color) !important;
 }
-
 .blog-img-wrapper {
     height: 230px !important;
     position: relative !important;
     overflow: hidden !important;
 }
-
 .blog-img-wrapper img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
     transition: transform 1s ease !important;
 }
-
 .blog-card-home:hover .blog-img-wrapper img {
     transform: scale(1.1) !important;
 }
-
 .blog-category {
     position: absolute !important;
     top: 20px !important;
     right: 20px !important;
-    background: var(--khmer-gold) !important;
-    color: var(--royal-blue) !important;
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
     padding: 5px 15px !important;
     border-radius: 50px !important;
     font-size: 12px !important;
     font-weight: 700 !important;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2) !important;
 }
-
 .blog-body {
     padding: 30px !important;
     flex-grow: 1 !important;
     display: flex !important;
     flex-direction: column !important;
 }
-
 .blog-meta {
     display: flex !important;
     gap: 20px !important;
@@ -830,11 +723,10 @@ body.dark-mode .section-subtitle {
     color: #888 !important;
     margin-bottom: 15px !important;
 }
-
 .blog-body h4 {
     font-size: 20px !important;
     font-weight: 700 !important;
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
     margin-bottom: 15px !important;
     line-height: 1.5 !important;
     display: -webkit-box !important;
@@ -842,7 +734,6 @@ body.dark-mode .section-subtitle {
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
 }
-
 .blog-body p {
     font-size: 14px !important;
     line-height: 1.7 !important;
@@ -850,9 +741,8 @@ body.dark-mode .section-subtitle {
     margin-bottom: 25px !important;
     flex-grow: 1 !important;
 }
-
 .read-more-link {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     text-decoration: none !important;
     font-weight: 700 !important;
     font-size: 14px !important;
@@ -860,14 +750,12 @@ body.dark-mode .section-subtitle {
     align-items: center !important;
     transition: 0.3s !important;
 }
-
 .read-more-link:hover {
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
     transform: translateX(5px) !important;
 }
-
 .btn-explore {
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
     text-decoration: none !important;
     font-weight: 700 !important;
     display: flex !important;
@@ -875,18 +763,14 @@ body.dark-mode .section-subtitle {
     gap: 10px !important;
     transition: 0.3s !important;
 }
-
 .btn-explore:hover {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     transform: translateX(5px) !important;
 }
-
-/* ── Testimonials Section ── */
 .testimonials-section {
     padding: 100px 0 !important;
     background-color: var(--sand-whisper) !important;
 }
-
 .testimonial-card {
     background: white !important;
     padding: 40px !important;
@@ -899,74 +783,62 @@ body.dark-mode .section-subtitle {
     border: 1px solid rgba(0, 0, 0, 0.05) !important;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
 }
-
 .testimonial-card:hover {
     transform: translateY(-10px) !important;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2) !important;
-    border-color: var(--khmer-gold) !important;
+    border-color: var(--secondary-color) !important;
 }
-
 .testi-quote {
     font-size: 40px !important;
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     opacity: 0.2 !important;
     position: absolute !important;
     top: 30px !important;
     right: 30px !important;
 }
-
 .testi-rating {
     color: #ffc107 !important;
     margin-bottom: 20px !important;
     font-size: 14px !important;
 }
-
 .testi-text {
     font-size: 16px !important;
     line-height: 1.8 !important;
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
     font-style: italic !important;
     margin-bottom: 30px !important;
     flex-grow: 1 !important;
 }
-
 .testi-user {
     display: flex !important;
     align-items: center !important;
     gap: 15px !important;
 }
-
 .testi-user img {
     width: 60px !important;
     height: 60px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
-    border: 2px solid var(--khmer-gold) !important;
+    border: 2px solid var(--secondary-color) !important;
 }
-
 .user-info h6 {
     margin: 0 !important;
     font-weight: 700 !important;
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
 }
-
 .user-info span {
     font-size: 12px !important;
     color: #888 !important;
 }
-
-/* ── Interactive Map Section ── */
 .interactive-map-section {
     padding: 100px 0 150px !important;
     background-color: var(--sand-whisper) !important;
 }
-
 .map-wrapper {
     position: relative !important;
     max-width: 1100px !important;
     margin: 0 auto !important;
 }
-
 .map-container-home {
     border-radius: 40px !important;
     overflow: hidden !important;
@@ -978,7 +850,7 @@ body.dark-mode .section-subtitle {
     position: absolute !important;
     bottom: -50px !important;
     left: 40px !important;
-    background: var(--royal-blue) !important;
+    background: var(--primary-color) !important;
     padding: 30px !important;
     border-radius: 25px !important;
     color: white !important;
@@ -988,7 +860,7 @@ body.dark-mode .section-subtitle {
 }
 
 .map-info-floating h5 {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     font-weight: 700 !important;
     margin-bottom: 10px !important;
 }
@@ -1006,7 +878,7 @@ body.dark-mode .section-subtitle {
 }
 
 .btn-map-link {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     text-decoration: none !important;
     font-weight: 700 !important;
     font-size: 13px !important;
@@ -1032,7 +904,7 @@ body.dark-mode .section-subtitle {
     font-size: 22px !important;
     font-weight: 700 !important;
     margin-bottom: 12px !important;
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
 }
 
 .service-content p {
@@ -1044,7 +916,7 @@ body.dark-mode .section-subtitle {
 }
 
 .btn-service {
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
     text-decoration: none !important;
     font-weight: 700 !important;
     font-size: 14px !important;
@@ -1055,7 +927,7 @@ body.dark-mode .section-subtitle {
 }
 
 .btn-service:hover {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
 }
 
 @media (max-width: 1200px) {
@@ -1081,7 +953,7 @@ body.dark-mode .section-subtitle {
 }
 
 .footer {
-    background-color: var(--royal-blue) !important;
+    background-color: var(--primary-color) !important;
     color: var(--parchment) !important;
     border-top: 1px solid rgba(197, 160, 89, 0.2) !important;
     position: relative !important;
@@ -1097,7 +969,7 @@ body.dark-mode .section-subtitle {
     left: 0 !important;
     right: 0 !important;
     height: 3px !important;
-    background: linear-gradient(90deg, transparent, var(--khmer-gold), transparent) !important;
+    background: linear-gradient(90deg, transparent, var(--secondary-color), transparent) !important;
 }
 
 .footer-brand-text {
@@ -1108,7 +980,7 @@ body.dark-mode .section-subtitle {
 }
 
 .footer-title {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     font-size: 16px !important;
     font-weight: 700 !important;
     margin-bottom: 25px !important;
@@ -1136,7 +1008,7 @@ body.dark-mode .section-subtitle {
 }
 
 .footer-links a:hover {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     transform: translateX(5px) !important;
 }
 
@@ -1150,7 +1022,7 @@ body.dark-mode .section-subtitle {
 }
 
 .footer-contact-item i {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     font-size: 18px !important;
     width: 20px !important;
     text-align: center !important;
@@ -1178,9 +1050,9 @@ body.dark-mode .section-subtitle {
 }
 
 .social-btn:hover {
-    background: var(--khmer-gold) !important;
-    color: var(--royal-blue) !important;
-    border-color: var(--khmer-gold) !important;
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    border-color: var(--secondary-color) !important;
     transform: translateY(-5px) !important;
 }
 
@@ -1201,13 +1073,13 @@ body.dark-mode .section-subtitle {
 }
 
 .footer-form .form-control:focus {
-    border-color: var(--khmer-gold) !important;
+    border-color: var(--secondary-color) !important;
     box-shadow: none !important;
 }
 
 .btn-subscribe {
-    background: var(--khmer-gold) !important;
-    color: var(--royal-blue) !important;
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
     border: none !important;
     width: 100% !important;
     padding: 12px !important;
@@ -1218,7 +1090,7 @@ body.dark-mode .section-subtitle {
 
 .btn-subscribe:hover {
     background: white !important;
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
     transform: scale(1.02) !important;
 }
 
@@ -1270,7 +1142,7 @@ body.dark-mode .section-subtitle {
     max-width: 900px !important;
 }
 .auth-img-side{
-    background: linear-gradient(rgba(13, 42, 67, 0.7), rgba(13, 42, 67, 0.7)), url('../image/Preah-Sihanouk.jpg') !important;
+    background: linear-gradient(rgba(13, 42, 67, 0.7), rgba(13, 42, 67, 0.7), url('../image/Preah-Sihanouk.jpg')) !important;
     background-size: cover !important;
     background-position: center !important;
     display: flex !important;
@@ -1286,7 +1158,7 @@ body.dark-mode .section-subtitle {
 }
 .auth-title{
     font-family: "Kantumruy Pro", sans-serif !important;
-    color: var(--deep-mahogany) !important;
+    color: var(--primary-color) !important;
     font-weight: 700 !important;
 }
 .form-label{
@@ -1300,12 +1172,11 @@ body.dark-mode .section-subtitle {
     border: 1px solid #ddd !important;
 }
 .form-control:focus{
-    border-color: var(--desert-terracotta) !important;
     box-shadow: 0 0 0 3px rgba(192, 98, 42, 0.25) !important;
 }
 
 .btn-auth{
-    background-color: var(--desert-terracotta) !important;
+    background-color: var(--primary-color) !important;
     color: white !important;
     padding: 12px !important;
     border-radius: 10px !important;
@@ -1315,7 +1186,7 @@ body.dark-mode .section-subtitle {
     border: none !important;
 }
 .btn-auth:hover{
-    background-color: var(--burnt-sienna) !important;
+    background-color: var(--angkor-stone) !important;
     color: white !important;
     transform: translateY(-2px) !important;
 }
@@ -1339,16 +1210,13 @@ body.dark-mode .section-subtitle {
 }
 .btn-social:hover{
     background-color: var(--sand-whisper) !important;
-    color: var(--desert-terracotta) !important;
-    border-color: var(--desert-terracotta) !important;
 }
 .auth-link{
-    color: var(--desert-terracotta) !important;
     text-decoration: none !important;
     font-weight: 600 !important;
 }
 .auth-link:hover{
-    color: var(--burnt-sienna) !important;
+    color: var(--angkor-stone) !important;
     text-decoration: underline !important;
 }
 @media (max-width: 768px){
@@ -1362,7 +1230,7 @@ body.dark-mode .section-subtitle {
 
 /* Booking Page Styles */
 .booking-header{
-    background: linear-gradient(rgba(13, 42, 67, 0.8), rgba(13, 42, 67, 0.8)), url('../image/Preah-Sihanouk.jpg') !important;
+    background: linear-gradient(rgba(13, 42, 67, 0.8), rgba(13, 42, 67, 0.8), url('../image/Preah-Sihanouk.jpg')) !important;
     background-size: cover !important;
     background-position: center !important;
     padding: 100px 0 60px !important;
@@ -1378,7 +1246,6 @@ body.dark-mode .section-subtitle {
     border: 1px solid rgba(0,0,0,0.05) !important;
 }
 .section-title-kh{
-    color: var(--desert-terracotta) !important;
     font-size: 14px !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
@@ -1387,7 +1254,7 @@ body.dark-mode .section-subtitle {
 }
 .booking-form-label{
     font-weight: 600 !important;
-    color: var(--deep-mahogany) !important;
+    color: var(--primary-color) !important;
     margin-bottom: 8px !important;
     display: block !important;
 }
@@ -1410,11 +1277,9 @@ body.dark-mode .section-subtitle {
 }
 .booking-form .form-control:focus{
     background-color: white !important;
-    border-color: var(--desert-terracotta) !important;
     box-shadow: 0 5px 15px rgba(192, 98, 42, 0.1) !important;
 }
 .btn-confirm-booking{
-    background-color: var(--desert-terracotta) !important;
     color: white !important;
     padding: 15px 40px !important;
     border-radius: 12px !important;
@@ -1424,7 +1289,7 @@ body.dark-mode .section-subtitle {
     width: 100% !important;
 }      
 .btn-confirm-booking:hover{
-    background-color: var(--burnt-sienna) !important;
+    background-color: var(--angkor-stone) !important;
     transform: translateY(-3px) !important;
     box-shadow: 0 10px 20px rgba(123, 45, 0, 0.2) !important;
 }
@@ -1445,13 +1310,10 @@ body.dark-mode .section-subtitle {
     border: none !important;
     padding: 0 !important;
 }
-.password-toggle:hover{
-    color: var(--desert-terracotta) !important;
-}
 
 /* Map Page Styles */
 .map-hero{
-    background: linear-gradient(rgba(13, 42, 67, 0.7), rgba(13, 42, 67, 0.7)), url('../image/Preah-Sihanouk.jpg') !important;
+    background: linear-gradient(rgba(13, 42, 67, 0.7), rgba(13, 42, 67, 0.7), url('../image/Preah-Sihanouk.jpg')) !important;
     background-size: cover !important;
     background-position: center !important;
     padding: 120px 0 80px !important;
@@ -1484,7 +1346,6 @@ body.dark-mode .section-subtitle {
     border: none !important;
 }
 .location-badge{
-    background-color: var(--desert-terracotta) !important;
     color: white !important;
     padding: 5px 15px !important;
     border-radius: 50px !important;
@@ -1493,7 +1354,7 @@ body.dark-mode .section-subtitle {
     margin-bottom: 10px !important;
 }
 .map-title{
-    color: var(--deep-mahogany) !important;
+    color: var(--primary-color) !important;
     font-weight: 700 !important;
     margin-bottom: 15px !important;
 }
@@ -1512,6 +1373,7 @@ body.dark-mode .section-subtitle {
 .card {
     transition: transform 0.3s ease;
     border-radius: 12px;
+    color: black;
 }
 .card:hover {
     transform: translateY(-8px);
@@ -1530,7 +1392,7 @@ body.dark-mode .section-subtitle {
     content: '' !important;
     width: 6px !important;
     height: 6px !important;
-    background: var(--khmer-gold) !important;
+    background: var(--secondary-color) !important;
     position: absolute !important;
     left: 50% !important;
     top: 10px !important;
@@ -1549,9 +1411,9 @@ body.dark-mode .section-subtitle {
 }
 
 .title-bento span {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
 }    .card-title {
-    color: var(--deep-mahogany);
+    color: var(--primary-color);
     font-size: 19px;
 }
 .card-text {
@@ -1565,7 +1427,7 @@ body.dark-mode .section-subtitle {
 /* Blog Detail Styles */
 .blog-detail-hero{
     height: 300px;
-    background: linear-gradient(rgba(13, 42, 67, 0.6), rgba(13, 42, 67, 0.6)), url('../image/Preah-Sihanouk.jpg');
+    background: linear-gradient(rgba(13, 42, 67, 0.6), rgba(13, 42, 67, 0.6), url('../image/Preah-Sihanouk.jpg'));
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1608,30 +1470,31 @@ body.dark-mode .section-subtitle {
 
 /* 1. Primary Brand Button (Royal Blue + Gold) */
 .btn-primary, .btn-royal {
-    background-color: var(--royal-blue) !important;
-    border: 1px solid var(--khmer-gold) !important;
+    background-color: var(--primary-color) !important;
+    border: 1px solid var(--secondary-color) !important;
     color: white !important;
+    text-decoration: none !important;
     transition: all 0.4s ease !important;
 }
 
 .btn-primary:hover, .btn-royal:hover {
-    background-color: var(--khmer-gold) !important;
-    color: var(--royal-blue) !important;
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
     box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4) !important;
 }
 
 /* 2. "Book Now" Button (Khmer Gold + Royal Blue) - Prestigious Action */
 .btn-book-now {
-    background-color: var(--khmer-gold) !important;
-    border: 1.5px solid var(--khmer-gold) !important;
-    color: var(--royal-blue) !important;
+    background-color: var(--secondary-color) !important;
+    border: 1.5px solid var(--secondary-color) !important;
+    color: var(--primary-color) !important;
     font-weight: 700 !important;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
 }
 
 .btn-book-now:hover {
     background-color: white !important;
-    color: var(--royal-blue) !important;
+    color: var(--primary-color) !important;
     border-color: white !important;
     transform: translateY(-3px) scale(1.05) !important;
     box-shadow: 0 8px 25px rgba(197, 160, 89, 0.3) !important;
@@ -1639,7 +1502,7 @@ body.dark-mode .section-subtitle {
 
 /* 3. Outline Button (Login / Secondary) - Gold Identity */
 .btn-outline-light {
-    border: 1.5px solid var(--khmer-gold) !important;
+    border: 1.5px solid var(--secondary-color) !important;
     color: white !important;
     background: transparent !important;
     display: flex !important;
@@ -1648,21 +1511,21 @@ body.dark-mode .section-subtitle {
 }
 
 .btn-outline-light:hover {
-    background: var(--khmer-gold) !important;
-    color: var(--royal-blue) !important;
-    border-color: var(--khmer-gold) !important;
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    border-color: var(--secondary-color) !important;
 }
 
 /* 4. Angkor Stone Button (Already handled in Hero section) */
 .btn-stone {
     background-color: var(--angkor-stone) !important;
-    border: 1px solid var(--khmer-gold) !important;
+    border: 1px solid var(--secondary-color) !important;
     color: white !important;
 }
 
 .btn-stone:hover {
-    background-color: var(--khmer-gold) !important;
-    color: var(--royal-blue) !important;
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
 }
 
 /* ==========================================================================
@@ -1670,11 +1533,11 @@ body.dark-mode .section-subtitle {
    ========================================================================== */
 
 .dropdown-menu {
-    background: var(--royal-blue) !important;
+    background: var(--primary-color) !important;
     backdrop-filter: blur(15px) !important;
     -webkit-backdrop-filter: blur(15px) !important;
     border: 1px solid rgba(197, 160, 89, 0.3) !important;
-    border-top: 3px solid var(--khmer-gold) !important;
+    border-top: 3px solid var(--secondary-color) !important;
     border-radius: 20px !important;
     padding: 15px !important;
     margin-top: 15px !important;
@@ -1704,7 +1567,7 @@ body.dark-mode .section-subtitle {
 
 .dropdown-item:hover {
     background: rgba(197, 160, 89, 0.2) !important;
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     padding-left: 25px !important;
 }
 
@@ -1723,7 +1586,7 @@ body.dark-mode .section-subtitle {
 }
 
 .province-selector-list {
-    background: var(--royal-blue) !important;
+    background: var(--primary-color) !important;
     height: 100% !important;
     padding: 20px !important;
     display: flex !important;
@@ -1744,14 +1607,14 @@ body.dark-mode .section-subtitle {
 
 .selector-item:hover, .selector-item.active {
     background: rgba(197, 160, 89, 0.15) !important;
-    border-color: var(--khmer-gold) !important;
+    border-color: var(--secondary-color) !important;
     transform: translateX(10px) !important;
 }
 
 .selector-number {
     font-size: 24px !important;
     font-weight: 800 !important;
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     margin-right: 20px !important;
     opacity: 0.5 !important;
     font-family: 'Kantumruy Pro', sans-serif !important;
@@ -1776,7 +1639,7 @@ body.dark-mode .section-subtitle {
 
 .selector-item i {
     margin-left: auto !important;
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
     opacity: 0 !important;
     transition: 0.3s !important;
 }
@@ -1818,11 +1681,84 @@ body.dark-mode .section-subtitle {
 }
 
 .map-overlay-badge i {
-    color: var(--khmer-gold) !important;
+    color: var(--secondary-color) !important;
 }
 
 @media (max-width: 992px) {
     .master-map-display {
         height: 400px !important;
     }
+}
+@media (max-width: 768px){
+.bento-grid{
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto !important;
+}
+
+.card-main{
+    grid-column: span 1 !important;
+    padding: 30px !important;
+}
+
+.destination-card, .service-card, .gallery-item{
+    height: auto !important;
+}
+.section-title{
+    font-size: 28px !important;
+}
+.hero-bento{
+    background-attachment: scroll !important;
+}
+.navbar-nav{
+    background: var(--primary-color);
+    padding: 20px;
+    border-radius: 20px;
+}
+}
+
+/* 4-Sided Cinematic Vignette Overlay */
+/* Applied to common image wrappers across the site */
+.card-img-wrapper::after,
+.service-img-box::after,
+.gallery-item::after,
+.blog-img-wrapper::after,
+.highlight-img::after,
+.rounded-4.overflow-hidden::after,
+.attraction-img-wrap::after,
+.about-img-wrap::after,
+.food-card-img::after,
+.beach-card-img::after,
+.nimg::after,
+.card-place::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.85) 100%) !important;
+    pointer-events: none !important;
+    z-index: 5 !important;
+    border-radius: inherit !important;
+    mix-blend-mode: multiply !important;
+    transition: all 0.5s ease !important;
+}
+
+/* Ensure wrappers are relative */
+.card-img-wrapper,
+.service-img-box,
+.gallery-item,
+.blog-img-wrapper,
+.highlight-img,
+.rounded-4.overflow-hidden,
+.attraction-img-wrap,
+.about-img-wrap,
+.food-card-img,
+.beach-card-img,
+.nimg,
+.card-place {
+    position: relative !important;
+}
+
+/* Vignette for standalone images using mask-image for soft fade */
+img.img-fluid:not(.logo), img.feature-img, img.img-food, img.attraction-img, img.lodge-premium-img, img.cultural-card-img {
+    -webkit-mask-image: radial-gradient(ellipse at center, black 65%, rgba(0,0,0,0.15) 100%) !important;
+    mask-image: radial-gradient(ellipse at center, black 65%, rgba(0,0,0,0.15) 100%) !important;
 }

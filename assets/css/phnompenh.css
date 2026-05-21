@@ -1,0 +1,692 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+:root{
+    --primary-color:     #0D2A43; 
+    --secondary-color:   #D7B56D; 
+    --angkor-stone:      #5D4037; 
+    --golden-spice:      #E5C58B;
+    --parchment:         #F8F9FA;
+    --sand-whisper:      #FAF9F6;
+    --night-indigo:      #1A365D;
+    --camel-brown:       #8D6E63;
+    --dark-oud:          #07121C;
+}
+body{
+    font-family: "Kantumruy Pro", sans-serif !important;
+    background-color: var(--sand-whisper) !important;
+    color: var(--night-indigo) !important;
+}
+.reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* HERO */
+        .pp-hero {
+            height: 100vh !important;
+            background: url('../image/phnom-penh.png') center/cover no-repeat !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+
+        /* Premium 4-Sided Cinematic Vignette Overlay */
+        .pp-hero::before {
+            content: '' !important;
+            position: absolute !important;
+            inset: 0 !important;
+            background: 
+                /* Top Shadow: Blends page header softly with banner */
+                linear-gradient(to bottom, rgba(7, 18, 28, 0.8) 0%, transparent 22%),
+                /* Bottom Shadow: Adds visual depth at viewport lower boundary */
+                linear-gradient(to top, rgba(7, 18, 28, 0.9) 0%, transparent 25%),
+                /* Left Shadow: Creates anamorphic matte framing on the left */
+                linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+                /* Right Shadow: Creates anamorphic matte framing on the right */
+                linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+                /* Central Spotlight: High-contrast vignette centered on the banner image */
+                radial-gradient(circle at center, rgba(13, 42, 67, 0.15) 0%, rgba(7, 18, 28, 0.5) 50%, rgba(7, 18, 28, 0.75) 100%) !important;
+            z-index: 1 !important;
+            pointer-events: none !important;
+        }
+
+
+        .pp-hero > .text-center {
+            position: relative !important;
+            z-index: 3 !important;
+        }
+
+        .hero-scroll-line {
+            position: absolute !important;
+            bottom: 40px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            gap: 6px !important;
+            color: white !important;
+            animation: bounce 2s infinite !important;
+            z-index: 3 !important;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(10px);
+            }
+        }
+
+        /* SIDE NAV */
+        .side-nav {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .side-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--camel-brown);
+            cursor: pointer;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .side-dot.active,
+        .side-dot:hover {
+            background: var(--desert-terracotta);
+            transform: scale(1.4);
+            border-color: var(--amber-dune);
+        }
+
+        /* SHARED */
+        .section-label {
+            font-size: 0.85rem !important;
+            letter-spacing: 3px !important;
+            text-transform: uppercase !important;
+            color: var(--desert-terracotta) !important;
+            font-weight: 700 !important;
+            margin-bottom: 12px !important;
+            display: inline-block !important;
+            line-height: 1.2 !important;
+        }
+
+        .section-title-km {
+            font-family: "Kantumruy Pro", sans-serif !important;
+            font-size: 2.3rem !important;
+            font-weight: 700 !important;
+            color: var(--deep-mahogany) !important;
+            margin-bottom: 16px !important;
+            line-height: 1.35 !important;
+        }
+
+        .divider-ornament {
+            display: flex !important;
+            align-items: center !important;
+            gap: 12px !important;
+            margin: 12px 0 24px !important;
+        }
+
+        .divider-ornament::before,
+        .divider-ornament::after {
+            content: '' !important;
+            flex: 1 !important;
+            height: 1px !important;
+            background: var(--secondary-color) !important;
+        }
+
+        .divider-ornament span {
+            color: var(--secondary-color) !important;
+            font-size: 1.2rem !important;
+        }
+
+        /* ABOUT */
+        .about-section {
+            padding: 100px 0;
+        }
+
+        .stat-box {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            border-bottom: 4px solid var(--desert-terracotta);
+            box-shadow: 0 4px 20px rgba(74, 28, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-6px);
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--desert-terracotta);
+        }
+
+        /* ATTRACTIONS */
+        .attractions-section {
+            padding: 100px 0;
+        }
+
+        .attraction-card-pp {
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 8px 32px rgba(74, 28, 0, 0.12);
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+        .attraction-card-pp:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(74, 28, 0, 0.2);
+        }
+
+        .attraction-img-wrap {
+            overflow: hidden;
+        }
+
+        .attraction-img {
+            height: 240px;
+            object-fit: cover;
+            width: 100%;
+            transition: transform 0.6s;
+        }
+
+        .attraction-card-pp:hover .attraction-img {
+            transform: scale(1.06);
+        }
+
+        .attraction-tag {
+            background: var(--desert-terracotta);
+            color: white;
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        /* FEATURE */
+        .feature-section {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            background: rgba(242, 192, 120, 0.07);
+            pointer-events: none;
+        }
+
+        .feature-img {
+            border-radius: 20px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+            transform: perspective(1000px) rotateY(5deg);
+            transition: transform 0.5s;
+        }
+
+        .feature-img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+
+        /* HISTORY */
+        .history-section {
+            padding: 100px 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 16px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--amber-dune);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 36px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -31px;
+            top: 6px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--desert-terracotta);
+            border: 3px solid var(--amber-dune);
+        }
+
+        .timeline-year {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--desert-terracotta);
+            margin-bottom: 4px;
+        }
+
+        .timeline-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px 24px;
+            box-shadow: 0 4px 16px rgba(74, 28, 0, 0.08);
+            border-left: 4px solid var(--amber-dune);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .timeline-card:hover {
+            border-color: var(--desert-terracotta);
+            transform: translateX(6px);
+        }
+
+        /* FOOD */
+        .food-section {
+            padding: 100px 0;
+        }
+
+        .food-card {
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 20px rgba(74, 28, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .food-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .food-img {
+            height: 180px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        /* GALLERY */
+        .gallery-section {
+            padding: 100px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            cursor: pointer;
+            aspect-ratio: 4/3;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Glassmorphic Caption Hover Effect */
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(13, 42, 67, 0.8) 0%, rgba(13, 42, 67, 0.2) 60%, transparent 100%);
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-item::after {
+            content: '🔍 ទិដ្ឋភាពភ្នំពេញ';
+            font-family: "Kantumruy Pro", sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--golden-spice);
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            z-index: 2;
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 8px 16px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(13, 42, 67, 0.4);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.12);
+        }
+
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* TIPS */
+        .tips-section {
+            padding: 100px 0;
+        }
+
+        .tip-card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            border-left: 5px solid var(--secondary-color);
+            box-shadow: 0 8px 30px rgba(13, 42, 67, 0.06);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--golden-spice);
+            box-shadow: 0 20px 40px rgba(13, 42, 67, 0.15);
+        }
+
+        .tip-icon {
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 16px;
+            transition: transform 0.4s ease;
+        }
+
+        .tip-card:hover .tip-icon {
+            transform: scale(1.15) rotate(-5deg);
+        }
+
+        /* CTA */
+        .cta-section {
+            padding: 100px 0;
+        }
+
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px !important;
+            }
+            .about-section,
+            .attractions-section,
+            .history-section,
+            .food-section,
+            .gallery-section,
+            .tips-section,
+            .cta-section {
+                padding: 70px 0 !important;
+            }
+            .feature-section {
+                padding: 70px 0 !important;
+                min-height: auto !important;
+            }
+            .section-title-km,
+            .feature-section h2,
+            .cta-section h2 {
+                font-size: 2rem !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .side-nav {
+                display: none;
+            }
+            .about-section,
+            .attractions-section,
+            .history-section,
+            .food-section,
+            .gallery-section,
+            .tips-section,
+            .cta-section {
+                padding: 60px 0 !important;
+            }
+            .feature-section {
+                padding: 60px 0 !important;
+            }
+            .section-title-km,
+            .feature-section h2,
+            .cta-section h2 {
+                font-size: 1.8rem !important;
+            }
+            .section-label {
+                font-size: 0.8rem !important;
+                letter-spacing: 2px !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 16px !important;
+            }
+            .about-section,
+            .attractions-section,
+            .history-section,
+            .food-section,
+            .gallery-section,
+            .tips-section,
+            .cta-section {
+                padding: 50px 0 !important;
+            }
+            .feature-section {
+                padding: 50px 0 !important;
+            }
+            .section-title-km,
+            .feature-section h2,
+            .cta-section h2 {
+                font-size: 1.6rem !important;
+            }
+        }
+
+/* ===== HIGH-CONTRAST GLOBAL FIXES FOR DARK SECTIONS ===== */
+
+/* Define the list of all dark section wrapper containers */
+.pp-hero,
+.bg-gradient-royal,
+.bg-gradient-dark,
+.bg-mixed,
+.bg-gradient-stone {
+    color: #ffffff !important;
+}
+
+/* Force all headings and subtitles inside dark sections to be crisp white */
+.pp-hero h1, .pp-hero h2, .pp-hero h3, .pp-hero h4, .pp-hero h5, .pp-hero h6,
+.bg-gradient-royal h1, .bg-gradient-royal h2, .bg-gradient-royal h3, .bg-gradient-royal h4, .bg-gradient-royal h5, .bg-gradient-royal h6,
+.bg-gradient-dark h1, .bg-gradient-dark h2, .bg-gradient-dark h3, .bg-gradient-dark h4, .bg-gradient-dark h5, .bg-gradient-dark h6,
+.bg-mixed h1, .bg-mixed h2, .bg-mixed h3, .bg-mixed h4, .bg-mixed h5, .bg-mixed h6,
+.bg-gradient-stone h1, .bg-gradient-stone h2, .bg-gradient-stone h3, .bg-gradient-stone h4, .bg-gradient-stone h5, .bg-gradient-stone h6 {
+    color: #ffffff !important;
+}
+
+/* Force all paragraphs, descriptions, list items, and general text to be light */
+.pp-hero p, .pp-hero span, .pp-hero li,
+.bg-gradient-royal p, .bg-gradient-royal span, .bg-gradient-royal li,
+.bg-gradient-dark p, .bg-gradient-dark span, .bg-gradient-dark li,
+.bg-mixed p, .bg-mixed span, .bg-mixed li,
+.bg-gradient-stone p, .bg-gradient-stone span, .bg-gradient-stone li {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Preserve gold highlights and brand yellow/amber elements */
+.pp-hero .section-label,
+.bg-gradient-royal .section-label,
+.bg-gradient-dark .section-label,
+.bg-mixed .section-label,
+.bg-gradient-stone .section-label {
+    color: var(--secondary-color) !important;
+}
+
+/* Specific details for Hero stats and scroll guide icons */
+.hero-scroll-line span,
+.hero-scroll-line i {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+.pp-hero .text-center div[style*="color:var(--golden-spice)"] {
+    color: var(--golden-spice) !important;
+}
+
+/* Specific detail for Angkor-like Feature section */
+.feature-section h2 {
+    color: var(--golden-spice) !important;
+}
+
+/* Specific detail for bottom Call to Action */
+.cta-section h2 {
+    color: var(--golden-spice) !important;
+}
+
+/* Keep Attraction Card elements high contrast on their white card background */
+.attraction-card-pp h5 {
+    color: var(--primary-color) !important;
+}
+.attraction-card-pp p {
+    color: var(--night-indigo) !important;
+}
+.attraction-card-pp span {
+    color: inherit !important;
+}
+
+/* Keep Timeline Card elements readable on their white background */
+.timeline-card h5 {
+    color: var(--primary-color) !important;
+}
+.timeline-card p {
+    color: var(--night-indigo) !important;
+}
+
+/* Keep Food Card elements readable on their white background */
+.food-card h5 {
+    color: var(--primary-color) !important;
+}
+.food-card p {
+    color: var(--night-indigo) !important;
+}
+
+/* Keep Tip Card elements readable on their white background */
+.tip-card h5 {
+    color: var(--primary-color) !important;
+}
+.tip-card p {
+    color: var(--night-indigo) !important;
+}
+
+/* Keep Stat Box elements readable on their white background */
+.stat-box .stat-number {
+    color: var(--secondary-color) !important;
+}
+.stat-box p {
+    color: var(--camel-brown) !important;
+}
+
+/* ===== TYPOGRAPHICAL HIERARCHY & TEXT SIZE STANDARDIZATION ===== */
+
+/* Standardize every main section title to the exact same size */
+.section-title-km,
+.feature-section h2,
+.cta-section h2 {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.5px !important;
+}
+
+/* Standardize every section description/body paragraph to its own uniform size */
+.about-section p,
+.feature-section p,
+.cta-section p,
+.pp-hero p.lead {
+    font-size: 1.1rem !important;
+    line-height: 1.85 !important;
+    font-weight: 400 !important;
+}
+
+/* Ensure smaller component cards have consistent, highly-fit descriptions */
+.attraction-card-pp p,
+.timeline-card p,
+.food-card p,
+.tip-card p {
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+}

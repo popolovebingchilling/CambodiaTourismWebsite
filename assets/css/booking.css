@@ -1,52 +1,52 @@
-:root {
-    --royal-blue: #0D2A43;
-    --khmer-gold: #D7B56D;
-    --angkor-stone: #5D4037;
-    --midnight-blue: #1A4A6E;
-    --reef-teal: #1B7A8C;
-    --lagoon: #2CA8A0;
-    --sea-glass: #6ECBBF;
-    --foam: #C4E8E4;
-    --morning-mist: #EEF7F6;
-    --sunset-amber: #D97E3B;
-
-    /* Global UI */
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+:root{
+    --primary-color:     #0D2A43; 
+    --secondary-color:   #D7B56D; 
+    --angkor-stone:      #5D4037; 
+    --golden-spice:      #E5C58B;
+    --parchment:         #F8F9FA;
+    --sand-whisper:      #FAF9F6;
+    --night-indigo:      #1A365D;
+    --camel-brown:       #8D6E63;
+    --dark-oud:          #07121C;
     --card-bg: #ffffff;
-    --card-border: #dbe7e6;
-    --card-hover-bg: #f7fbfb;
-    --card-hover-border: #6ECBBF;
-    --card-shadow: 0 8px 24px rgba(13, 42, 67, 0.08);
-
-    --card-title: #0D2A43;
-    --card-text: #5D4037;
-
-    --primary-btn: #1B7A8C;
-    --primary-btn-hover: #166775;
-
-    --accent-color: #D7B56D;
-
-    --parchment: #ffffff;
-    --dark-oud: #0D2A43;
-
-    --desert-terracotta: #1B7A8C;
-    --burnt-sienna: #1A4A6E;
-    --camel-brown: #5D4037;
-    --amber-dune: #D7B56D;
-    --golden-spice: #D7B56D;
-    --sand-whisper: #EEF7F6;
+    --card-border: rgba(0, 0, 0, 0.1);
+    --card-title: var(--primary-color);
+    --card-text: #666666;
+    --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --card-hover-bg: #ffffff;
+    --card-hover-border: rgba(0, 0, 0, 0.2);
+    --midnight-blue: var(--primary-color);
+    --royal-blue: var(--primary-color);
+    --reef-teal: var(--secondary-color);
+    --khmer-gold: var(--secondary-color);
+    --lagoon: #2CA8A0;
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.text-primary-color {
+    color: var(--primary-color) !important;
 }
-
-body {
-    font-family: 'Kantumruy Pro', sans-serif;
-    background: var(--morning-mist);
-    color: var(--dark-oud);
-    line-height: 1.8;
+.text-golden-spice {
+    color: var(--golden-spice) !important;
+}
+body{
+    font-family: "Kantumruy Pro", sans-serif !important;
+    background-color: var(--sand-whisper) !important;
+    color: var(--night-indigo) !important;
+}
+.bg-gradient-stone {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--angkor-stone) 100%) !important;
+}
+.bg-gradient-dark {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-oud) 100%) !important;
+}
+.bg-gradient-royal {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color) 50%, var(--secondary-color) 100%) !important;
+}
+.bg-mixed {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-oud) 40%, var(--angkor-stone) 100%) !important;
 }
 
 /* Scrollbar */
@@ -240,8 +240,8 @@ body {
 }
 
 /* Forms */
-.fg {
-    margin-bottom: 18px;
+.fg, .form-group {
+    margin-bottom: 12px;
 }
 
 .fl,
@@ -291,6 +291,7 @@ body {
 .fr,
 .form-row {
     display: grid;
+    margin-bottom: 10px;
     grid-template-columns: 1fr 1fr;
     gap: 14px;
 }
