@@ -53,12 +53,13 @@
                         <li class="nav-item">
                             <a class="nav-link active rounded-pill px-3" href="index.html">ទំព័រដើម</a>
                         </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle px-3" href="#" role="button"
                                 data-bs-toggle="dropdown">គោលដៅ</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-content dropdown-item" href="sr.html">សៀមរាប</a></li>
-                                <li><a class="dropdown-content dropdown-item" href="#">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="siem-reap.html">សៀមរាប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="phnompenh.html">ភ្នំពេញ</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a>
@@ -73,25 +74,24 @@
                                 data-bs-toggle="dropdown">សេវាកម្ម</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-content dropdown-item" href="hotels.html">សណ្ឋាគារ</a></li>
-                                <li><a class="dropdown-content dropdown-item" href="restaurants.html">ភោជនីយដ្ឋាន</a></li>
-                                <li><a class="dropdown-content dropdown-item active" href="guide.html">មគ្គុទ្ទេសក៍</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="restaurants.html">ភោជនីយដ្ឋាន</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="guide.html">មគ្គុទ្ទេសក៍</a></li>
                                 <li><a class="dropdown-content dropdown-item"
                                         href="transportation.html">ការដឹកជញ្ជូន</a></li>
                             </ul>
                         </li>
 
-                        <li class="nav-item"><a class="nav-link px-3" href="#">វិចិត្រសាល</a></li>
+
+                        <li class="nav-item"><a class="nav-link px-3" href="vikjittsal.html">វិចិត្រសាល</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
-                        <li class="nav-item"><a class="nav-link px-3" href="#">មតិយោបល់</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
                     </ul>
                 </div>
                 <div class="d-none d-lg-flex align-items-center gap-3">
-                    <!-- Theme Toggle Button -->
-                    <button id="theme-toggle" class="btn btn-link text-white p-0 border-0 fs-5"
-                        title="ផ្លាស់ប្តូរពន្លឺ">
-                        <i class="bi bi-moon-stars-fill"></i>
-                    </button>
+                    
                     <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
                 </div>
@@ -399,35 +399,7 @@
             });
         }, { threshold: 0.5 });
 
-        counters.forEach(c => counterObserver.observe(c));
-
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-        const icon = themeToggle.querySelector('i');
-
-        // Check for saved theme
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            body.classList.add(savedTheme);
-            updateIcon(savedTheme);
-        }
-
-        themeToggle.addEventListener('click', () => {
-            if (body.classList.contains('light-mode')) {
-                body.classList.remove('light-mode');
-                localStorage.setItem('theme', 'dark-mode');
-                updateIcon('dark-mode');
-            } else {
-                body.classList.add('light-mode');
-                localStorage.setItem('theme', 'light-mode');
-                updateIcon('light-mode');
-            }
-        });
-
-        function updateIcon(theme) {
-            if (theme === 'light-mode') {
-                icon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
-            } else {
+        counters.forEach(c => counterObserver.observe(c)); else {
                 icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
             }
         }

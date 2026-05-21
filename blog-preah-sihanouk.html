@@ -184,8 +184,9 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav gap-2">
                         <li class="nav-item">
-                            <a class="nav-link rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                            <a class="nav-link active rounded-pill px-3" href="index.html">ទំព័រដើម</a>
                         </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle px-3" href="#" role="button"
                                 data-bs-toggle="dropdown">គោលដៅ</a>
@@ -214,17 +215,16 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item"><a class="nav-link px-3" href="#">វិចិត្រសាល</a></li>
-                        <li class="nav-item"><a class="nav-link active px-3" href="blog.html">ប្លុក</a></li>
+
+                        <li class="nav-item"><a class="nav-link px-3" href="vikjittsal.html">វិចិត្រសាល</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
                     </ul>
                 </div>
                 <div class="d-none d-lg-flex align-items-center gap-3">
-                    <button id="theme-toggle" class="btn btn-link text-white p-0 border-0 fs-5"
-                        title="ផ្លាស់ប្តូរពន្លឺ">
-                        <i class="bi bi-moon-stars-fill"></i>
-                    </button>
+                    
                     <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
                 </div>
@@ -468,16 +468,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1200, once: true });
-
-        // Theme Toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-mode');
-            document.body.classList.toggle('dark-mode');
-            const icon = themeToggle.querySelector('i');
-            icon.classList.toggle('bi-moon-stars-fill');
-            icon.classList.toggle('bi-sun-fill');
-        });
     </script>
 </body>
 
