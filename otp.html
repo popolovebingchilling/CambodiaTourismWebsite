@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ចូលប្រើប្រាស់ | ទេសចរណ៍កម្ពុជា</title>
+    <title>ផ្ទៀងផ្ទាត់ OTP | ទេសចរណ៍កម្ពុជា</title>
     <!-- HTML CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/login.css">
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
     <!-- BOOTSTRAP THEME  -->
@@ -89,64 +88,47 @@
 
     <main class="bg-mixed auth-wrapper">
         <div class="container d-flex justify-content-center">
-            <div class="auth-card d-flex flex-column flex-md-row">
+            <div class="auth-card d-flex flex-column flex-md-row" style="max-width: 800px;">
                 <!-- Image Side -->
                 <div class="auth-img-side col-md-5">
-                    <h2 class="auth-title text-white mb-3">សូមស្វាគមន៍<span>មកវិញ</span></h2>
-                    <p class="mb-4">សូមស្វាគមន៍មកកាន់គេហទំព័រទេសចរណ៍កម្ពុជា។
-                        សូមចូលប្រើប្រាស់ដើម្បីបន្តដំណើរកម្សាន្តរបស់អ្នក។</p>
+                    <h2 class="auth-title text-white mb-3">ផ្ទៀងផ្ទាត់<span>គណនី</span></h2>
+                    <p class="mb-4">ដើម្បីសុវត្ថិភាពគណនីរបស់អ្នក សូមធ្វើការផ្ទៀងផ្ទាត់លេខកូដ OTP ។</p>
                     <div class="my-4 text-center">
                         <div class="vignette-wrapper shadow">
                             <img src="assets/image/Siem_Reap/AngkorWat.jpg" alt="Angkor Wat" style="height: 280px; width: 180px; object-fit: cover; display: block;">
                         </div>
                     </div>
                     <div class="mt-auto">
-                        <p class="small">មិនទាន់មានគណនីមែនទេ?</p>
-                        <a href="register.html" class="btn btn-outline-light rounded-pill px-4">ចុះឈ្មោះឥឡូវនេះ</a>
+                        <a href="login.html" class="btn btn-outline-light rounded-pill px-4"><i
+                                class="fas fa-arrow-left me-2"></i> ត្រឡប់ទៅការចូលប្រើ</a>
                     </div>
                 </div>
                 <!-- Form Side -->
                 <div class="auth-form-side col-md-7">
                     <div class="mb-4">
-                        <h3 class="auth-title mb-1">ចូលប្រើ<span>ប្រាស់</span></h3>
-                        <p class="text-white-50">ចូលប្រើប្រាស់គណនីរបស់អ្នក</p>
+                        <h3 class="auth-title mb-1">បញ្ចូលលេខកូដ <span>OTP</span></h3>
+                        <p class="text-white-50">យើងបានផ្ញើលេខកូដ ៦ ខ្ទង់ទៅកាន់អ៊ីម៉ែលរបស់អ្នក។</p>
                     </div>
                     <form action="index.html">
-                        <div class="mb-3">
-                            <label for="email" class="form-label">អាសយដ្ឋានអ៊ីម៉ែល</label>
-                            <input type="email" class="form-control" id="email" placeholder="បញ្ចូលអ៊ីមែលរបស់អ្នក"
-                                required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">ពាក្យសម្ងាត់</label>
-                            <div class="password-field-wrapper mb-2">
-                                <input type="password" class="form-control" id="password"
-                                    placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
-                                <button type="button" class="password-toggle" id="togglePassword">
-                                    <i class="fas fa-eye-slash"></i>
-                                </button>
+                        <div class="mb-4">
+                            <label class="form-label">លេខកូដបញ្ជាក់ (OTP)</label>
+                            <div class="d-flex gap-2 justify-content-between">
+                                <input type="text" class="form-control text-center fs-4 fw-bold" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                <input type="text" class="form-control text-center fs-4 fw-bold" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                <input type="text" class="form-control text-center fs-4 fw-bold" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                <input type="text" class="form-control text-center fs-4 fw-bold" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                <input type="text" class="form-control text-center fs-4 fw-bold" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                <input type="text" class="form-control text-center fs-4 fw-bold" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
                             </div>
-                            <div class="d-flex justify-content-between align-items-center mb-4 mt-2">
-                                <div class="form-check mb-0">
-                                    <input type="checkbox" class="form-check-input" id="remember">
-                                    <label class="form-check-label small text-white-50" for="remember">ចងចាំខ្ញុំ</label>
-                                </div>
-                                <a href="forgot-password.html" class="small auth-link">ភ្លេចពាក្យសម្ងាត់?</a>
+                            <div class="text-end mt-2">
+                                <a href="#" class="small auth-link">ផ្ញើលេខកូដឡើងវិញ</a>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-auth mb-4">ចូលប្រើ</button>
-
-                        <div class="text-center">
-                            <p class="small text-white-50 mb-3">ឬចូលប្រើជាមួយ</p>
-                            <div class="social-auth">
-                                <a href="#" class="btn-social"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="btn-social"><i class="fab fa-google"></i></a>
-                                <a href="#" class="btn-social"><i class="fab fa-apple"></i></a>
-                            </div>
-                        </div>
+                        <button type="submit" class="btn btn-auth mb-4">បញ្ជាក់ និង បន្ត</button>
                     </form>
-                    <div class="mt-5 text-center d-md-none">
-                        <p class="small">មិនទាន់មានគណនីមែនទេ? <a href="register.html" class="auth-link">ចុះឈ្មោះ</a></p>
+                    <div class="mt-4 text-center">
+                        <p class="small text-white-50">ចងចាំពាក្យសម្ងាត់មែនទេ? <a href="login.html"
+                                class="auth-link">ចូលប្រើប្រាស់</a></p>
                     </div>
                 </div>
             </div>
@@ -256,23 +238,6 @@
 
     <!-- BOOTSTRAP JAVA -->
     <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        const togglePassword = document.querySelector('#togglePassword');
-        const password = document.querySelector('#password');
-
-        togglePassword.addEventListener('click', function (e) {
-            // toggle the type attribute
-            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-            password.setAttribute('type', type);
-            // toggle the eye slash icon
-            const icon = this.querySelector('i');
-            if (icon.classList.contains('fa-eye-slash')) {
-                icon.classList.replace('fa-eye-slash', 'fa-eye');
-            } else {
-                icon.classList.replace('fa-eye', 'fa-eye-slash');
-            }
-        });
-    </script>
 </body>
 
 </html>

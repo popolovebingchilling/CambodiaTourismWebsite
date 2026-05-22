@@ -5,363 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>វិចិត្រសាលរូបភាព - ទេសចរណ៍កម្ពុជា</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* REVEAL */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity .7s ease, transform .7s ease
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0)
-        }
-
-        /* HERO */
-        .gallery-hero {
-            height: 60vh;
-            background: linear-gradient(rgba(0, 0, 0, .55), rgba(74, 28, 0, .65)),
-                url('https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=1600&q=80') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .gallery-hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: linear-gradient(transparent, var(--sand-whisper))
-        }
-
-        /* SHARED */
-        .section-label {
-            font-size: .75rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--desert-terracotta);
-            font-weight: 600
-        }
-
-        .section-title-km {
-            font-family: "Kantumruy Pro", sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--deep-mahogany)
-        }
-
-        /* FILTER TABS */
-        .filter-wrap {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 40px
-        }
-
-        .ftab {
-            background: white;
-            border: 1.5px solid #e8ddd0;
-            border-radius: 30px;
-            padding: 8px 20px;
-            font-size: .85rem;
-            color: var(--night-indigo);
-            cursor: pointer;
-            transition: all .25s;
-            font-family: "Kantumruy Pro", sans-serif;
-        }
-
-        .ftab.active,
-        .ftab:hover {
-            background: var(--desert-terracotta);
-            border-color: var(--desert-terracotta);
-            color: white
-        }
-
-        .ftab .count {
-            background: rgba(0, 0, 0, .1);
-            border-radius: 20px;
-            padding: 1px 7px;
-            font-size: .75rem;
-            margin-left: 4px;
-        }
-
-        .ftab.active .count {
-            background: rgba(255, 255, 255, .25)
-        }
-
-        /* MASONRY */
-        .masonry-grid {
-            columns: 4 280px;
-            column-gap: 14px;
-        }
-
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 14px;
-            border-radius: 14px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            box-shadow: 0 4px 18px rgba(74, 28, 0, .1);
-            transition: transform .35s, box-shadow .35s;
-        }
-
-        .masonry-item:hover {
-            transform: translateY(-5px) scale(1.01);
-            box-shadow: 0 12px 36px rgba(74, 28, 0, .22)
-        }
-
-        .masonry-item img {
-            width: 100%;
-            display: block;
-            transition: transform .5s;
-        }
-
-        .masonry-item:hover img {
-            transform: scale(1.06)
-        }
-
-        .masonry-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(transparent 40%, rgba(44, 26, 14, .82));
-            opacity: 0;
-            transition: opacity .35s;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 16px;
-        }
-
-        .masonry-item:hover .masonry-overlay {
-            opacity: 1
-        }
-
-        .overlay-title {
-            color: white;
-            font-weight: 700;
-            font-size: .95rem;
-            margin-bottom: 2px
-        }
-
-        .overlay-sub {
-            color: rgba(255, 255, 255, .78);
-            font-size: .78rem
-        }
-
-        .overlay-tag {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            background: var(--desert-terracotta);
-            color: white;
-            font-size: .7rem;
-            padding: 3px 10px;
-            border-radius: 20px;
-        }
-
-        .overlay-zoom {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: rgba(255, 255, 255, .2);
-            color: white;
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            backdrop-filter: blur(4px);
-            opacity: 0;
-            transition: opacity .3s;
-        }
-
-        .masonry-item:hover .overlay-zoom {
-            opacity: 1
-        }
-
-        /* STATS BAR */
-        .stats-bar {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(74, 28, 0, .08);
-            padding: 24px 32px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 24px;
-            align-items: center;
-            justify-content: space-around;
-            margin-bottom: 40px;
-        }
-
-        .stat-item {
-            text-align: center
-        }
-
-        .stat-num {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--desert-terracotta)
-        }
-
-        .stat-lbl {
-            font-size: .8rem;
-            color: var(--camel-brown)
-        }
-
-        /* LIGHTBOX */
-        .lightbox {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 9999;
-            background: rgba(0, 0, 0, .92);
-            align-items: center;
-            justify-content: center;
-        }
-
-        .lightbox.open {
-            display: flex
-        }
-
-        .lb-inner {
-            position: relative;
-            max-width: 900px;
-            width: 94vw
-        }
-
-        .lb-img {
-            width: 100%;
-            border-radius: 12px;
-            max-height: 80vh;
-            object-fit: contain
-        }
-
-        .lb-info {
-            color: white;
-            text-align: center;
-            padding: 12px 0 0
-        }
-
-        .lb-title {
-            font-size: 1.1rem;
-            font-weight: 700
-        }
-
-        .lb-sub {
-            font-size: .85rem;
-            opacity: .7;
-            margin-top: 4px
-        }
-
-        .lb-close {
-            position: fixed;
-            top: 20px;
-            right: 24px;
-            background: rgba(255, 255, 255, .15);
-            border: none;
-            color: white;
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: background .2s;
-        }
-
-        .lb-close:hover {
-            background: var(--desert-terracotta)
-        }
-
-        .lb-prev,
-        .lb-next {
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, .12);
-            border: none;
-            color: white;
-            width: 46px;
-            height: 46px;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: background .2s;
-        }
-
-        .lb-prev {
-            left: 16px
-        }
-
-        .lb-next {
-            right: 16px
-        }
-
-        .lb-prev:hover,
-        .lb-next:hover {
-            background: var(--desert-terracotta)
-        }
-
-        /* NO RESULTS */
-        .no-result {
-            text-align: center;
-            padding: 60px;
-            color: var(--camel-brown)
-        }
-
-        .no-result i {
-            font-size: 3rem;
-            opacity: .3;
-            display: block;
-            margin-bottom: 12px
-        }
-
-        /* LOAD MORE */
-        .btn-load {
-            background: white;
-            border: 2px solid var(--desert-terracotta);
-            color: var(--desert-terracotta);
-            border-radius: 50px;
-            padding: 10px 36px;
-            font-weight: 600;
-            transition: all .25s;
-        }
-
-        .btn-load:hover {
-            background: var(--desert-terracotta);
-            color: white
-        }
-
-        @media(max-width:600px) {
-            .masonry-grid {
-                columns: 2 160px;
-                column-gap: 10px
-            }
-
-            .masonry-item {
-                margin-bottom: 10px
-            }
-        }
-    </style>
+    <!-- HTML CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/vijitasal.css">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
+    <!-- BOOTSTRAP THEME  -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <!-- FONT AWESOME FOR ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- BOOTSTRAP ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-
     <!-- NAVBAR -->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
@@ -421,7 +81,7 @@
                     </ul>
                 </div>
                 <div class="d-none d-lg-flex align-items-center gap-3">
-                    
+
                     <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
                 </div>
@@ -438,7 +98,7 @@
             </span>
             <h1
                 style="font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,4rem);text-shadow:0 4px 20px rgba(0,0,0,.4);">
-                រូបភាព<span style="color:var(--golden-spice);">ប្រទេសកម្ពុជា</span>
+                រូបភាព<span style="color:var(--secondary-color);">ប្រទេសកម្ពុជា</span>
             </h1>
             <p style="opacity:.9;font-size:1rem;max-width:520px;margin:0 auto;">
                 ស្វែងរកភាពស្រស់ស្អាតនៃខេត្ត និងប្រជាប្រិយភ្នំពេញ
@@ -447,7 +107,7 @@
     </section>
 
     <!-- MAIN -->
-    <section style="padding:70px 0;background:var(--sand-whisper);">
+    <section class="bg-mixed" style="padding:70px 0;">
         <div class="container-fluid px-4">
 
             <!-- STATS -->
@@ -491,7 +151,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer py-5">
         <div class="container">
             <div class="row">
@@ -517,8 +176,8 @@
                 <div class="col-6 col-lg-2 mb-5 mb-lg-0">
                     <h6 class="footer-title">គោលដៅ</h6>
                     <ul class="footer-links">
-                        <li><a href="#">ភ្នំពេញ</a></li>
-                        <li><a href="sr.html">សៀមរាប</a></li>
+                        <li><a href="phnompenh.html">ភ្នំពេញ</a></li>
+                        <li><a href="siem-reap.html">សៀមរាប</a></li>
                         <li><a href="kampot.html">កំពត</a></li>
                         <li><a href="kep.html">កែប</a></li>
                         <li><a href="prea-sihanouk.html">ព្រះសីហនុ</a></li>
@@ -568,9 +227,9 @@
                 <div class="col-lg-2">
                     <h6 class="footer-title">ស្វែងយល់</h6>
                     <ul class="footer-links">
-                        <li><a href="#">វិចិត្រសាល</a></li>
+                        <li><a href="vikjittsal.html">វិចិត្រសាល</a></li>
                         <li><a href="blog.html">ប្លុកទេសចរណ៍</a></li>
-                        <li><a href="#">មតិយោបល់</a></li>
+                        <li><a href="review.html">មតិយោបល់</a></li>
                         <li><a href="map.html">ផែនទី</a></li>
                     </ul>
                 </div>
@@ -592,7 +251,6 @@
             </div>
         </div>
     </footer>
-
     <!-- LIGHTBOX -->
     <div class="lightbox" id="lightbox">
         <button class="lb-close" onclick="closeLB()"><i class="bi bi-x-lg"></i></button>
