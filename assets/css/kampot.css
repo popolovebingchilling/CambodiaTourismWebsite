@@ -25,6 +25,10 @@
     --card-hover-shadow: 0 20px 45px rgba(13, 42, 67, 0.15);
     --card-title: var(--primary-color);
     --card-text: var(--night-indigo);
+    
+    /* Text Variables for Cards */
+    --text-secondary: #6B7280; 
+    --text-tertiary: #9CA3AF; 
 }
 body{
     font-family: "Kantumruy Pro", sans-serif !important;
@@ -67,13 +71,13 @@ body{
             inset: 0 !important;
             background: 
                 /* Top Shadow: Blends page header softly with banner */
-                linear-gradient(to bottom, rgba(7, 18, 28, 0.85) 0%, transparent 22%),
+                linear-gradient(to bottom, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 22%),
                 /* Bottom Shadow: Adds visual depth at viewport lower boundary */
-                linear-gradient(to top, rgba(7, 18, 28, 0.9) 0%, transparent 25%),
+                linear-gradient(to top, rgba(7, 18, 28, 0.9) 0%, rgba(7, 18, 28, 0) 25%),
                 /* Left Shadow: Creates anamorphic matte framing on the left */
-                linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+                linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
                 /* Right Shadow: Creates anamorphic matte framing on the right */
-                linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+                linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
                 /* Central Spotlight: High-contrast vignette centered on Kampot image */
                 radial-gradient(circle at center, rgba(13, 42, 67, 0.15) 0%, rgba(7, 18, 28, 0.5) 50%, rgba(7, 18, 28, 0.75) 100%) !important;
             z-index: 1 !important;
@@ -87,7 +91,7 @@ body{
             left: 0 !important;
             right: 0 !important;
             height: 120px !important;
-            background: linear-gradient(transparent, var(--body-bg)) !important;
+            background: linear-gradient(rgba(13, 42, 67, 0), var(--primary-color)) !important;
             z-index: 2 !important;
             pointer-events: none !important;
         }
@@ -753,8 +757,8 @@ body{
 }
 
 .bg-mixed .image-card p,
-.bg-mixed .image-card span,
-.bg-mixed .image-card div,
+.bg-mixed .image-card span:not(.card-tag):not(.hotel-card-details *),
+.bg-mixed .image-card div:not(.hotel-card-details):not(.hotel-card-details *),
 .bg-mixed .glass-card p,
 .bg-mixed .glass-card span,
 .bg-mixed .glass-card div {
@@ -791,6 +795,56 @@ body{
 .image-card .card-desc {
     flex-grow: 1 !important;
 }
+
+/* Hotel Card Details Structure */
+.hotel-card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--card-border);
+}
+.hotel-card-details .price {
+    color: var(--secondary-color) !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.hotel-card-details .price span {
+    color: var(--text-tertiary) !important;
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+.hotel-card-details .rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-secondary) !important;
+    font-size: 0.9rem;
+}
+.hotel-card-details .rating i {
+    color: #FBBF24 !important;
+}
+
+/* Base tag override for dark sections */
+.bg-mixed .image-card .card-tag,
+.bg-mixed .glass-card .card-tag {
+    color: var(--accent) !important;
+    background: rgba(215, 181, 109, 0.1) !important;
+}
+
+/* Specific Card Tags */
+.bg-mixed .image-card .card-tag.tag-eco,
+.bg-mixed .glass-card .card-tag.tag-eco { background: rgba(59,130,246,0.1) !important; color: #60a5fa !important; }
+
+.bg-mixed .image-card .card-tag.tag-boutique,
+.bg-mixed .glass-card .card-tag.tag-boutique { background: rgba(251,191,36,0.1) !important; color: #fbbf24 !important; }
+
+.bg-mixed .image-card .card-tag.tag-guesthouse,
+.bg-mixed .glass-card .card-tag.tag-guesthouse { background: rgba(244,63,94,0.1) !important; color: #fb7185 !important; }
+
+.bg-mixed .image-card .card-tag.tag-luxury,
+.bg-mixed .glass-card .card-tag.tag-luxury { background: rgba(16,185,129,0.1) !important; color: var(--accent-light) !important; }
 
 .glass-card {
     height: 100% !important;
@@ -841,6 +895,8 @@ body.dark-mode {
     --card-hover-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.6);
     --card-title: #ffffff;
     --card-text: rgba(255, 255, 255, 0.8);
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --text-tertiary: rgba(255, 255, 255, 0.5);
 }
 
 /* Apply Dark Mode specifics to elements */

@@ -69,13 +69,13 @@ body{
             inset: 0 !important;
             background: 
                 /* Top Shadow: Blends page header softly with banner */
-                linear-gradient(to bottom, rgba(7, 18, 28, 0.8) 0%, transparent 22%),
+                linear-gradient(to bottom, rgba(7, 18, 28, 0.8) 0%, rgba(7, 18, 28, 0) 22%),
                 /* Bottom Shadow: Adds visual depth at viewport lower boundary */
-                linear-gradient(to top, rgba(7, 18, 28, 0.9) 0%, transparent 25%),
+                linear-gradient(to top, rgba(7, 18, 28, 0.9) 0%, rgba(7, 18, 28, 0) 25%),
                 /* Left Shadow: Creates anamorphic matte framing on the left */
-                linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+                linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
                 /* Right Shadow: Creates anamorphic matte framing on the right */
-                linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+                linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
                 /* Central Spotlight: High-contrast vignette centered on the banner image */
                 radial-gradient(circle at center, rgba(13, 42, 67, 0.15) 0%, rgba(7, 18, 28, 0.5) 50%, rgba(7, 18, 28, 0.75) 100%) !important;
             z-index: 1 !important;
@@ -618,7 +618,7 @@ body{
 }
 
 /* Keep Attraction Card elements high contrast on their white card background */
-.attraction-card-pp h5 {
+.attraction-card-pp h1, .attraction-card-pp h2, .attraction-card-pp h3, .attraction-card-pp h4, .attraction-card-pp h5, .attraction-card-pp h6 {
     color: var(--primary-color) !important;
 }
 .attraction-card-pp p {
@@ -629,7 +629,7 @@ body{
 }
 
 /* Keep Timeline Card elements readable on their white background */
-.timeline-card h5 {
+.timeline-card h1, .timeline-card h2, .timeline-card h3, .timeline-card h4, .timeline-card h5, .timeline-card h6 {
     color: var(--primary-color) !important;
 }
 .timeline-card p {
@@ -637,7 +637,7 @@ body{
 }
 
 /* Keep Food Card elements readable on their white background */
-.food-card h5 {
+.food-card h1, .food-card h2, .food-card h3, .food-card h4, .food-card h5, .food-card h6 {
     color: var(--primary-color) !important;
 }
 .food-card p {

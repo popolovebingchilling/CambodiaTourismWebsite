@@ -35,7 +35,7 @@ body{
 
         .review-hero {
             height: 55vh;
-            background: linear-gradient(rgba(0, 0, 0, .55), rgba(74, 28, 0, .65)), url('https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?q=80&w=2071&auto=format&fit=crop') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, .55), rgba(74, 28, 0, .65)), url('../image/home-bg.png') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -349,9 +349,13 @@ body{
             background: var(--parchment)
         }
 
-        /* bg-mixed overrides for review page */
         .bg-mixed.review-hero {
-            background: linear-gradient(rgba(0, 0, 0, .55), rgba(74, 28, 0, .65)), url('https://images.unsplash.com/photo-1540959733332-eab4deceeaf7?q=80&w=2071&auto=format&fit=crop') center/cover no-repeat !important;
+            background: linear-gradient(rgba(0, 0, 0, .55), rgba(74, 28, 0, .65)), url('../image/home-bg.png') center/cover no-repeat !important;
+        }
+
+        .bg-mixed .section-title span,
+        .bg-mixed .section-title-km span {
+            color: var(--secondary-color) !important;
         }
 
         .bg-mixed .section-title-km {
@@ -400,7 +404,11 @@ body{
         .bg-mixed .form-label,
         .bg-mixed .bar-label,
         .bg-mixed .bar-count,
-        .bg-mixed .review-tag {
+        .bg-mixed .review-tag,
+        .bg-mixed .user-info span,
+        .bg-mixed .section-badge,
+        .bg-mixed .section-subtitle,
+        .bg-mixed .testi-text {
             color: rgba(255, 255, 255, 0.8) !important;
         }
 
@@ -425,4 +433,19 @@ body{
             background: rgba(255, 255, 255, 0.2) !important;
             color: var(--secondary-color) !important;
             border-color: var(--secondary-color) !important;
+        }
+
+        .bg-mixed.review-hero::after {
+            display: none !important;
+        }
+
+        .bg-mixed .btn-submit {
+            background: var(--secondary-color) !important;
+            color: var(--primary-color) !important;
+            border-color: var(--secondary-color) !important;
+        }
+
+        .bg-mixed .btn-submit:hover {
+            background: transparent !important;
+            color: var(--secondary-color) !important;
         }

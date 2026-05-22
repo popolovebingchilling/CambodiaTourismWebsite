@@ -41,7 +41,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav gap-2">
                         <li class="nav-item">
-                            <a class="nav-link active rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                            <a class="nav-link rounded-pill px-3" href="index.html">ទំព័រដើម</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -73,7 +73,7 @@
                         </li>
 
 
-                        <li class="nav-item"><a class="nav-link px-3" href="vikjittsal.html">វិចិត្រសាល</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 active" href="vikjittsal.html">វិចិត្រសាល</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
@@ -97,7 +97,7 @@
                 📸 វិចិត្រសាល
             </span>
             <h1
-                style="font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,4rem);text-shadow:0 4px 20px rgba(0,0,0,.4);">
+                style="font-size:clamp(2rem,5vw,4rem);text-shadow:0 4px 20px rgba(0,0,0,.4);">
                 រូបភាព<span style="color:var(--secondary-color);">ប្រទេសកម្ពុជា</span>
             </h1>
             <p style="opacity:.9;font-size:1rem;max-width:520px;margin:0 auto;">
@@ -270,60 +270,60 @@
         // ===== PHOTO DATA =====
         const PHOTOS = [
             // សៀមរាប
-            { id: 1, province: 'សៀមរាប', title: 'ប្រាសាទអង្គរវត្ត', sub: 'ពន្លឺព្រះអាទិត្យប្រតាប់', url: 'https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=800&q=80', h: 'tall' },
-            { id: 2, province: 'សៀមរាប', title: 'ប្រាសាទអង្គរធំ', sub: 'មុខចំនួន ២១៦', url: 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800&q=80', h: 'normal' },
-            { id: 3, province: 'សៀមរាប', title: 'ប្រាសាទតាព្រហ្ម', sub: 'ព្រៃស្ទាបព័ទ្ធ', url: 'https://images.unsplash.com/photo-1552832538-d1ded64cfcd5?w=800&q=80', h: 'tall' },
-            { id: 4, province: 'សៀមរាប', title: 'ព្រះអាទិត្យលិច', sub: 'អង្គរវត្ត', url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80', h: 'normal' },
-            { id: 5, province: 'សៀមរាប', title: 'អ្នកស្រុក', sub: 'វប្បធម៌ខ្មែរ', url: 'https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=800&q=80', h: 'normal' },
-            { id: 6, province: 'សៀមរាប', title: 'បឹងទន្លេសាប', sub: 'ជីវិតក្នុងទឹក', url: 'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80', h: 'tall' },
+            { id: 1, province: 'សៀមរាប', title: 'ប្រាសាទអង្គរវត្ត', sub: 'ពន្លឺព្រះអាទិត្យប្រតាប់', url: 'assets/image/Siem_Reap/AngkorWat.jpg', h: 'tall' },
+            { id: 2, province: 'សៀមរាប', title: 'ប្រាសាទអង្គរធំ', sub: 'មុខចំនួន ២១៦', url: 'assets/image/Siem_Reap/angkorthom.jpg', h: 'normal' },
+            { id: 3, province: 'សៀមរាប', title: 'ប្រាសាទតាព្រហ្ម', sub: 'ព្រៃស្ទាបព័ទ្ធ', url: 'assets/image/Siem_Reap/bayon.png', h: 'tall' },
+            { id: 4, province: 'សៀមរាប', title: 'ព្រះអាទិត្យលិច', sub: 'អង្គរវត្ត', url: 'assets/image/Siem_Reap/sunrise.png', h: 'normal' },
+            { id: 5, province: 'សៀមរាប', title: 'អ្នកស្រុក', sub: 'វប្បធម៌ខ្មែរ', url: 'assets/image/Siem_Reap/Tonle sap.png', h: 'normal' },
+            { id: 6, province: 'សៀមរាប', title: 'បឹងទន្លេសាប', sub: 'ជីវិតក្នុងទឹក', url: 'assets/image/Siem_Reap/Gallery 1.jpg', h: 'tall' },
 
             // ភ្នំពេញ
-            { id: 7, province: 'ភ្នំពេញ', title: 'ព្រះបរមរាជវាំង', sub: 'ស្ថាបត្យខ្មែរ', url: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80', h: 'normal' },
-            { id: 8, province: 'ភ្នំពេញ', title: 'ច្រាំងទន្លេ', sub: 'ពន្លឺព្រឹក', url: 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=800&q=80', h: 'tall' },
-            { id: 9, province: 'ភ្នំពេញ', title: 'វិមានឯករាជ្យ', sub: 'ស្ថាបត្យ Naga', url: 'https://images.unsplash.com/photo-1560969184-10fe8719e047?w=800&q=80', h: 'normal' },
-            { id: 10, province: 'ភ្នំពេញ', title: 'ផ្សារថ្មី', sub: 'Art Deco បារាំង', url: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80', h: 'normal' },
-            { id: 11, province: 'ភ្នំពេញ', title: 'ទីក្រុងយប់', sub: 'ភ្ញាំង ភ្នំពេញ', url: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80', h: 'tall' },
-            { id: 12, province: 'ភ្នំពេញ', title: 'ម្ហូបខ្មែរ', sub: 'នំបញ្ចុក អាម៉ុក', url: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80', h: 'normal' },
+            { id: 7, province: 'ភ្នំពេញ', title: 'ព្រះបរមរាជវាំង', sub: 'ស្ថាបត្យខ្មែរ', url: 'assets/image/pp.jpg', h: 'normal' },
+            { id: 8, province: 'ភ្នំពេញ', title: 'ច្រាំងទន្លេ', sub: 'ពន្លឺព្រឹក', url: 'assets/image/independencemoment.jpg', h: 'tall' },
+            { id: 9, province: 'ភ្នំពេញ', title: 'វិមានឯករាជ្យ', sub: 'ស្ថាបត្យ Naga', url: 'assets/image/kohnorea.jpg', h: 'normal' },
+            { id: 10, province: 'ភ្នំពេញ', title: 'ផ្សារថ្មី', sub: 'Art Deco បារាំង', url: 'assets/image/kingdom.jpg', h: 'normal' },
+            { id: 11, province: 'ភ្នំពេញ', title: 'ទីក្រុងយប់', sub: 'ភ្ញាំង ភ្នំពេញ', url: 'assets/image/picture.jpg', h: 'tall' },
+            { id: 12, province: 'ភ្នំពេញ', title: 'ម្ហូបខ្មែរ', sub: 'នំបញ្ចុក អាម៉ុក', url: 'assets/image/independencemoment.jpg', h: 'normal' },
 
             // កំពត
-            { id: 13, province: 'កំពត', title: 'ទីក្រុងកំពត', sub: 'ស្ថាបត្យបារាំង', url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80', h: 'tall' },
-            { id: 14, province: 'កំពត', title: 'ទឹកជ្រោះ Bokor', sub: 'ភ្នំបូករ', url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80', h: 'normal' },
-            { id: 15, province: 'កំពត', title: 'ថ្ម Kamchay', sub: 'ទេសភាពភ្នំ', url: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80', h: 'normal' },
-            { id: 16, province: 'កំពត', title: 'ខ្ទីមកំពត', sub: 'ពីដែនល្បី', url: 'https://images.unsplash.com/photo-1490818387583-1baba5e638af?w=800&q=80', h: 'tall' },
-            { id: 17, province: 'កំពត', title: 'ច្រាំងសមុទ្រ', sub: 'ភ្លៅព្រះអាទិត្យ', url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80', h: 'normal' },
+            { id: 13, province: 'កំពត', title: 'ទីក្រុងកំពត', sub: 'ស្ថាបត្យបារាំង', url: 'assets/image/kompot.jpg', h: 'tall' },
+            { id: 14, province: 'កំពត', title: 'ទឹកជ្រោះ Bokor', sub: 'ភ្នំបូករ', url: 'assets/image/kingdom.jpg', h: 'normal' },
+            { id: 15, province: 'កំពត', title: 'ថ្ម Kamchay', sub: 'ទេសភាពភ្នំ', url: 'assets/image/picture.jpg', h: 'normal' },
+            { id: 16, province: 'កំពត', title: 'ខ្ទីមកំពត', sub: 'ពីដែនល្បី', url: 'assets/image/independencemoment.jpg', h: 'tall' },
+            { id: 17, province: 'កំពត', title: 'ច្រាំងសមុទ្រ', sub: 'ភ្លៅព្រះអាទិត្យ', url: 'assets/image/tonle.jpg', h: 'normal' },
 
             // មណ្ឌលគិរី
-            { id: 18, province: 'មណ្ឌលគិរី', title: 'ទឹកជ្រោះ Bou Sraa', sub: 'ទឹកជ្រោះធំបំផុត', url: 'https://images.unsplash.com/photo-1546587348-d12660c30c50?w=800&q=80', h: 'tall' },
-            { id: 19, province: 'មណ្ឌលគិរី', title: 'ព្រៃ Mondulkiri', sub: 'ខ្ទឹម ដំរី', url: 'https://images.unsplash.com/photo-1516912481808-3406841bd33c?w=800&q=80', h: 'normal' },
-            { id: 20, province: 'មណ្ឌលគិរី', title: 'ដំរី Sanctuary', sub: 'ការពារដំរី', url: 'https://images.unsplash.com/photo-1557050543-4d5f4e07ef46?w=800&q=80', h: 'normal' },
-            { id: 21, province: 'មណ្ឌលគិរី', title: 'ភ្នំខៀវ', sub: 'ទេសភាពដ៏ស្រស់', url: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80', h: 'tall' },
-            { id: 22, province: 'មណ្ឌលគិរី', title: 'ជនជាតិដើម', sub: 'វប្បធម៌ Bunong', url: 'https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=800&q=80', h: 'normal' },
+            { id: 18, province: 'មណ្ឌលគិរី', title: 'ទឹកជ្រោះ Bou Sraa', sub: 'ទឹកជ្រោះធំបំផុត', url: 'assets/image/bou-sra.jpg', h: 'tall' },
+            { id: 19, province: 'មណ្ឌលគិរី', title: 'ព្រៃ Mondulkiri', sub: 'ខ្ទឹម ដំរី', url: 'assets/image/bousra.jpg', h: 'normal' },
+            { id: 20, province: 'មណ្ឌលគិរី', title: 'ដំរី Sanctuary', sub: 'ការពារដំរី', url: 'assets/image/naturelodgeroom.png', h: 'normal' },
+            { id: 21, province: 'មណ្ឌលគិរី', title: 'ភ្នំខៀវ', sub: 'ទេសភាពដ៏ស្រស់', url: 'assets/image/kingdom.jpg', h: 'tall' },
+            { id: 22, province: 'មណ្ឌលគិរី', title: 'ជនជាតិដើម', sub: 'វប្បធម៌ Bunong', url: 'assets/image/picture.jpg', h: 'normal' },
 
             // កែប
-            { id: 23, province: 'កែប', title: 'ច្រាំងសមុទ្រ កែប', sub: 'ភ្ញៀវ ផ្ដែ', url: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80', h: 'tall' },
-            { id: 24, province: 'កែប', title: 'ក្ដាមកែប', sub: 'ម្ហូបសមុទ្រ', url: 'https://images.unsplash.com/photo-1559181567-c3190bba3c78?w=800&q=80', h: 'normal' },
-            { id: 25, province: 'កែប', title: 'កោះអន្ទ', sub: 'ដើរទូក', url: 'https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=800&q=80', h: 'normal' },
-            { id: 26, province: 'កែប', title: 'ព្រះអាទិត្យលិច', sub: 'ច្រាំងសមុទ្រ', url: 'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=800&q=80', h: 'tall' },
+            { id: 23, province: 'កែប', title: 'ច្រាំងសមុទ្រ កែប', sub: 'ភ្ញៀវ ផ្ដែ', url: 'assets/image/kingdom.jpg', h: 'tall' },
+            { id: 24, province: 'កែប', title: 'ក្ដាមកែប', sub: 'ម្ហូបសមុទ្រ', url: 'assets/image/kingdom.jpg', h: 'normal' },
+            { id: 25, province: 'កែប', title: 'កោះអន្ទ', sub: 'ដើរទូក', url: 'assets/image/picture.jpg', h: 'normal' },
+            { id: 26, province: 'កែប', title: 'ព្រះអាទិត្យលិច', sub: 'ច្រាំងសមុទ្រ', url: 'assets/image/independencemoment.jpg', h: 'tall' },
 
             // ព្រះសីហនុ
-            { id: 27, province: 'ព្រះសីហនុ', title: 'ឆ្នេរ Ochheuteal', sub: 'ខ្សាច់ស ទឹកថ្លា', url: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80', h: 'normal' },
-            { id: 28, province: 'ព្រះសីហនុ', title: 'ព្រះអាទិត្យលិច', sub: 'ឆ្នេរ ព្រះសីហនុ', url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80', h: 'tall' },
-            { id: 29, province: 'ព្រះសីហនុ', title: 'ទូកចែវ', sub: 'ផ្ទៃសមុទ្រ', url: 'https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=800&q=80', h: 'normal' },
-            { id: 30, province: 'ព្រះសីហនុ', title: 'ជីវិតឆ្នេរ', sub: 'ភ្ញៀវ ម្ហូប', url: 'https://images.unsplash.com/photo-1559338526-f7ba3b7e8e0e?w=800&q=80', h: 'normal' },
-            { id: 31, province: 'ព្រះសីហនុ', title: 'កោះរ៉ុង', sub: 'ទឹកថ្លា ត្រជាក់', url: 'https://images.unsplash.com/photo-1498503182468-3b51cbb6cb24?w=800&q=80', h: 'tall' },
+            { id: 27, province: 'ព្រះសីហនុ', title: 'ឆ្នេរ Ochheuteal', sub: 'ខ្សាច់ស ទឹកថ្លា', url: 'assets/image/Preah-Sihanouk.jpg', h: 'normal' },
+            { id: 28, province: 'ព្រះសីហនុ', title: 'ព្រះអាទិត្យលិច', sub: 'ឆ្នេរ ព្រះសីហនុ', url: 'assets/image/kohsdach.png', h: 'tall' },
+            { id: 29, province: 'ព្រះសីហនុ', title: 'ទូកចែវ', sub: 'ផ្ទៃសមុទ្រ', url: 'assets/image/kingdom.jpg', h: 'normal' },
+            { id: 30, province: 'ព្រះសីហនុ', title: 'ជីវិតឆ្នេរ', sub: 'ភ្ញៀវ ម្ហូប', url: 'assets/image/picture.jpg', h: 'normal' },
+            { id: 31, province: 'ព្រះសីហនុ', title: 'កោះរ៉ុង', sub: 'ទឹកថ្លា ត្រជាក់', url: 'assets/image/independencemoment.jpg', h: 'tall' },
 
             // កោះកុង
-            { id: 32, province: 'កោះកុង', title: 'ព្រៃឈើកោះកុង', sub: 'ធម្មជាតិច្រើន', url: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80', h: 'normal' },
-            { id: 33, province: 'កោះកុង', title: 'ទឹកជ្រោះ Tatai', sub: 'ព្រំដែន ថៃ', url: 'https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=800&q=80', h: 'tall' },
-            { id: 34, province: 'កោះកុង', title: 'ដំណើរទូក', sub: 'ទន្លេ Tatai', url: 'https://images.unsplash.com/photo-1504916014-cfca8b6f6d76?w=800&q=80', h: 'normal' },
-            { id: 35, province: 'កោះកុង', title: 'ព្រៃ Mangrove', sub: 'ការពារធម្មជាតិ', url: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80', h: 'normal' },
+            { id: 32, province: 'កោះកុង', title: 'ព្រៃឈើកោះកុង', sub: 'ធម្មជាតិច្រើន', url: 'assets/image/kohkong.jpg', h: 'normal' },
+            { id: 33, province: 'កោះកុង', title: 'ទឹកជ្រោះ Tatai', sub: 'ព្រំដែន ថៃ', url: 'assets/image/kongkongresort.jpg', h: 'tall' },
+            { id: 34, province: 'កោះកុង', title: 'ដំណើរទូក', sub: 'ទន្លេ Tatai', url: 'assets/image/hilltopobservatoryroom.png', h: 'normal' },
+            { id: 35, province: 'កោះកុង', title: 'ព្រៃ Mangrove', sub: 'ការពារធម្មជាតិ', url: 'assets/image/kingdom.jpg', h: 'normal' },
 
             // បាត់ដំបង
-            { id: 36, province: 'បាត់ដំបង', title: 'ប្រាសាទអំពិល', sub: 'ប្រាសាទ ១០០០ ជាន់', url: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80', h: 'tall' },
-            { id: 37, province: 'បាត់ដំបង', title: 'ភ្នំសំពៅ', sub: 'ទេសភាព បាត់ដំបង', url: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800&q=80', h: 'normal' },
-            { id: 38, province: 'បាត់ដំបង', title: 'ស្ទឹងសង្កែ', sub: 'ទស្សនីយ ព្រលឹម', url: 'https://images.unsplash.com/photo-1504870712357-65ea720d6078?w=800&q=80', h: 'normal' },
-            { id: 39, province: 'បាត់ដំបង', title: 'ខ្នំ Phnom Sampeau', sub: 'ប្រវត្តិ ទេសភាព', url: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80', h: 'tall' },
-            { id: 40, province: 'បាត់ដំបង', title: 'ក្បាច់ស្ងោរ', sub: 'ចំណេះ ខ្មែរ', url: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&q=80', h: 'normal' },
+            { id: 36, province: 'បាត់ដំបង', title: 'ប្រាសាទអំពិល', sub: 'ប្រាសាទ ១០០០ ជាន់', url: 'assets/image/battambang-real.png', h: 'tall' },
+            { id: 37, province: 'បាត់ដំបង', title: 'ភ្នំសំពៅ', sub: 'ទេសភាព បាត់ដំបង', url: 'assets/image/picture.jpg', h: 'normal' },
+            { id: 38, province: 'បាត់ដំបង', title: 'ស្ទឹងសង្កែ', sub: 'ទស្សនីយ ព្រលឹម', url: 'assets/image/kingdom.jpg', h: 'normal' },
+            { id: 39, province: 'បាត់ដំបង', title: 'ខ្នំ Phnom Sampeau', sub: 'ប្រវត្តិ ទេសភាព', url: 'assets/image/picture.jpg', h: 'tall' },
+            { id: 40, province: 'បាត់ដំបង', title: 'ក្បាច់ស្ងោរ', sub: 'ចំណេះ ខ្មែរ', url: 'assets/image/independencemoment.jpg', h: 'normal' },
         ];
 
         const PROVINCES = ['ទាំងអស់', 'សៀមរាប', 'ភ្នំពេញ', 'កំពត', 'មណ្ឌលគិរី', 'កែប', 'ព្រះសីហនុ', 'កោះកុង', 'បាត់ដំបង'];
