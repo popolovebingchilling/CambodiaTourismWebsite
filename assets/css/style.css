@@ -1134,9 +1134,11 @@ body.dark-mode .section-subtitle {
     padding: 50px 0 !important;
 }
 .auth-card{
-    background: white !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 20px !important;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+    backdrop-filter: blur(10px) !important;
     overflow: hidden !important;
     width: 100% !important;
     max-width: 900px !important;
@@ -1153,23 +1155,49 @@ body.dark-mode .section-subtitle {
     color: white !important;
     text-align: center !important;
 }
+.vignette-wrapper {
+    position: relative !important;
+    display: inline-block !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+}
+.vignette-wrapper::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.6) 100%) !important;
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.7) !important;
+    pointer-events: none !important;
+}
 .auth-form-side{
     padding: 50px !important;
+    color: white !important;
 }
 .auth-title{
     font-family: "Kantumruy Pro", sans-serif !important;
-    color: var(--primary-color) !important;
+    color: white !important;
     font-weight: 700 !important;
 }
+.auth-title span {
+    color: var(--secondary-color) !important;
+}
 .form-label{
-    color: var(--night-indigo) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
     font-weight: 600 !important;
     font-size: 14px !important;
 }
 .form-control{
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
     padding: 12px 15px !important;
     border-radius: 10px !important;
-    border: 1px solid #ddd !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
 }
 .form-control:focus{
     box-shadow: 0 0 0 3px rgba(192, 98, 42, 0.25) !important;
@@ -1203,17 +1231,21 @@ body.dark-mode .section-subtitle {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    border: 1px solid #ddd !important;
-    color: var(--night-indigo) !important;
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
     transition: 0.3s !important;
     text-decoration: none !important;
 }
 .btn-social:hover{
-    background-color: var(--sand-whisper) !important;
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    border-color: var(--secondary-color) !important;
 }
 .auth-link{
     text-decoration: none !important;
     font-weight: 600 !important;
+    color: var(--secondary-color) !important;
 }
 .auth-link:hover{
     color: var(--angkor-stone) !important;
@@ -1304,7 +1336,7 @@ body.dark-mode .section-subtitle {
     top: 50% !important;
     transform: translateY(-50%) !important;
     cursor: pointer !important;
-    color: var(--camel-brown) !important;
+    color: white !important;
     z-index: 10 !important;
     background: none !important;
     border: none !important;

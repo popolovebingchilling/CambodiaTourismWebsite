@@ -361,3 +361,68 @@ body{
         .bg-mixed .empty-state {
             color: rgba(255, 255, 255, 0.75) !important;
         }
+
+        .bg-mixed .rating-overview,
+        .bg-mixed .form-card,
+        .bg-mixed .review-card,
+        .bg-mixed .testimonial-card {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            backdrop-filter: blur(10px) !important;
+            color: white !important;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2) !important;
+        }
+
+        .bg-mixed .filter-tab {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+        }
+
+        .bg-mixed .form-control,
+        .bg-mixed .form-select {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+            color: white !important;
+        }
+
+        .bg-mixed .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        .bg-mixed .form-select option {
+            background: var(--primary-color) !important;
+            color: white !important;
+        }
+
+        .bg-mixed p,
+        .bg-mixed h6,
+        .bg-mixed .form-label,
+        .bg-mixed .bar-label,
+        .bg-mixed .bar-count,
+        .bg-mixed .review-tag {
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+
+        .bg-mixed .fw-bold,
+        .bg-mixed .fw-semibold {
+            color: white !important;
+        }
+
+        .bg-mixed .section-label,
+        .bg-mixed .big-score {
+            color: var(--secondary-color) !important;
+        }
+
+        .bg-mixed .like-btn {
+            background: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+            color: rgba(255, 255, 255, 0.8) !important;
+        }
+        
+        .bg-mixed .like-btn:hover,
+        .bg-mixed .like-btn.liked {
+            background: rgba(255, 255, 255, 0.2) !important;
+            color: var(--secondary-color) !important;
+            border-color: var(--secondary-color) !important;
+        }

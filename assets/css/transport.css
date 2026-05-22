@@ -12,6 +12,15 @@
     --night-indigo:      #1A365D;
     --camel-brown:       #8D6E63;
     --dark-oud:          #07121C;
+    
+    --card-bg:           white;
+    --card-border:       rgba(0, 0, 0, 0.05);
+    --card-shadow:       0 15px 35px rgba(0, 0, 0, 0.05);
+    --card-hover-bg:     white;
+    --card-hover-border: var(--secondary-color);
+    --card-hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    --card-title:        var(--primary-color);
+    --card-text:         var(--night-indigo);
 }
 body{
     font-family: "Kantumruy Pro", sans-serif !important;
@@ -124,7 +133,7 @@ body{
         }
 
         .hero-title span {
-            color: var(--golden-spice);
+            color: var(--secondary-color);
         }
 
         .hero-subtitle {
@@ -206,6 +215,11 @@ body{
             line-height: 1.3;
         }
 
+        .section-title span {
+            color: var(--secondary-color);
+        }
+
+
         .section-desc {
             font-size: 0.95rem;
             color: var(--card-text);
@@ -227,6 +241,8 @@ body{
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             overflow: hidden;
             height: 100%;
+            display: flex;
+            flex-direction: column;
             opacity: 0;
             transform: translateY(30px);
         }
@@ -313,6 +329,9 @@ body{
 
         .card-body-content {
             padding: 0.25rem 1.75rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
         .card-title-text {
@@ -335,6 +354,7 @@ body{
             color: var(--card-text);
             line-height: 1.8;
             margin-bottom: 1.15rem;
+            text-align: justify;
         }
 
         /* Sub-section titles inside cards */
@@ -514,6 +534,7 @@ body{
             font-size: 0.82rem;
             color: var(--angkor-stone);
             line-height: 1.65;
+            margin-top: auto;
         }
 
         .card-warning i {
@@ -609,6 +630,8 @@ body{
             box-shadow: var(--card-shadow);
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             height: 100%;
+            display: flex;
+            flex-direction: column;
             opacity: 0;
             transform: translateY(30px);
         }
@@ -670,6 +693,7 @@ body{
             color: var(--card-text);
             line-height: 1.75;
             margin-bottom: 1rem;
+            text-align: justify;
         }
 
         .company-detail-grid {
@@ -734,11 +758,22 @@ body{
             box-shadow: var(--card-shadow);
             opacity: 0;
             transform: translateY(30px);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .detail-card.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        .detail-card:hover {
+            background: var(--card-hover-bg);
+            border-color: var(--card-hover-border);
+            box-shadow: var(--card-hover-shadow);
+            transform: translateY(-4px);
         }
 
         .detail-card h4 {
