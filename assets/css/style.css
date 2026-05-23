@@ -12,6 +12,9 @@
     --night-indigo:      #1A365D;
     --camel-brown:       #8D6E63;
     --dark-oud:          #07121C;
+    --deep-mahogany:     var(--primary-color);
+    --desert-terracotta: var(--secondary-color);
+    --amber-dune:        var(--secondary-color);
 }
 .text-primary-color {
     color: var(--primary-color) !important;
@@ -290,7 +293,7 @@ body.dark-mode .destinations-section {
     font-family: "Kantumruy Pro", sans-serif !important;
     font-size: clamp(28px, 4vw, 42px) !important;
     font-weight: 800 !important;
-    color: var(--primary-color) !important;
+    color: white !important;
     margin-top: 15px !important;
 }
 body.dark-mode .section-title {
@@ -309,7 +312,7 @@ body.dark-mode .section-title {
     max-width: 600px !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    color: var(--night-indigo) !important;
+    color: white !important;
     opacity: 0.7 !important;
     font-size: 16px !important;
 }
@@ -418,7 +421,7 @@ body.dark-mode .section-subtitle {
     transition: 0.3s !important;
 }
 .btn-explore:hover {
-    color: white !important;
+    color: var(--sand-whisper) !important;
 }
 .destination-card:hover {
     transform: translateY(-10px) !important;
@@ -1019,6 +1022,12 @@ body.dark-mode .section-subtitle {
     margin-bottom: 15px !important;
     font-size: 15px !important;
     opacity: 0.85 !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.footer-contact-item span,
+.footer-contact-item div {
+    color: rgba(255, 255, 255, 0.7) !important;
 }
 
 .footer-contact-item i {
@@ -1595,9 +1604,10 @@ body.dark-mode .section-subtitle {
     padding: 10px 20px !important;
     border-radius: 10px !important;
     transition: 0.3s !important;
+    background-color: transparent !important;
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover, .dropdown-item.active, .dropdown-item:active {
     background: rgba(197, 160, 89, 0.2) !important;
     color: var(--secondary-color) !important;
     padding-left: 25px !important;
@@ -1793,4 +1803,31 @@ body.dark-mode .section-subtitle {
 img.img-fluid:not(.logo), img.feature-img, img.img-food, img.attraction-img, img.lodge-premium-img, img.cultural-card-img {
     -webkit-mask-image: radial-gradient(ellipse at center, black 65%, rgba(0,0,0,0.15) 100%) !important;
     mask-image: radial-gradient(ellipse at center, black 65%, rgba(0,0,0,0.15) 100%) !important;
+}
+
+
+/* ========================================================
+   PROVINCE CINEMATIC VIGNETTE OVERLAY (No White Halo)
+   ======================================================== */
+.cinematic-vignette-overlay {
+    position: relative !important;
+}
+
+.cinematic-vignette-overlay::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: 
+        linear-gradient(to bottom, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 22%),
+        linear-gradient(to top, rgba(7, 18, 28, 0.95) 0%, rgba(7, 18, 28, 0) 25%),
+        linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
+        linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
+        radial-gradient(circle at center, rgba(13, 42, 67, 0.15) 0%, rgba(7, 18, 28, 0.5) 50%, rgba(7, 18, 28, 0.75) 100%) !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+.cinematic-vignette-overlay > * {
+    position: relative;
+    z-index: 3 !important;
 }

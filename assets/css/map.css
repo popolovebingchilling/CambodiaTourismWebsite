@@ -1,11 +1,15 @@
 /* map.css - Modern Grid Style */
 .map-hero {
     position: relative;
-    padding: 140px 0 80px;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('../image/battambang.jpg') center/cover no-repeat;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('../image/home-bg.png') center/cover no-repeat;
     color: white;
     text-align: center;
-    margin-top: -86px;
+    overflow: hidden;
     z-index: 1;
 }
 
@@ -132,7 +136,7 @@
 
 /* Dark mode overrides */
 body.dark-mode .map-hero {
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('../image/battambang.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('../image/home-bg.png') center/cover no-repeat;
 }
 
 body.dark-mode .map-info-card {

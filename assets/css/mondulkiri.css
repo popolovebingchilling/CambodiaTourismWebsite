@@ -69,15 +69,15 @@ body{
     inset: 0 !important;
     background: 
         /* Top Shadow: Blends page header softly with banner */
-        linear-gradient(to bottom, rgba(7, 18, 28, 0.85) 0%, transparent 22%),
+        linear-gradient(to bottom, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 22%),
         /* Bottom Shadow: Adds visual depth at viewport lower boundary */
-        linear-gradient(to top, rgba(7, 18, 28, 0.95) 0%, transparent 25%),
+        linear-gradient(to top, rgba(7, 18, 28, 0.95) 0%, rgba(7, 18, 28, 0) 25%),
         /* Left Shadow: Creates anamorphic matte framing on the left */
-        linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+        linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
         /* Right Shadow: Creates anamorphic matte framing on the right */
-        linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, transparent 20%),
+        linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
         /* Central Spotlight: High-contrast vignette centered on image */
-        radial-gradient(circle at center, rgba(13, 42, 67, 0.65) 0%, rgba(7, 18, 28, 0.8) 50%, rgba(7, 18, 28, 0.95) 100%) !important;
+        radial-gradient(circle at center, rgba(13, 42, 67, 0.15) 0%, rgba(7, 18, 28, 0.5) 50%, rgba(7, 18, 28, 0.75) 100%) !important;
     z-index: 1 !important;
     pointer-events: none !important;
 }
@@ -89,7 +89,7 @@ body{
     left: 0 !important;
     right: 0 !important;
     height: 120px !important;
-    background: linear-gradient(transparent, var(--primary-color)) !important;
+    background: linear-gradient(rgba(13, 42, 67, 0), var(--primary-color)) !important;
     z-index: 2 !important;
     pointer-events: none !important;
 }

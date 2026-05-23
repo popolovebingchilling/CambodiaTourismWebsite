@@ -39,7 +39,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav gap-2">
                         <li class="nav-item">
-                            <a class="nav-link active rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                            <a class="nav-link rounded-pill px-3" href="index.html">ទំព័រដើម</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -72,7 +72,7 @@
 
 
                         <li class="nav-item"><a class="nav-link px-3" href="vikjittsal.html">វិចិត្រសាល</a></li>
-                        <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
+                        <li class="nav-item"><a class="nav-link px-3 active" href="blog.html">ប្លុក</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
                         <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
@@ -88,17 +88,20 @@
     </header>
 
     <main>
+        <!-- ── Blog Hero Section ── -->
+        <section class="blog-hero">
+            <div class="blog-hero-content text-center text-white" data-aos="fade-up">
+                <span class="badge rounded-pill px-3 py-2 mb-3 shadow-sm" style="background-color: var(--primary-color) !important;">រឿងរ៉ាវធ្វើដំណើរ</span>
+                <h1 class="display-3 fw-bold mb-3">
+                    <span style="color: white;">ស្វែងយល់ពី</span><span style="color: var(--secondary-color);">កម្ពុជា</span>
+                </h1>
+                <p class="lead opacity-75 fs-5 mx-auto" style="max-width: 700px;">រុករកនូវរឿងរ៉ាវពិត បទពិសោធន៍ធ្វើដំណើរ និងការណែនាំដ៏ល្អបំផុតពីអ្នកជំនាញទេសចរណ៍ក្នុងតំបន់។</p>
+            </div>
+        </section>
+
         <!-- ── Bento Hero Section ── -->
-        <section class="bg-mixed py-5 pt-lg-5 pb-lg-5">
-            <div class="container pt-5 mt-4">
-                <div class="text-center mb-5" data-aos="fade-down">
-                    <span class="badge bg-secondary text-white mb-3 px-4 py-2 rounded-pill shadow-sm"
-                        style="background: var(--secondary-color) !important; color: var(--primary-color) !important;">រឿងរ៉ាវធ្វើដំណើរ</span>
-                    <h1 class="display-3 fw-bold text-dark">ស្វែងយល់ពី <span class="text-primary-color"
-                            style="color: var(--secondary-color) !important;">កម្ពុជា</span></h1>
-                    <p class="text-muted fs-5 mt-3">រុករកនូវរឿងរ៉ាវពិត បទពិសោធន៍ធ្វើដំណើរ
-                        និងការណែនាំដ៏ល្អបំផុតពីអ្នកជំនាញទេសចរណ៍ក្នុងតំបន់។</p>
-                </div>
+        <section class="bg-mixed pb-5">
+            <div class="container pt-5">
 
                 <div class="bento-hero-grid">
                     <!-- Main Large Featured Post (Left, spans 2 columns, 2 rows) -->
@@ -141,9 +144,9 @@
         <section class="bg-mixed blog-grid-section py-5">
             <div class="container">
                 <div class="text-center mb-5" data-aos="fade-up">
-                    <span class="badge bg-secondary text-white mb-2 px-3 py-2 rounded-pill">អត្ថបទថ្មីៗ</span>
-                    <h2 class="display-5 fw-bold text-dark">រឿងរ៉ាវសម្រស់កម្ពុជា</h2>
-                    <p class="text-muted">ស្វែងយល់ពីកម្ពុជាតាមរយៈអត្ថបទដែលបានរៀបចំយ៉ាងសម្រិតសម្រាំង</p>
+                    <span class="badge mb-2 px-3 py-2 rounded-pill shadow-sm" style="background-color: var(--secondary-color) !important; color: var(--primary-color) !important;">អត្ថបទថ្មីៗ</span>
+                    <h2 class="display-5 fw-bold text-white">រឿងរ៉ាវសម្រស់<span style="color: var(--secondary-color);">កម្ពុជា</span></h2>
+                    <p class="text-white opacity-75">ស្វែងយល់ពីកម្ពុជាតាមរយៈអត្ថបទដែលបានរៀបចំយ៉ាងសម្រិតសម្រាំង</p>
                 </div>
 
                 <div class="row g-4">
@@ -325,7 +328,7 @@
                             <form class="d-flex gap-2">
                                 <input type="email" class="form-control form-control-lg rounded-pill px-4 border-0"
                                     placeholder="អាសយដ្ឋានអ៊ីមែលរបស់អ្នក..." required>
-                                <button type="submit" class="btn rounded-pill px-4 fw-bold shadow-sm"
+                                <button type="submit" class="btn rounded-pill px-4 fw-bold shadow-sm text-nowrap"
                                     style="background: var(--secondary-color); color: var(--primary-color);">ចុះឈ្មោះ</button>
                             </form>
                         </div>
