@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0D2A43;
+    --secondary-color: #D7B56D;
+    --angkor-stone: #5D4037;
+    --golden-spice: #E5C58B;
+    --parchment: #F8F9FA;
+    --sand-whisper: #FAF9F6;
+    --night-indigo: #020d1e;
+    --camel-brown: #8D6E63;
+    --dark-oud: #07121C;
+}
+
+body {
+    font-family: "Kantumruy Pro", sans-serif !important;
+    background-color: var(--sand-whisper) !important;
+    color: var(--night-indigo) !important;
+}
+
+.sidebar {
+    width: 280px !important;
+    min-height: 100vh !important;
+    background: rgba(92, 88, 88, 0.286) !important;
+    border-right: 1px solid #eee !important;
+    border-radius: 20px !important;
+    margin-top: 30px !important;
+}
+
+.logo {
+    font-size: 26px !important;
+    font-weight: 700 !important;
+    color: #2563eb !important;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.6) !important;
+    border-radius: 25px !important;
+    padding: 30px !important;
+    text-align: center !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+.profile-img {
+    width: 110px !important;
+    height: 110px !important;
+    border-radius: 50% !important;
+    background: linear-gradient(135deg, #2563eb, #4f8cff) !important;
+    color: white !important;
+    font-size: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: auto !important;
+    font-weight: bold !important;
+}
+
+.menu a {
+    text-decoration: none !important;
+    color: #c4bcbc !important;
+    padding: 14px 18px !important;
+    display: block !important;
+    border-radius: 14px !important;
+    margin-bottom: 10px !important;
+    transition: 0.3s !important;
+    font-weight: 500 !important;
+}
+
+.menu a:hover,
+.menu .active {
+    background: #2563eb !important;
+    color: white !important;
+}
+
+.main-content {
+    flex: 1 !important;
+    padding: 30px !important;
+}
+
+.top-banner {
+    background: linear-gradient(135deg, #2564eb3c, #4f8cff) !important;
+    border-radius: 30px !important;
+    padding: 35px !important;
+    color: white !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.top-banner::before {
+    content: '' !important;
+    position: absolute !important;
+    width: 300px !important;
+    height: 300px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 50% !important;
+    right: -100px !important;
+    top: -100px !important;
+}
+
+.banner-profile {
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 50% !important;
+    background: white !important;
+    color: #2563eb !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 32px !important;
+    font-weight: bold !important;
+}
+
+.custom-card {
+    background: rgba(255, 255, 255, 0.395) !important;
+    border-radius: 25px !important;
+    padding: 30px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    height: 100% !important;
+}
+
+.custom-card h4 {
+    margin-bottom: 25px !important;
+    font-weight: 600 !important;
+}
+
+.form-control,
+.form-select {
+    border-radius: 14px !important;
+    padding: 12px !important;
+}
+
+.btn-primary {
+    background: #2563eb !important;
+    border: none !important;
+    border-radius: 14px !important;
+    padding: 12px 24px !important;
+}
+
+.btn-outline-primary {
+    border-radius: 14px !important;
+    padding: 12px 24px !important;
+}
+
+.logout-btn {
+    border: 1px solid #ff4d4f !important;
+    color: #ff4d4f !important;
+    border-radius: 14px !important;
+    padding: 12px !important;
+    width: 100% !important;
+    background: white !important;
+    transition: 0.3s !important;
+}
+
+.logout-btn:hover {
+    background: #ff4d4f !important;
+    color: white !important;
+}
+
+.info-item {
+    border-bottom: 1px solid #eee !important;
+    padding: 15px 0 !important;
+}
+
+.info-item:last-child {
+    border-bottom: none !important;
+}
+
+@media(max-width: 992px) {
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+}
