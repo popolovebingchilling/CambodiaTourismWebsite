@@ -53,24 +53,14 @@ header {
 
         /* HERO */
         .gallery-hero {
-            height: 60vh;
+            height: 55vh;
             background: linear-gradient(rgba(0, 0, 0, .55), rgba(74, 28, 0, .65)),
-                url('https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?w=1600&q=80') center/cover no-repeat;
+                url('../image/home-bg.png') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             overflow: hidden;
-        }
-
-        .gallery-hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: linear-gradient(transparent, var(--sand-whisper))
         }
 
         /* SHARED */

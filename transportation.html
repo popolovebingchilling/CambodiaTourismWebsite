@@ -40,7 +40,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                     <ul class="navbar-nav gap-2">
                         <li class="nav-item">
-                            <a class="nav-link active rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                            <a class="nav-link rounded-pill px-3" href="index.html">ទំព័រដើម</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -59,14 +59,14 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle px-3" href="#" role="button"
+                            <a class="nav-link dropdown-toggle px-3 active" href="#" role="button"
                                 data-bs-toggle="dropdown">សេវាកម្ម</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-content dropdown-item" href="hotels.html">សណ្ឋាគារ</a></li>
                                 <li><a class="dropdown-content dropdown-item" href="restaurants.html">ភោជនីយដ្ឋាន</a>
                                 </li>
                                 <li><a class="dropdown-content dropdown-item" href="guide.html">មគ្គុទ្ទេសក៍</a></li>
-                                <li><a class="dropdown-content dropdown-item"
+                                <li><a class="dropdown-content dropdown-item active"
                                         href="transportation.html">ការដឹកជញ្ជូន</a></li>
                             </ul>
                         </li>
@@ -89,40 +89,58 @@
     </header>
 
     <!-- ═══ HERO ═══ -->
-    <section class="bg-mixed hero-section">
-        <div class="hero-dots" id="heroDots"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="bi bi-compass"></i>
-                មគ្គុទ្ទេសក៍ទេសចរណ៍កម្ពុជា
-            </div>
-            <h1 class="hero-title">មធ្យោបាយ<span>ធ្វើដំណើរ</span></h1>
-            <p class="hero-subtitle">
-                ជ្រើសរើសប្រភេទការដឹកជញ្ជូនដែលសមស្របបំផុតសម្រាប់ការធ្វើដំណើររបស់អ្នកទៅកាន់គោលដៅទេសចរណ៍នានា</p>
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <span class="hero-stat-number">៤</span>
-                    <span class="hero-stat-label">ប្រភេទដឹកជញ្ជូនចម្បង</span>
-                </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-number">២៥+</span>
-                    <span class="hero-stat-label">ខេត្តទទួលបាន</span>
-                </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-number">$១</span>
-                    <span class="hero-stat-label">ចាប់ផ្តើមពី</span>
+    <section class="bg-mixed hero-section" id="home">
+        <div class="hero-bg-img">
+            <img src="https://images.ctfassets.net/wv75stsetqy3/1e1cm8WhT3TKwW8lVCDIKb/8aba5693e20be387c12804ba81c5c986/Cambodia.jpg?q=60&fit=fill&fm=webp"
+                class="img-fluid" alt="">
+        </div>
+        <div class="container hero-content text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 d-flex flex-column align-items-center">
+                    <div class="hero-badge fade-up">
+                        <i class="bi bi-compass"></i>
+                        មគ្គុទ្ទេសក៍ទេសចរណ៍កម្ពុជា
+                    </div>
+                    <h1 class="hero-title fade-up delay-1 text-white">
+                        មធ្យោបាយ <span style="color: var(--secondary-color);">ធ្វើដំណើរ</span>
+                    </h1>
+                    <p class="hero-desc fade-up delay-2" style="color: white !important;">
+                        ជ្រើសរើសប្រភេទការដឹកជញ្ជូនដែលសមស្របបំផុតសម្រាប់ការធ្វើដំណើររបស់អ្នកទៅកាន់គោលដៅទេសចរណ៍នានា
+                    </p>
+                    <div class="hero-btns d-flex flex-wrap justify-content-center gap-3 fade-up delay-3">
+                        <a href="#options" class="btn btn-golden">
+                            <i class="bi bi-car-front-fill me-2"></i>ជម្រើសដឹកជញ្ជូន
+                        </a>
+                        <a href="#companies" class="btn btn-outline-warm">
+                            <i class="bi bi-building me-2"></i>ក្រុមហ៊ុនល្បីៗ
+                        </a>
+                    </div>
+                    <div class="hero-stats justify-content-center w-100 fade-up delay-4" style="display: flex; gap: 2.5rem; margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid rgba(215, 181, 109, 0.15);">
+                        <div>
+                            <span class="hero-stat-num" data-count="4" style="font-size: 2rem; font-weight: 700; color: var(--golden-spice); display: block; line-height: 1;">៤</span>
+                            <div class="hero-stat-label" style="font-size: .85rem; color: rgba(248, 249, 250, 0.55); font-weight: 400; margin-top: .35rem;">ប្រភេទដឹកជញ្ជូនចម្បង</div>
+                        </div>
+                        <div>
+                            <span class="hero-stat-num" data-count="25" style="font-size: 2rem; font-weight: 700; color: var(--golden-spice); display: block; line-height: 1;">២៥+</span>
+                            <div class="hero-stat-label" style="font-size: .85rem; color: rgba(248, 249, 250, 0.55); font-weight: 400; margin-top: .35rem;">ខេត្តទទួលបាន</div>
+                        </div>
+                        <div>
+                            <span class="hero-stat-num" data-count="1" style="font-size: 2rem; font-weight: 700; color: var(--golden-spice); display: block; line-height: 1;">$១</span>
+                            <div class="hero-stat-label" style="font-size: .85rem; color: rgba(248, 249, 250, 0.55); font-weight: 400; margin-top: .35rem;">ចាប់ផ្តើមពី</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ═══ TRANSPORT CARDS ═══ -->
-    <section class="bg-mixed transport-section">
+    <section class="bg-mixed transport-section" id="options">
         <div class="container">
             <div class="section-header">
-                <div class="section-label">ជម្រើសដឹកជញ្ជូន</div>
-                <h2 class="section-title">ប្រភេទ<span>មធ្យោបាយធ្វើដំណើរ</span></h2>
-                <p class="section-desc">នេះគឺជាមធ្យោបាយធ្វើដំណើរទាំង ៤ ដែលពេញនិយមបំផុតសម្រាប់ភ្ញៀវទេសចរនៅកម្ពុជា
+                <div class="section-label" style="color: white !important;">ជម្រើសដឹកជញ្ជូន</div>
+                <h2 class="section-title text-white">ប្រភេទ<span style="color: var(--secondary-color);">មធ្យោបាយធ្វើដំណើរ</span></h2>
+                <p class="section-desc" style="color: white !important;">នេះគឺជាមធ្យោបាយធ្វើដំណើរទាំង ៤ ដែលពេញនិយមបំផុតសម្រាប់ភ្ញៀវទេសចរនៅកម្ពុជា
                     ជាមួយព័ត៌មានលម្អិតប្រាកដនូវ</p>
             </div>
             <div class="row g-4">
@@ -543,12 +561,12 @@
     </section>
 
     <!-- ═══ COMPANY SECTION ═══ -->
-    <section class="bg-mixed company-section">
+    <section class="bg-mixed company-section" id="companies">
         <div class="container">
             <div class="section-header">
-                <div class="section-label">ក្រុមហ៊ុនដឹកជញ្ជូន</div>
-                <h2 class="section-title">ក្រុមហ៊ុនល្បី<span>ដែលអ្នកគួរស្គាល់</span></h2>
-                <p class="section-desc">ក្រុមហ៊ុនដឹកជញ្ជូនដែលមានកេរ្តិ៍ឈ្មោះល្អ
+                <div class="section-label" style="color: white !important;">ក្រុមហ៊ុនដឹកជញ្ជូន</div>
+                <h2 class="section-title text-white">ក្រុមហ៊ុនល្បី<span style="color: var(--secondary-color);">ដែលអ្នកគួរស្គាល់</span></h2>
+                <p class="section-desc" style="color: white !important;">ក្រុមហ៊ុនដឹកជញ្ជូនដែលមានកេរ្តិ៍ឈ្មោះល្អ
                     និងផ្តល់សេវាកម្មគុណភាពខ្ពស់ទូទាំងប្រទេសកម្ពុជា</p>
             </div>
 
@@ -728,9 +746,9 @@
     <section class="bg-mixed transport-section">
         <div class="container">
             <div class="section-header">
-                <div class="section-label">មូលហេតុចម្បង</div>
-                <h2 class="section-title">ហេតុអ្វីគួរជ្រើសរើស<span>ការដឹកជញ្ជូនរបស់យើង?</span></h2>
-                <p class="section-desc">យើងប្តេជ្ញាផ្តល់ជូនលោកអ្នកនូវបទពិសោធន៍ធ្វើដំណើរដ៏ល្អបំផុត ប្រកបដោយទំនុកចិត្ត និងសុវត្ថិភាពខ្ពស់</p>
+                <div class="section-label" style="color: white !important;">មូលហេតុចម្បង</div>
+                <h2 class="section-title text-white">ហេតុអ្វីគួរជ្រើសរើស<span style="color: var(--secondary-color);">ការដឹកជញ្ជូនរបស់យើង?</span></h2>
+                <p class="section-desc" style="color: white !important;">យើងប្តេជ្ញាផ្តល់ជូនលោកអ្នកនូវបទពិសោធន៍ធ្វើដំណើរដ៏ល្អបំផុត ប្រកបដោយទំនុកចិត្ត និងសុវត្ថិភាពខ្ពស់</p>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4">
@@ -866,27 +884,9 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script> else {
-            icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
-        }
-        }
-    </script>
+
     <script>
-        // ── Hero Floating Dots ──
-        (function () {
-            var container = document.getElementById('heroDots');
-            for (var i = 0; i < 20; i++) {
-                var dot = document.createElement('div');
-                dot.classList.add('hero-dot');
-                var size = Math.random() * 6 + 3;
-                dot.style.width = size + 'px';
-                dot.style.height = size + 'px';
-                dot.style.left = Math.random() * 100 + '%';
-                dot.style.animationDuration = (Math.random() * 8 + 6) + 's';
-                dot.style.animationDelay = (Math.random() * 6) + 's';
-                container.appendChild(dot);
-            }
-        })();
+
 
         // ── Scroll Reveal ──
         (function () {
