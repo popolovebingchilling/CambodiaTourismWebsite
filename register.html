@@ -111,7 +111,7 @@
                         <h3 class="auth-title mb-1">បង្កើត<span>គណនី</span></h3>
                         <p class="text-white-50">បង្កើតគណនីថ្មីរបស់អ្នក</p>
                     </div>
-                    <form action="index.html">
+                    <form action="profile.html">
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="firstName" class="form-label">នាមខ្លួន</label>
@@ -282,6 +282,21 @@
                 icon.classList.replace('fa-eye-slash', 'fa-eye');
             } else {
                 icon.classList.replace('fa-eye', 'fa-eye-slash');
+            }
+        });
+    </script>
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e) {
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            
+            if (firstName && lastName) {
+                // In Khmer, family name (lastName) usually comes first
+                localStorage.setItem('userFullName', lastName + ' ' + firstName);
+            }
+            if (email) {
+                localStorage.setItem('userEmail', email);
             }
         });
     </script>
