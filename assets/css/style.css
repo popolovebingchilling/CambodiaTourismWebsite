@@ -823,6 +823,10 @@ body.dark-mode .section-subtitle {
     border-radius: 50% !important;
     object-fit: cover !important;
     border: 2px solid var(--secondary-color) !important;
+    transform: translateZ(0) !important;
+    -webkit-backface-visibility: hidden !important;
+    backface-visibility: hidden !important;
+    image-rendering: high-quality !important;
 }
 .user-info h6 {
     margin: 0 !important;
@@ -1818,6 +1822,201 @@ img.img-fluid:not(.logo), img.feature-img, img.img-food, img.attraction-img, img
     position: absolute !important;
     inset: 0 !important;
     background: 
+    box-shadow: 0 40px 80px rgba(13, 42, 67, 0.15) !important;
+    border: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+.province-selector-list {
+    background: var(--primary-color) !important;
+    height: 100% !important;
+    padding: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+}
+
+.selector-item {
+    display: flex !important;
+    align-items: center !important;
+    padding: 20px !important;
+    background: rgba(255,255,255,0.03) !important;
+    border-radius: 20px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid rgba(255,255,255,0.05) !important;
+}
+
+.selector-item:hover, .selector-item.active {
+    background: rgba(197, 160, 89, 0.15) !important;
+    border-color: var(--secondary-color) !important;
+    transform: translateX(10px) !important;
+}
+
+.selector-number {
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    color: var(--secondary-color) !important;
+    margin-right: 20px !important;
+    opacity: 0.5 !important;
+    font-family: 'Kantumruy Pro', sans-serif !important;
+}
+
+.selector-item:hover .selector-number, .selector-item.active .selector-number {
+    opacity: 1 !important;
+}
+
+.selector-info h6 {
+    color: white !important;
+    margin: 0 !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+}
+
+.selector-info span {
+    color: rgba(255,255,255,0.5) !important;
+    font-size: 12px !important;
+    display: block !important;
+}
+
+.selector-item i {
+    margin-left: auto !important;
+    color: var(--secondary-color) !important;
+    opacity: 0 !important;
+    transition: 0.3s !important;
+}
+
+.selector-item:hover i, .selector-item.active i {
+    opacity: 1 !important;
+    transform: translateX(5px) !important;
+}
+
+.master-map-display {
+    height: 100% !important;
+    min-height: 600px !important;
+    position: relative !important;
+}
+
+.master-map-display iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    pointer-events: auto !important;
+}
+
+.map-overlay-badge {
+    position: absolute !important;
+    top: 30px !important;
+    right: 30px !important;
+    background: rgba(13, 42, 67, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    padding: 12px 25px !important;
+    border-radius: 50px !important;
+    color: white !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    font-size: 13px !important;
+    border: 1px solid rgba(197, 160, 89, 0.3) !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
+
+.map-overlay-badge i {
+    color: var(--secondary-color) !important;
+}
+
+@media (max-width: 992px) {
+    .master-map-display {
+        height: 400px !important;
+    }
+}
+@media (max-width: 768px){
+.bento-grid{
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto !important;
+}
+
+.card-main{
+    grid-column: span 1 !important;
+    padding: 30px !important;
+}
+
+.destination-card, .service-card, .gallery-item{
+    height: auto !important;
+}
+.section-title{
+    font-size: 28px !important;
+}
+.hero-bento{
+    background-attachment: scroll !important;
+}
+.navbar-nav{
+    background: var(--primary-color);
+    padding: 20px;
+    border-radius: 20px;
+}
+}
+
+/* 4-Sided Cinematic Vignette Overlay */
+/* Applied to common image wrappers across the site */
+.card-img-wrapper::after,
+.service-img-box::after,
+.gallery-item::after,
+.blog-img-wrapper::after,
+.highlight-img::after,
+.rounded-4.overflow-hidden::after,
+.attraction-img-wrap::after,
+.about-img-wrap::after,
+.food-card-img::after,
+.beach-card-img::after,
+.nimg::after,
+.card-place::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.85) 100%) !important;
+    pointer-events: none !important;
+    z-index: 5 !important;
+    border-radius: inherit !important;
+    mix-blend-mode: multiply !important;
+    transition: all 0.5s ease !important;
+}
+
+/* Ensure wrappers are relative */
+.card-img-wrapper,
+.service-img-box,
+.gallery-item,
+.blog-img-wrapper,
+.highlight-img,
+.rounded-4.overflow-hidden,
+.attraction-img-wrap,
+.about-img-wrap,
+.food-card-img,
+.beach-card-img,
+.nimg,
+.card-place {
+    position: relative !important;
+}
+
+/* Vignette for standalone images using mask-image for soft fade */
+img.img-fluid:not(.logo), img.feature-img, img.img-food, img.attraction-img, img.lodge-premium-img, img.cultural-card-img {
+    -webkit-mask-image: radial-gradient(ellipse at center, black 65%, rgba(0,0,0,0.15) 100%) !important;
+    mask-image: radial-gradient(ellipse at center, black 65%, rgba(0,0,0,0.15) 100%) !important;
+}
+
+
+/* ========================================================
+   PROVINCE CINEMATIC VIGNETTE OVERLAY (No White Halo)
+   ======================================================== */
+.cinematic-vignette-overlay {
+    position: relative !important;
+}
+
+.cinematic-vignette-overlay::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: 
         linear-gradient(to bottom, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 22%),
         linear-gradient(to top, rgba(7, 18, 28, 0.95) 0%, rgba(7, 18, 28, 0) 25%),
         linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
@@ -1835,17 +2034,17 @@ img.img-fluid:not(.logo), img.feature-img, img.img-food, img.attraction-img, img
 /* =========================================
    GLOBAL BUTTON STANDARDIZATION
    ========================================= */
-button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn), 
+button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn):not(.password-toggle), 
 input[type="submit"], 
 input[type="button"], 
 .btn:not(.btn-close):not(.nav-link), 
 .btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-warning, .btn-info, .btn-light, .btn-dark, 
 .btn-book-now, .btn-bento, .btn-explore, .btn-map-link, .btn-service, .btn-subscribe, 
-.btn-auth, .btn-social, .btn-confirm-booking, .btn-royal, .btn-outline-light, .btn-stone, 
+.btn-auth, .btn-confirm-booking, .btn-royal, .btn-outline-light, .btn-stone, 
 .button, .buttonv, .bs, .btn-submit, .btn-khmer {
-    background-color: var(--primary-color) !important;
-    color: var(--secondary-color) !important;
-    border: 1px solid var(--secondary-color) !important;
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    border: none !important;
     border-radius: 10px !important;
     padding: 10px 20px !important;
     font-weight: bold !important;
@@ -1857,17 +2056,17 @@ input[type="button"],
     text-align: center !important;
 }
 
-button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn):hover, 
+button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn):not(.password-toggle):hover, 
 input[type="submit"]:hover, 
 input[type="button"]:hover, 
 .btn:not(.btn-close):not(.nav-link):hover, 
 .btn-primary:hover, .btn-secondary:hover, .btn-success:hover, .btn-danger:hover, .btn-warning:hover, .btn-info:hover, .btn-light:hover, .btn-dark:hover, 
 .btn-book-now:hover, .btn-bento:hover, .btn-explore:hover, .btn-map-link:hover, .btn-service:hover, .btn-subscribe:hover, 
-.btn-auth:hover, .btn-social:hover, .btn-confirm-booking:hover, .btn-royal:hover, .btn-outline-light:hover, .btn-stone:hover, 
+.btn-auth:hover, .btn-confirm-booking:hover, .btn-royal:hover, .btn-outline-light:hover, .btn-stone:hover, 
 .button:hover, .buttonv:hover, .bs:hover, .btn-submit:hover, .btn-khmer:hover {
-    background-color: var(--secondary-color) !important;
-    color: var(--primary-color) !important;
-    border: 1px solid var(--primary-color) !important;
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border: none !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 5px 15px rgba(215, 181, 109, 0.4) !important;
 }

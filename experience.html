@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ប្រវត្តិរូប | ទេសចរណ៍កម្ពុជា</title>
+    <title>បទពិសោធន៍ | ទេសចរណ៍កម្ពុជា</title>
     <!-- HTML CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/profile.css">
@@ -112,7 +112,7 @@
                                     ប្រវត្តិរូប
                                 </a>
 
-                                <a href="experience.html">
+                                <a href="experience.html" class="active">
                                     <i class="bi bi-journal-text"></i>
                                     បទពិសោធន៍
                                 </a>
@@ -122,7 +122,7 @@
                                     រក្សាទុក
                                 </a>
 
-                                <a href="profile.html" class="active">
+                                <a href="profile.html">
                                     <i class="bi bi-gear"></i>
                                     ការកំណត់
                                 </a>
@@ -161,177 +161,52 @@
 
                         <!-- Content Cards -->
                         <div class="row g-4">
-                            <!-- General Settings -->
-                            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="100">
                                 <div class="premium-card">
-                                    <h4>
-                                        <i class="bi bi-sliders"></i>
-                                        ការកំណត់ ទូទៅ
+                                    <h4 class="mb-4">
+                                        <i class="bi bi-journal-text me-2"></i>
+                                        បទពិសោធន៍ថ្មីៗ
                                     </h4>
-
-                                    <div class="mb-4">
-                                        <label class="form-label">ភាសា</label>
-                                        <select class="form-select form-select-premium">
-                                            <option>ភាសាខ្មែរ</option>
-                                            <option>អង់គ្លេស</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <label class="form-label">ឈ្មោះ</label>
-                                        <input type="text" id="profileNameInput" class="form-control form-control-premium" value="ថន បញ្ចៈពល្លី">
-                                    </div>
-
-                                    <div class="mb-4">
-                                        <label class="form-label">ទីកន្លែង</label>
-                                        <select class="form-select form-select-premium">
-                                            <option>កម្ពុជា</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="mb-5">
-                                        <label class="form-label">មុខរបរ</label>
-                                        <select class="form-select form-select-premium">
-                                            <option>បច្ចេកវិទ្យាអប់រំ</option>
-                                            <option>សិស្ស / និស្សិត</option>
-                                            <option>អាជីវករ</option>
-                                            <option>បុគ្គលិកក្រុមហ៊ុន</option>
-                                            <option>មន្ត្រីរាជការ</option>
-                                            <option>គ្រូបង្រៀន</option>
-                                            <option>វិស្វករ</option>
-                                            <option>វេជ្ជបណ្ឌិត</option>
-                                            <option>ផ្សេងៗ</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="d-flex gap-3">
-                                        <button class="btn btn-primary-premium flex-grow-1" onclick="saveProfileName()">
-                                            រក្សាទុក ការផ្លាស់ប្តូរ
-                                        </button>
-
-                                        <button class="btn btn-outline-premium" onclick="resetProfileName()">
-                                            ម្តងទៀត
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Security -->
-                            <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
-                                <div class="premium-card">
-                                    <h4>
-                                        <i class="bi bi-shield-lock"></i>
-                                        ផ្នែកសុវត្ថិភាព
-                                    </h4>
-
-                                    <div class="info-item-premium">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div>
-                                                <strong>ការផ្ទៀងផ្ទាត់ ២ ជំហាន</strong>
-                                                <p class="text-muted mb-0 small">បានបើកតាមរយៈលេខកូដអុីមែល</p>
+                                    
+                                    <!-- Experience Item 1 -->
+                                    <div class="d-flex flex-column flex-md-row align-items-md-center gap-4 mb-4 p-4 rounded-4 experience-card" style="background: #f8f9fa; border: 1px solid #e9ecef; transition: 0.3s;" onmouseover="this.style.background='#e9ecef'" onmouseout="this.style.background='#f8f9fa'">
+                                        <div style="width: 150px; height: 110px; overflow: hidden; border-radius: 12px; flex-shrink: 0;" class="shadow-sm">
+                                            <img src="assets/image/Siem_Reap/AngkorWat.jpg" alt="Angkor Wat" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="mb-0 fw-bold">ដំណើរកម្សាន្តទៅសៀមរាប</h5>
+                                                <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill"><i class="bi bi-check-circle me-1"></i> បានបញ្ចប់</span>
                                             </div>
-                                            <div class="form-check form-switch mb-0">
-                                                <input class="form-check-input" type="checkbox" checked>
+                                            <p class="text-muted mb-2 small"><i class="bi bi-calendar-event me-2"></i>១២ មករា ២០២៦ - ១៥ មករា ២០២៦</p>
+                                            <p class="mb-3 text-secondary small" style="line-height: 1.6;">ដំណើរកម្សាន្តដ៏អស្ចារ្យជាមួយគ្រួសារទៅកាន់ប្រាសាទអង្គរវត្ត។ យើងទទួលបានសេវាកម្មមគ្គុទ្ទេសក៍ដ៏ល្អ និងការស្នាក់នៅប្រកបដោយផាសុកភាព។</p>
+                                            <div class="d-flex gap-2">
+                                                <button class="btn rounded-pill px-3 btn-primary-sm"><i class="bi bi-star-fill text-warning me-1"></i> ៥.០</button>
+                                                <button class="btn rounded-pill px-3 btn-primary-sm">មើលព័ត៌មានលម្អិត</button>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="info-item-premium">
-                                        <strong>បានប្តូរពាក្យសម្ងាត់ថ្មី</strong>
-                                        <p class="text-muted mb-0 small"><i class="bi bi-clock-history me-1"></i> ធ្វើបច្ចុប្បន្នភាពចុងក្រោយ ១១ ថ្ងៃមុន</p>
+                                    <!-- Experience Item 2 -->
+                                    <div class="d-flex flex-column flex-md-row align-items-md-center gap-4 p-4 rounded-4 experience-card" style="background: #f8f9fa; border: 1px solid #e9ecef; transition: 0.3s;" onmouseover="this.style.background='#e9ecef'" onmouseout="this.style.background='#f8f9fa'">
+                                        <div style="width: 150px; height: 110px; overflow: hidden; border-radius: 12px; flex-shrink: 0;" class="shadow-sm">
+                                            <img src="assets/image/Kep/kep1.png" alt="Kep" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="mb-0 fw-bold">សម្រាកលំហែកាយនៅកែប</h5>
+                                                <span class="badge bg-warning-subtle text-warning px-3 py-2 rounded-pill"><i class="bi bi-clock me-1"></i> គ្រោងទុក</span>
+                                            </div>
+                                            <p class="text-muted mb-2 small"><i class="bi bi-calendar-event me-2"></i>២០ ឧសភា ២០២៦</p>
+                                            <p class="mb-3 text-secondary small" style="line-height: 1.6;">ត្រៀមខ្លួនសម្រាប់ដំណើរកម្សាន្តទៅកាន់ខេត្តកែប ដើម្បីភ្លក់រសជាតិក្តាមថ្មីៗ និងសម្រាកលំហែកាយលើឆ្នេរសមុទ្រដ៏ស្ងប់ស្ងាត់។</p>
+                                            <div class="d-flex gap-2">
+                                                <button class="btn btn-sm btn-primary-premium rounded-pill px-3">គ្រប់គ្រងការកក់</button>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="info-item-premium border-0 pb-0">
-                                        <strong>ឧបករណ៍ដែលទុកចិត្ត</strong>
-                                        <p class="text-muted mb-0 small"><i class="bi bi-laptop me-1"></i> កុំព្យូទ័រ Windows</p>
-                                    </div>
-
-                                    <div class="mt-4 mb-3">
-                                        <label class="form-label" style="font-size: 14px;">ពាក្យសម្ងាត់ថ្មី</label>
-                                        <input type="password" id="newPasswordInput" class="form-control form-control-premium" style="padding: 12px 20px; font-size: 14px;" placeholder="បញ្ចូលពាក្យសម្ងាត់ថ្មី">
-                                    </div>
-                                    <div class="mb-4">
-                                        <label class="form-label" style="font-size: 14px;">បញ្ជាក់ពាក្យសម្ងាត់</label>
-                                        <input type="password" id="confirmPasswordInput" class="form-control form-control-premium" style="padding: 12px 20px; font-size: 14px;" placeholder="បញ្ចូលពាក្យសម្ងាត់ម្តងទៀត">
-                                    </div>
-
-                                    <button class="btn btn-outline-premium w-100" onclick="changePassword()">
-                                        <i class="bi bi-key me-2"></i> ផ្លាស់ប្តូរពាក្យសម្ថាត់
-                                    </button>
                                 </div>
                             </div>
-
-                            <!-- Notification -->
-                            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-                                <div class="premium-card">
-                                    <h4>
-                                        <i class="bi bi-bell"></i>
-                                        សារបញ្ជាក់
-                                    </h4>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" checked id="notif1">
-                                        <label class="form-check-label" for="notif1">
-                                            ទទួលបានសារអុីមែល
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" checked id="notif2">
-                                        <label class="form-check-label" for="notif2">
-                                            ទទួលបានបច្ចុប្បន្នភាព
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check mb-0">
-                                        <input class="form-check-input" type="checkbox" id="notif3">
-                                        <label class="form-check-label" for="notif3">
-                                            ទទួលសារពី SMS
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Account Info -->
-                            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-                                <div class="premium-card">
-                                    <h4>
-                                        <i class="bi bi-info-circle"></i>
-                                        ព័ត៌មានផ្ទាល់ខ្លួន
-                                    </h4>
-
-                                    <div class="info-item-premium d-flex align-items-center gap-3">
-                                        <div style="font-size: 24px; color: var(--secondary-color); width: 30px; text-align: center;">
-                                            <i class="bi bi-envelope-at"></i>
-                                        </div>
-                                        <div>
-                                            <strong>អុីមែល</strong>
-                                            <p class="text-muted mb-0" id="profileEmailDisplay">manig@example.com</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="info-item-premium d-flex align-items-center gap-3">
-                                        <div style="font-size: 24px; color: var(--secondary-color); width: 30px; text-align: center;">
-                                            <i class="bi bi-telephone"></i>
-                                        </div>
-                                        <div>
-                                            <strong>លេខទូរស័ព្ទ</strong>
-                                            <p class="text-muted mb-0">+855 12 345 678</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="info-item-premium d-flex align-items-center gap-3 mb-0 border-0">
-                                        <div style="font-size: 24px; color: var(--secondary-color); width: 30px; text-align: center;">
-                                            <i class="bi bi-geo-alt"></i>
-                                        </div>
-                                        <div>
-                                            <strong>ទីតាំង</strong>
-                                            <p class="text-muted mb-0">ភ្នំពេញ, កម្ពុជា</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -452,54 +327,14 @@
         });
     </script>
     <script>
-        function saveProfileName() {
-            const newName = document.getElementById('profileNameInput').value;
-            if(newName.trim() === '') {
-                alert('សូមបញ្ចូលឈ្មោះរបស់អ្នក! (Please enter your name!)');
-                return;
-            }
-            document.querySelector('.profile-name').textContent = newName;
-            document.querySelector('.top-banner-premium h2.fw-bold.mb-2').textContent = newName;
-            alert('បានរក្សាទុកដោយជោគជ័យ! (Saved successfully!)');
-        }
-
-        function resetProfileName() {
-            document.getElementById('profileNameInput').value = document.querySelector('.profile-name').textContent;
-        }
-
-        function changePassword() {
-            const newPass = document.getElementById('newPasswordInput').value;
-            const confirmPass = document.getElementById('confirmPasswordInput').value;
-            if(newPass === '' || confirmPass === '') {
-                alert('សូមបញ្ចូលពាក្យសម្ងាត់! (Please enter password!)');
-                return;
-            }
-            if(newPass !== confirmPass) {
-                alert('ពាក្យសម្ងាត់មិនត្រូវគ្នាទេ! (Passwords do not match!)');
-                return;
-            }
-            alert('ពាក្យសម្ងាត់ត្រូវបានផ្លាស់ប្តូរដោយជោគជ័យ! (Password changed successfully!)');
-            document.getElementById('newPasswordInput').value = '';
-            document.getElementById('confirmPasswordInput').value = '';
-        }
+        // Javascript for experience page if needed
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const storedName = localStorage.getItem('userFullName');
-            const storedEmail = localStorage.getItem('userEmail');
-
             if (storedName) {
-                // Update names in profile UI
                 const nameElements = document.querySelectorAll('.profile-name, .fw-bold.mb-2');
                 nameElements.forEach(el => el.textContent = storedName);
-                
-                const nameInput = document.getElementById('profileNameInput');
-                if (nameInput) nameInput.value = storedName;
-            }
-            
-            if (storedEmail) {
-                const emailDisplay = document.getElementById('profileEmailDisplay');
-                if (emailDisplay) emailDisplay.textContent = storedEmail;
             }
         });
     </script>
