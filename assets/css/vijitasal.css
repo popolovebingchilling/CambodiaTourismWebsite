@@ -61,6 +61,7 @@ header {
             justify-content: center;
             position: relative;
             overflow: hidden;
+            box-shadow: inset 0 0 150px 40px rgba(0, 0, 0, 0.9);
         }
 
         /* SHARED */
@@ -143,6 +144,8 @@ header {
 
         .masonry-item img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
             transition: transform .5s;
         }

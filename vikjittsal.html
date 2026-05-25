@@ -93,10 +93,10 @@
     <section class="gallery-hero">
         <div class="text-center text-white px-3" style="z-index:2;position:relative;">
             <span class="d-inline-block px-4 py-2 rounded-pill mb-3 fw-semibold shadow-sm"
-                style="background-color: var(--secondary-color); color: var(--primary-color); font-size: 0.9rem; letter-spacing: 1px; border: 1px solid var(--secondary-color);">
+                style="background-color: var(--secondary-color); color: var(--primary-color); font-size: 0.9rem; border: 1px solid var(--secondary-color);">
                 វិចិត្រសាល
             </span>
-            <h1
+            <h1 class="fw-bold"
                 style="font-size:clamp(2rem,5vw,4rem);text-shadow:0 4px 20px rgba(0,0,0,.4);">
                 រូបភាព<span style="color:var(--secondary-color);">ប្រទេសកម្ពុជា</span>
             </h1>
@@ -151,13 +151,26 @@
         </div>
     </section>
 
+    
     <footer class="footer py-5">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <h5 style="font-family:'Playfair Display',serif;color:var(--golden-spice);">ទេសចរណ៍កម្ពុជា</h5>
-                    <p class="small mt-3" style="opacity:.7;line-height:2;">ស្វែងរកភាពស្រស់ស្អាត ប្រវត្តិ
-                        និងវប្បធម៌នៃប្រទេសកម្ពុជា។</p>
+            <div class="row">
+                <!-- Column 1: Brand Essence -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="footer-brand mb-4">
+                        <img src="assets/image/new_logo_v2.png" alt="Logo" width="60" class="mb-3">
+                        <h5 class="text-white fw-bold">ទេសចរណ៍កម្ពុជា</h5>
+                    </div>
+                    <p class="footer-brand-text">
+                        ស្វែងយល់ពីភាពអស្ចារ្យនៃព្រះរាជាណាចក្រអច្ឆរិយៈ។ យើងខ្ញុំផ្តល់ជូននូវបទពិសោធន៍ទេសចរណ៍ដ៏ល្អបំផុត
+                        ដើម្បីបំពេញក្តីសុបិនរបស់អ្នកនៅក្នុងតំបន់អាសុីអាគ្នេយ៍។
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+                    </div>
                 </div>
 
                 <!-- Column 2: Destinations -->
@@ -174,12 +187,15 @@
                         <li><a href="koh-kong.html">កោះកុង</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-6">
-                    <h6 style="color:var(--amber-dune);" class="mb-3">ព័ត៌មាន</h6>
-                    <ul class="list-unstyled footer-links small">
-                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
-                        <li class="mb-2"><a href="review.html">វាយតម្លៃ</a></li>
-                        <li class="mb-2"><a href="team.html">ក្រុម</a></li>
+
+                <!-- Column 3: Services -->
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title">សេវាកម្ម</h6>
+                    <ul class="footer-links">
+                        <li><a href="hotels.html">សណ្ឋាគារ</a></li>
+                        <li><a href="restaurants.html">ភោជនីយដ្ឋាន</a></li>
+                        <li><a href="guide.html">មគ្គុទ្ទេសក៍</a></li>
+                        <li><a href="transportation.html">ការដឹកជញ្ជូន</a></li>
                     </ul>
                 </div>
 
@@ -232,7 +248,6 @@
                     <i class="fab fa-cc-paypal"></i>
                 </div>
             </div>
-
         </div>
     </footer>
     <!-- LIGHTBOX -->
@@ -258,56 +273,56 @@
             { id: 2, province: 'សៀមរាប', title: 'ប្រាសាទអង្គរធំ', sub: 'មុខចំនួន ២១៦', url: 'assets/image/Siem_Reap/angkorthom.jpg', h: 'normal' },
             { id: 3, province: 'សៀមរាប', title: 'ប្រាសាទតាព្រហ្ម', sub: 'ព្រៃស្ទាបព័ទ្ធ', url: 'assets/image/Siem_Reap/bayon.png', h: 'tall' },
             { id: 4, province: 'សៀមរាប', title: 'ព្រះអាទិត្យលិច', sub: 'អង្គរវត្ត', url: 'assets/image/Siem_Reap/sunrise.png', h: 'normal' },
-            { id: 5, province: 'សៀមរាប', title: 'អ្នកស្រុក', sub: 'វប្បធម៌ខ្មែរ', url: 'assets/image/Siem_Reap/Tonle sap.png', h: 'normal' },
-            { id: 6, province: 'សៀមរាប', title: 'បឹងទន្លេសាប', sub: 'ជីវិតក្នុងទឹក', url: 'assets/image/Siem_Reap/Gallery 1.jpg', h: 'tall' },
+            { id: 5, province: 'សៀមរាប', title: 'អ្នកស្រុក', sub: 'វប្បធម៌ខ្មែរ', url: 'https://asset.cambodia.gov.kh/tourism/2025/09/photo_3_2025-09-24_11-45-02-768x961.jpg', h: 'normal' },
+            { id: 6, province: 'សៀមរាប', title: 'បឹងទន្លេសាប', sub: 'ជីវិតក្នុងទឹក', url: 'https://static.information.gov.kh/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMUZvQnc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--cbaccd844373bdc3d38811bcae239b3dbe11248f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9MY21WemFYcGxTU0lNT1RBd2VEWXdNQVk2QmtWVSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--70cbddbba2e46c7ca8ac0c1f8b8316d88752e16d/photo_2025-04-03_13-34-10.jpg', h: 'tall' },
 
             // ភ្នំពេញ
             { id: 7, province: 'ភ្នំពេញ', title: 'ព្រះបរមរាជវាំង', sub: 'ស្ថាបត្យខ្មែរ', url: 'assets/image/pp.jpg', h: 'normal' },
-            { id: 8, province: 'ភ្នំពេញ', title: 'ច្រាំងទន្លេ', sub: 'ពន្លឺព្រឹក', url: 'assets/image/phnom_penh_riverfront.jpg', h: 'tall' },
-            { id: 9, province: 'ភ្នំពេញ', title: 'វិមានឯករាជ្យ', sub: 'ស្ថាបត្យ Naga', url: 'assets/image/independence_monument_pp.jpg', h: 'normal' },
-            { id: 10, province: 'ភ្នំពេញ', title: 'ផ្សារថ្មី', sub: 'Art Deco បារាំង', url: 'assets/image/central_market_pp.jpg', h: 'normal' },
-            { id: 11, province: 'ភ្នំពេញ', title: 'ទីក្រុងយប់', sub: 'ភ្ញាំង ភ្នំពេញ', url: 'assets/image/phnom_penh_night.jpg', h: 'tall' },
+            { id: 8, province: 'ភ្នំពេញ', title: 'ច្រាំងទន្លេ', sub: 'ពន្លឺព្រឹក', url: 'https://media.restless.co.uk/uploads/2024/03/explore-floating-villages-on-tonle-sap-lake-cambodia.jpg', h: 'tall' },
+            { id: 9, province: 'ភ្នំពេញ', title: 'វិមានឯករាជ្យ', sub: 'ស្ថាបត្យ Naga', url: 'https://i.pinimg.com/736x/11/1d/43/111d43382470db98dc063c15524175cc.jpg', h: 'normal' },
+            { id: 10, province: 'ភ្នំពេញ', title: 'ផ្សារថ្មី', sub: 'Art Deco បារាំង', url: 'https://asset.cambodia.gov.kh/tourism/2023/11/Thom-Thmei-Market-in-Phnom-Penh-Capital-1-scaled.webp', h: 'normal' },
+            { id: 11, province: 'ភ្នំពេញ', title: 'ទីក្រុងយប់', sub: 'ភ្ញាំង ភ្នំពេញ', url: 'https://t3.ftcdn.net/jpg/02/89/87/32/360_F_289873298_R6OHqOHcglPMoQFgqilcFZMF11Z7gxlx.jpg', h: 'tall' },
             { id: 12, province: 'ភ្នំពេញ', title: 'ម្ហូបខ្មែរ', sub: 'នំបញ្ចុក អាម៉ុក', url: 'assets/image_food/fish_amok_real.jpg', h: 'normal' },
 
             // កំពត
             { id: 13, province: 'កំពត', title: 'ទីក្រុងកំពត', sub: 'ស្ថាបត្យបារាំង', url: 'assets/image/kompot.jpg', h: 'tall' },
-            { id: 14, province: 'កំពត', title: 'ទឹកជ្រោះ Bokor', sub: 'ភ្នំបូករ', url: 'assets/image/bokor_waterfall.jpg', h: 'normal' },
-            { id: 15, province: 'កំពត', title: 'ទំនប់កំចាយ', sub: 'ទេសភាពភ្នំ', url: 'assets/image/kamchay_dam.jpg', h: 'normal' },
-            { id: 16, province: 'កំពត', title: 'ម្រេចកំពត', sub: 'ពីដែនល្បី', url: 'assets/image/kampot_pepper.jpg', h: 'tall' },
-            { id: 17, province: 'កំពត', title: 'ច្រាំងសមុទ្រ', sub: 'ភ្លៅព្រះអាទិត្យ', url: 'assets/image/kampot_river_sunset.jpg', h: 'normal' },
+            { id: 14, province: 'កំពត', title: 'ទឹកជ្រោះ Bokor', sub: 'ភ្នំបូករ', url: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIKVJqruW0-cV8mrEzVdF9RSP40gsXvIQaPyL-JcezgvMDp3HnCFrV3iQmG8P2zi-IudB_ZGegKX19ICEQAuBJduMejmwHnJ4JZanfdf02ByVYjSv6cKsx5nKm29G3eJwS9jvoWY8r85xuYVCS9rNmR4dTVNtRcNrhjdykI9Qwb3fiDEWegrUvCx_SbLQ/s1600/9%20Steps%20Waterfall.jpg', h: 'normal' },
+            { id: 15, province: 'កំពត', title: 'ទំនប់កំចាយ', sub: 'ទេសភាពភ្នំ', url: 'https://image.thmeythmey.com/pictures/2024/07/27/front_______________________________________________________________________________.jpg', h: 'normal' },
+            { id: 16, province: 'កំពត', title: 'ម្រេចកំពត', sub: 'ពីដែនល្បី', url: 'https://s3.ams.com.kh/economy/2023/05/Kampotpepperv.jpg', h: 'tall' },
+            { id: 17, province: 'កំពត', title: 'ច្រាំងសមុទ្រ', sub: 'ភ្លៅព្រះអាទិត្យ', url: 'https://i0.wp.com/sroksrear.wordpress.com/wp-content/uploads/2014/03/kampot41.jpg?ssl=1', h: 'normal' },
 
             // មណ្ឌលគិរី
             { id: 18, province: 'មណ្ឌលគិរី', title: 'ទឹកជ្រោះ Bou Sraa', sub: 'ទឹកជ្រោះធំបំផុត', url: 'assets/image/bou-sra.jpg', h: 'tall' },
-            { id: 19, province: 'មណ្ឌលគិរី', title: 'ព្រៃ Mondulkiri', sub: 'ខ្ទឹម ដំរី', url: 'assets/image/bousra.jpg', h: 'normal' },
-            { id: 20, province: 'មណ្ឌលគិរី', title: 'ជម្រកដំរី', sub: 'ការពារដំរី', url: 'assets/image/elephant_sanctuary_mondulkiri.jpg', h: 'normal' },
-            { id: 21, province: 'មណ្ឌលគិរី', title: 'សមុទ្រឈើ', sub: 'ទេសភាពដ៏ស្រស់', url: 'assets/image/doh_kromom_mondulkiri.jpg', h: 'tall' },
-            { id: 22, province: 'មណ្ឌលគិរី', title: 'ជនជាតិដើម', sub: 'វប្បធម៌ព្នង', url: 'assets/image/bunong_people_mondulkiri.jpg', h: 'normal' },
+            { id: 19, province: 'មណ្ឌលគិរី', title: 'ព្រៃ Mondulkiri', sub: 'ខ្ទឹម ដំរី', url: 'https://www.techoairport.com.kh/tia-backend/locators/1754028641346-Picture1.png', h: 'normal' },
+            { id: 20, province: 'មណ្ឌលគិរី', title: 'ជម្រកដំរី', sub: 'ការពារដំរី', url: 'https://www.thailand.org/pictures/profile/pimage-15699-57-photo.jpg?Ethical-Elephant-Sanctuary-Chang%20Khlan', h: 'normal' },
+            { id: 21, province: 'មណ្ឌលគិរី', title: 'សមុទ្រឈើ', sub: 'ទេសភាពដ៏ស្រស់', url: 'https://media.sabay.com/media/sabay-news/campaigns/roadhome/Mondulkiry/sea-forest-01.jpg', h: 'tall' },
+            { id: 22, province: 'មណ្ឌលគិរី', title: 'ជនជាតិដើម', sub: 'វប្បធម៌ព្នង', url: 'https://image.thmeythmey.com/pictures/2018/06/26/wine__1_.jpg', h: 'normal' },
 
             // កែប
-            { id: 23, province: 'កែប', title: 'ឆ្នេរកែប', sub: 'ទេសភាពសមុទ្រ', url: 'assets/image/kep_beach.jpg', h: 'tall' },
-            { id: 24, province: 'កែប', title: 'ផ្សារក្ដាមកែប', sub: 'ម្ហូបសមុទ្រ', url: 'assets/image/kep_crab_market.jpg', h: 'normal' },
-            { id: 25, province: 'កែប', title: 'កោះទន្សាយ', sub: 'ដើរទូក', url: 'assets/image/rabbit_island_kep.jpg', h: 'normal' },
-            { id: 26, province: 'កែប', title: 'ព្រះអាទិត្យលិច', sub: 'ច្រាំងសមុទ្រ', url: 'assets/image/kep_sunset.jpg', h: 'tall' },
+            { id: 23, province: 'កែប', title: 'ឆ្នេរកែប', sub: 'ទេសភាពសមុទ្រ', url: 'https://images.realestate.com.kh/blog_search_images/2022-01/c36f0912a829740ebaea7ecfc2e16b179ae30b06.jpg', h: 'tall' },
+            { id: 24, province: 'កែប', title: 'ផ្សារក្ដាមកែប', sub: 'ម្ហូបសមុទ្រ', url: 'https://media.sabay.com/media/cms-images/1286696_feature_sponsored.png', h: 'normal' },
+            { id: 25, province: 'កែប', title: 'កោះទន្សាយ', sub: 'ដើរទូក', url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUCUj8ryr3ewe3p39xb6M4vkwanJRbzwSgTA&s', h: 'normal' },
+            { id: 26, province: 'កែប', title: 'ព្រះអាទិត្យលិច', sub: 'ច្រាំងសមុទ្រ', url: 'https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/af/25/cf/caption.jpg', h: 'tall' },
 
             // ព្រះសីហនុ
-            { id: 27, province: 'ព្រះសីហនុ', title: 'ឆ្នេរ Ochheuteal', sub: 'ខ្សាច់ស ទឹកថ្លា', url: 'assets/image/Preah-Sihanouk.jpg', h: 'normal' },
-            { id: 28, province: 'ព្រះសីហនុ', title: 'ព្រះអាទិត្យលិច', sub: 'ឆ្នេរ ព្រះសីហនុ', url: 'assets/image/kohsdach.png', h: 'tall' },
-            { id: 29, province: 'ព្រះសីហនុ', title: 'ទូកនេសាទ', sub: 'ផ្ទៃសមុទ្រ', url: 'assets/image/sihanoukville_boat.jpg', h: 'normal' },
-            { id: 30, province: 'ព្រះសីហនុ', title: 'ជីវិតឆ្នេរ', sub: 'ភ្ញៀវ ម្ហូប', url: 'assets/image/sihanoukville_beach_life.jpg', h: 'normal' },
-            { id: 31, province: 'ព្រះសីហនុ', title: 'កោះរ៉ុង', sub: 'ទឹកថ្លា ត្រជាក់', url: 'assets/image/koh_rong_beach.jpg', h: 'tall' },
+            { id: 27, province: 'ព្រះសីហនុ', title: 'ឆ្នេរ Ochheuteal', sub: 'ខ្សាច់ស ទឹកថ្លា', url: 'https://sihanouktourism.com/wp-content/uploads/photo_2025-12-10_12-47-55.jpg', h: 'normal' },
+            { id: 28, province: 'ព្រះសីហនុ', title: 'ព្រះអាទិត្យលិច', sub: 'ឆ្នេរ ព្រះសីហនុ', url: 'https://media-cdn.tripadvisor.com/media/photo-s/1a/4d/d7/8e/asurajourney-kampongpluk.jpg', h: 'tall' },
+            { id: 29, province: 'ព្រះសីហនុ', title: 'ទូកនេសាទ', sub: 'ផ្ទៃសមុទ្រ', url: 'https://b1949157.smushcdn.com/1949157/wp-content/uploads/2026/02/IMG_2189-scaled.jpg?lossy=1&strip=1&webp=1', h: 'normal' },
+            { id: 30, province: 'ព្រះសីហនុ', title: 'ជីវិតឆ្នេរ', sub: 'ភ្ញៀវ ម្ហូប', url: 'https://imagevietnam.vnanet.vn//MediaUpload/Org/2026/04/22/122-14-13-56.jpg', h: 'normal' },
+            { id: 31, province: 'ព្រះសីហនុ', title: 'កោះរ៉ុង', sub: 'ទឹកថ្លា ត្រជាក់', url: 'https://sihanouktourism.com/wp-content/uploads/photo_2025-12-12_17-09-20-350x250.jpg', h: 'tall' },
 
             // កោះកុង
-            { id: 32, province: 'កោះកុង', title: 'ព្រៃឈើកោះកុង', sub: 'ធម្មជាតិច្រើន', url: 'assets/image/kohkong.jpg', h: 'normal' },
-            { id: 33, province: 'កោះកុង', title: 'ទឹកជ្រោះ Tatai', sub: 'ព្រំដែន ថៃ', url: 'assets/image/kongkongresort.jpg', h: 'tall' },
-            { id: 34, province: 'កោះកុង', title: 'ដំណើរទូក', sub: 'ទន្លេតាតៃ', url: 'assets/image/tatai_river_boat.jpg', h: 'normal' },
-            { id: 35, province: 'កោះកុង', title: 'ព្រៃកោងកាង', sub: 'ការពារធម្មជាតិ', url: 'assets/image/peam_krasop_mangrove.jpg', h: 'normal' },
+            { id: 32, province: 'កោះកុង', title: 'ព្រៃឈើកោះកុង', sub: 'ធម្មជាតិច្រើន', url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv-dklD7EWxfr9432mQjZ6giTnbIW4YuJUJw&s', h: 'normal' },
+            { id: 33, province: 'កោះកុង', title: 'ទឹកជ្រោះ Tatai', sub: 'ព្រំដែន', url: 'https://www.guidetrip.info/asset/img/gallery_resort/5abc712577a51.jpg', h: 'tall' },
+            { id: 34, province: 'កោះកុង', title: 'ដំណើរទូក', sub: 'ទន្លេតាតៃ', url: 'https://provincial.obsv3.kh-gov-1.mptccloud.gov.kh/sites/12/2019/09/IMG_20190901_111435_911-1024x683.jpg', h: 'normal' },
+            { id: 35, province: 'កោះកុង', title: 'ព្រៃកោងកាង', sub: 'ការពារធម្មជាតិ', url: 'https://provincial.obsv3.kh-gov-1.mptccloud.gov.kh/sites/12/2019/08/photo_2019-08-30_08-23-54-1024x682.jpg', h: 'normal' },
 
             // បាត់ដំបង
-            { id: 36, province: 'បាត់ដំបង', title: 'ប្រាសាទអំពិល', sub: 'ប្រាសាទ ១០០០ ជាន់', url: 'assets/image/battambang-real.png', h: 'tall' },
-            { id: 37, province: 'បាត់ដំបង', title: 'ភ្នំសំពៅ', sub: 'ទេសភាពបាត់ដំបង', url: 'assets/image/phnom_sampeau.jpg', h: 'normal' },
-            { id: 38, province: 'បាត់ដំបង', title: 'ស្ទឹងសង្កែ', sub: 'ទស្សនីយភាព', url: 'assets/image/sangkae_river.jpg', h: 'normal' },
-            { id: 39, province: 'បាត់ដំបង', title: 'ល្អាងប្រចៀវ', sub: 'ភ្នំសំពៅ', url: 'assets/image/phnom_sampeau_bats.jpg', h: 'tall' },
-            { id: 40, province: 'បាត់ដំបង', title: 'ម្ហូបបាត់ដំបង', sub: 'ចំណេះខ្មែរ', url: 'assets/image/khmer_cooking_class.jpg', h: 'normal' },
+            { id: 36, province: 'បាត់ដំបង', title: 'ប្រាសាទអំពិល', sub: 'ប្រាសាទ ១០០០ ជាន់', url: 'https://kptmedia.ap-south-1.linodeobjects.com/uploads/2025/07/tourism-battambang.jpg', h: 'tall' },
+            { id: 37, province: 'បាត់ដំបង', title: 'ភ្នំសំពៅ', sub: 'ទេសភាពបាត់ដំបង', url: 'https://image.thmeythmey.com/pictures/2019/01/29/on-the-top-of-phnom-sampeou-mountain.jpg', h: 'normal' },
+            { id: 38, province: 'បាត់ដំបង', title: 'ស្ទឹងសង្កែ', sub: 'ទស្សនីយភាព', url: 'https://image.thmeythmey.com/pictures/2017/10/08/steong-sanke-_1_.jpg', h: 'normal' },
+            { id: 39, province: 'បាត់ដំបង', title: 'ល្អាងប្រចៀវ', sub: 'ភ្នំសំពៅ', url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROIxoeNSXI1m1_VUrYgy2ZQNg1m2TPryfVSQ&s', h: 'tall' },
+            { id: 40, province: 'បាត់ដំបង', title: 'ម្ហូបបាត់ដំបង', sub: 'ចំណេះខ្មែរ', url: 'https://s3.ams.com.kh/infotainment/2024/04/Battambang-Food.jpg', h: 'normal' },
         ];
 
         const PROVINCES = ['ទាំងអស់', 'សៀមរាប', 'ភ្នំពេញ', 'កំពត', 'មណ្ឌលគិរី', 'កែប', 'ព្រះសីហនុ', 'កោះកុង', 'បាត់ដំបង'];
@@ -350,7 +365,7 @@
             noResult.classList.add('d-none');
 
             grid.innerHTML = filteredPhotos.map((p, i) => `
-        <div class="masonry-item" onclick="openLB(${i})">
+        <div class="masonry-item"  data-aos="fade-up" onclick="openLB(${i})">
             <img src="${p.url}" alt="${p.title}" loading="lazy"
                  style="aspect-ratio:${p.h === 'tall' ? '3/4' : '4/3'}">
             <span class="overlay-tag">${p.province}</span>
@@ -394,15 +409,14 @@
             if (e.key === 'ArrowRight') changeLB(1);
         });
 
-        // Scroll reveal
-        const obs = new IntersectionObserver(entries =>
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-            { threshold: .1 }
-        );
-        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+        
 
         // Init
         renderGrid();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
     </script>
 </body>
 
