@@ -508,15 +508,15 @@ body.dark-mode .section-subtitle {
     text-align: left !important; /* Move text to side */
 }
 .service-icon-box {
-    width: 50px !important;
-    height: 50px !important;
+    width: 42px !important;
+    height: 42px !important;
     background: var(--secondary-color) !important;
     color: var(--primary-color) !important;
-    border-radius: 14px !important;
+    border-radius: 12px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 20px !important;
+    font-size: 16px !important;
     margin: 0 0 15px 0 !important; /* Align to side */
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
     box-shadow: 0 5px 15px rgba(215, 181, 109, 0.2) !important;
@@ -525,7 +525,6 @@ body.dark-mode .section-subtitle {
 .service-card:hover .service-icon-box {
     background: var(--primary-color) !important;
     color: var(--secondary-color) !important;
-    transform: translateY(-5px) rotate(8deg) !important;
     box-shadow: 0 12px 25px rgba(13, 42, 67, 0.2) !important;
 }
 .guides-showcase-section {
@@ -2114,4 +2113,13 @@ input[type="button"]:hover,
 .bg-mixed .display-6 span,
 .display-6 span {
     color: var(--secondary-color) !important;
+}
+
+/* Global fix for blog editorial content images */
+.editorial-content img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 350px !important;
+    object-fit: cover !important;
+    border-radius: 1rem !important;
 }
