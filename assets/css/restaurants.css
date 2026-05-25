@@ -36,7 +36,7 @@ body {
     color: white !important;
     text-align: center !important;
     overflow: hidden !important;
-    background-image: url('../image_food/b6f65872-9279-4ade-963e-24294c26ae7e.jpg') !important;
+    background-image: url('../image/Siem_Reap/AngkorWat.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -82,7 +82,7 @@ body {
 
 /* Custom Overrides for bg-mixed to display the background image */
 .bg-mixed.hero-section {
-    background: url('../image_food/b6f65872-9279-4ade-963e-24294c26ae7e.jpg') no-repeat center/cover !important;
+    background: url('../image/Siem_Reap/AngkorWat.jpg') no-repeat center/cover !important;
 }
 
 /* ── Premium Typography & Elements ── */
@@ -155,27 +155,26 @@ img:hover {
     background-color: var(--secondary-color) !important;
     height: 5px !important;
 }
-.all {
-    color: var(--parchment) !important;
-    border-radius: 4px !important;
-    transition: 0.3s !important;
-    border: 2px solid var(--secondary-color) !important;
-    transition: 0.03s !important;
+/* Normal (inactive) tab */
+.nav-pills .nav-link {
+    background-color: transparent !important;
+    color: var(--secondary-color) !important;
+    /* yellow text */
+    border: 1px solid var(--secondary-color) !important;
 }
 
-.all:hover {
-    color: var(--primary-color) !important;
-    border-radius: 4px !important;
-    transition: 0.3s !important;
-    background-color: var(--secondary-color) !important;
-    transform: scale(1.02) !important;
-    text-decoration: underline !important;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: var(--secondary-color) !important;
-    color: var(--primary-color) !important;
+/* Active tab */
+.nav-pills .nav-link.active {
+    background-color: rgba(215, 181, 109, 0.5) !important;
+    /* blue */
+    color: white !important;
     border-color: var(--secondary-color) !important;
+}
+
+/* Hover effect */
+.nav-pills .nav-link:hover {
+    background-color: var(--secondary-color) !important;
+    color: black !important;
 }
 
 .hotel {

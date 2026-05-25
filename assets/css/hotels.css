@@ -30,7 +30,7 @@ body{
     color: white !important;
     text-align: center !important;
     overflow: hidden !important;
-    background-image: url('../image_hotel/photo_2026-04-29_20-35-00.jpg') !important;
+    background-image: url('../image/Siem_Reap/AngkorWat.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -76,7 +76,7 @@ body{
 
 /* Custom Overrides for bg-mixed to display the background image */
 .bg-mixed.hero-section {
-    background: url('../image_hotel/photo_2026-04-29_20-35-00.jpg') no-repeat center/cover !important;
+    background: url('../image/Siem_Reap/AngkorWat.jpg') no-repeat center/cover !important;
 }
 
 /* ── Premium Typography & Elements ── */
