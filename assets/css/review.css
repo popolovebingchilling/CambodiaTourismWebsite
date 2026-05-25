@@ -406,8 +406,7 @@ body{
         .bg-mixed .bar-count,
         .bg-mixed .review-tag,
         .bg-mixed .user-info span,
-        .bg-mixed .section-badge,
-        .bg-mixed .section-subtitle,
+                .bg-mixed .section-subtitle,
         .bg-mixed .testi-text {
             color: rgba(255, 255, 255, 0.8) !important;
         }

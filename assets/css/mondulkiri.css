@@ -331,7 +331,33 @@ body{
 }
 
 .cultural-card-content {
-    padding: 24px !important;
+    padding: 35px 24px 24px !important;
+}
+
+.cultural-icon-badge {
+    position: absolute !important;
+    top: 177px !important; /* Overlaps the 200px image */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 45px !important;
+    height: 45px !important;
+    background: var(--primary-color) !important;
+    border: 2px solid var(--secondary-color) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 18px !important;
+    color: var(--secondary-color) !important;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3) !important;
+    z-index: 2 !important;
+    transition: all 0.4s ease !important;
+}
+
+.cultural-card:hover .cultural-icon-badge {
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    transform: translateX(-50%) scale(1.1) !important;
 }
 
 /* ── Stay Section ── */
@@ -402,7 +428,7 @@ body{
 /* ── Buttons ── */
 .btn-khmer {
     padding: 14px 32px !important;
-    border-radius: 50px !important;
+    border-radius: 12px !important;
     font-weight: 700 !important;
     font-size: 14px !important;
     text-decoration: none !important;
@@ -428,16 +454,16 @@ body{
 }
 
 .btn-khmer-gold {
-    background: var(--primary-color) !important;
-    color: var(--secondary-color) !important;
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
     border-color: var(--secondary-color) !important;
 }
 
 .btn-khmer-gold:hover {
-    background: var(--secondary-color) !important;
-    color: var(--primary-color) !important;
+    background: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
     transform: translateY(-5px) scale(1.05) !important;
-    border-color: var(--secondary-color) !important;
+    border-color: var(--primary-color) !important;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
@@ -545,7 +571,6 @@ body{
 }
 
 .bg-mixed .section-label,
-.bg-mixed .section-badge,
 .hero-title span {
     color: var(--secondary-color) !important;
 }

@@ -279,15 +279,29 @@ body.light-mode .navbar-brand img {
 body.dark-mode .destinations-section {
     background-color: var(--dark-oud) !important;
 }
-.section-badge {
-    background: var(--primary-color) !important;
-    color: var(--secondary-color) !important;
-    padding: 8px 20px !important;
+html body .section-badge,
+.bg-mixed .section-badge,
+.hero-section .section-badge,
+.pp-hero .section-badge,
+.bg-gradient-stone .section-badge,
+.bg-gradient-royal .section-badge,
+.bg-gradient-dark .section-badge {
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    padding: 5px 14px !important;
     border-radius: 50px !important;
     font-weight: 700 !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
     letter-spacing: 1px !important;
     border: 1px solid var(--secondary-color) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+.section-badge:hover {
+    background: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+    border-color: var(--primary-color) !important;
 }
 .section-title {
     font-family: "Kantumruy Pro", sans-serif !important;
@@ -2088,4 +2102,16 @@ input[type="button"]:hover,
     .footer .row.align-items-center > .col-md-6 > p.mb-0 {
         justify-content: center !important;
     }
+}
+
+/* Global fix to ensure title spans are always secondary-color, even inside bg-mixed */
+.bg-mixed .section-title span,
+.section-title span,
+.bg-mixed .hero-title span,
+.hero-title span,
+.bg-mixed .display-5 span,
+.display-5 span,
+.bg-mixed .display-6 span,
+.display-6 span {
+    color: var(--secondary-color) !important;
 }

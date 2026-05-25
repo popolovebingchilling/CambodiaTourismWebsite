@@ -444,11 +444,20 @@ input:checked+label .description {
 .glass-card > div:last-child {
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
+    justify-content: center !important;
     flex-grow: 1 !important;
     height: 100% !important;
     margin-left: 20px !important;
     padding: 10px 0 !important;
+}
+
+.glass-card > div:last-child p {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    margin-bottom: 0 !important;
 }
 
 /* Force details button to sit aligned to start at the bottom */
@@ -560,7 +569,6 @@ section.bg {
 .bg-mixed .section-label,
 .bg-mixed h2.text-center.fw-bold,
 .bg-mixed h5,
-.bg-mixed .section-badge,
 .hero-title span {
     color: var(--secondary-color) !important;
 }
