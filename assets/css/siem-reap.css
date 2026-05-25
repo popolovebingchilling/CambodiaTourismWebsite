@@ -1355,3 +1355,68 @@ p {
         font-size: 1.6rem !important;
     }
 }
+
+/* ── Stay Section ── */
+.stay-section {
+    padding: 100px 0 !important;
+}
+
+.lodge-premium-card {
+    display: flex !important;
+    flex-direction: column !important;
+    background: var(--primary-color) !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    color: white !important;
+    margin-bottom: 0 !important;
+    box-shadow: 0 10px 30px rgba(13, 42, 67, 0.1) !important;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    height: 100% !important;
+}
+
+.lodge-premium-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 40px 80px -20px rgba(13, 42, 67, 0.4) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.lodge-premium-img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+}
+
+.lodge-premium-info {
+    width: 100% !important;
+    padding: 25px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    flex-grow: 1 !important;
+}
+
+.lodge-premium-info h3 {
+    color: var(--secondary-color) !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    margin-bottom: 12px !important;
+}
+
+.lodge-premium-info p {
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+}
+
+.lodge-premium-tag {
+    display: inline-block !important;
+    background: rgba(215, 181, 109, 0.1) !important;
+    color: var(--secondary-color) !important;
+    padding: 4px 12px !important;
+    border-radius: 6px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    margin-bottom: 15px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}

@@ -708,6 +708,14 @@ body{
     color: var(--secondary-color) !important;
 }
 
+.bg-mixed .section-title span,
+.bg-mixed .card-title-custom span,
+.bg-mixed h1 span,
+.bg-mixed h2 span,
+.bg-mixed h3 span {
+    color: var(--secondary-color) !important;
+}
+
 .bg-mixed .quote-card {
     background: rgba(255, 255, 255, 0.05) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -785,6 +793,9 @@ body{
     color: var(--secondary-color) !important;
     font-weight: 600;
     font-size: 1.1rem;
+}
+.hotel-card-details .rating i {
+    color: var(--secondary-color) !important;
 }
 .hotel-card-details .price span {
     color: var(--text-tertiary) !important;

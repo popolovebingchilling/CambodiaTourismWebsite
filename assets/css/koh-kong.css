@@ -434,16 +434,16 @@ body{
 }
 
 .btn-khmer-gold {
-    background: var(--primary-color) !important;
-    color: var(--secondary-color) !important;
+    background: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
     border-color: var(--secondary-color) !important;
 }
 
 .btn-khmer-gold:hover {
-    background: var(--secondary-color) !important;
-    color: var(--primary-color) !important;
+    background: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
     transform: translateY(-5px) scale(1.05) !important;
-    border-color: var(--secondary-color) !important;
+    border-color: var(--primary-color) !important;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
@@ -560,7 +560,6 @@ body{
 }
 
 .bg-mixed .section-label,
-.bg-mixed .section-badge,
 .hero-title span {
     color: var(--secondary-color) !important;
 }
