@@ -280,14 +280,14 @@ body.dark-mode .destinations-section {
     background-color: var(--dark-oud) !important;
 }
 .section-badge {
-    background: rgba(215, 181, 109, 0.1) !important;
+    background: var(--primary-color) !important;
     color: var(--secondary-color) !important;
     padding: 8px 20px !important;
     border-radius: 50px !important;
     font-weight: 700 !important;
     font-size: 14px !important;
     letter-spacing: 1px !important;
-    border: 1px solid rgba(215, 181, 109, 0.2) !important;
+    border: 1px solid var(--secondary-color) !important;
 }
 .section-title {
     font-family: "Kantumruy Pro", sans-serif !important;
@@ -1830,4 +1830,63 @@ img.img-fluid:not(.logo), img.feature-img, img.img-food, img.attraction-img, img
 .cinematic-vignette-overlay > * {
     position: relative;
     z-index: 3 !important;
+}
+
+/* =========================================
+   GLOBAL BUTTON STANDARDIZATION
+   ========================================= */
+button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn), 
+input[type="submit"], 
+input[type="button"], 
+.btn:not(.btn-close):not(.nav-link), 
+.btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-warning, .btn-info, .btn-light, .btn-dark, 
+.btn-book-now, .btn-bento, .btn-explore, .btn-map-link, .btn-service, .btn-subscribe, 
+.btn-auth, .btn-social, .btn-confirm-booking, .btn-royal, .btn-outline-light, .btn-stone, 
+.button, .buttonv, .bs, .btn-submit, .btn-khmer {
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+    border: 1px solid var(--secondary-color) !important;
+    border-radius: 10px !important;
+    padding: 10px 20px !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn):hover, 
+input[type="submit"]:hover, 
+input[type="button"]:hover, 
+.btn:not(.btn-close):not(.nav-link):hover, 
+.btn-primary:hover, .btn-secondary:hover, .btn-success:hover, .btn-danger:hover, .btn-warning:hover, .btn-info:hover, .btn-light:hover, .btn-dark:hover, 
+.btn-book-now:hover, .btn-bento:hover, .btn-explore:hover, .btn-map-link:hover, .btn-service:hover, .btn-subscribe:hover, 
+.btn-auth:hover, .btn-social:hover, .btn-confirm-booking:hover, .btn-royal:hover, .btn-outline-light:hover, .btn-stone:hover, 
+.button:hover, .buttonv:hover, .bs:hover, .btn-submit:hover, .btn-khmer:hover {
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(215, 181, 109, 0.4) !important;
+}
+
+/* Align footer copyright text with trust badges globally */
+.footer .row.align-items-center > .col-md-6 > p.mb-0 {
+    display: flex !important;
+    align-items: center !important;
+    height: 24px !important;
+    margin-bottom: 0 !important;
+}
+
+@media (min-width: 768px) {
+    .footer .row.align-items-center > .col-md-6.text-md-start > p.mb-0 {
+        justify-content: flex-start !important;
+    }
+}
+@media (max-width: 767.98px) {
+    .footer .row.align-items-center > .col-md-6 > p.mb-0 {
+        justify-content: center !important;
+    }
 }

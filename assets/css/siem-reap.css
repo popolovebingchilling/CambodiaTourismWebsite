@@ -497,6 +497,8 @@ body{
             border-left: none !important;
             display: flex !important;
             flex-direction: column !important;
+            align-items: center !important;
+            text-align: center !important;
         }
 
         .tip-card:hover {
@@ -1095,8 +1097,6 @@ p {
     background: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
     opacity: 0.04 !important;
     pointer-events: none !important;
-}
-
 .tip-card {
     height: 100% !important;
     background: white !important;
@@ -1108,6 +1108,8 @@ p {
     border-left: none !important;
     display: flex !important;
     flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
 }
 
 .tip-card:hover {

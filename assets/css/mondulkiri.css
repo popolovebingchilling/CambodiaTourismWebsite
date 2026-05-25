@@ -402,7 +402,7 @@ body{
 /* ── Buttons ── */
 .btn-khmer {
     padding: 14px 32px !important;
-    border-radius: 12px !important;
+    border-radius: 50px !important;
     font-weight: 700 !important;
     font-size: 14px !important;
     text-decoration: none !important;
@@ -428,16 +428,16 @@ body{
 }
 
 .btn-khmer-gold {
-    background: var(--secondary-color) !important;
-    color: var(--primary-color) !important;
+    background: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
     border-color: var(--secondary-color) !important;
 }
 
 .btn-khmer-gold:hover {
-    background: white !important;
+    background: var(--secondary-color) !important;
     color: var(--primary-color) !important;
     transform: translateY(-5px) scale(1.05) !important;
-    border-color: white !important;
+    border-color: var(--secondary-color) !important;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
@@ -544,7 +544,9 @@ body{
     color: rgba(255, 255, 255, 0.85) !important;
 }
 
-.bg-mixed .section-label {
+.bg-mixed .section-label,
+.bg-mixed .section-badge,
+.hero-title span {
     color: var(--secondary-color) !important;
 }
 
