@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- SWIPER -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -89,7 +91,7 @@
 
     <main class="bg-mixed auth-wrapper">
         <div class="container d-flex justify-content-center">
-            <div class="auth-card d-flex flex-column flex-md-row">
+            <div class="auth-card d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="100">
                 <!-- Image Side -->
                 <div class="auth-img-side col-md-5">
                     <h2 class="auth-title text-white mb-3">ចូលរួមជាមួយ<span>យើង</span></h2>
@@ -299,6 +301,10 @@
                 localStorage.setItem('userEmail', email);
             }
         });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
     </script>
 </body>
 

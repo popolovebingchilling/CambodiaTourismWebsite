@@ -365,7 +365,7 @@
             noResult.classList.add('d-none');
 
             grid.innerHTML = filteredPhotos.map((p, i) => `
-        <div class="masonry-item" onclick="openLB(${i})">
+        <div class="masonry-item"  data-aos="fade-up" onclick="openLB(${i})">
             <img src="${p.url}" alt="${p.title}" loading="lazy"
                  style="aspect-ratio:${p.h === 'tall' ? '3/4' : '4/3'}">
             <span class="overlay-tag">${p.province}</span>
@@ -409,15 +409,14 @@
             if (e.key === 'ArrowRight') changeLB(1);
         });
 
-        // Scroll reveal
-        const obs = new IntersectionObserver(entries =>
-            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-            { threshold: .1 }
-        );
-        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+        
 
         // Init
         renderGrid();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
     </script>
 </body>
 
