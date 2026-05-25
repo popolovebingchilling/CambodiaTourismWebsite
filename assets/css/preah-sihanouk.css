@@ -559,7 +559,9 @@ section.bg {
 /* Specific golden ornaments and secondary highlights */
 .bg-mixed .section-label,
 .bg-mixed h2.text-center.fw-bold,
-.bg-mixed h5 {
+.bg-mixed h5,
+.bg-mixed .section-badge,
+.hero-title span {
     color: var(--secondary-color) !important;
 }
 

@@ -86,10 +86,10 @@ body{
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(215, 181, 109, 0.12);
-            border: 1px solid rgba(215, 181, 109, 0.25);
+            background: var(--primary-color) !important;
+            border: 1px solid var(--secondary-color) !important;
             backdrop-filter: blur(10px);
-            color: var(--secondary-color);
+            color: var(--secondary-color) !important;
             padding: 8px 22px;
             border-radius: 50px;
             font-size: 0.95rem;

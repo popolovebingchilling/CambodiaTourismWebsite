@@ -460,6 +460,8 @@ body{
             height: 100%;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .tip-card:hover {
@@ -482,6 +484,21 @@ body{
         /* CTA */
         .cta-section {
             padding: 100px 0;
+        }
+
+        .btn-hero-primary, .btn-hero-outline{
+            background-color: var(--secondary-color) !important;
+            color: var(--primary-color) !important;
+            border: 1px solid var(--secondary-color) !important;
+            transition: 0.3s !important;
+        }
+
+        .btn-hero-primary:hover , .btn-hero-outline:hover {
+            background-color: white !important;
+            color: var(--primary-color) !important;
+            border-color: white !important;
+            transform: translateY(-3px) scale(1.05) !important;
+            box-shadow: 0 8px 25px rgba(215, 181, 109, 0.3) !important;
         }
 
         @media (max-width: 992px) {
