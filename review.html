@@ -89,11 +89,11 @@
 
     <section class="bg-mixed review-hero">
         <div class="text-center text-white px-3" style="z-index:2;position:relative;">
-            <span class="d-inline-block px-4 py-2 rounded-pill mb-3"
-                style="background:rgba(13, 42, 67, 0.85); font-size:.85rem; letter-spacing:2px; border: 1.5px solid var(--secondary-color); color: var(--secondary-color);">
-                ⭐ ប្រព័ន្ធវាយតម្លៃ
+            <span class="d-inline-block px-4 py-2 rounded-pill mb-3 fw-bold"
+                style="background-color: var(--secondary-color) !important; color: var(--primary-color) !important; font-size:.85rem; border: 1.5px solid var(--secondary-color);">
+                ប្រព័ន្ធវាយតម្លៃ
             </span>
-            <h1 style="font-size:clamp(2.2rem,5vw,4rem);text-shadow:0 4px 20px rgba(0,0,0,.4);">
+            <h1 class="fw-bold" style="font-size:clamp(2.2rem,5vw,4rem);text-shadow:0 4px 20px rgba(0,0,0,.4);">
                 មតិ<span style="color:var(--secondary-color);">យោបល់</span></h1>
             <p style="opacity:.9;font-size:1rem;max-width:500px;margin:0 auto;">
                 ចែករំលែកបទពិសោធ ដើម្បីជួយអ្នកដំណើរផ្សេងទៀត
@@ -149,7 +149,7 @@
                 <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
                     <div>
                         <p class="section-label mb-0">មតិយោបល់</p>
-                        <h2 class="section-title-km text-white mb-0">អ្នក<span>ប្រើប្រាស់</span></h2>
+                        <h2 class="section-title text-white mb-0">អ្នក<span>ប្រើប្រាស់</span></h2>
                     </div>
                     <div class="d-flex gap-2 flex-wrap">
                         <button class="filter-tab active" data-filter="all">ទាំងអស់</button>
@@ -251,7 +251,7 @@
         <div class="container">
             <div class="text-center mb-5 reveal">
                 <p class="section-label">ចែករំលែក</p>
-                <h2 class="section-title-km text-white">សរសេរមតិ<span>របស់អ្នក</span></h2>
+                <h2 class="section-title text-white">សរសេរមតិ<span>របស់អ្នក</span></h2>
                 <div class="divider-ornament justify-content-center"><span>✦</span></div>
             </div>
             <div class="row justify-content-center">
@@ -451,7 +451,13 @@
         const avC = ['av-1', 'av-2', 'av-3', 'av-4', 'av-5'];
         function avClass(id) { return avC[(id - 1) % avC.length]; }
         function avLetter(name) { return (name || '?')[0].toUpperCase(); }
-        function fmtDate(d) { return new Date(d).toLocaleDateString('km-KH', { year: 'numeric', month: 'long', day: 'numeric' }); }
+        function fmtDate(d) { 
+            const date = new Date(d);
+            const khmerMonths = ['មករា', 'កុម្ភៈ', 'មីនា', 'មេសា', 'ឧសភា', 'មិថុនា', 'កក្កដា', 'សីហា', 'កញ្ញា', 'តុលា', 'វិច្ឆិកា', 'ធ្នូ'];
+            const khmerNums = ['០', '១', '២', '៣', '៤', '៥', '៦', '៧', '៨', '៩'];
+            const toKhmerNum = (n) => n.toString().split('').map(c => khmerNums[c] || c).join('');
+            return `${toKhmerNum(date.getDate())} ${khmerMonths[date.getMonth()]} ${toKhmerNum(date.getFullYear())}`;
+        }
 
         function updateStats(reviews) {
             const total = reviews.length;
@@ -492,7 +498,7 @@
                     ${r.title ? `<p class="fw-semibold mb-1 small">"${r.title}"</p>` : ''}
                     <p class="mb-2" style="line-height:1.8;font-size:.92rem;">${r.comment}</p>
                     <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
-                        <span class="text-muted small"><i class="bi bi-calendar3 me-1"></i>${fmtDate(r.date)}</span>
+                        <span class="review-tag fw-bold"><i class="bi bi-calendar3 me-1"></i>${fmtDate(r.date)}</span>
                         <button class="like-btn ${r.liked ? 'liked' : ''}" onclick="toggleLike(${r.id})">
                             <i class="bi bi-hand-thumbs-up me-1"></i>${r.likes}
                         </button>

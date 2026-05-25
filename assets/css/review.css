@@ -241,12 +241,12 @@ body{
         }
 
         .review-tag {
-            background: var(--parchment);
-            color: var(--desert-terracotta);
+            background-color: var(--secondary-color) !important;
+            color: var(--primary-color) !important;
             font-size: .7rem;
             padding: 3px 10px;
             border-radius: 20px;
-            border: 1px solid var(--amber-dune)
+            border: 1px solid var(--secondary-color)
         }
 
         .like-btn {
@@ -404,7 +404,6 @@ body{
         .bg-mixed .form-label,
         .bg-mixed .bar-label,
         .bg-mixed .bar-count,
-        .bg-mixed .review-tag,
         .bg-mixed .user-info span,
                 .bg-mixed .section-subtitle,
         .bg-mixed .testi-text {
