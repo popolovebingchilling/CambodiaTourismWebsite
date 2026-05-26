@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 .profile-wrapper {
-    margin-top: 50px !important;
-    margin-bottom: 80px !important;
+    margin-top: 30px !important;
+    margin-bottom: 60px !important;
 }
 
 .profile-sidebar {
     background: #ffffff !important;
-    border: 1px solid rgba(255, 255, 255, 0.8) !important;
-    border-radius: 30px !important;
-    padding: 35px !important;
-    box-shadow: 0 20px 40px rgba(13, 42, 67, 0.05) !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 25px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
     height: 100% !important;
 }
@@ -129,13 +129,13 @@
 
 .top-banner-premium {
     background: linear-gradient(135deg, var(--primary-color) 0%, #153e5f 100%) !important;
-    border-radius: 30px !important;
-    padding: 45px !important;
+    border-radius: 20px !important;
+    padding: 30px !important;
     color: white !important;
     position: relative !important;
     overflow: hidden !important;
-    box-shadow: 0 20px 40px rgba(13, 42, 67, 0.25) !important;
-    margin-bottom: 35px !important;
+    box-shadow: 0 15px 30px rgba(13, 42, 67, 0.15) !important;
+    margin-bottom: 25px !important;
 }
 
 .top-banner-premium::before {
@@ -219,10 +219,10 @@
 
 .premium-card {
     background: #ffffff !important;
-    border: 1px solid rgba(255, 255, 255, 0.8) !important;
-    border-radius: 30px !important;
-    padding: 40px !important;
-    box-shadow: 0 20px 40px rgba(13, 42, 67, 0.04) !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 25px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
     height: 100% !important;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
 }
@@ -234,12 +234,12 @@
 }
 
 .premium-card h4 {
-    margin-bottom: 35px !important;
+    margin-bottom: 25px !important;
     font-weight: 800 !important;
     color: var(--primary-color) !important;
     display: flex !important;
     align-items: center !important;
-    font-size: 22px !important;
+    font-size: 20px !important;
 }
 
 .premium-card h4 i {
@@ -262,7 +262,7 @@
 .form-control-premium,
 .form-select-premium {
     border-radius: 18px !important;
-    padding: 16px 22px !important;
+    padding: 12px 18px !important;
     background-color: rgba(255, 255, 255, 0.9) !important;
     border: 2px solid rgba(13, 42, 67, 0.08) !important;
     color: var(--primary-color) !important;
@@ -318,7 +318,7 @@
 
 .info-item-premium {
     border-bottom: 1px solid rgba(13, 42, 67, 0.08) !important;
-    padding: 22px 0 !important;
+    padding: 15px 0 !important;
     transition: all 0.4s ease !important;
     border-radius: 15px !important;
     margin-bottom: 5px !important;

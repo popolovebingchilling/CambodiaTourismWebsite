@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- AOS ANIMATION -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="assets/js/spa-router.js" defer></script>
 </head>
 
 <body>
@@ -78,10 +79,12 @@
                         <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
                     </ul>
                 </div>
-                <div class="d-none d-lg-flex align-items-center gap-3">
+                                                <div class="d-none d-lg-flex align-items-center gap-3">
 
-                    <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
+                    <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2" title="ប្រវត្តិរូប" style="display: none !important;">
+                        <img src="assets/image/pouly.jpg" alt="Profile" class="rounded-circle border border-2 border-white" style="width: 40px; height: 40px; object-fit: cover; transition: 0.3s; opacity: 0.9;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0.9'; this.style.transform='scale(1)';">
+                    </a>
                 </div>
             </div>
         </nav>
@@ -192,10 +195,10 @@
                         <p class="testi-text">"សេវាកម្មពិតជាអស្ចារ្យមែន! មគ្គុទ្ទេសក៍ទេសចរណ៍មានចំណេះដឹងជ្រៅជ្រះ
                             និងរួសរាយរាក់ទាក់បំផុត។ ខ្ញុំនឹងត្រឡប់មកវិញម្តងទៀត។"</p>
                         <div class="testi-user">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop"
+                            <img src="assets/image/Panha.jpg"
                                 alt="User 1">
                             <div class="user-info">
-                                <h6>សុខ ហេង</h6>
+                                <h6>បញ្ញា</h6>
                                 <span>អ្នកទេសចរមកពីភ្នំពេញ</span>
                             </div>
                         </div>
@@ -213,10 +216,10 @@
                         <p class="testi-text">"ការរៀបចំដំណើរស្ទើរតែឥតខ្ចោះ។ ខ្ញុំចូលចិត្តការជ្រើសរើសសណ្ឋាគារ
                             និងភោជនីយដ្ឋានដែលមានផាសុកភាព និងរសជាតិឆ្ងាញ់។"</p>
                         <div class="testi-user">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop"
+                            <img src="assets/image/Soama.jpg"
                                 alt="User 2">
                             <div class="user-info">
-                                <h6>លីនដា</h6>
+                                <h6>សោមា</h6>
                                 <span>អ្នកទេសចរអន្តរជាតិ</span>
                             </div>
                         </div>
@@ -231,13 +234,12 @@
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
                                 class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                         </div>
-                        <p class="testi-text">"បទពិសោធន៍នៅមណ្ឌលគិរីជាមួយដំរីពិតជាមិនអាចបំភ្លេចបាន។ អរគុណ Royal
-                            Cambodia សម្រាប់ការណែនាំដ៏ល្អបំផុត។"</p>
+                        <p class="testi-text">"បទពិសោធន៍នៅមណ្ឌលគិរីជាមួយដំរីពិតជាមិនអាចបំភ្លេចបាន។ អរគុណ ទេសចរណ៏កម្ពុជា សម្រាប់ការណែនាំដ៏ល្អបំផុត។"</p>
                         <div class="testi-user">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1974&auto=format&fit=crop"
+                            <img src="assets/image/Makara.jpg"
                                 alt="User 3">
                             <div class="user-info">
-                                <h6>វិច្ឆិកា</h6>
+                                <h6>មករា</h6>
                                 <span>អ្នកថតរូបសេរី</span>
                             </div>
                         </div>
@@ -563,6 +565,21 @@
         AOS.init({
             duration: 1000,
             once: true
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hasRegistered = localStorage.getItem('userFullName') || localStorage.getItem('userEmail');
+            const registerBtn = document.getElementById('header-register-btn');
+            const profileAvatar = document.getElementById('header-profile-avatar');
+            
+            if (hasRegistered) {
+                if (registerBtn) registerBtn.setAttribute('style', 'display: none !important;');
+                if (profileAvatar) profileAvatar.setAttribute('style', 'display: flex !important;');
+            } else {
+                if (registerBtn) registerBtn.setAttribute('style', 'display: inline-block !important;');
+                if (profileAvatar) profileAvatar.setAttribute('style', 'display: none !important;');
+            }
         });
     </script>
 </body>

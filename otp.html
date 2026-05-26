@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- AOS ANIMATION -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="assets/js/spa-router.js" defer></script>
 </head>
 
 <body>
@@ -79,10 +80,12 @@
                         <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
                     </ul>
                 </div>
-                <div class="d-none d-lg-flex align-items-center gap-3">
+                                                <div class="d-none d-lg-flex align-items-center gap-3">
 
-                    <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
+                    <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2" title="ប្រវត្តិរូប" style="display: none !important;">
+                        <img src="assets/image/pouly.jpg" alt="Profile" class="rounded-circle border border-2 border-white" style="width: 40px; height: 40px; object-fit: cover; transition: 0.3s; opacity: 0.9;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0.9'; this.style.transform='scale(1)';">
+                    </a>
                 </div>
             </div>
         </nav>
@@ -97,12 +100,13 @@
                     <p class="mb-4">ដើម្បីសុវត្ថិភាពគណនីរបស់អ្នក សូមធ្វើការផ្ទៀងផ្ទាត់លេខកូដ OTP ។</p>
                     <div class="my-4 text-center w-100">
                         <div class="vignette-wrapper shadow w-100">
-                            <img src="assets/image/Siem_Reap/AngkorWat.jpg" alt="Angkor Wat" style="height: 400px; width: 100%; object-fit: cover; display: block; border-radius: 20px;">
+                            <img src="assets/image/home-bg.png" alt="Angkor Wat" style="height: 300px; width: 100%; object-fit: cover; display: block; border-radius: 20px;">
                         </div>
                     </div>
                     <div class="mt-auto">
-                        <a href="login.html" class="btn btn-outline-light rounded-pill px-4"><i
-                                class="fas fa-arrow-left me-2"></i> ត្រឡប់ទៅការចូលប្រើ</a>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a href="login.html" class="btn btn-primary rounded-pill px-4"><i class="fas fa-sign-in-alt me-2"></i> ចូលគណនី</a>
+                        </div>
                     </div>
                 </div>
                 <!-- Form Side -->
@@ -111,16 +115,16 @@
                         <h3 class="auth-title mb-1">បញ្ចូលលេខកូដ <span>OTP</span></h3>
                         <p class="text-white-50">យើងបានផ្ញើលេខកូដ ៦ ខ្ទង់ទៅកាន់អ៊ីម៉ែលរបស់អ្នក។</p>
                     </div>
-                    <form action="index.html">
+                    <form action="login.html">
                         <div class="mb-4">
                             <label class="form-label">លេខកូដបញ្ជាក់ (OTP)</label>
                             <div class="d-flex gap-2 justify-content-between">
-                                <input type="text" class="form-control text-center fs-4 fw-bold" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
-                                <input type="text" class="form-control text-center fs-4 fw-bold" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
-                                <input type="text" class="form-control text-center fs-4 fw-bold" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
-                                <input type="text" class="form-control text-center fs-4 fw-bold" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
-                                <input type="text" class="form-control text-center fs-4 fw-bold" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
-                                <input type="text" class="form-control text-center fs-4 fw-bold" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                <input type="text" class="form-control text-center fs-4 fw-bold otp-input" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                <input type="text" class="form-control text-center fs-4 fw-bold otp-input" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                <input type="text" class="form-control text-center fs-4 fw-bold otp-input" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                <input type="text" class="form-control text-center fs-4 fw-bold otp-input" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                <input type="text" class="form-control text-center fs-4 fw-bold otp-input" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                <input type="text" class="form-control text-center fs-4 fw-bold otp-input" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
                             </div>
                             <div class="text-end mt-2">
                                 <a href="#" class="small auth-link">ផ្ញើលេខកូដឡើងវិញ</a>
@@ -128,9 +132,10 @@
                         </div>
                         <button type="submit" class="btn btn-auth mb-4">បញ្ជាក់ និង បន្ត</button>
                     </form>
-                    <div class="mt-4 text-center">
-                        <p class="small text-white-50">ចងចាំពាក្យសម្ងាត់មែនទេ? <a href="login.html"
-                                class="auth-link">ចូលប្រើប្រាស់</a></p>
+                    <div class="mt-4 text-center d-flex justify-content-center gap-3">
+                        <p class="small text-white-50 mb-0">ត្រឡប់ទៅ <a href="index.html" class="auth-link">ទំព័រដើម</a></p>
+                        <span class="text-white-50">|</span>
+                        <p class="small text-white-50 mb-0">ត្រឡប់ទៅ <a href="register.html" class="auth-link">ចុះឈ្មោះវិញ</a></p>
                     </div>
                 </div>
             </div>
@@ -241,6 +246,111 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1200, once: true });
+    </script>
+    <script>
+        // OTP Auto-focus and Navigation
+        const inputs = document.querySelectorAll('.otp-input');
+        
+        inputs.forEach((input, index) => {
+            // Focus the first input on load
+            if (index === 0) input.focus();
+            
+            input.addEventListener('input', (e) => {
+                const val = e.target.value;
+                // Allow only digits
+                if (!/^[0-9]$/.test(val)) {
+                    e.target.value = '';
+                    return;
+                }
+                
+                // Auto-focus next input
+                if (val && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            });
+            
+            input.addEventListener('keydown', (e) => {
+                // Backspace key
+                if (e.key === 'Backspace') {
+                    if (input.value === '') {
+                        if (index > 0) {
+                            inputs[index - 1].focus();
+                            inputs[index - 1].value = '';
+                        }
+                    } else {
+                        input.value = '';
+                    }
+                    e.preventDefault();
+                }
+            });
+            
+            // Paste event to support pasting 6-digit code
+            input.addEventListener('paste', (e) => {
+                const data = e.clipboardData.getData('text');
+                if (data.length === inputs.length && /^\d+$/.test(data)) {
+                    inputs.forEach((inp, idx) => {
+                        inp.value = data[idx];
+                    });
+                    inputs[inputs.length - 1].focus();
+                    e.preventDefault();
+                }
+            });
+        });
+
+        // OTP Verification and redirection logic
+        document.querySelector('form').addEventListener('submit', function (e) {
+            const otpCode = Array.from(inputs).map(inp => inp.value).join('');
+            if (otpCode.length < 6) {
+                alert("សូមបញ្ចូលលេខកូដ OTP ឱ្យបានគ្រប់ ៦ ខ្ទង់!");
+                e.preventDefault();
+                return;
+            }
+
+            const tempName = localStorage.getItem('tempUserFullName');
+            const tempEmail = localStorage.getItem('tempUserEmail');
+            const tempResetEmail = localStorage.getItem('tempResetEmail');
+
+            if (tempResetEmail) {
+                // Password Reset Flow
+                alert("ការផ្ទៀងផ្ទាត់ OTP ជោគជ័យ! អ្នកបានចូលគណនីដោយជោគជ័យ។");
+                localStorage.setItem('userFullName', 'User');
+                localStorage.setItem('userEmail', tempResetEmail);
+                localStorage.removeItem('tempResetEmail');
+                e.preventDefault();
+                window.location.href = 'index.html';
+                return;
+            } else {
+                // Registration Flow
+                if (tempName) {
+                    localStorage.setItem('userFullName', tempName);
+                    localStorage.removeItem('tempUserFullName');
+                } else {
+                    localStorage.setItem('userFullName', 'ភ្ញៀវកិត្តិយស');
+                }
+                if (tempEmail) {
+                    localStorage.setItem('userEmail', tempEmail);
+                    localStorage.removeItem('tempUserEmail');
+                } else {
+                    localStorage.setItem('userEmail', 'guest@cambodiatourism.com');
+                }
+                alert("ការផ្ទៀងផ្ទាត់ OTP ទទួលបានជោគជ័យ! គណនីរបស់អ្នកត្រូវបានបង្កើតឡើងដោយជោគជ័យ។");
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hasRegistered = localStorage.getItem('userFullName') || localStorage.getItem('userEmail');
+            const registerBtn = document.getElementById('header-register-btn');
+            const profileAvatar = document.getElementById('header-profile-avatar');
+            
+            if (hasRegistered) {
+                if (registerBtn) registerBtn.setAttribute('style', 'display: none !important;');
+                if (profileAvatar) profileAvatar.setAttribute('style', 'display: flex !important;');
+            } else {
+                if (registerBtn) registerBtn.setAttribute('style', 'display: inline-block !important;');
+                if (profileAvatar) profileAvatar.setAttribute('style', 'display: none !important;');
+            }
+        });
     </script>
 </body>
 

@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="assets/js/spa-router.js" defer></script>
 </head>
 
 <body class="bg-mixed">
@@ -79,10 +80,11 @@
                         <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
                     </ul>
                 </div>
-                <div class="d-none d-lg-flex align-items-center gap-3">
+                                                <div class="d-none d-lg-flex align-items-center gap-3">
+
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
-                    <a href="profile.html" class="text-white fs-4 ms-2" style="transition: 0.3s; opacity: 0.8;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'" title="ប្រវត្តិរូប">
-                        <i class="bi bi-person-circle"></i>
+                    <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2" title="ប្រវត្តិរូប" style="display: none !important;">
+                        <img src="assets/image/pouly.jpg" alt="Profile" class="rounded-circle border border-2 border-white" style="width: 40px; height: 40px; object-fit: cover; transition: 0.3s; opacity: 0.9;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0.9'; this.style.transform='scale(1)';">
                     </a>
                 </div>
             </div>
@@ -128,7 +130,7 @@
                                 </a>
                             </div>
 
-                            <button class="logout-btn-custom" onclick="window.location.href='login.html'">
+                            <button class="logout-btn-custom" onclick="localStorage.removeItem('userFullName'); localStorage.removeItem('userEmail'); window.location.href='index.html';">
                                 <i class="bi bi-box-arrow-right me-2"></i>
                                 ចាកចេញ
                             </button>
@@ -190,7 +192,7 @@
                                     <!-- Experience Item 2 -->
                                     <div class="d-flex flex-column flex-md-row align-items-md-center gap-4 p-4 rounded-4 experience-card" style="background: #f8f9fa; border: 1px solid #e9ecef; transition: 0.3s;" onmouseover="this.style.background='#e9ecef'" onmouseout="this.style.background='#f8f9fa'">
                                         <div style="width: 150px; height: 110px; overflow: hidden; border-radius: 12px; flex-shrink: 0;" class="shadow-sm">
-                                            <img src="assets/image/Kep/kep1.png" alt="Kep" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                                            <img src="https://img.harbor-property.com/bkarticle/2021/10/25/173634624.jpg" alt="Kep" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
                                         </div>
                                         <div class="flex-grow-1">
                                             <div class="d-flex justify-content-between align-items-center mb-2">
@@ -335,6 +337,21 @@
             if (storedName) {
                 const nameElements = document.querySelectorAll('.profile-name, .fw-bold.mb-2');
                 nameElements.forEach(el => el.textContent = storedName);
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hasRegistered = localStorage.getItem('userFullName') || localStorage.getItem('userEmail');
+            const registerBtn = document.getElementById('header-register-btn');
+            const profileAvatar = document.getElementById('header-profile-avatar');
+            
+            if (hasRegistered) {
+                if (registerBtn) registerBtn.setAttribute('style', 'display: none !important;');
+                if (profileAvatar) profileAvatar.setAttribute('style', 'display: flex !important;');
+            } else {
+                if (registerBtn) registerBtn.setAttribute('style', 'display: inline-block !important;');
+                if (profileAvatar) profileAvatar.setAttribute('style', 'display: none !important;');
             }
         });
     </script>

@@ -26,6 +26,7 @@ body{
     font-family: "Kantumruy Pro", sans-serif !important;
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
+    padding-top: 76px !important;
 }
 .bg-gradient-stone {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--angkor-stone) 100%) !important;
@@ -39,7 +40,14 @@ body{
 .bg-mixed {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-oud) 40%, var(--angkor-stone) 100%) !important;
 }
+
+
 header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1030 !important;
     background-color: var(--primary-color) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
@@ -425,7 +433,8 @@ body.dark-mode .section-subtitle {
     opacity: 1 !important;
 }
 .btn-explore {
-    color: var(--secondary-color) !important;
+    background: transparent !important;
+    color: var(--primary-color) !important;
     text-decoration: none !important;
     font-weight: 700 !important;
     font-size: 15px !important;
@@ -771,6 +780,7 @@ body.dark-mode .section-subtitle {
     transform: translateX(5px) !important;
 }
 .btn-explore {
+    background: transparent !important;
     color: var(--primary-color) !important;
     text-decoration: none !important;
     font-weight: 700 !important;
@@ -936,7 +946,8 @@ body.dark-mode .section-subtitle {
 }
 
 .btn-service {
-    color: var(--primary-color) !important;
+    background: transparent !important;
+    color: var(--secondary-color) !important;
     text-decoration: none !important;
     font-weight: 700 !important;
     font-size: 14px !important;
@@ -1153,11 +1164,11 @@ body.dark-mode .section-subtitle {
 
 /* Authentication Pages Styles */
 .auth-wrapper{
-    min-height: 80vh !important;
+    min-height: 70vh !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 50px 0 !important;
+    padding: 30px 0 !important;
 }
 .auth-card{
     background: rgba(255, 255, 255, 0.05) !important;
@@ -1181,11 +1192,24 @@ body.dark-mode .section-subtitle {
     color: white !important;
     text-align: center !important;
 }
+.auth-img-side > div.my-4 {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+}
 .vignette-wrapper {
     position: relative !important;
-    display: inline-block !important;
+    display: flex !important;
+    flex-grow: 1 !important;
     border-radius: 20px !important;
     overflow: hidden !important;
+}
+.vignette-wrapper img {
+    height: 100% !important;
+    min-height: 300px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    transform: rotate(-1.5deg) scale(1.05) !important;
 }
 .vignette-wrapper::after {
     content: '' !important;
@@ -1201,6 +1225,9 @@ body.dark-mode .section-subtitle {
 .auth-form-side{
     padding: 50px !important;
     color: white !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
 }
 .auth-title{
     font-family: "Kantumruy Pro", sans-serif !important;
@@ -1521,12 +1548,6 @@ body.dark-mode .section-subtitle {
         margin-top: -30px;
     }
 }
-
-/* ==========================================================================
-   Standardized Brand Buttons (Logo-Based Palette)
-   ========================================================================== */
-
-/* 1. Primary Brand Button (Royal Blue + Gold) */
 .btn-primary, .btn-royal {
     background-color: var(--primary-color) !important;
     border: 1px solid var(--secondary-color) !important;
@@ -1585,11 +1606,6 @@ body.dark-mode .section-subtitle {
     background-color: var(--secondary-color) !important;
     color: var(--primary-color) !important;
 }
-
-/* ==========================================================================
-   Unique "Royal Glass" Dropdown Menus
-   ========================================================================== */
-
 .dropdown-menu {
     background: var(--primary-color) !important;
     backdrop-filter: blur(15px) !important;
@@ -1774,9 +1790,6 @@ body.dark-mode .section-subtitle {
     border-radius: 20px;
 }
 }
-
-/* 4-Sided Cinematic Vignette Overlay */
-/* Applied to common image wrappers across the site */
 .card-img-wrapper::after,
 .service-img-box::after,
 .gallery-item::after,
@@ -1822,10 +1835,6 @@ img.img-fluid:not(.logo), img.feature-img, img.img-food, img.attraction-img, img
     mask-image: radial-gradient(ellipse at center, black 65%, rgba(0,0,0,0.15) 100%) !important;
 }
 
-
-/* ========================================================
-   PROVINCE CINEMATIC VIGNETTE OVERLAY (No White Halo)
-   ======================================================== */
 .cinematic-vignette-overlay {
     position: relative !important;
 }
@@ -1970,6 +1979,177 @@ img.img-fluid:not(.logo), img.feature-img, img.img-food, img.attraction-img, img
 }
 }
 
+.card-img-wrapper::after,
+.service-img-box::after,
+.gallery-item::after,
+.blog-img-wrapper::after,
+.highlight-img::after,
+.rounded-4.overflow-hidden::after,
+.attraction-img-wrap::after,
+.about-img-wrap::after,
+.food-card-img::after,
+.beach-card-img::after,
+.nimg::after,
+.card-place::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.85) 100%) !important;
+    pointer-events: none !important;
+    z-index: 5 !important;
+    border-radius: inherit !important;
+    mix-blend-mode: multiply !important;
+    transition: all 0.5s ease !important;
+}
+
+/* Ensure wrappers are relative */
+.card-img-wrapper,
+.service-img-box,
+.gallery-item,
+.blog-img-wrapper,
+.highlight-img,
+.rounded-4.overflow-hidden,
+.attraction-img-wrap,
+.about-img-wrap,
+.food-card-img,
+.beach-card-img,
+.nimg,
+.card-place {
+    position: relative !important;
+}
+
+/* Vignette for standalone images using mask-image for soft fade */
+img.img-fluid:not(.logo), img.feature-img, img.img-food, img.attraction-img, img.lodge-premium-img, img.cultural-card-img {
+    -webkit-mask-image: radial-gradient(ellipse at center, black 65%, rgba(0,0,0,0.15) 100%) !important;
+    mask-image: radial-gradient(ellipse at center, black 65%, rgba(0,0,0,0.15) 100%) !important;
+}
+.cinematic-vignette-overlay {
+    position: relative !important;
+}
+
+.cinematic-vignette-overlay::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: 
+        linear-gradient(to bottom, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 22%),
+        linear-gradient(to top, rgba(7, 18, 28, 0.95) 0%, rgba(7, 18, 28, 0) 25%),
+        linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
+        linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
+        radial-gradient(circle at center, rgba(13, 42, 67, 0.15) 0%, rgba(7, 18, 28, 0.5) 50%, rgba(7, 18, 28, 0.75) 100%) !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+.cinematic-vignette-overlay > * {
+    position: relative;
+    z-index: 3 !important;
+}
+
+
+button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn):not(.password-toggle), 
+input[type="submit"], 
+input[type="button"], 
+.btn:not(.btn-close):not(.nav-link), 
+.btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-warning, .btn-info, .btn-light, .btn-dark, 
+.btn-book-now, .btn-bento, .btn-map-link, .btn-subscribe, 
+.btn-auth, .btn-confirm-booking, .btn-royal, .btn-outline-light, .btn-stone, 
+.button, .buttonv, .bs, .btn-submit, .btn-khmer {
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-color) !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 10px 20px !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn):not(.password-toggle):hover, 
+input[type="submit"]:hover, 
+input[type="button"]:hover, 
+.btn:not(.btn-close):not(.nav-link):hover, 
+.btn-primary:hover, .btn-secondary:hover, .btn-success:hover, .btn-danger:hover, .btn-warning:hover, .btn-info:hover, .btn-light:hover, .btn-dark:hover, 
+.btn-book-now:hover, .btn-bento:hover, .btn-map-link:hover, .btn-subscribe:hover, 
+.btn-auth:hover, .btn-confirm-booking:hover, .btn-royal:hover, .btn-outline-light:hover, .btn-stone:hover, 
+.button:hover, .buttonv:hover, .bs:hover, .btn-submit:hover, .btn-khmer:hover {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border: none !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(215, 181, 109, 0.4) !important;
+}
+
+/* Align footer copyright text with trust badges globally */
+.footer .row.align-items-center > .col-md-6 > p.mb-0 {
+    display: flex !important;
+    align-items: center !important;
+    height: 24px !important;
+    margin-bottom: 0 !important;
+}
+
+@media (min-width: 768px) {
+    .footer .row.align-items-center > .col-md-6.text-md-start > p.mb-0 {
+        justify-content: flex-start !important;
+    }
+}
+@media (max-width: 767.98px) {
+    .footer .row.align-items-center > .col-md-6 > p.mb-0 {
+        justify-content: center !important;
+    }
+}
+
+/* Global fix to ensure title spans are always secondary-color, even inside bg-mixed */
+.bg-mixed .section-title span,
+.section-title span,
+.bg-mixed .hero-title span,
+.hero-title span,
+.bg-mixed .display-5 span,
+.display-5 span,
+.bg-mixed .display-6 span,
+.display-6 span {
+    color: var(--secondary-color) !important;
+}
+.map-overlay-badge i {
+    color: var(--secondary-color) !important;
+}
+
+@media (max-width: 992px) {
+    .master-map-display {
+        height: 400px !important;
+    }
+}
+@media (max-width: 768px){
+.bento-grid{
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto !important;
+}
+
+.card-main{
+    grid-column: span 1 !important;
+    padding: 30px !important;
+}
+
+.destination-card, .service-card, .gallery-item{
+    height: auto !important;
+}
+.section-title{
+    font-size: 28px !important;
+}
+.hero-bento{
+    background-attachment: scroll !important;
+}
+.navbar-nav{
+    background: var(--primary-color);
+    padding: 20px;
+    border-radius: 20px;
+}
+}
+
 /* 4-Sided Cinematic Vignette Overlay */
 /* Applied to common image wrappers across the site */
 .card-img-wrapper::after,
@@ -2052,7 +2232,7 @@ input[type="submit"],
 input[type="button"], 
 .btn:not(.btn-close):not(.nav-link), 
 .btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-warning, .btn-info, .btn-light, .btn-dark, 
-.btn-book-now, .btn-bento, .btn-explore, .btn-map-link, .btn-service, .btn-subscribe, 
+.btn-book-now, .btn-bento, .btn-map-link, .btn-subscribe, 
 .btn-auth, .btn-confirm-booking, .btn-royal, .btn-outline-light, .btn-stone, 
 .button, .buttonv, .bs, .btn-submit, .btn-khmer {
     background-color: var(--secondary-color) !important;
@@ -2074,7 +2254,7 @@ input[type="submit"]:hover,
 input[type="button"]:hover, 
 .btn:not(.btn-close):not(.nav-link):hover, 
 .btn-primary:hover, .btn-secondary:hover, .btn-success:hover, .btn-danger:hover, .btn-warning:hover, .btn-info:hover, .btn-light:hover, .btn-dark:hover, 
-.btn-book-now:hover, .btn-bento:hover, .btn-explore:hover, .btn-map-link:hover, .btn-service:hover, .btn-subscribe:hover, 
+.btn-book-now:hover, .btn-bento:hover, .btn-map-link:hover, .btn-subscribe:hover, 
 .btn-auth:hover, .btn-confirm-booking:hover, .btn-royal:hover, .btn-outline-light:hover, .btn-stone:hover, 
 .button:hover, .buttonv:hover, .bs:hover, .btn-submit:hover, .btn-khmer:hover {
     background-color: var(--primary-color) !important;
@@ -2122,4 +2302,30 @@ input[type="button"]:hover,
     height: 350px !important;
     object-fit: cover !important;
     border-radius: 1rem !important;
+}
+
+/* Global Typography & Layout Shift Fixes */
+html {
+    scroll-behavior: smooth !important;
+    scrollbar-gutter: stable !important;
+}
+
+h1, .hero-title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem) !important;
+    line-height: 1.25 !important;
+}
+
+h2, .section-title {
+    font-size: clamp(1.4rem, 3.5vw, 1.8rem) !important;
+    line-height: 1.3 !important;
+}
+
+h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem) !important;
+    line-height: 1.4 !important;
+}
+
+p, .hero-desc, .section-subtitle, .blog-body p, .guide-info p, .service-content p, .card-main p, .footer-brand-text, .auth-img-side p {
+    font-size: 15px !important;
+    line-height: 1.8 !important;
 }
