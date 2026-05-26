@@ -145,7 +145,7 @@ body{
 
         /* SHARED */
         .section-label {
-            font-size: 0.85rem !important;
+            font-size: 2rem !important;
             letter-spacing: 3px !important;
             text-transform: uppercase !important;
             color: var(--desert-terracotta) !important;
