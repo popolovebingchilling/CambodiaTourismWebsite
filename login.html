@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ចូលប្រើប្រាស់ | ទេសចរណ៍កម្ពុជា</title>
+    <title>ចូលគណនី | ទេសចរណ៍កម្ពុជា</title>
     <!-- HTML CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/register.css">
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
     <!-- BOOTSTRAP THEME  -->
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- AOS ANIMATION -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="assets/js/spa-router.js" defer></script>
 </head>
 
 <body>
@@ -82,8 +83,10 @@
                 </div>
                 <div class="d-none d-lg-flex align-items-center gap-3">
 
-                    <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
+                    <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2" title="ប្រវត្តិរូប" style="display: none !important;">
+                        <img src="assets/image/pouly.jpg" alt="Profile" class="rounded-circle border border-2 border-white" style="width: 40px; height: 40px; object-fit: cover; transition: 0.3s; opacity: 0.9;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0.9'; this.style.transform='scale(1)';">
+                    </a>
                 </div>
             </div>
         </nav>
@@ -94,52 +97,54 @@
             <div class="auth-card d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="100">
                 <!-- Image Side -->
                 <div class="auth-img-side col-md-5">
-                    <h2 class="auth-title text-white mb-3">សូមស្វាគមន៍<span>មកវិញ</span></h2>
-                    <p class="mb-4">សូមស្វាគមន៍មកកាន់គេហទំព័រទេសចរណ៍កម្ពុជា។
-                        សូមចូលប្រើប្រាស់ដើម្បីបន្តដំណើរកម្សាន្តរបស់អ្នក។</p>
+                    <h2 class="auth-title text-white mb-3">ចូលរួមជាមួយ<span>យើង</span></h2>
+                    <p class="mb-4">ចូលរួមជាមួយពួកយើងដើម្បីទទួលបានបទពិសោធន៍ថ្មីៗ
+                         និងការបញ្ចុះតម្លៃពិសេសសម្រាប់ការធ្វើដំណើរក្នុងប្រទេសកម្ពុជា។</p>
                     <div class="my-4 text-center w-100">
                         <div class="vignette-wrapper shadow w-100">
-                            <img src="assets/image/Siem_Reap/AngkorWat.jpg" alt="Angkor Wat" style="height: 400px; width: 100%; object-fit: cover; display: block; border-radius: 20px;">
+                            <img src="assets/image/home-bg.png" alt="Angkor Wat" style="height: 300px; width: 100%; object-fit: cover; display: block; border-radius: 20px;">
                         </div>
                     </div>
                     <div class="mt-auto">
-                        <p class="small">មិនទាន់មានគណនីមែនទេ?</p>
-                        <a href="register.html" class="btn btn-outline-light rounded-pill px-4">ចុះឈ្មោះឥឡូវនេះ</a>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a href="register.html" class="btn btn-primary rounded-pill px-4"><i class="fas fa-user-plus me-2"></i> ចុះឈ្មោះ</a>
+                        </div>
                     </div>
                 </div>
                 <!-- Form Side -->
                 <div class="auth-form-side col-md-7">
                     <div class="mb-4">
-                        <h3 class="auth-title mb-1">ចូលប្រើ<span>ប្រាស់</span></h3>
-                        <p class="text-white-50">ចូលប្រើប្រាស់គណនីរបស់អ្នក</p>
+                        <h3 class="auth-title mb-1">ចូល<span>គណនី</span></h3>
+                        <p class="text-white-50">ចូលទៅកាន់គណនីរបស់អ្នក</p>
                     </div>
-                    <form action="profile.html">
+                    <form action="index.html">
+                        
                         <div class="mb-3">
                             <label for="email" class="form-label">អាសយដ្ឋានអ៊ីម៉ែល</label>
-                            <input type="email" class="form-control" id="email" placeholder="បញ្ចូលអ៊ីមែលរបស់អ្នក"
-                                required>
+                            <input type="email" class="form-control" id="email" placeholder="បញ្ចូលអ៊ីមែលរបស់អ្នក" required>
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">ពាក្យសម្ងាត់</label>
-                            <div class="password-field-wrapper mb-2">
-                                <input type="password" class="form-control" id="password"
-                                    placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
+                            <div class="password-field-wrapper">
+                                <input type="password" class="form-control" id="password" placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
                                 <button type="button" class="password-toggle" id="togglePassword">
                                     <i class="fas fa-eye-slash"></i>
                                 </button>
                             </div>
-                            <div class="d-flex justify-content-between align-items-center mb-4 mt-2">
-                                <div class="form-check mb-0">
-                                    <input type="checkbox" class="form-check-input" id="remember">
-                                    <label class="form-check-label small text-white-50" for="remember">ចងចាំខ្ញុំ</label>
-                                </div>
-                                <a href="forgot-password.html" class="small auth-link">ភ្លេចពាក្យសម្ងាត់?</a>
-                            </div>
                         </div>
-                        <button type="submit" class="btn btn-auth mb-4">ចូលប្រើ</button>
+                        <div class="mb-4 d-flex justify-content-between align-items-center">
+                            <div class="form-check mb-0">
+                                <input type="checkbox" class="form-check-input" id="terms" required>
+                                <label class="form-check-label small" for="terms">
+                                    ចងចាំខ្ញុំ
+                                </label>
+                            </div>
+                            <a href="forgot-password.html" class="small auth-link">ភ្លេចពាក្យសម្ងាត់?</a>
+                        </div>
+                        <button type="submit" class="btn btn-auth mb-4">ចូលគណនី</button>
 
                         <div class="text-center">
-                            <p class="small text-white-50 mb-3">ឬចូលប្រើជាមួយ</p>
+                            <p class="small text-white-50 mb-3">ឬចូលគណនីជាមួយ</p>
                             <div class="social-auth">
                                 <a href="#" class="btn-social"><i class="fab fa-facebook-f"></i></a>
                                 <a href="#" class="btn-social"><i class="fab fa-google"></i></a>
@@ -148,7 +153,7 @@
                         </div>
                     </form>
                     <div class="mt-5 text-center d-md-none">
-                        <p class="small">មិនទាន់មានគណនីមែនទេ? <a href="register.html" class="auth-link">ចុះឈ្មោះ</a></p>
+                        <p class="small">ទៅកាន់ <a href="index.html" class="auth-link">ទំព័រដើម</a></p>
                     </div>
                 </div>
             </div>
@@ -275,15 +280,40 @@
     </script>
     <script>
         document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
             const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            
+            if (password !== '123456') {
+                alert('ពាក្យសម្ងាត់មិនត្រឹមត្រូវទេ! ប្រសិនបើអ្នកភ្លេចពាក្យសម្ងាត់ សូមចុចលើ "ភ្លេចពាក្យសម្ងាត់?"');
+                return;
+            }
+            
             if (email) {
+                localStorage.setItem('userFullName', 'User');
                 localStorage.setItem('userEmail', email);
+                window.location.href = 'index.html';
             }
         });
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1200, once: true });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hasRegistered = localStorage.getItem('userFullName') || localStorage.getItem('userEmail');
+            const registerBtn = document.getElementById('header-register-btn');
+            const profileAvatar = document.getElementById('header-profile-avatar');
+            
+            if (hasRegistered) {
+                if (registerBtn) registerBtn.setAttribute('style', 'display: none !important;');
+                if (profileAvatar) profileAvatar.setAttribute('style', 'display: flex !important;');
+            } else {
+                if (registerBtn) registerBtn.setAttribute('style', 'display: inline-block !important;');
+                if (profileAvatar) profileAvatar.setAttribute('style', 'display: none !important;');
+            }
+        });
     </script>
 </body>
 

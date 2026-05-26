@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- AOS ANIMATION -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="assets/js/spa-router.js" defer></script>
 </head>
 
 <header class="sticky-top">
@@ -78,620 +79,16 @@
                     <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
                 </ul>
             </div>
-            <div class="d-none d-lg-flex align-items-center gap-3">
+                                            <div class="d-none d-lg-flex align-items-center gap-3">
 
-                <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
-                <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
-            </div>
+                    <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
+                    <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2" title="ប្រវត្តិរូប" style="display: none !important;">
+                        <img src="assets/image/pouly.jpg" alt="Profile" class="rounded-circle border border-2 border-white" style="width: 40px; height: 40px; object-fit: cover; transition: 0.3s; opacity: 0.9;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0.9'; this.style.transform='scale(1)';">
+                    </a>
+                </div>
         </div>
     </nav>
 </header>
-<section class="modal-section">
-    <!-- Amber Kampot Detail Modal -->
-    <div class="modal fade" id="amberModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content"
-                style="background: var(--card-bg) !important; border: 1px solid var(--card-border) !important; border-radius: 20px !important; overflow: hidden !important;">
-
-                <!-- Modal Header Image -->
-                <div style="position:relative;">
-                    <!-- Scrollable Image Gallery -->
-                    <div style="position:relative;">
-                        <div id="amberGallery"
-                            style="display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;padding:0;height:350px;">
-                            <img src="https://amber-kampot.com/wp-content/uploads/2020/06/lagoon-scaled.jpg"
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://amber-kampot.com/wp-content/uploads/2020/06/pool-scaled.jpg"
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://amber-kampot.com/wp-content/uploads/2020/06/bath-scaled.jpg"
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://amber-kampot.com/wp-content/uploads/2020/06/room-scaled.jpg"
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://amber-kampot.com/wp-content/uploads/2020/06/floating-scaled.jpg"
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                        </div>
-                        <!-- Gradient overlays -->
-                        <div
-                            style="position:absolute;top:0;left:0;bottom:0;width:60px;background:linear-gradient(to right,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
-                        </div>
-                        <div
-                            style="position:absolute;top:0;right:0;bottom:0;width:60px;background:linear-gradient(to left,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
-                        </div>
-                        <div
-                            style="position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,#0f0f12 5%,transparent);pointer-events:none;z-index:2;">
-                        </div>
-                        <!-- Scroll arrows -->
-                        <button
-                            onclick="document.getElementById('amberGallery').scrollBy({left:-380,behavior:'smooth'})"
-                            style="position:absolute;top:50%;left:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button onclick="document.getElementById('amberGallery').scrollBy({left:380,behavior:'smooth'})"
-                            style="position:absolute;top:50%;right:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <!-- Close button -->
-                        <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                            style="position:absolute;top:16px;right:16px;z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                            <i class="fas fa-xmark"></i>
-                        </button>
-                        <!-- Dots indicator -->
-                        <div style="position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:6px;"
-                            id="amberDots"></div>
-                        <!-- Title overlay -->
-
-                    </div>
-                    <div
-                        style="position:absolute;inset:0;background:linear-gradient(to top,#0f0f12 5%,transparent 60%);">
-                    </div>
-                    <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                        style="position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                        onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                        onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                        <i class="fas fa-xmark"></i>
-                    </button>
-                    <div style="position:absolute;bottom:20px;left:24px;">
-                        <span
-                            style="display:inline-block;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-light);background:rgba(16,185,129,0.1);padding:4px 10px;border-radius:6px;margin-bottom:8px;">Luxury
-                            Resort</span>
-                        <h3 style="font-size:24px;font-weight:600;margin:0; color: white;">Amber Kampot</h3>
-                    </div>
-                </div>
-
-                <!-- Modal Body -->
-                <div style="padding:24px 28px 28px;">
-
-                    <!-- Rating & Price Row -->
-                    <div class="d-flex align-items-center gap-3 mb-4" style="flex-wrap:wrap;">
-                        <div class="d-flex align-items-center gap-1">
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star-half-stroke" style="color:#fbbf24;font-size:13px;"></i>
-                            <span style="font-size:13px;font-weight:500;margin-left:4px;">4.8</span>
-                        </div>
-                        <span style="color:var(--card-border);">|</span>
-                        <span style="font-size:12px;color:var(--text-tertiary);"><i class="fas fa-location-dot me-1"
-                                style="color:var(--accent);"></i>ទួលតាមួយ កំពត</span>
-                        <span style="color:var(--card-border);">|</span>
-                        <span style="font-size:14px;font-weight:600;color:var(--accent-light);">ចាប់ផ្តើម
-                            $350+/យប់</span>
-                    </div>
-
-                    <!-- Description -->
-                    <p
-                        style="font-size:14px;color:var(--card-title);font-weight:300;line-height:1.9;margin-bottom:20px;">
-                        Amber Kampot គឺជារមណីយដ្ឋានប្រណិតកម្រិតខ្ពស់ ស្ថិតនៅតាមដងទន្លេកំពត មានរចនាបថទំនើបស្រស់ស្អាត។
-                        ទីនេះផ្តល់នូវបទពិសោធន៍សម្រាកដ៏ពិសេស ជាមួយនឹងវីឡាឯកជន បឹងលំហែមុខទឹក
-                        និងបរិស្ថានធម្មជាតិដ៏ស្រស់ស្អាត។
-                    </p>
-                    <!-- Amenities -->
-                    <div style="font-size:12px;font-weight:500;color:var(--text-secondary);margin-bottom:12px;">
-                        សេវាកម្មនិងប្រើប្រាស់</div>
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background: white !important;border:1px solid rgba(13, 42, 67, 0.1) !important;border-radius:8px;padding:6px 12px;font-size:11px;color: var(--night-indigo) !important;">
-                            <i class="fas fa-water" style="color:#60a5fa;"></i> បឹងលំហែ
-                        </span>
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-wifi" style="color:var(--accent-light);"></i> WiFi
-                        </span>
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-utensils" style="color:#fbbf24;"></i> ភោជនីយដ្ឋាន
-                        </span>
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-motorcycle" style="color:#fb7185;"></i> ជួលម៉ូតូ
-                        </span>
-
-                    </div>
-
-                    <!-- Modal Actions -->
-                    <div class="d-flex gap-3" style="flex-wrap:wrap;">
-                        <a href="https://amber-kampot.com" target="_blank"
-                            style="flex:1;min-width:140px;background:#fff;color:#000;font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:none;text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);box-shadow:0 0 20px -5px rgba(255,255,255,0.15);"
-                            onmouseover="this.style.transform='translateY(-2px) scale(1.02)';this.style.boxShadow='0 0 30px -5px rgba(255,255,255,0.3)'"
-                            onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 0 20px -5px rgba(255,255,255,0.15)'">
-                            <i class="fas fa-globe"></i> គេហទំព័រផ្លូវការ
-                        </a>
-                        <a href="booking.html"
-                            style="flex:1;min-width:140px;background:var(--card-bg);color:var(--text-secondary);font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:1px solid var(--card-border);text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);"
-                            onmouseover="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--text-primary)';this.style.transform='translateY(-2px)'"
-                            onmouseout="this.style.background='var(--card-bg)';this.style.color='var(--text-secondary)';this.style.transform='translateY(0)'">
-                            <i class="fas fa-ticket-alt"></i>កក់ឥឡូវនេះ
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Retro Kampot Detail Modal -->
-    <div class="modal fade" id="retroModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content"
-                style="background: var(--card-bg) !important; border: 1px solid var(--card-border) !important; border-radius: 20px !important; overflow: hidden !important;">
-
-                <!-- Modal Header Image -->
-                <div style="position:relative;">
-                    <!-- Scrollable Image Gallery -->
-                    <div style="position:relative;">
-                        <div id="retroGallery"
-                            style="display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;padding:0;height:350px;">
-                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/560651486.jpg?k=a9684fbc01040fa7ed87a7977ba3f0f5621d1deba64664669a0b9cfb526a8e9f&o="
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/250943555.jpg?k=ffbc34bb7ca166c777618c98da9d455864edd1ff07f50ce916a9c8a0d1bcac17&o=&hp=1"
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/250948089.jpg?k=f7fb1e855bf3ddb2dfd56db8e8ff0cc48fe8c1b242f7b749114775c1df855116&o="
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/250944754.jpg?k=d0ba688b11c12c02997e16ba5854ef7162d1566ff1df493dedd87ffc9079fb1f&o="
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/250958278.jpg?k=3348ce20e4f060531e1e35948789d50701ad4977e6f5302ec5e2e42c2a45209b&o=&hp=1"
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                        </div>
-                        <!-- Gradient overlays -->
-                        <div
-                            style="position:absolute;top:0;left:0;bottom:0;width:60px;background:linear-gradient(to right,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
-                        </div>
-                        <div
-                            style="position:absolute;top:0;right:0;bottom:0;width:60px;background:linear-gradient(to left,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
-                        </div>
-                        <div
-                            style="position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,#0f0f12 5%,transparent);pointer-events:none;z-index:2;">
-                        </div>
-                        <!-- Scroll arrows -->
-                        <button
-                            onclick="document.getElementById('retroGallery').scrollBy({left:-380,behavior:'smooth'})"
-                            style="position:absolute;top:50%;left:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button onclick="document.getElementById('retroGallery').scrollBy({left:380,behavior:'smooth'})"
-                            style="position:absolute;top:50%;right:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <!-- Close button -->
-                        <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                            style="position:absolute;top:16px;right:16px;z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                            <i class="fas fa-xmark"></i>
-                        </button>
-                        <!-- Dots indicator -->
-                        <div style="position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:6px;"
-                            id="amberDots"></div>
-                        <!-- Title overlay -->
-
-                    </div>
-                    <div
-                        style="position:absolute;inset:0;background:linear-gradient(to top,#0f0f12 5%,transparent 60%);">
-                    </div>
-                    <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                        style="position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                        onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                        onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                        <i class="fas fa-xmark"></i>
-                    </button>
-                    <div style="position:absolute;bottom:20px;left:24px;">
-                        <span
-                            style="display:inline-block;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#fb7185;background:rgba(244,63,94,0.1);padding:4px 10px;border-radius:6px;margin-bottom:8px;">Guesthouse</span>
-                        <h3 style="font-size:24px;font-weight:600;margin:0; color: white;">Retro Kampot Guesthouse
-                        </h3>
-                    </div>
-                </div>
-
-                <!-- Modal Body -->
-                <div style="padding:24px 28px 28px;">
-
-                    <!-- Rating & Price Row -->
-                    <div class="d-flex align-items-center gap-3 mb-4" style="flex-wrap:wrap;">
-                        <div class="d-flex align-items-center gap-1">
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star-half-stroke" style="color:#fbbf24;font-size:13px;"></i>
-                            <span style="font-size:13px;font-weight:500;margin-left:4px;">4.6</span>
-                        </div>
-                        <span style="color:var(--card-border);">|</span>
-                        <span style="font-size:12px;color:var(--text-tertiary);"><i class="fas fa-location-dot me-1"
-                                style="color:var(--accent);"></i>ស្ថិតនៅជិត ដងទន្លេ និងព្រៃមង្គោល</span>
-                        <span style="color:var(--card-border);">|</span>
-                        <span style="font-size:14px;font-weight:600;color:var(--accent-light);">ចាប់ផ្តើម
-                            $15/យប់</span>
-                    </div>
-
-                    <!-- Description -->
-                    <p
-                        style="font-size:14px;color:var(--card-title);font-weight:300;line-height:1.9;margin-bottom:20px;">
-                        Retro Kampot Guesthouse គឺជាកន្លែងស្នាក់នៅដែលមានបរិយាកាសស្ងប់ស្ងាត់ និងធម្មជាតិខ្លាំង
-                        នៅខេត្តកំពត
-                    </p>
-                    <!-- Amenities -->
-                    <div style="font-size:12px;font-weight:500;color:var(--text-secondary);margin-bottom:12px;">
-                        សេវាកម្មនិងប្រើប្រាស់</div>
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-water" style="color:#60a5fa;"></i> ទីតាំងជាប់ទន្លេ
-                        </span>
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-wifi" style="color:var(--accent-light);"></i> WiFi
-                        </span>
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-utensils" style="color:#fbbf24;"></i> ភោជនីយដ្ឋាន
-                        </span>
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-motorcycle" style="color:#fb7185;"></i> ជួលម៉ូតូ
-                        </span>
-
-                    </div>
-
-                    <!-- Modal Actions -->
-                    <div class="d-flex gap-3" style="flex-wrap:wrap;">
-                        <a href="https://retrokampotguesthouse.top/" target="_blank"
-                            style="flex:1;min-width:140px;background:#fff;color:#000;font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:none;text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);box-shadow:0 0 20px -5px rgba(255,255,255,0.15);"
-                            onmouseover="this.style.transform='translateY(-2px) scale(1.02)';this.style.boxShadow='0 0 30px -5px rgba(255,255,255,0.3)'"
-                            onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 0 20px -5px rgba(255,255,255,0.15)'">
-                            <i class="fas fa-globe"></i> គេហទំព័រផ្លូវការ
-                        </a>
-                        <a href="booking.html"
-                            style="flex:1;min-width:140px;background:var(--card-bg);color:var(--text-secondary);font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:1px solid var(--card-border);text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);"
-                            onmouseover="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--text-primary)';this.style.transform='translateY(-2px)'"
-                            onmouseout="this.style.background='var(--card-bg)';this.style.color='var(--text-secondary)';this.style.transform='translateY(0)'">
-                            <i class="fas fa-ticket-alt"></i> កក់ឥឡូវនេះ
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- River Kampot Detail Modal -->
-    <div class="modal fade" id="edenModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content"
-                style="background: var(--card-bg) !important; border: 1px solid var(--card-border) !important; border-radius: 20px !important; overflow: hidden !important;">
-
-                <!-- Modal Header Image -->
-                <div style="position:relative;">
-                    <!-- Scrollable Image Gallery -->
-                    <div style="position:relative;">
-                        <div id="edenGallery"
-                            style="display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;padding:0;height:350px;">
-                            <img src="https://www.mekongdolphintours.com/userfiles/Rivertree-villa-Resort-in-kampot-Swimming-Pool-1-lr.jpg"
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/687899829.jpg?k=41be481f66441c467d5835cb7f3c2d5fe9ac89c7720a7dbbb292130f6f220524&o="
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://photos.hotelbeds.com/giata/bigger/10/1021367/1021367a_hb_p_001.jpg"
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://www.guidetrip.info/asset/img/gallery_resort/62da6c0004c75.jpeg"
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://rivertreevilla.com.kh/wp-content/uploads/2025/05/Suite-Private-Pool-Twin-Villa-Featured.jpg"
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                        </div>
-                        <!-- Gradient overlays -->
-                        <div
-                            style="position:absolute;top:0;left:0;bottom:0;width:60px;background:linear-gradient(to right,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
-                        </div>
-                        <div
-                            style="position:absolute;top:0;right:0;bottom:0;width:60px;background:linear-gradient(to left,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
-                        </div>
-                        <div
-                            style="position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,#0f0f12 5%,transparent);pointer-events:none;z-index:2;">
-                        </div>
-                        <!-- Scroll arrows -->
-                        <button onclick="document.getElementById('edenGallery').scrollBy({left:-380,behavior:'smooth'})"
-                            style="position:absolute;top:50%;left:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button onclick="document.getElementById('edenGallery').scrollBy({left:380,behavior:'smooth'})"
-                            style="position:absolute;top:50%;right:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <!-- Close button -->
-                        <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                            style="position:absolute;top:16px;right:16px;z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                            <i class="fas fa-xmark"></i>
-                        </button>
-                        <!-- Dots indicator -->
-                        <div style="position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:6px;"
-                            id="edenDots"></div>
-                        <!-- Title overlay -->
-
-                    </div>
-                    <div
-                        style="position:absolute;inset:0;background:linear-gradient(to top,#0f0f12 5%,transparent 60%);">
-                    </div>
-                    <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                        style="position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                        onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                        onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                        <i class="fas fa-xmark"></i>
-                    </button>
-                    <div style="position:absolute;bottom:20px;left:24px;">
-                        <span
-                            style="display:inline-block;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#60a5fa;background:rgba(59,130,246,0.1);padding:4px 10px;border-radius:6px;margin-bottom:8px;">Eco-Luxury</span>
-                        <h3 style="font-size:24px;font-weight:600;margin:0; color: white;">RiverTree Villa </h3>
-                    </div>
-                </div>
-
-                <!-- Modal Body -->
-                <div style="padding:24px 28px 28px;">
-
-                    <!-- Rating & Price Row -->
-                    <div class="d-flex align-items-center gap-3 mb-4" style="flex-wrap:wrap;">
-                        <div class="d-flex align-items-center gap-1">
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star-half-stroke" style="color:#fbbf24;font-size:13px;"></i>
-                            <span style="font-size:13px;font-weight:500;margin-left:4px;">4.5</span>
-                        </div>
-                        <span style="color:var(--card-border);">|</span>
-                        <span style="font-size:12px;color:var(--text-tertiary);"><i class="fas fa-location-dot me-1"
-                                style="color:var(--accent);"></i>ស្ថិតនៅភូមិ Mak Prang</span>
-                        <span style="color:var(--card-border);">|</span>
-                        <span style="font-size:14px;font-weight:600;color:var(--accent-light);">ចាប់ផ្តើម
-                            $85 - $130/យប់</span>
-                    </div>
-
-                    <!-- Description -->
-                    <p
-                        style="font-size:14px;color:var(--card-title);font-weight:300;line-height:1.9;margin-bottom:20px;">
-                        RiverTree Villa & Resort គឺជា resort លំដាប់ luxury បែបធម្មជាតិ (eco-luxury)
-                        ដែលពេញនិយមខ្លាំងនៅកំពត
-                    </p>
-                    <!-- Amenities -->
-                    <div style="font-size:12px;font-weight:500;color:var(--text-secondary);margin-bottom:12px;">
-                        សេវាកម្មនិងប្រើប្រាស់</div>
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-water" style="color:#60a5fa;"></i> ទីតាំងជាប់ទន្លេ
-                        </span>
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-wifi" style="color:var(--accent-light);"></i> WiFi
-                        </span>
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-utensils" style="color:#fbbf24;"></i> ភោជនីយដ្ឋាន
-                        </span>
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-motorcycle" style="color:#fb7185;"></i> ជួលម៉ូតូ
-                        </span>
-
-                    </div>
-
-                    <!-- Modal Actions -->
-                    <div class="d-flex gap-3" style="flex-wrap:wrap;">
-                        <a href="https://www.google.com/aclk?sa=L&ai=DChsSEwiYqoDe1YOUAxX4mGYCHf64LVoYACICCAEQARoCc20&ae=2&aspm=1&co=1&ase=2&gclid=CjwKCAjwhqfPBhBWEiwAZo196hkcN-cWtxzjVF5GUYzwT5NaccL999kStmWM0z4Bnlme-FY8ETS5WBoCMk4QAvD_BwE&cid=CAASuwHkaI9tqiAN-PHIiAedSvFvx86F-ImF_NkjMnznCIMYN-XztUGQfoxDfDGVbzL10s4fzmDpHqXapHA9Tt7Tuf2Z3fz3JwibpVtXFAjNAQQRRkC5Ude7qC4tp2toDz568ahEvmw9-M4hT5P-AaKp6W-fkfSLmI5fehDMBBjs2cLgpdjB-Yt2Aw5Zb8FfJ0NgHZzLhotyTz8K2LpsxyfvaG7OkQGOiePaRWRoryIRK73ILuW-rjxSZhV8Rlzq&cce=2&category=acrcp_v1_35&sig=AOD64_20flrMBZeEYcbJQ3O14uqNC-b7BQ&q&nis=4&adurl&ved=2ahUKEwjghPnd1YOUAxUFwzgGHQG-JfUQ0Qx6BAgLEAE"
-                            target="_blank"
-                            style="flex:1;min-width:140px;background:#fff;color:#000;font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:none;text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);box-shadow:0 0 20px -5px rgba(255,255,255,0.15);"
-                            onmouseover="this.style.transform='translateY(-2px) scale(1.02)';this.style.boxShadow='0 0 30px -5px rgba(255,255,255,0.3)'"
-                            onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 0 20px -5px rgba(255,255,255,0.15)'">
-                            <i class="fas fa-globe"></i> គេហទំព័រផ្លូវការ
-                        </a>
-                        <a href="booking.html"
-                            style="flex:1;min-width:140px;background:var(--card-bg);color:var(--text-secondary);font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:1px solid var(--card-border);text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);"
-                            onmouseover="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--text-primary)';this.style.transform='translateY(-2px)'"
-                            onmouseout="this.style.background='var(--card-bg)';this.style.color='var(--text-secondary)';this.style.transform='translateY(0)'">
-                            <i class="fas fa-ticket-alt"></i> កក់ឥឡូវនេះ
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Sweet Kampot Detail Modal -->
-    <div class="modal fade" id="sweetModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content"
-                style="background: var(--card-bg) !important; border: 1px solid var(--card-border) !important; border-radius: 20px !important; overflow: hidden !important;">
-
-                <!-- Modal Header Image -->
-                <div style="position:relative;">
-                    <!-- Scrollable Image Gallery -->
-                    <div style="position:relative;">
-                        <div id="sweetGallery"
-                            style="display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;padding:0;height:350px;">
-                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/404878777.jpg?k=34dbbdb35f3b0262d32327047b00bca784aafd4cb766063b216a1a097c68a7b5&o="
-                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://www.kampotsweetboutique.com/uploads/room/2023-02-20%2010-34-12.jpg"
-                                style="width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/436295441.jpg?k=3b762e863f5e95cab58e97c3bd2c9877d6ec9d754b059ed020f0d1b350ea916b&o="
-                                style="width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://hanoivoyage.com/en/wp-content/uploads/2025/11/cambodge-hotel-kampot-kampot-sweet-boutique-1024-02.jpg"
-                                style="width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                            <img src="https://i.ytimg.com/vi/Rq6z1nvuuZE/maxresdefault.jpg"
-                                style="width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
-                                alt="">
-                        </div>
-                        <!-- Gradient overlays -->
-                        <div
-                            style="position:absolute;top:0;left:0;bottom:0;width:60px;background:linear-gradient(to right,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
-                        </div>
-                        <div
-                            style="position:absolute;top:0;right:0;bottom:0;width:60px;background:linear-gradient(to left,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
-                        </div>
-                        <div
-                            style="position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,#0f0f12 5%,transparent);pointer-events:none;z-index:2;">
-                        </div>
-                        <!-- Scroll arrows -->
-                        <button
-                            onclick="document.getElementById('sweetGallery').scrollBy({left:-380,behavior:'smooth'})"
-                            style="position:absolute;top:50%;left:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button onclick="document.getElementById('sweetGallery').scrollBy({left:380,behavior:'smooth'})"
-                            style="position:absolute;top:50%;right:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <!-- Close button -->
-                        <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                            style="position:absolute;top:16px;right:16px;z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                            <i class="fas fa-xmark"></i>
-                        </button>
-                        <!-- Dots indicator -->
-                        <div style="position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:6px;"
-                            id="edenDots"></div>
-                        <!-- Title overlay -->
-
-                    </div>
-                    <div
-                        style="position:absolute;inset:0;background:linear-gradient(to top,#0f0f12 5%,transparent 60%);">
-                    </div>
-                    <button type="button" data-bs-dismiss="modal" aria-label="Close"
-                        style="position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
-                        onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-                        onmouseout="this.style.background='rgba(0,0,0,0.5)'">
-                        <i class="fas fa-xmark"></i>
-                    </button>
-                    <div style="position:absolute;bottom:20px;left:24px;">
-                        <span
-                            style="display:inline-block;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#fbbf24;background:rgba(251,191,36,0.1);padding:4px 10px;border-radius:6px;margin-bottom:8px;">Boutique</span>
-                        <h3 style="font-size:24px;font-weight:600;margin:0; color: white;">Kampot Sweet Boutique
-                        </h3>
-                    </div>
-                </div>
-
-                <!-- Modal Body -->
-                <div style="padding:24px 28px 28px;">
-
-                    <!-- Rating & Price Row -->
-                    <div class="d-flex align-items-center gap-3 mb-4" style="flex-wrap:wrap;">
-                        <div class="d-flex align-items-center gap-1">
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
-                            <i class="fas fa-star-half-stroke" style="color:#fbbf24;font-size:13px;"></i>
-                            <span style="font-size:13px;font-weight:500;margin-left:4px;">4.7</span>
-                        </div>
-                        <span style="color:var(--card-border);">|</span>
-                        <span style="font-size:12px;color:var(--text-tertiary);"><i class="fas fa-location-dot me-1"
-                                style="color:var(--accent);"></i>Teuk Chhou (ក្រៅទីក្រុងបន្តិច)</span>
-                        <span style="color:var(--card-border);">|</span>
-                        <span style="font-size:14px;font-weight:600;color:var(--accent-light);">ចាប់ផ្តើម
-                            $30/យប់</span>
-                    </div>
-
-                    <!-- Description -->
-                    <p
-                        style="font-size:14px;color:var(--card-title);font-weight:300;line-height:1.9;margin-bottom:20px;">
-                        Kampot Sweet Boutique គឺជាសណ្ឋាគារបែប boutique + luxury (4⭐) នៅខេត្តកំពត
-                        ដែលមានបរិយាកាសស្ងប់ស្ងាត់ និងស្រស់ស្អាត
-                    </p>
-                    <!-- Amenities -->
-                    <div style="font-size:12px;font-weight:500;color:var(--text-secondary);margin-bottom:12px;">
-                        សេវាកម្មនិងប្រើប្រាស់</div>
-                    <div class="d-flex flex-wrap gap-2 mb-4">
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-water" style="color:#60a5fa;"></i> ទីតាំងជាប់ទន្លេ
-                        </span>
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-wifi" style="color:var(--accent-light);"></i> WiFi
-                        </span>
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-utensils" style="color:#fbbf24;"></i> ភោជនីយដ្ឋាន
-                        </span>
-                        <span
-                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
-                            <i class="fas fa-motorcycle" style="color:#fb7185;"></i> ជួលម៉ូតូ
-                        </span>
-
-                    </div>
-
-                    <!-- Modal Actions -->
-                    <div class="d-flex gap-3" style="flex-wrap:wrap;">
-                        <a href="https://www.kampotsweetboutique.com/index.php" target="_blank"
-                            style="flex:1;min-width:140px;background:#fff;color:#000;font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:none;text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);box-shadow:0 0 20px -5px rgba(255,255,255,0.15);"
-                            onmouseover="this.style.transform='translateY(-2px) scale(1.02)';this.style.boxShadow='0 0 30px -5px rgba(255,255,255,0.3)'"
-                            onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 0 20px -5px rgba(255,255,255,0.15)'">
-                            <i class="fas fa-globe"></i> គេហទំព័រផ្លូវការ
-                        </a>
-                        <a href="booking.html"
-                            style="flex:1;min-width:140px;background:var(--card-bg);color:var(--text-secondary);font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:1px solid var(--card-border);text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);"
-                            onmouseover="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--text-primary)';this.style.transform='translateY(-2px)'"
-                            onmouseout="this.style.background='var(--card-bg)';this.style.color='var(--text-secondary)';this.style.transform='translateY(0)'">
-                            <i class="fas fa-ticket-alt"></i> កក់ឥឡូវនេះ
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <!-- ════════ HERO ════════ -->
 <section class="bg-mixed hero-section" id="hero">
     <div class="container" style="max-width: 1280px; position: relative; z-index: 3;">
@@ -699,7 +96,7 @@
             <div class="col-lg-10 mx-auto text-center">
                 <span class="section-badge mb-3 d-inline-block">ទីក្រុងមាត់សមុទ្រ</span>
             <h1 class="hero-title fw-bold text-white"
-                    style="font-size: clamp(2.5rem, 6vw, 4.5rem); text-shadow: 0 4px 20px rgba(0,0,0,0.5); line-height: 1.25; margin-bottom: 20px;">
+                    style="font-size: 100px; text-shadow: 0 4px 20px rgba(0,0,0,0.5); line-height: 1.25; margin-bottom: 20px;">
                     ស្វែងយល់ <span style="color: var(--secondary-color) !important;">កំពត</span><br>
                     ស្ងប់ស្ងាត់ ស្រស់ស្អាត
                 </h1>
@@ -708,10 +105,10 @@
                 </p>
                 <div class="hero-actions justify-content-center d-flex">
                     <a href="#bokor" class="btn btn-khmer">
-                        <i class="fas fa-compass"></i> ស្វែងយល់ថ្មី
+                        <i class="fas fa-compass me-2"></i>ស្វែងយល់ថ្មី
                     </a>
                     <a href="#about" class="btn btn-secondary-color ms-3">
-                        <i class="fas fa-play"></i> ស្តាប់បទពិសោធន៍
+                        <i class="fas fa-play me-2"></i>ស្តាប់បទពិសោធន៍
                     </a>
                 </div>
             </div>
@@ -720,12 +117,12 @@
                     <div class="d-flex align-items-center gap-3 justify-content-center h-100">
                         <div>
                             <div class="stat-number" style="color:var(--secondary-color);">4.8</div>
-                            <div class="stat-label" style="color:var(--night-indigo);">ការវាយតម្លៃ</div>
+                            <div class="stat-label" style="color:var(--secondary-color);">ការវាយតម្លៃ</div>
                         </div>
                         <div style="width:1px;height:32px;background:var(--card-border);"></div>
                         <div>
                             <div class="stat-number" style="color:var(--secondary-color);">12K+</div>
-                            <div class="stat-label" style="color:var(--night-indigo);">ភ្ញៀវក្នុងឆ្នាំ</div>
+                            <div class="stat-label" style="color:var(--secondary-color);">ភ្ញៀវក្នុងឆ្នាំ</div>
                         </div>
                     </div>
                 </div>
@@ -751,7 +148,7 @@
                     ភ្នំបូកគោដ៏ស្រស់ស្អាត និងវប្បធម៌ផ្សេងៗ។
                 </p>
                 <a href="#bokor" class="btn btn-khmer">
-                    <i class="fas fa-arrow-right"></i> មើលទីតាំងទេសចរណ៍
+                    <i class="fas fa-arrow-right me-2"></i>មើលទីតាំងទេសចរណ៍
                 </a>
             </div>
             <div class="col-lg-7 reveal reveal-delay-2">
@@ -759,28 +156,28 @@
                     <div class="col-6">
                         <div class="glass-card text-center" data-aos="fade-up" data-aos-delay="100">
                             <div class="feature-icon amber mx-auto"><i class="fas fa-temperature-low"></i></div>
-                            <div class="stat-number" style="color: var(--khmer-gold) !important;">១០៧៥ម</div>
+                            <div class="stat-number" style="color: var(--secondary-color) !important;">១០៧៥ម</div>
                             <div class="stat-label">កំពស់ភ្នំបូកគោ</div>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="glass-card text-center" data-aos="fade-up" data-aos-delay="100">
                             <div class="feature-icon amber mx-auto"><i class="fas fa-temperature-low"></i></div>
-                            <div class="stat-number" style="color: var(--khmer-gold) !important;">៨០កម</div>
+                            <div class="stat-number" style="color: var(--secondary-color) !important;">៨០កម</div>
                             <div class="stat-label">ប្រវែងទន្លេកំពត</div>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="glass-card text-center" data-aos="fade-up" data-aos-delay="100">
                             <div class="feature-icon amber mx-auto"><i class="fas fa-temperature-low"></i></div>
-                            <div class="stat-number" style="color: var(--khmer-gold) !important;">២៤°C</div>
+                            <div class="stat-number" style="color: var(--secondary-color) !important;">២៤°C</div>
                             <div class="stat-label">សីតុណ្ហភាពមធ្យម</div>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="glass-card text-center" data-aos="fade-up" data-aos-delay="100">
                             <div class="feature-icon rose mx-auto"><i class="fas fa-people-group"></i></div>
-                            <div class="stat-number" style="color: var(--khmer-gold) !important;">៥៣៨៧</div>
+                            <div class="stat-number" style="color: var(--secondary-color) !important;">៥៣៨៧</div>
                             <div class="stat-label">ប្រជាជន​(ពាន់នាក់)</div>
                         </div>
                     </div>
@@ -1488,6 +885,627 @@
     <script>
         AOS.init({ duration: 1200, once: true });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hasRegistered = localStorage.getItem('userFullName') || localStorage.getItem('userEmail');
+            const registerBtn = document.getElementById('header-register-btn');
+            const profileAvatar = document.getElementById('header-profile-avatar');
+            
+            if (hasRegistered) {
+                if (registerBtn) registerBtn.setAttribute('style', 'display: none !important;');
+                if (profileAvatar) profileAvatar.setAttribute('style', 'display: flex !important;');
+            } else {
+                if (registerBtn) registerBtn.setAttribute('style', 'display: inline-block !important;');
+                if (profileAvatar) profileAvatar.setAttribute('style', 'display: none !important;');
+            }
+        });
+    </script>
+<section class="modal-section">
+    <!-- Amber Kampot Detail Modal -->
+    <div class="modal fade" id="amberModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content"
+                style="background: var(--card-bg) !important; border: 1px solid var(--card-border) !important; border-radius: 20px !important; overflow: hidden !important;">
+
+                <!-- Modal Header Image -->
+                <div style="position:relative;">
+                    <!-- Scrollable Image Gallery -->
+                    <div style="position:relative;">
+                        <div id="amberGallery"
+                            style="display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;padding:0;height:350px;">
+                            <img src="https://amber-kampot.com/wp-content/uploads/2020/06/lagoon-scaled.jpg"
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://amber-kampot.com/wp-content/uploads/2020/06/pool-scaled.jpg"
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://amber-kampot.com/wp-content/uploads/2020/06/bath-scaled.jpg"
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://amber-kampot.com/wp-content/uploads/2020/06/room-scaled.jpg"
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://amber-kampot.com/wp-content/uploads/2020/06/floating-scaled.jpg"
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                        </div>
+                        <!-- Gradient overlays -->
+                        <div
+                            style="position:absolute;top:0;left:0;bottom:0;width:60px;background:linear-gradient(to right,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
+                        </div>
+                        <div
+                            style="position:absolute;top:0;right:0;bottom:0;width:60px;background:linear-gradient(to left,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
+                        </div>
+                        <div
+                            style="position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,#0f0f12 5%,transparent);pointer-events:none;z-index:2;">
+                        </div>
+                        <!-- Scroll arrows -->
+                        <button
+                            onclick="document.getElementById('amberGallery').scrollBy({left:-380,behavior:'smooth'})"
+                            style="position:absolute;top:50%;left:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button onclick="document.getElementById('amberGallery').scrollBy({left:380,behavior:'smooth'})"
+                            style="position:absolute;top:50%;right:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <!-- Close button -->
+                        <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                            style="position:absolute;top:16px;right:16px;z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                            <i class="fas fa-xmark"></i>
+                        </button>
+                        <!-- Dots indicator -->
+                        <div style="position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:6px;"
+                            id="amberDots"></div>
+                        <!-- Title overlay -->
+
+                    </div>
+                    <div
+                        style="position:absolute;inset:0;background:linear-gradient(to top,#0f0f12 5%,transparent 60%);">
+                    </div>
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                        style="position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                        onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                        onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                        <i class="fas fa-xmark"></i>
+                    </button>
+                    <div style="position:absolute;bottom:20px;left:24px;">
+                        <span
+                            style="display:inline-block;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-light);background:rgba(16,185,129,0.1);padding:4px 10px;border-radius:6px;margin-bottom:8px;">Luxury
+                            Resort</span>
+                        <h3 style="font-size:24px;font-weight:600;margin:0; color: white;">Amber Kampot</h3>
+                    </div>
+                </div>
+
+                <!-- Modal Body -->
+                <div style="padding:24px 28px 28px;">
+
+                    <!-- Rating & Price Row -->
+                    <div class="d-flex align-items-center gap-3 mb-4" style="flex-wrap:wrap;">
+                        <div class="d-flex align-items-center gap-1">
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star-half-stroke" style="color:#fbbf24;font-size:13px;"></i>
+                            <span style="font-size:13px;font-weight:500;margin-left:4px;">4.8</span>
+                        </div>
+                        <span style="color:var(--card-border);">|</span>
+                        <span style="font-size:12px;color:var(--text-tertiary);"><i class="fas fa-location-dot me-1"
+                                style="color:var(--accent);"></i>ទួលតាមួយ កំពត</span>
+                        <span style="color:var(--card-border);">|</span>
+                        <span style="font-size:14px;font-weight:600;color:var(--accent-light);">ចាប់ផ្តើម
+                            $350+/យប់</span>
+                    </div>
+
+                    <!-- Description -->
+                    <p
+                        style="font-size:14px;color:var(--card-title);font-weight:300;line-height:1.9;margin-bottom:20px;">
+                        Amber Kampot គឺជារមណីយដ្ឋានប្រណិតកម្រិតខ្ពស់ ស្ថិតនៅតាមដងទន្លេកំពត មានរចនាបថទំនើបស្រស់ស្អាត។
+                        ទីនេះផ្តល់នូវបទពិសោធន៍សម្រាកដ៏ពិសេស ជាមួយនឹងវីឡាឯកជន បឹងលំហែមុខទឹក
+                        និងបរិស្ថានធម្មជាតិដ៏ស្រស់ស្អាត។
+                    </p>
+                    <!-- Amenities -->
+                    <div style="font-size:12px;font-weight:500;color:var(--text-secondary);margin-bottom:12px;">
+                        សេវាកម្មនិងប្រើប្រាស់</div>
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background: white !important;border:1px solid rgba(13, 42, 67, 0.1) !important;border-radius:8px;padding:6px 12px;font-size:11px;color: var(--night-indigo) !important;">
+                            <i class="fas fa-water" style="color:#60a5fa;"></i> បឹងលំហែ
+                        </span>
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-wifi" style="color:var(--accent-light);"></i> WiFi
+                        </span>
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-utensils" style="color:#fbbf24;"></i> ភោជនីយដ្ឋាន
+                        </span>
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-motorcycle" style="color:#fb7185;"></i> ជួលម៉ូតូ
+                        </span>
+
+                    </div>
+
+                    <!-- Modal Actions -->
+                    <div class="d-flex gap-3" style="flex-wrap:wrap;">
+                        <a href="https://amber-kampot.com" target="_blank"
+                            style="flex:1;min-width:140px;background:#fff;color:#000;font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:none;text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);box-shadow:0 0 20px -5px rgba(255,255,255,0.15);"
+                            onmouseover="this.style.transform='translateY(-2px) scale(1.02)';this.style.boxShadow='0 0 30px -5px rgba(255,255,255,0.3)'"
+                            onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 0 20px -5px rgba(255,255,255,0.15)'">
+                            <i class="fas fa-globe"></i> គេហទំព័រផ្លូវការ
+                        </a>
+                        <a href="booking.html"
+                            style="flex:1;min-width:140px;background:var(--card-bg);color:var(--text-secondary);font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:1px solid var(--card-border);text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);"
+                            onmouseover="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--text-primary)';this.style.transform='translateY(-2px)'"
+                            onmouseout="this.style.background='var(--card-bg)';this.style.color='var(--text-secondary)';this.style.transform='translateY(0)'">
+                            <i class="fas fa-ticket-alt"></i>កក់ឥឡូវនេះ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Retro Kampot Detail Modal -->
+    <div class="modal fade" id="retroModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content"
+                style="background: var(--card-bg) !important; border: 1px solid var(--card-border) !important; border-radius: 20px !important; overflow: hidden !important;">
+
+                <!-- Modal Header Image -->
+                <div style="position:relative;">
+                    <!-- Scrollable Image Gallery -->
+                    <div style="position:relative;">
+                        <div id="retroGallery"
+                            style="display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;padding:0;height:350px;">
+                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/560651486.jpg?k=a9684fbc01040fa7ed87a7977ba3f0f5621d1deba64664669a0b9cfb526a8e9f&o="
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/250943555.jpg?k=ffbc34bb7ca166c777618c98da9d455864edd1ff07f50ce916a9c8a0d1bcac17&o=&hp=1"
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/250948089.jpg?k=f7fb1e855bf3ddb2dfd56db8e8ff0cc48fe8c1b242f7b749114775c1df855116&o="
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/250944754.jpg?k=d0ba688b11c12c02997e16ba5854ef7162d1566ff1df493dedd87ffc9079fb1f&o="
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/250958278.jpg?k=3348ce20e4f060531e1e35948789d50701ad4977e6f5302ec5e2e42c2a45209b&o=&hp=1"
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                        </div>
+                        <!-- Gradient overlays -->
+                        <div
+                            style="position:absolute;top:0;left:0;bottom:0;width:60px;background:linear-gradient(to right,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
+                        </div>
+                        <div
+                            style="position:absolute;top:0;right:0;bottom:0;width:60px;background:linear-gradient(to left,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
+                        </div>
+                        <div
+                            style="position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,#0f0f12 5%,transparent);pointer-events:none;z-index:2;">
+                        </div>
+                        <!-- Scroll arrows -->
+                        <button
+                            onclick="document.getElementById('retroGallery').scrollBy({left:-380,behavior:'smooth'})"
+                            style="position:absolute;top:50%;left:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button onclick="document.getElementById('retroGallery').scrollBy({left:380,behavior:'smooth'})"
+                            style="position:absolute;top:50%;right:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <!-- Close button -->
+                        <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                            style="position:absolute;top:16px;right:16px;z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                            <i class="fas fa-xmark"></i>
+                        </button>
+                        <!-- Dots indicator -->
+                        <div style="position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:6px;"
+                            id="amberDots"></div>
+                        <!-- Title overlay -->
+
+                    </div>
+                    <div
+                        style="position:absolute;inset:0;background:linear-gradient(to top,#0f0f12 5%,transparent 60%);">
+                    </div>
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                        style="position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                        onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                        onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                        <i class="fas fa-xmark"></i>
+                    </button>
+                    <div style="position:absolute;bottom:20px;left:24px;">
+                        <span
+                            style="display:inline-block;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#fb7185;background:rgba(244,63,94,0.1);padding:4px 10px;border-radius:6px;margin-bottom:8px;">Guesthouse</span>
+                        <h3 style="font-size:24px;font-weight:600;margin:0; color: white;">Retro Kampot Guesthouse
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Modal Body -->
+                <div style="padding:24px 28px 28px;">
+
+                    <!-- Rating & Price Row -->
+                    <div class="d-flex align-items-center gap-3 mb-4" style="flex-wrap:wrap;">
+                        <div class="d-flex align-items-center gap-1">
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star-half-stroke" style="color:#fbbf24;font-size:13px;"></i>
+                            <span style="font-size:13px;font-weight:500;margin-left:4px;">4.6</span>
+                        </div>
+                        <span style="color:var(--card-border);">|</span>
+                        <span style="font-size:12px;color:var(--text-tertiary);"><i class="fas fa-location-dot me-1"
+                                style="color:var(--accent);"></i>ស្ថិតនៅជិត ដងទន្លេ និងព្រៃមង្គោល</span>
+                        <span style="color:var(--card-border);">|</span>
+                        <span style="font-size:14px;font-weight:600;color:var(--accent-light);">ចាប់ផ្តើម
+                            $15/យប់</span>
+                    </div>
+
+                    <!-- Description -->
+                    <p
+                        style="font-size:14px;color:var(--card-title);font-weight:300;line-height:1.9;margin-bottom:20px;">
+                        Retro Kampot Guesthouse គឺជាកន្លែងស្នាក់នៅដែលមានបរិយាកាសស្ងប់ស្ងាត់ និងធម្មជាតិខ្លាំង
+                        នៅខេត្តកំពត
+                    </p>
+                    <!-- Amenities -->
+                    <div style="font-size:12px;font-weight:500;color:var(--text-secondary);margin-bottom:12px;">
+                        សេវាកម្មនិងប្រើប្រាស់</div>
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-water" style="color:#60a5fa;"></i> ទីតាំងជាប់ទន្លេ
+                        </span>
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-wifi" style="color:var(--accent-light);"></i> WiFi
+                        </span>
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-utensils" style="color:#fbbf24;"></i> ភោជនីយដ្ឋាន
+                        </span>
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-motorcycle" style="color:#fb7185;"></i> ជួលម៉ូតូ
+                        </span>
+
+                    </div>
+
+                    <!-- Modal Actions -->
+                    <div class="d-flex gap-3" style="flex-wrap:wrap;">
+                        <a href="https://retrokampotguesthouse.top/" target="_blank"
+                            style="flex:1;min-width:140px;background:#fff;color:#000;font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:none;text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);box-shadow:0 0 20px -5px rgba(255,255,255,0.15);"
+                            onmouseover="this.style.transform='translateY(-2px) scale(1.02)';this.style.boxShadow='0 0 30px -5px rgba(255,255,255,0.3)'"
+                            onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 0 20px -5px rgba(255,255,255,0.15)'">
+                            <i class="fas fa-globe"></i> គេហទំព័រផ្លូវការ
+                        </a>
+                        <a href="booking.html"
+                            style="flex:1;min-width:140px;background:var(--card-bg);color:var(--text-secondary);font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:1px solid var(--card-border);text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);"
+                            onmouseover="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--text-primary)';this.style.transform='translateY(-2px)'"
+                            onmouseout="this.style.background='var(--card-bg)';this.style.color='var(--text-secondary)';this.style.transform='translateY(0)'">
+                            <i class="fas fa-ticket-alt"></i> កក់ឥឡូវនេះ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- River Kampot Detail Modal -->
+    <div class="modal fade" id="edenModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content"
+                style="background: var(--card-bg) !important; border: 1px solid var(--card-border) !important; border-radius: 20px !important; overflow: hidden !important;">
+
+                <!-- Modal Header Image -->
+                <div style="position:relative;">
+                    <!-- Scrollable Image Gallery -->
+                    <div style="position:relative;">
+                        <div id="edenGallery"
+                            style="display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;padding:0;height:350px;">
+                            <img src="https://www.mekongdolphintours.com/userfiles/Rivertree-villa-Resort-in-kampot-Swimming-Pool-1-lr.jpg"
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/687899829.jpg?k=41be481f66441c467d5835cb7f3c2d5fe9ac89c7720a7dbbb292130f6f220524&o="
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://photos.hotelbeds.com/giata/bigger/10/1021367/1021367a_hb_p_001.jpg"
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://www.guidetrip.info/asset/img/gallery_resort/62da6c0004c75.jpeg"
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://rivertreevilla.com.kh/wp-content/uploads/2025/05/Suite-Private-Pool-Twin-Villa-Featured.jpg"
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                        </div>
+                        <!-- Gradient overlays -->
+                        <div
+                            style="position:absolute;top:0;left:0;bottom:0;width:60px;background:linear-gradient(to right,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
+                        </div>
+                        <div
+                            style="position:absolute;top:0;right:0;bottom:0;width:60px;background:linear-gradient(to left,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
+                        </div>
+                        <div
+                            style="position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,#0f0f12 5%,transparent);pointer-events:none;z-index:2;">
+                        </div>
+                        <!-- Scroll arrows -->
+                        <button onclick="document.getElementById('edenGallery').scrollBy({left:-380,behavior:'smooth'})"
+                            style="position:absolute;top:50%;left:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button onclick="document.getElementById('edenGallery').scrollBy({left:380,behavior:'smooth'})"
+                            style="position:absolute;top:50%;right:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <!-- Close button -->
+                        <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                            style="position:absolute;top:16px;right:16px;z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                            <i class="fas fa-xmark"></i>
+                        </button>
+                        <!-- Dots indicator -->
+                        <div style="position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:6px;"
+                            id="edenDots"></div>
+                        <!-- Title overlay -->
+
+                    </div>
+                    <div
+                        style="position:absolute;inset:0;background:linear-gradient(to top,#0f0f12 5%,transparent 60%);">
+                    </div>
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                        style="position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                        onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                        onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                        <i class="fas fa-xmark"></i>
+                    </button>
+                    <div style="position:absolute;bottom:20px;left:24px;">
+                        <span
+                            style="display:inline-block;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#60a5fa;background:rgba(59,130,246,0.1);padding:4px 10px;border-radius:6px;margin-bottom:8px;">Eco-Luxury</span>
+                        <h3 style="font-size:24px;font-weight:600;margin:0; color: white;">RiverTree Villa </h3>
+                    </div>
+                </div>
+
+                <!-- Modal Body -->
+                <div style="padding:24px 28px 28px;">
+
+                    <!-- Rating & Price Row -->
+                    <div class="d-flex align-items-center gap-3 mb-4" style="flex-wrap:wrap;">
+                        <div class="d-flex align-items-center gap-1">
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star-half-stroke" style="color:#fbbf24;font-size:13px;"></i>
+                            <span style="font-size:13px;font-weight:500;margin-left:4px;">4.5</span>
+                        </div>
+                        <span style="color:var(--card-border);">|</span>
+                        <span style="font-size:12px;color:var(--text-tertiary);"><i class="fas fa-location-dot me-1"
+                                style="color:var(--accent);"></i>ស្ថិតនៅភូមិ Mak Prang</span>
+                        <span style="color:var(--card-border);">|</span>
+                        <span style="font-size:14px;font-weight:600;color:var(--accent-light);">ចាប់ផ្តើម
+                            $85 - $130/យប់</span>
+                    </div>
+
+                    <!-- Description -->
+                    <p
+                        style="font-size:14px;color:var(--card-title);font-weight:300;line-height:1.9;margin-bottom:20px;">
+                        RiverTree Villa & Resort គឺជា resort លំដាប់ luxury បែបធម្មជាតិ (eco-luxury)
+                        ដែលពេញនិយមខ្លាំងនៅកំពត
+                    </p>
+                    <!-- Amenities -->
+                    <div style="font-size:12px;font-weight:500;color:var(--text-secondary);margin-bottom:12px;">
+                        សេវាកម្មនិងប្រើប្រាស់</div>
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-water" style="color:#60a5fa;"></i> ទីតាំងជាប់ទន្លេ
+                        </span>
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-wifi" style="color:var(--accent-light);"></i> WiFi
+                        </span>
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-utensils" style="color:#fbbf24;"></i> ភោជនីយដ្ឋាន
+                        </span>
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-motorcycle" style="color:#fb7185;"></i> ជួលម៉ូតូ
+                        </span>
+
+                    </div>
+
+                    <!-- Modal Actions -->
+                    <div class="d-flex gap-3" style="flex-wrap:wrap;">
+                        <a href="https://www.google.com/aclk?sa=L&ai=DChsSEwiYqoDe1YOUAxX4mGYCHf64LVoYACICCAEQARoCc20&ae=2&aspm=1&co=1&ase=2&gclid=CjwKCAjwhqfPBhBWEiwAZo196hkcN-cWtxzjVF5GUYzwT5NaccL999kStmWM0z4Bnlme-FY8ETS5WBoCMk4QAvD_BwE&cid=CAASuwHkaI9tqiAN-PHIiAedSvFvx86F-ImF_NkjMnznCIMYN-XztUGQfoxDfDGVbzL10s4fzmDpHqXapHA9Tt7Tuf2Z3fz3JwibpVtXFAjNAQQRRkC5Ude7qC4tp2toDz568ahEvmw9-M4hT5P-AaKp6W-fkfSLmI5fehDMBBjs2cLgpdjB-Yt2Aw5Zb8FfJ0NgHZzLhotyTz8K2LpsxyfvaG7OkQGOiePaRWRoryIRK73ILuW-rjxSZhV8Rlzq&cce=2&category=acrcp_v1_35&sig=AOD64_20flrMBZeEYcbJQ3O14uqNC-b7BQ&q&nis=4&adurl&ved=2ahUKEwjghPnd1YOUAxUFwzgGHQG-JfUQ0Qx6BAgLEAE"
+                            target="_blank"
+                            style="flex:1;min-width:140px;background:#fff;color:#000;font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:none;text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);box-shadow:0 0 20px -5px rgba(255,255,255,0.15);"
+                            onmouseover="this.style.transform='translateY(-2px) scale(1.02)';this.style.boxShadow='0 0 30px -5px rgba(255,255,255,0.3)'"
+                            onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 0 20px -5px rgba(255,255,255,0.15)'">
+                            <i class="fas fa-globe"></i> គេហទំព័រផ្លូវការ
+                        </a>
+                        <a href="booking.html"
+                            style="flex:1;min-width:140px;background:var(--card-bg);color:var(--text-secondary);font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:1px solid var(--card-border);text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);"
+                            onmouseover="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--text-primary)';this.style.transform='translateY(-2px)'"
+                            onmouseout="this.style.background='var(--card-bg)';this.style.color='var(--text-secondary)';this.style.transform='translateY(0)'">
+                            <i class="fas fa-ticket-alt"></i> កក់ឥឡូវនេះ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Sweet Kampot Detail Modal -->
+    <div class="modal fade" id="sweetModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content"
+                style="background: var(--card-bg) !important; border: 1px solid var(--card-border) !important; border-radius: 20px !important; overflow: hidden !important;">
+
+                <!-- Modal Header Image -->
+                <div style="position:relative;">
+                    <!-- Scrollable Image Gallery -->
+                    <div style="position:relative;">
+                        <div id="sweetGallery"
+                            style="display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;padding:0;height:350px;">
+                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/404878777.jpg?k=34dbbdb35f3b0262d32327047b00bca784aafd4cb766063b216a1a097c68a7b5&o="
+                                style="width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://www.kampotsweetboutique.com/uploads/room/2023-02-20%2010-34-12.jpg"
+                                style="width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/436295441.jpg?k=3b762e863f5e95cab58e97c3bd2c9877d6ec9d754b059ed020f0d1b350ea916b&o="
+                                style="width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://hanoivoyage.com/en/wp-content/uploads/2025/11/cambodge-hotel-kampot-kampot-sweet-boutique-1024-02.jpg"
+                                style="width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                            <img src="https://i.ytimg.com/vi/Rq6z1nvuuZE/maxresdefault.jpg"
+                                style="width:100%;height:100%;object-fit:cover;scroll-snap-align:start;flex-shrink:0;"
+                                alt="">
+                        </div>
+                        <!-- Gradient overlays -->
+                        <div
+                            style="position:absolute;top:0;left:0;bottom:0;width:60px;background:linear-gradient(to right,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
+                        </div>
+                        <div
+                            style="position:absolute;top:0;right:0;bottom:0;width:60px;background:linear-gradient(to left,rgba(15,15,18,0.8),transparent);pointer-events:none;z-index:2;">
+                        </div>
+                        <div
+                            style="position:absolute;bottom:0;left:0;right:0;height:120px;background:linear-gradient(to top,#0f0f12 5%,transparent);pointer-events:none;z-index:2;">
+                        </div>
+                        <!-- Scroll arrows -->
+                        <button
+                            onclick="document.getElementById('sweetGallery').scrollBy({left:-380,behavior:'smooth'})"
+                            style="position:absolute;top:50%;left:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button onclick="document.getElementById('sweetGallery').scrollBy({left:380,behavior:'smooth'})"
+                            style="position:absolute;top:50%;right:12px;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);color:#fff;font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <!-- Close button -->
+                        <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                            style="position:absolute;top:16px;right:16px;z-index:3;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                            onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                            onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                            <i class="fas fa-xmark"></i>
+                        </button>
+                        <!-- Dots indicator -->
+                        <div style="position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:6px;"
+                            id="edenDots"></div>
+                        <!-- Title overlay -->
+
+                    </div>
+                    <div
+                        style="position:absolute;inset:0;background:linear-gradient(to top,#0f0f12 5%,transparent 60%);">
+                    </div>
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close"
+                        style="position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;"
+                        onmouseover="this.style.background='rgba(255,255,255,0.15)'"
+                        onmouseout="this.style.background='rgba(0,0,0,0.5)'">
+                        <i class="fas fa-xmark"></i>
+                    </button>
+                    <div style="position:absolute;bottom:20px;left:24px;">
+                        <span
+                            style="display:inline-block;font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:0.1em;color:#fbbf24;background:rgba(251,191,36,0.1);padding:4px 10px;border-radius:6px;margin-bottom:8px;">Boutique</span>
+                        <h3 style="font-size:24px;font-weight:600;margin:0; color: white;">Kampot Sweet Boutique
+                        </h3>
+                    </div>
+                </div>
+
+                <!-- Modal Body -->
+                <div style="padding:24px 28px 28px;">
+
+                    <!-- Rating & Price Row -->
+                    <div class="d-flex align-items-center gap-3 mb-4" style="flex-wrap:wrap;">
+                        <div class="d-flex align-items-center gap-1">
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star" style="color:#fbbf24;font-size:13px;"></i>
+                            <i class="fas fa-star-half-stroke" style="color:#fbbf24;font-size:13px;"></i>
+                            <span style="font-size:13px;font-weight:500;margin-left:4px;">4.7</span>
+                        </div>
+                        <span style="color:var(--card-border);">|</span>
+                        <span style="font-size:12px;color:var(--text-tertiary);"><i class="fas fa-location-dot me-1"
+                                style="color:var(--accent);"></i>Teuk Chhou (ក្រៅទីក្រុងបន្តិច)</span>
+                        <span style="color:var(--card-border);">|</span>
+                        <span style="font-size:14px;font-weight:600;color:var(--accent-light);">ចាប់ផ្តើម
+                            $30/យប់</span>
+                    </div>
+
+                    <!-- Description -->
+                    <p
+                        style="font-size:14px;color:var(--card-title);font-weight:300;line-height:1.9;margin-bottom:20px;">
+                        Kampot Sweet Boutique គឺជាសណ្ឋាគារបែប boutique + luxury (4⭐) នៅខេត្តកំពត
+                        ដែលមានបរិយាកាសស្ងប់ស្ងាត់ និងស្រស់ស្អាត
+                    </p>
+                    <!-- Amenities -->
+                    <div style="font-size:12px;font-weight:500;color:var(--text-secondary);margin-bottom:12px;">
+                        សេវាកម្មនិងប្រើប្រាស់</div>
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-water" style="color:#60a5fa;"></i> ទីតាំងជាប់ទន្លេ
+                        </span>
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-wifi" style="color:var(--accent-light);"></i> WiFi
+                        </span>
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-utensils" style="color:#fbbf24;"></i> ភោជនីយដ្ឋាន
+                        </span>
+                        <span
+                            style="display:inline-flex;align-items:center;gap:6px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:6px 12px;font-size:11px;color:var(--text-secondary);">
+                            <i class="fas fa-motorcycle" style="color:#fb7185;"></i> ជួលម៉ូតូ
+                        </span>
+
+                    </div>
+
+                    <!-- Modal Actions -->
+                    <div class="d-flex gap-3" style="flex-wrap:wrap;">
+                        <a href="https://www.kampotsweetboutique.com/index.php" target="_blank"
+                            style="flex:1;min-width:140px;background:#fff;color:#000;font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:none;text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);box-shadow:0 0 20px -5px rgba(255,255,255,0.15);"
+                            onmouseover="this.style.transform='translateY(-2px) scale(1.02)';this.style.boxShadow='0 0 30px -5px rgba(255,255,255,0.3)'"
+                            onmouseout="this.style.transform='translateY(0) scale(1)';this.style.boxShadow='0 0 20px -5px rgba(255,255,255,0.15)'">
+                            <i class="fas fa-globe"></i> គេហទំព័រផ្លូវការ
+                        </a>
+                        <a href="booking.html"
+                            style="flex:1;min-width:140px;background:var(--card-bg);color:var(--text-secondary);font-size:14px;font-weight:500;padding:12px 24px;border-radius:12px;border:1px solid var(--card-border);text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);"
+                            onmouseover="this.style.background='rgba(255,255,255,0.06)';this.style.color='var(--text-primary)';this.style.transform='translateY(-2px)'"
+                            onmouseout="this.style.background='var(--card-bg)';this.style.color='var(--text-secondary)';this.style.transform='translateY(0)'">
+                            <i class="fas fa-ticket-alt"></i> កក់ឥឡូវនេះ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
 
 </html>

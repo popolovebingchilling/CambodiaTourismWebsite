@@ -18,6 +18,7 @@
     <!-- SWIPER -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="assets/js/spa-router.js" defer></script>
 </head>
 
 <body>
@@ -78,9 +79,12 @@
                         <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
                     </ul>
                 </div>
-                <div class="d-none d-lg-flex align-items-center gap-3">
-                    <a href="login.html" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចូលប្រើប្រាស់</a>
+                     <div class="d-none d-lg-flex align-items-center gap-3">
+                    <a href="register.html" id="header-register-btn" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចុះឈ្មោះ</a>
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
+                    <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2" title="ប្រវត្តិរូប" style="display: none !important;">
+                        <img src="assets/image/pouly.jpg" alt="Profile" class="rounded-circle border border-2 border-white" style="width: 40px; height: 40px; object-fit: cover; transition: 0.3s; opacity: 0.9;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0.9'; this.style.transform='scale(1)';">
+                    </a>
                 </div>
             </div>
         </nav>
@@ -791,82 +795,7 @@
 
 
 
-        <!-- ── Travelers Testimonials Section ── -->
-        <section class="bg-mixed testimonials-section py-5">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <span class="section-badge mb-2 d-inline-block">ការវាយតម្លៃ</span>
-                    <h2 class="section-title text-white">មតិយោបល់<span>អ្នកប្រើប្រាស់</span></h2>
-                    <div class="title-line mx-auto"></div>
-                    <p class="section-subtitle mt-3">
-                        ស្តាប់នូវបទពិសោធន៍ពិតៗពីអ្នកធ្វើដំណើរដែលបានប្រើប្រាស់សេវាកម្មរបស់យើង។</p>
-                </div>
 
-                <div class="row g-4">
-                    <!-- Testimonial 1 -->
-                    <div class="col-lg-4">
-                        <div class="testimonial-card">
-                            <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
-                            <div class="testi-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="testi-text">"សេវាកម្មពិតជាអស្ចារ្យមែន! មគ្គុទ្ទេសក៍ទេសចរណ៍មានចំណេះដឹងជ្រៅជ្រះ
-                                និងរួសរាយរាក់ទាក់បំផុត។ ខ្ញុំនឹងត្រឡប់មកវិញម្តងទៀត។"</p>
-                            <div class="testi-user">
-                                <img src="assets/image/Panha.jpg"
-                                    alt="User 1">
-                                <div class="user-info">
-                                    <h6>បញ្ញា</h6>
-                                    <span>អ្នកទេសចរមកពីភ្នំពេញ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 2 -->
-                    <div class="col-lg-4">
-                        <div class="testimonial-card">
-                            <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
-                            <div class="testi-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                            <p class="testi-text">"ការរៀបចំដំណើរស្ទើរតែឥតខ្ចោះ។ ខ្ញុំចូលចិត្តការជ្រើសរើសសណ្ឋាគារ
-                                និងភោជនីយដ្ឋានដែលមានផាសុកភាព និងរសជាតិឆ្ងាញ់។"</p>
-                            <div class="testi-user">
-                                <img src="assets/image/Soama.jpg"
-                                    alt="User 2">
-                                <div class="user-info">
-                                    <h6>សោមា</h6>
-                                    <span>អ្នកទេសចរអន្តរជាតិ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial 3 -->
-                    <div class="col-lg-4">
-                        <div class="testimonial-card">
-                            <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
-                            <div class="testi-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <p class="testi-text">"បទពិសោធន៍នៅមណ្ឌលគិរីជាមួយដំរីពិតជាមិនអាចបំភ្លេចបាន។ អរគុណ ទេសចរណ៏កម្ពុជា សម្រាប់ការណែនាំដ៏ល្អបំផុត។"</p>
-                            <div class="testi-user">
-                                <img src="assets/image/Makara.jpg"
-                                    alt="User 3">
-                                <div class="user-info">
-                                    <h6>មករា</h6>
-                                    <span>អ្នកថតរូបសេរី</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- ── Cinematic Map Explorer Section ── -->
         <section class="bg-mixed map-explorer-section py-5">
@@ -1123,6 +1052,21 @@
                     mapFrame.src = mapUrl;
                 }
             });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hasRegistered = localStorage.getItem('userFullName') || localStorage.getItem('userEmail');
+            const registerBtn = document.getElementById('header-register-btn');
+            const profileAvatar = document.getElementById('header-profile-avatar');
+            
+            if (hasRegistered) {
+                if (registerBtn) registerBtn.setAttribute('style', 'display: none !important;');
+                if (profileAvatar) profileAvatar.setAttribute('style', 'display: flex !important;');
+            } else {
+                if (registerBtn) registerBtn.setAttribute('style', 'display: inline-block !important;');
+                if (profileAvatar) profileAvatar.setAttribute('style', 'display: none !important;');
+            }
         });
     </script>
 </body>
