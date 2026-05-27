@@ -286,7 +286,7 @@ html, body{
    ======================================================== */
 
 section.bg-mixed {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
 }
 
 .bg-mixed {

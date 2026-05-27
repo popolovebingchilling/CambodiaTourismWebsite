@@ -191,7 +191,7 @@ body{
 
         /* ABOUT */
         .about-section {
-            padding: 100px 0;
+            padding: clamp(50px, 8vw, 100px) 0;
         }
 
         .stat-box {
@@ -216,7 +216,7 @@ body{
 
         /* ATTRACTIONS */
         .attractions-section {
-            padding: 100px 0;
+            padding: clamp(50px, 8vw, 100px) 0;
         }
 
         .attraction-card-pp {
@@ -289,7 +289,7 @@ body{
 
         /* HISTORY */
         .history-section {
-            padding: 100px 0;
+            padding: clamp(50px, 8vw, 100px) 0;
         }
 
         .timeline {
@@ -347,7 +347,7 @@ body{
 
         /* FOOD */
         .food-section {
-            padding: 100px 0;
+            padding: clamp(50px, 8vw, 100px) 0;
         }
 
         .food-card {
@@ -370,7 +370,7 @@ body{
 
         /* GALLERY */
         .gallery-section {
-            padding: 100px 0;
+            padding: clamp(50px, 8vw, 100px) 0;
         }
 
         .gallery-grid {
@@ -452,7 +452,7 @@ body{
 
         /* TIPS */
         .tips-section {
-            padding: 100px 0;
+            padding: clamp(50px, 8vw, 100px) 0;
         }
 
         .tip-card {
@@ -488,7 +488,7 @@ body{
 
         /* CTA */
         .cta-section {
-            padding: 100px 0;
+            padding: clamp(50px, 8vw, 100px) 0;
         }
 
         .btn-hero-primary, .btn-hero-outline{

@@ -85,11 +85,7 @@
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
                     <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2"
                         title="ប្រវត្តិរូប" style="display: none !important;">
-                        <img src="assets/image/pouly.jpg" alt="Profile"
-                            class="rounded-circle border border-2 border-white"
-                            style="width: 40px; height: 40px; object-fit: cover; transition: 0.3s; opacity: 0.9;"
-                            onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';"
-                            onmouseout="this.style.opacity='0.9'; this.style.transform='scale(1)';">
+                        <i class="fas fa-user-circle text-white" style="font-size: 38px; transition: 0.3s; opacity: 0.9;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0.9'; this.style.transform='scale(1)';"></i>
                     </a>
                 </div>
             </div>
@@ -192,7 +188,7 @@
             <div class="row g-4">
                 <!-- Testimonial 1 -->
                 <div class="col-lg-4">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card" data-aos="fade-up">
                         <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
                         <div class="testi-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -212,7 +208,7 @@
 
                 <!-- Testimonial 2 -->
                 <div class="col-lg-4">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card" data-aos="fade-up">
                         <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
                         <div class="testi-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -232,7 +228,7 @@
 
                 <!-- Testimonial 3 -->
                 <div class="col-lg-4">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card" data-aos="fade-up">
                         <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
                         <div class="testi-rating">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
@@ -262,7 +258,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8 reveal">
-                    <div class="form-card">
+                    <div class="form-card" data-aos="fade-up">
                         <div class="text-center mb-4">
                             <p class="fw-bold mb-2">ផ្តល់ពិន្ទុ</p>
                             <div class="star-picker" id="starPicker">
@@ -497,7 +493,7 @@
             if (!filtered.length) { list.innerHTML = ''; empty.classList.remove('d-none'); return; }
             empty.classList.add('d-none');
             list.innerHTML = filtered.map(r => `
-        <div class="review-card" data-id="${r.id}">
+        <div class="review-card" data-id="${r.id}" data-aos="fade-up">
             <div class="d-flex align-items-start gap-3">
                 <div class="reviewer-avatar ${avClass(r.id)}">${avLetter(r.name)}</div>
                 <div class="flex-grow-1">

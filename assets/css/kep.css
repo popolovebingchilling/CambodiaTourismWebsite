@@ -99,7 +99,7 @@ body{
         }
 
         .hero-title {
-            font-size:  5.5rem;
+            font-size: clamp(36px, 4.5vw, 52px) !important;
             font-weight: 700;
             color: var(--parchment);
             line-height: 1.15;

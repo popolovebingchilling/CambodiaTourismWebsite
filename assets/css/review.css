@@ -341,12 +341,12 @@ body{
         }
 
         .review-section {
-            padding: 80px 0;
+            padding: clamp(40px, 6vw, 80px) 0;
             background: var(--sand-whisper)
         }
 
         .form-section {
-            padding: 80px 0;
+            padding: clamp(40px, 6vw, 80px) 0;
             background: var(--parchment)
         }
 

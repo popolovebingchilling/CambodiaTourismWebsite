@@ -34,7 +34,7 @@ body{
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    padding: 140px 0 100px !important;
+    padding: clamp(80px, 15vw, 140px) 0 clamp(60px, 10vw, 100px) !important;
 }
 
 /* Premium 4-Sided Cinematic Vignette Overlay */
@@ -101,7 +101,7 @@ body{
 }
 
 .hero-title-main {
-    font-size: clamp(38px, 7vw, 85px) !important;
+    font-size: clamp(36px, 4.5vw, 52px) !important;
     font-weight: 800 !important;
     line-height: 1.15 !important;
     margin-bottom: 20px !important;
@@ -230,7 +230,8 @@ img:hover {
 
 .line {
     font-weight: 400px !important;
-    width: 270px !important;
+    width: 100% !important;
+    max-width: 270px !important;
     font-size: 5px !important;
     border-bottom: 1px solid var(--secondary-color) !important;
 }

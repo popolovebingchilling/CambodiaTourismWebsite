@@ -44,7 +44,7 @@ body{
 }
 
 .blog-hero-content h1 {
-    font-size: clamp(36px, 6vw, 64px);
+    font-size: clamp(36px, 4.5vw, 52px) !important;
     font-weight: 800;
     margin-bottom: 20px;
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -146,7 +146,7 @@ body.dark-mode .featured-content h2 {
 
 /* ── Unique Blog Grid ── */
 .blog-grid-section {
-    padding: 80px 0;
+    padding: clamp(40px, 6vw, 80px) 0;
 }
 
 /* ── Editorial Card (Normal yet Unique) ── */
@@ -449,7 +449,7 @@ body.dark-mode .read-more-premium {
 /* ── Newsletter Section ── */
 .newsletter-section {
     background: var(--primary-color);
-    padding: 100px 0;
+    padding: clamp(50px, 8vw, 100px) 0;
     position: relative;
     overflow: hidden;
     border-radius: 60px;
@@ -461,7 +461,7 @@ body.dark-mode .read-more-premium {
     position: absolute;
     top: -50%;
     right: -10%;
-    width: 600px;
+    width: 100%; max-width: 600px;
     height: 600px;
     background: radial-gradient(circle, rgba(215, 181, 109, 0.1) 0%, transparent 70%);
     z-index: 1;

@@ -62,7 +62,6 @@
         opacity: 0;
         pointer-events: none;
     `;
-    
     document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(progressBar);
     });
