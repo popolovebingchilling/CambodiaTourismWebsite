@@ -112,7 +112,7 @@ body.light-mode .navbar-brand img {
 .hero-bento {
     min-height: 100vh !important;
     position: relative !important;
-    padding-top: 100px !important;
+    padding-top: 70px !important;
     padding-bottom: 80px !important;
     background-image: url('../image/home-bg.png') !important;
     background-size: 110% !important;
