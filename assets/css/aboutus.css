@@ -489,12 +489,13 @@ main .btn-outline:hover {
 
 /* ── Eyebrow ── */
 .eyebrow {
-    font-family: var(--font-khmer);
-    font-size: 0.75rem;
-    letter-spacing: 0.18em;
+    font-family: var(--font-khmer) !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: normal !important;
     text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 8px;
+    color: var(--khmer-gold) !important;
+    margin-bottom: 12px;
 }
 
 /* ── Heading ── */
