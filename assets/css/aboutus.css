@@ -540,6 +540,7 @@ main .btn-outline:hover {
     flex: 0 0 calc(12.5% - 16px);
     min-width: 110px;
     max-width: 145px;
+    min-height: 170px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
