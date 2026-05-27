@@ -135,8 +135,17 @@
                         <div class="mb-3">
                             <label for="password" class="form-label">ពាក្យសម្ងាត់</label>
                             <div class="password-field-wrapper">
-                                <input type="password" class="form-control" id="password" placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
-                                <button type="button" class="password-toggle" id="togglePassword">
+                                <input type="password" class="form-control" id="password1" placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
+                                <button type="button" class="password-toggle" id="togglePassword1">
+                                    <i class="fas fa-eye-slash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">បញ្ចាក់ពាក្យសម្ងាត់</label>
+                            <div class="password-field-wrapper">
+                                <input type="password" class="form-control" id="password2" placeholder="បញ្ចាក់ពាក្យសម្ងាត់" required>
+                                <button type="button" class="password-toggle" id="togglePassword2">
                                     <i class="fas fa-eye-slash"></i>
                                 </button>
                             </div>
@@ -271,13 +280,30 @@
     <!-- BOOTSTRAP JAVA -->
     <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        const togglePassword = document.querySelector('#togglePassword');
-        const password = document.querySelector('#password');
+        const togglePassword1 = document.querySelector('#togglePassword1');
+        const password1 = document.querySelector('#password1');
 
-        togglePassword.addEventListener('click', function (e) {
+        togglePassword1.addEventListener('click', function (e) {
             // toggle the type attribute
-            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-            password.setAttribute('type', type);
+            const type = password1.getAttribute('type') === 'password' ? 'text' : 'password';
+            password1.setAttribute('type', type);
+            // toggle the eye slash icon
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-eye-slash')) {
+                icon.classList.replace('fa-eye-slash', 'fa-eye');
+            } else {
+                icon.classList.replace('fa-eye', 'fa-eye-slash');
+            }
+        });
+    </script>
+     <script>
+        const togglePassword2 = document.querySelector('#togglePassword2');
+        const password2 = document.querySelector('#password2');
+
+        togglePassword2.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
+            password2.setAttribute('type', type);
             // toggle the eye slash icon
             const icon = this.querySelector('i');
             if (icon.classList.contains('fa-eye-slash')) {
