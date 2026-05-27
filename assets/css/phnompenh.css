@@ -145,7 +145,7 @@ body{
 
         /* SHARED */
         .section-label {
-            font-size: 2rem !important;
+            font-size: 0.85rem !important;
             letter-spacing: 3px !important;
             text-transform: uppercase !important;
             color: var(--desert-terracotta) !important;
@@ -162,6 +162,11 @@ body{
             color: var(--deep-mahogany) !important;
             margin-bottom: 16px !important;
             line-height: 1.35 !important;
+        }
+
+        .section-title span,
+        .section-title-km span {
+            color: var(--secondary-color) !important;
         }
 
         .divider-ornament {
@@ -419,6 +424,8 @@ body{
             transition: opacity 0.4s ease, transform 0.4s ease;
             text-align: center;
             background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             padding: 8px 16px;
             border-radius: 30px;
             border: 1px solid rgba(255, 255, 255, 0.25);
@@ -426,6 +433,7 @@ body{
         }
 
         .gallery-item:hover {
+            transform: translateY(-8px);
             box-shadow: 0 20px 45px rgba(13, 42, 67, 0.4);
         }
 

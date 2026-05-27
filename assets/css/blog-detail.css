@@ -1,0 +1,51 @@
+/* Blog Details Custom Stylesheet */
+
+/* Article main inline image containers */
+.rounded-4.overflow-hidden {
+    border-radius: 20px !important;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease !important;
+    cursor: pointer;
+}
+
+.rounded-4.overflow-hidden:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(13, 42, 67, 0.2) !important;
+}
+
+.rounded-4.overflow-hidden img {
+    width: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.rounded-4.overflow-hidden:hover img {
+    transform: scale(1.04) !important;
+}
+
+/* Make inline images responsive on smaller viewports */
+@media (max-width: 576px) {
+    .rounded-4.overflow-hidden img {
+        height: 220px !important;
+    }
+}
+
+/* Editorial content overall styling */
+.editorial-content {
+    font-size: 1.15rem !important;
+    line-height: 2.1 !important;
+    color: #2c3e50 !important;
+}
+
+/* Subtle parallax-zoom on hero background */
+.royal-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.royal-hero::before {
+    transition: transform 8s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.royal-hero:hover::before {
+    transform: scale(1.06) !important;
+}
