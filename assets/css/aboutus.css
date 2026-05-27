@@ -614,7 +614,7 @@ main .btn-outline:hover {
 
 /* ── Label ── */
 .feature-label {
-    font-family: 'Battambang', serif;
+    font-family: var(--font-khmer) !important;
     font-size: 0.72rem;
     line-height: 1.55;
     color: rgba(255, 255, 255, 0.8);
