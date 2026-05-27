@@ -82,6 +82,7 @@
                     </ul>
                 </div>
                 <div class="d-none d-lg-flex align-items-center gap-3">
+                    <a href="register.html" id="header-register-btn" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចុះឈ្មោះ</a>
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
                     <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2" title="ប្រវត្តិរូប" style="display: none !important;">
                         <img src="assets/image/pouly.jpg" alt="Profile" class="rounded-circle border border-2 border-white" style="width: 40px; height: 40px; object-fit: cover; transition: 0.3s; opacity: 0.9;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0.9'; this.style.transform='scale(1)';">
@@ -378,11 +379,23 @@
             </div>
         </div>
     `).join('');
+
+            if (window.AOS) {
+                setTimeout(() => {
+                    AOS.refresh();
+                }, 50);
+            }
         }
 
         // Lightbox
+        let lbTimeout = null;
+
         function openLB(i) {
             lbIndex = i;
+            const img = document.getElementById('lbImg');
+            if (img) {
+                img.classList.remove('loaded');
+            }
             updateLB();
             document.getElementById('lightbox').classList.add('open');
             document.body.style.overflow = 'hidden';
@@ -390,14 +403,32 @@
         function closeLB() {
             document.getElementById('lightbox').classList.remove('open');
             document.body.style.overflow = '';
+            const img = document.getElementById('lbImg');
+            if (img) {
+                img.classList.remove('loaded');
+                img.src = '';
+            }
         }
         function changeLB(dir) {
-            lbIndex = (lbIndex + dir + filteredPhotos.length) % filteredPhotos.length;
-            updateLB();
+            const img = document.getElementById('lbImg');
+            if (img) {
+                img.classList.remove('loaded');
+            }
+            if (lbTimeout) clearTimeout(lbTimeout);
+            lbTimeout = setTimeout(() => {
+                lbIndex = (lbIndex + dir + filteredPhotos.length) % filteredPhotos.length;
+                updateLB();
+            }, 150);
         }
         function updateLB() {
             const p = filteredPhotos[lbIndex];
-            document.getElementById('lbImg').src = p.url.replace('w=800', 'w=1200');
+            const img = document.getElementById('lbImg');
+            if (img) {
+                img.onload = function() {
+                    img.classList.add('loaded');
+                };
+                img.src = p.url.replace('w=800', 'w=1200');
+            }
             document.getElementById('lbTitle').textContent = p.title;
             document.getElementById('lbSub').textContent = p.province + ' · ' + p.sub;
         }

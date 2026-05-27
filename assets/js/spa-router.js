@@ -135,7 +135,7 @@
         const profileAvatar = document.getElementById('header-profile-avatar');
         const hasRegistered = localStorage.getItem('userFullName') || localStorage.getItem('userEmail');
 
-        if (isHomepage && !hasRegistered) {
+        if (!hasRegistered) {
             if (registerBtn) registerBtn.setAttribute('style', 'display: inline-block !important;');
         } else {
             if (registerBtn) registerBtn.setAttribute('style', 'display: none !important;');
@@ -201,6 +201,13 @@
             });
 
             // --- Body ---
+            // Scroll to top instantly before swapping content to prevent browser scroll jump layout shift
+            const htmlEl = document.documentElement;
+            const originalScrollBehavior = htmlEl.style.scrollBehavior;
+            htmlEl.style.scrollBehavior = 'auto';
+            window.scrollTo(0, 0);
+            htmlEl.style.scrollBehavior = originalScrollBehavior;
+
             const currentHeader = document.querySelector('header');
             
             // Remove everything except header, progress bar, and scripts
