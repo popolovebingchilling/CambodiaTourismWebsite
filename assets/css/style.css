@@ -51,6 +51,9 @@ header {
     background-color: var(--primary-color) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
+#header-profile-avatar {
+    text-decoration: none !important;
+}
 .navbar-brand {
     background: transparent !important;
 }
@@ -153,7 +156,7 @@ body.light-mode .navbar-brand img {
     grid-row: span 2 !important;
     background: transparent !important; 
     color: white !important;
-    padding: 60px !important; 
+    padding: clamp(30px, 6vw, 60px) !important; 
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -179,7 +182,7 @@ body.light-mode .navbar-brand img {
     letter-spacing: 1px !important;
 }
 .card-main .title-bento {
-    font-size: clamp(30px, 3.5vw, 42px) !important; 
+    font-size: clamp(36px, 4.5vw, 52px) !important; 
     font-weight: 800 !important;
     line-height: 1.2 !important;
     margin-bottom: 25px !important;
@@ -282,7 +285,7 @@ body.light-mode .navbar-brand img {
     background-color: var(--sand-whisper) !important;
     position: relative !important;
     overflow: hidden !important;
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
 }
 body.dark-mode .destinations-section {
     background-color: var(--dark-oud) !important;
@@ -452,7 +455,7 @@ body.dark-mode .section-subtitle {
 }
 .services-section {
     background: linear-gradient(135deg, var(--primary-color) 0%, #153e5f 100%) !important;
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
     position: relative !important;
     overflow: hidden !important;
 }
@@ -538,7 +541,7 @@ body.dark-mode .section-subtitle {
 }
 .guides-showcase-section {
     background-color: var(--sand-whisper) !important;
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
     position: relative !important;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color) 50%, var(--secondary-color) 100%) !important;
 }
@@ -602,11 +605,11 @@ body.dark-mode .section-subtitle {
     margin-bottom: 0 !important;
 }
 .royal-gallery-section {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
     background: white !important;
 }
 .royal-gallery-section {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-oud) 40%, var(--angkor-stone) 100%) !important;
 }
 .gallery-bento-grid {
@@ -692,7 +695,7 @@ body.dark-mode .section-subtitle {
 }
 .latest-blog-section {
     background-color: white !important;
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
 }
 .blog-card-home {
     background: white !important;
@@ -794,7 +797,7 @@ body.dark-mode .section-subtitle {
     transform: translateX(5px) !important;
 }
 .testimonials-section {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
     background-color: var(--sand-whisper) !important;
 }
 .testimonial-card {
@@ -1223,7 +1226,7 @@ body.dark-mode .section-subtitle {
     pointer-events: none !important;
 }
 .auth-form-side{
-    padding: 50px !important;
+    padding: clamp(20px, 5vw, 50px) !important;
     color: white !important;
     display: flex !important;
     flex-direction: column !important;
@@ -1318,7 +1321,7 @@ body.dark-mode .section-subtitle {
     background: linear-gradient(rgba(13, 42, 67, 0.8), rgba(13, 42, 67, 0.8), url('../image/Preah-Sihanouk.jpg')) !important;
     background-size: cover !important;
     background-position: center !important;
-    padding: 100px 0 60px !important;
+    padding: clamp(50px, 8vw, 100px) 0 clamp(30px, 6vw, 60px) !important;
     color: white !important;
     text-align: center !important;
 }
@@ -1401,7 +1404,7 @@ body.dark-mode .section-subtitle {
     background: linear-gradient(rgba(13, 42, 67, 0.7), rgba(13, 42, 67, 0.7), url('../image/Preah-Sihanouk.jpg')) !important;
     background-size: cover !important;
     background-position: center !important;
-    padding: 120px 0 80px !important;
+    padding: clamp(60px, 10vw, 120px) 0 clamp(40px, 8vw, 80px) !important;
     text-align: center !important;
     color: white !important;
 }
@@ -1648,7 +1651,7 @@ body.dark-mode .section-subtitle {
 
 /* ── Cinematic Map Explorer ── */
 .map-explorer-section {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
     background-color: white !important;
 }
 
@@ -2311,7 +2314,7 @@ html {
 }
 
 h1, .hero-title {
-    font-size: clamp(1.8rem, 4vw, 2.6rem) !important;
+    font-size: clamp(36px, 4.5vw, 52px) !important;
     line-height: 1.25 !important;
 }
 

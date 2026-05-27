@@ -97,7 +97,7 @@ body{
 }
 
 .hero-bk h1 {
-    font-size: 48px;
+    font-size: clamp(36px, 4.5vw, 52px) !important;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -.02em;

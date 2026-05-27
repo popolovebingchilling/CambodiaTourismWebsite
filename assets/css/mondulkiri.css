@@ -33,7 +33,7 @@ body{
 
 /* ── Shared Utilities ── */
 .section-padding {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
     position: relative !important;
     overflow: hidden !important;
 }
@@ -110,7 +110,7 @@ body{
 }
 
 .hero-title-main {
-    font-size: clamp(36px, 8vw, 84px) !important;
+    font-size: clamp(36px, 4.5vw, 52px) !important;
     font-weight: 700 !important;
     line-height: 1.1 !important;
     letter-spacing: -0.03em !important;
@@ -124,7 +124,7 @@ body{
 
 /* ── Mixed Background Sections ── */
 .explore-grid-container {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
     color: white !important;
     position: relative !important;
 }
@@ -217,7 +217,7 @@ body{
 
 /* ── Taste Section ── */
 .taste-section {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
     color: white !important;
 }
 
@@ -362,7 +362,7 @@ body{
 
 /* ── Stay Section ── */
 .stay-section {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
 }
 
 .lodge-premium-card {

@@ -214,7 +214,7 @@ body{
 
         /* ===== ABOUT SECTION ===== */
         .about-section {
-            padding: 100px 0 !important;
+            padding: clamp(50px, 8vw, 100px) 0 !important;
             position: relative !important;
         }
 
@@ -249,7 +249,7 @@ body{
 
         /* ===== ATTRACTION CARDS ===== */
         .attractions-section {
-            padding: 100px 0 !important;
+            padding: clamp(50px, 8vw, 100px) 0 !important;
             position: relative !important;
         }
 
@@ -362,7 +362,7 @@ body{
 
         /* ===== FOOD SECTION ===== */
         .food-section {
-            padding: 100px 0 !important;
+            padding: clamp(50px, 8vw, 100px) 0 !important;
             color: white !important;
             position: relative !important;
         }
@@ -424,7 +424,7 @@ body{
 
         /* ===== GALLERY ===== */
         .gallery-section {
-            padding: 100px 0 !important;
+            padding: clamp(50px, 8vw, 100px) 0 !important;
             position: relative !important;
         }
 
@@ -473,7 +473,7 @@ body{
 
         /* ===== TIPS ===== */
         .tips-section {
-            padding: 100px 0 !important;
+            padding: clamp(50px, 8vw, 100px) 0 !important;
             position: relative !important;
         }
 
@@ -520,7 +520,7 @@ body{
 
         /* ===== MAP CTA ===== */
         .map-cta {
-            padding: 100px 0 !important;
+            padding: clamp(50px, 8vw, 100px) 0 !important;
         }
 
         @media (max-width: 768px) {
@@ -826,7 +826,7 @@ p {
 
 /* ===== ABOUT SECTION ===== */
 .about-section {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
     position: relative !important;
 }
 
@@ -861,7 +861,7 @@ p {
 
 /* ===== ATTRACTION CARDS ===== */
 .attractions-section {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
     position: relative !important;
 }
 
@@ -976,7 +976,7 @@ p {
 
 /* ===== FOOD SECTION ===== */
 .food-section {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
     color: white !important;
     position: relative !important;
 }
@@ -1038,7 +1038,7 @@ p {
 
 /* ===== GALLERY ===== */
 .gallery-section {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
     position: relative !important;
 }
 .gallery-section::after {
@@ -1086,7 +1086,7 @@ p {
 
 /* ===== TIPS ===== */
 .tips-section {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
     position: relative !important;
 }
 
@@ -1131,7 +1131,7 @@ p {
 
 /* ===== MAP CTA ===== */
 .map-cta {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
 }
 
 @media (max-width: 768px) {
@@ -1358,7 +1358,7 @@ p {
 
 /* ── Stay Section ── */
 .stay-section {
-    padding: 100px 0 !important;
+    padding: clamp(50px, 8vw, 100px) 0 !important;
 }
 
 .lodge-premium-card {

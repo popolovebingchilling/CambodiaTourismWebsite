@@ -85,7 +85,7 @@ body{
             backdrop-filter: blur(8px);
         }
         .hero-title {
-            font-size: 4.5rem;
+            font-size: clamp(36px, 4.5vw, 52px) !important;
             font-weight: 700;
             color: var(--parchment);
             line-height: 1.15;
@@ -448,7 +448,7 @@ body{
 
         .cta-section::before {
             position: absolute;
-            width: 500px;
+            width: 100%; max-width: 500px;
             height: 500px;
             border-radius: 50%;
             background: var(--amber-dune);
@@ -479,7 +479,7 @@ body{
             color: rgba(248, 249, 250, 0.65);
             font-weight: 300;
             line-height: 1.7;
-            max-width: 500px;
+            max-width: 100%; max-width: 500px;
         }
         /* ── Scroll to top ── */
         .scroll-top-btn {

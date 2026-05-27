@@ -65,7 +65,7 @@ main img {
 }
 
 section {
-    padding: 80px 0;
+    padding: clamp(40px, 6vw, 80px) 0;
     position: relative;
     overflow: hidden;
 }
@@ -78,7 +78,7 @@ main .container {
 
 /* --- UTILITY CLASSES --- */
 .section-padding {
-    padding: 100px 0;
+    padding: clamp(50px, 8vw, 100px) 0;
 }
 
 .section-header {
@@ -219,7 +219,7 @@ main .btn-outline:hover {
 }
 
 .hero-title1 {
-    font-size: 4.5rem;
+    font-size: clamp(36px, 4.5vw, 52px) !important;
     font-weight: 700;
     margin-bottom: 10px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
@@ -642,7 +642,7 @@ main .btn-outline:hover {
     background-attachment: fixed;
     background-position: center;
     color: white;
-    padding: 80px 0;
+    padding: clamp(40px, 6vw, 80px) 0;
 }
 
 .stats-grid {
@@ -1065,7 +1065,7 @@ main .btn-outline:hover {
 
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 2.2rem;
+        font-size: clamp(36px, 4.5vw, 52px) !important;
     }
 
     .hero-subtitle {
