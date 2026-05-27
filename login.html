@@ -284,13 +284,16 @@
             const email = document.getElementById('email').value.trim();
             const password = document.getElementById('password').value;
             
-            if (password !== '123456') {
-                alert('ពាក្យសម្ងាត់មិនត្រឹមត្រូវទេ! ប្រសិនបើអ្នកភ្លេចពាក្យសម្ងាត់ សូមចុចលើ "ភ្លេចពាក្យសម្ងាត់?"');
+            const registeredPassword = localStorage.getItem('registeredPassword') || '123456';
+            const registeredFullName = localStorage.getItem('registeredFullName') || 'User';
+            
+            if (password !== registeredPassword) {
+                alert('ពាក្យសម្ងាត់មិនត្រឹមត្រូវទេ! ប្រសិនបើអ្នកមិនទាន់បានចុះឈ្មោះ សូមចុះឈ្មោះជាមុនសិន។');
                 return;
             }
             
             if (email) {
-                localStorage.setItem('userFullName', 'User');
+                localStorage.setItem('userFullName', registeredFullName);
                 localStorage.setItem('userEmail', email);
                 window.location.href = 'index.html';
             }

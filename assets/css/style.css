@@ -2,6 +2,9 @@
 *{
     padding: 0; margin: 0; box-sizing: border-box;
 }
+html {
+    overflow-y: scroll !important;
+}
 :root{
     --primary-color:     #0D2A43; 
     --secondary-color:   #D7B56D; 
@@ -100,7 +103,16 @@ body.light-mode .navbar-brand img {
 }
 .nav-link.active { 
     color: var(--secondary-color) !important;
-    font-weight: 600 !important;
+    text-shadow: 0 0 .6px var(--secondary-color), 0 0 .6px var(--secondary-color) !important;
+}
+
+@media (min-width: 992px) {
+    #navbarNav {
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: auto !important;
+    }
 }
 .btn-book-now{
     background-color: var(--secondary-color) !important;
