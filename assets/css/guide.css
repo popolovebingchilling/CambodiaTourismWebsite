@@ -43,7 +43,6 @@ body{
             font-family: 'Kantumruy Pro', sans-serif;
             background-color: var(--sand-whisper);
             color: var(--dark-oud);
-            overflow-x: hidden;
         }
 
 
@@ -51,22 +50,7 @@ body{
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--parchment); }
         ::-webkit-scrollbar-thumb { background: var(--secondary-color); border-radius: 10px; }
-        /* ── Hero Section ── */
-        .hero-section {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            background: linear-gradient(100deg, var(--dark-oud) 0%, var(--primary-color) 40%, var(--angkor-stone) 100%);
-        }
 
-        .hero-bg-img {
-            position: absolute;
-            inset: 0;
-            opacity: .25;
-            z-index: 0;
-        }
         .hero-content {
             position: relative;
             z-index: 2;
@@ -193,7 +177,7 @@ body{
 
         /* ── Section Common ── */
         .section-padding {
-            padding: 5rem 0;
+            padding: var(--section-padding-y) 0;
         }
         .section-label {
             display: inline-flex;
@@ -231,7 +215,7 @@ body{
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 20px;
-            padding: 2rem;
+            padding: var(--space-xl);
             box-shadow: var(--card-shadow);
             transition: all .4s cubic-bezier(.25, .8, .25, 1);
             height: 100%;
@@ -411,8 +395,8 @@ body{
         .budget-tip {
             display: flex;
             align-items: flex-start;
-            gap: 1rem;
-            padding: 1rem;
+            gap: var(--space-md);
+            padding: var(--space-md);
             border-radius: 12px;
             transition: background .3s ease;
         }
@@ -556,12 +540,10 @@ body{
                 font-size: 1.5rem;
             }
 
-            .section-padding {
-                padding: 3.5rem 0;
-            }
+        }
 
             .guide-card {
-                padding: 1.5rem;
+                padding: var(--space-lg);
             }
         }
 

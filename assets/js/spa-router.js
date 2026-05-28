@@ -64,6 +64,7 @@
     `;
     document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(progressBar);
+        updateHeader(window.location.href);
     });
 
     function startLoading() {
@@ -92,11 +93,17 @@
         let path = url.split('/').pop().split('?')[0].split('#')[0] || 'index.html';
         if (path === '') path = 'index.html';
 
+        // Map detail pages to their parent nav link for active state
+        let matchPath = path;
+        if (path.startsWith('blog-') && path.endsWith('.html')) {
+            matchPath = 'blog.html';
+        }
+
         // Update active nav links
         const navLinks = document.querySelectorAll('header a.nav-link, header a.dropdown-item');
         navLinks.forEach(link => {
             const href = link.getAttribute('href');
-            if (href === path) {
+            if (href === path || href === matchPath) {
                 link.classList.add('active');
                 const parentDropdown = link.closest('.dropdown');
                 if (parentDropdown) {
@@ -230,34 +237,49 @@
             stopLoading();
 
             // --- Execute Scripts ---
-            isTracking = true; // Start tracking new listeners
+            const scriptsToRun = Array.from(doc.querySelectorAll('script')).filter(s => {
+                const src = s.getAttribute('src');
+                return !src || (!src.includes('spa-router.js') && !src.includes('bootstrap.bundle.min.js'));
+            });
             
-            // Execute the inline scripts sequentially
-            const scriptsToRun = Array.from(doc.body.querySelectorAll('script')).filter(s => !s.hasAttribute('src'));
-            
-            scriptsToRun.forEach(oldScript => {
-                const code = oldScript.textContent;
-                if (code.trim()) {
-                    let processedCode = code;
-                    // Replace const and let with var to prevent redeclaration errors on subsequent visits
-                    processedCode = processedCode.replace(/\\bconst\\s+/g, 'var ');
-                    processedCode = processedCode.replace(/\\blet\\s+/g, 'var ');
-                    
-                    try {
-                        (0, eval)(processedCode);
-                    } catch (e) {
-                        console.error('Error executing script from ' + url + ':', e);
+            for (let oldScript of scriptsToRun) {
+                if (oldScript.hasAttribute('src')) {
+                    const src = oldScript.getAttribute('src');
+                    if (!document.querySelector(`script[src="${src}"]`)) {
+                        await new Promise((resolve) => {
+                            const newScript = document.createElement('script');
+                            Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                            newScript.onload = resolve;
+                            newScript.onerror = resolve;
+                            document.body.appendChild(newScript);
+                        });
+                    }
+                } else {
+                    const code = oldScript.textContent;
+                    if (code.trim()) {
+                        isTracking = true;
+                        let processedCode = code;
+                        // Replace const and let with var to prevent redeclaration errors on subsequent visits
+                        processedCode = processedCode.replace(/\bconst\s+/g, 'var ');
+                        processedCode = processedCode.replace(/\blet\s+/g, 'var ');
+                        
+                        try {
+                            (0, eval)(processedCode);
+                        } catch (e) {
+                            console.error('Error executing script from ' + url + ':', e);
+                        }
+                        isTracking = false;
                     }
                 }
-            });
-
-            isTracking = false;
+            }
 
             // Re-initialize AOS if available
-            if (window.AOS) {
-                AOS.refreshHard();
-                AOS.init({ duration: 1000, once: true });
-            }
+            setTimeout(() => {
+                if (window.AOS) {
+                    AOS.refreshHard();
+                    AOS.init({ duration: 1000, once: true });
+                }
+            }, 100);
 
         } catch (error) {
             console.error('Error fetching page:', error);

@@ -375,7 +375,7 @@
     margin-top: 0.15em !important;
 }
 
-@media(max-width: 992px) {
+@media (max-width: 991.98px) {
     .profile-sidebar {
         margin-bottom: 30px !important;
     }

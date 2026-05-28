@@ -2,9 +2,7 @@
 *{
     padding: 0; margin: 0; box-sizing: border-box;
 }
-html {
-    overflow-y: scroll !important;
-}
+
 :root{
     --primary-color:     #0D2A43; 
     --secondary-color:   #D7B56D; 
@@ -18,6 +16,25 @@ html {
     --deep-mahogany:     var(--primary-color);
     --desert-terracotta: var(--secondary-color);
     --amber-dune:        var(--secondary-color);
+
+    /* ── Standardized Spacing Scale ── */
+    --space-xs: 0.25rem;  /* 4px */
+    --space-sm: 0.5rem;   /* 8px */
+    --space-md: 1rem;     /* 16px */
+    --space-lg: 1.5rem;   /* 24px */
+    --space-xl: 2rem;     /* 32px */
+    --space-2xl: 3rem;    /* 48px */
+    --space-3xl: 4rem;    /* 64px */
+    --space-4xl: 6rem;    /* 96px */
+    
+    /* ── Responsive Section Padding ── */
+    --section-padding-y: clamp(3rem, 6vw, 6rem); /* 48px - 96px */
+    --section-padding-x: clamp(1rem, 4vw, 2rem); /* 16px - 32px */
+
+    /* ── Standardized Typography / Line Heights ── */
+    --lh-tight: 1.2;
+    --lh-base: 1.5;
+    --lh-loose: 1.8;
 }
 .text-primary-color {
     color: var(--primary-color) !important;
@@ -31,6 +48,7 @@ body{
     color: var(--night-indigo) !important;
     padding-top: 76px !important;
 }
+
 .bg-gradient-stone {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--angkor-stone) 100%) !important;
 }
@@ -146,6 +164,65 @@ body.light-mode .navbar-brand img {
         rgba(13, 42, 67, 0.85) 100%) !important;
     z-index: 1 !important;
 }
+
+/* ========================================================
+   GLOBAL HERO SECTION (Consistent across all pages)
+   ======================================================== */
+.hero-section {
+    position: relative !important;
+    min-height: 100vh !important;
+    height: auto !important;
+    width: 100% !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+    padding-top: 100px !important;
+    padding-bottom: 80px !important;
+}
+
+/* Premium 4-Sided Cinematic Vignette Overlay */
+.hero-section::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: 
+        /* Top Shadow: Blends page header softly with banner */
+        linear-gradient(to bottom, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 22%),
+        /* Bottom Shadow: Adds visual depth at viewport lower boundary */
+        linear-gradient(to top, rgba(7, 18, 28, 0.95) 0%, rgba(7, 18, 28, 0) 25%),
+        /* Left Shadow: Creates anamorphic matte framing on the left */
+        linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
+        /* Right Shadow: Creates anamorphic matte framing on the right */
+        linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
+        /* Central Spotlight: High-contrast vignette centered on image */
+        radial-gradient(circle at center, rgba(13, 42, 67, 0.15) 0%, rgba(7, 18, 28, 0.5) 50%, rgba(7, 18, 28, 0.75) 100%) !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+}
+
+.hero-section::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 120px !important;
+    background: linear-gradient(rgba(7, 18, 28, 0), var(--dark-oud)) !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+}
+
+.hero-section > .container,
+.hero-section > .hero-content,
+.hero-section > .hero-overlay + div {
+    position: relative !important;
+    z-index: 3 !important;
+}
+
 .bento-grid {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
@@ -687,7 +764,7 @@ body.dark-mode .section-subtitle {
     font-weight: 700 !important;
     margin: 0 !important;
 }
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
     .gallery-bento-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         grid-template-rows: repeat(4, 200px) !important;
@@ -695,7 +772,7 @@ body.dark-mode .section-subtitle {
     .item-large { grid-row: span 2 !important; }
     .item-wide { grid-column: span 2 !important; }
 }
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
     .gallery-bento-grid {
         display: flex !important;
         flex-direction: column !important;
@@ -935,7 +1012,7 @@ body.dark-mode .section-subtitle {
     transform: translateX(5px) !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
     .map-info-floating {
         position: relative !important;
         bottom: 0 !important;
@@ -983,14 +1060,14 @@ body.dark-mode .section-subtitle {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
     .bento-grid {
         grid-template-columns: repeat(2, 1fr) !important;
     }
     .card-main { grid-column: span 2 !important; }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
     .bento-grid {
         grid-template-columns: 1fr !important;
         grid-auto-rows: 250px !important;
@@ -1319,7 +1396,7 @@ body.dark-mode .section-subtitle {
     color: var(--angkor-stone) !important;
     text-decoration: underline !important;
 }
-@media (max-width: 768px){
+@media (max-width: 767.98px){
     .auth-img-side {
         display: none !important;
     }
@@ -1557,7 +1634,7 @@ body.dark-mode .section-subtitle {
     padding: 20px;
     border: 1px solid #ddd;
 }
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
     .blog-article {
         padding: 20px;
         margin-top: -30px;
@@ -1774,12 +1851,12 @@ body.dark-mode .section-subtitle {
     color: var(--secondary-color) !important;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
     .master-map-display {
         height: 400px !important;
     }
 }
-@media (max-width: 768px){
+@media (max-width: 767.98px){
 .bento-grid{
     grid-template-columns: 1fr !important;
     grid-auto-rows: auto !important;
@@ -1962,12 +2039,12 @@ img.img-fluid:not(.logo), img.feature-img, img.img-food, img.attraction-img, img
     color: var(--secondary-color) !important;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
     .master-map-display {
         height: 400px !important;
     }
 }
-@media (max-width: 768px){
+@media (max-width: 767.98px){
 .bento-grid{
     grid-template-columns: 1fr !important;
     grid-auto-rows: auto !important;
@@ -2133,12 +2210,12 @@ input[type="button"]:hover,
     color: var(--secondary-color) !important;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
     .master-map-display {
         height: 400px !important;
     }
 }
-@media (max-width: 768px){
+@media (max-width: 767.98px){
 .bento-grid{
     grid-template-columns: 1fr !important;
     grid-auto-rows: auto !important;
@@ -2343,4 +2420,17 @@ h3 {
 p, .hero-desc, .section-subtitle, .blog-body p, .guide-info p, .service-content p, .card-main p, .footer-brand-text, .auth-img-side p {
     font-size: 15px !important;
     line-height: 1.8 !important;
+}
+
+/* ========================================================
+   MODAL SCROLLBAR LAYOUT SHIFT FIX
+   ======================================================== */
+body.modal-open {
+    padding-right: 0 !important;
+}
+.modal-open .sticky-top,
+.modal-open .fixed-top,
+.modal-open .navbar {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
 }

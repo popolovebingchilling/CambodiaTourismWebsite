@@ -93,7 +93,7 @@
         </nav>
     </header>
     <!-- ═══════ Hero ═══════ -->
-    <section class="hero-section" id="hero">
+    <section class="hero-section" id="hero" style="background-image: url('assets/image/kep.png') !important;">
         <div class="hero-content">
             <span class="section-badge mb-3 d-inline-block">ទីក្រុងឆ្នេរ ភាគខាងត្បូងកម្ពុជា</span>
             <h1 class="hero-title">
@@ -425,10 +425,7 @@
             </div>
         </div>
     </section>
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="bi bi-chevron-up"></i>
-    </button>
+
     <!-- ── MAP SECTION ── -->
     <section class="bg-mixed section-padding map-section">
         <div class="container">
@@ -553,24 +550,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // ── Navbar scroll effect ──
-        const navbar = document.getElementById('mainNav');
-        const backToTop = document.getElementById('backToTop');
 
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-
-            // Back to top button
-            if (scrollY > 500) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
-        });
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
     </script>
     <script>
         // ── Scroll reveal ──
