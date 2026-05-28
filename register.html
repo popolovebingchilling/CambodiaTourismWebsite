@@ -135,17 +135,17 @@
                         <div class="mb-3">
                             <label for="password" class="form-label">ពាក្យសម្ងាត់</label>
                             <div class="password-field-wrapper">
-                                <input type="password" class="form-control" id="password1" placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
-                                <button type="button" class="password-toggle" id="togglePassword1">
+                                <input type="password" class="form-control" id="password" placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
+                                <button type="button" class="password-toggle" id="togglePassword">
                                     <i class="fas fa-eye-slash"></i>
                                 </button>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">បញ្ចាក់ពាក្យសម្ងាត់</label>
+                            <label for="confirmPassword" class="form-label">បញ្ជាក់ពាក្យសម្ងាត់</label>
                             <div class="password-field-wrapper">
-                                <input type="password" class="form-control" id="password2" placeholder="បញ្ចាក់ពាក្យសម្ងាត់" required>
-                                <button type="button" class="password-toggle" id="togglePassword2">
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="បញ្ចាក់ពាក្យសម្ងាត់" required>
+                                <button type="button" class="password-toggle" id="toggleConfirmPassword">
                                     <i class="fas fa-eye-slash"></i>
                                 </button>
                             </div>
@@ -280,13 +280,15 @@
     <!-- BOOTSTRAP JAVA -->
     <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        const togglePassword1 = document.querySelector('#togglePassword1');
-        const password1 = document.querySelector('#password1');
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+        const toggleConfirmPassword = document.querySelector('#toggleConfirmPassword');
+        const confirmPassword = document.querySelector('#confirmPassword');
 
-        togglePassword1.addEventListener('click', function (e) {
+        togglePassword.addEventListener('click', function (e) {
             // toggle the type attribute
-            const type = password1.getAttribute('type') === 'password' ? 'text' : 'password';
-            password1.setAttribute('type', type);
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
             // toggle the eye slash icon
             const icon = this.querySelector('i');
             if (icon.classList.contains('fa-eye-slash')) {
@@ -295,16 +297,10 @@
                 icon.classList.replace('fa-eye', 'fa-eye-slash');
             }
         });
-    </script>
-     <script>
-        const togglePassword2 = document.querySelector('#togglePassword2');
-        const password2 = document.querySelector('#password2');
 
-        togglePassword2.addEventListener('click', function (e) {
-            // toggle the type attribute
-            const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
-            password2.setAttribute('type', type);
-            // toggle the eye slash icon
+        toggleConfirmPassword.addEventListener('click', function (e) {
+            const type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+            confirmPassword.setAttribute('type', type);
             const icon = this.querySelector('i');
             if (icon.classList.contains('fa-eye-slash')) {
                 icon.classList.replace('fa-eye-slash', 'fa-eye');
@@ -315,22 +311,30 @@
     </script>
     <script>
         document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent default submission so we can control navigation
             const firstName = document.getElementById('firstName').value.trim();
             const lastName = document.getElementById('lastName').value.trim();
             const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert('ពាក្យសម្ងាត់មិនត្រូវគ្នាទេ!');
+                return;
+            }
             
-            // Clear any old temp values
-            localStorage.removeItem('userFullName');
-            localStorage.removeItem('userEmail');
-            localStorage.removeItem('tempResetEmail');
-            
+            // Save registered data so login page can use it
             if (firstName && lastName) {
                 // In Khmer, family name (lastName) usually comes first
-                localStorage.setItem('userFullName', lastName + ' ' + firstName);
+                localStorage.setItem('registeredFullName', lastName + ' ' + firstName);
             }
             if (email) {
-                localStorage.setItem('userEmail', email);
+                localStorage.setItem('registeredEmail', email);
+                localStorage.setItem('registeredPassword', password);
             }
+
+            // Redirect to login page as requested
+            window.location.href = 'login.html';
         });
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

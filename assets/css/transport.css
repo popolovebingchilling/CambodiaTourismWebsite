@@ -27,28 +27,7 @@ body{
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
 }
-        /* ─── Hero ─── */
-        .hero-section {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: linear-gradient(100deg, var(--dark-oud) 0%, var(--primary-color) 40%, var(--angkor-stone) 100%);
-        }
 
-        .hero-bg-img {
-            position: absolute;
-            inset: 0;
-            opacity: .25;
-            z-index: 0;
-        }
-        .hero-bg-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
 
         .hero-content {
             position: relative;
@@ -213,7 +192,7 @@ body{
 
         /* ─── Transport Section ─── */
         .transport-section {
-            padding: 4rem 0;
+            padding: var(--section-padding-y) 0;
         }
 
         .transport-card {
@@ -311,7 +290,7 @@ body{
         }
 
         .card-body-content {
-            padding: 1.5rem 2.5rem 2.5rem;
+            padding: var(--space-lg) var(--space-xl) var(--space-xl);
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -601,7 +580,8 @@ body{
 
         /* ─── Company Section ─── */
         .company-section {
-            padding: 4rem 0 5rem;
+            padding: var(--section-padding-y) 0;
+            position: relative;
             background: linear-gradient(180deg, var(--sand-whisper) 0%, var(--parchment) 50%, var(--sand-whisper) 100%);
         }
 
@@ -730,7 +710,8 @@ body{
 
         /* ─── Extra Detail Section ─── */
         .detail-section {
-            padding: 0 0 4rem;
+            padding: 0 0 var(--section-padding-y);
+            position: relative;
         }
 
         .detail-card {
@@ -858,10 +839,8 @@ body{
             }
         }
 
-        @media (max-width: 768px) {
-            .hero-section {
-                min-height: 340px;
-            }
+        @media (max-width: 767.98px) {
+
 
             .hero-stats {
                 gap: 1.5rem;
@@ -902,18 +881,7 @@ body{
             }
         }
 
-        @media (max-width: 576px) {
-            .transport-section {
-                padding: 2.5rem 0;
-            }
-
-            .company-section {
-                padding: 2.5rem 0 3.5rem;
-            }
-
-            .detail-section {
-                padding: 0 0 2.5rem;
-            }
+        @media (max-width: 575.98px) {
 
             .app-list {
                 flex-direction: column;

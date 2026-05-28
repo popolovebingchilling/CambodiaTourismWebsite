@@ -23,7 +23,7 @@
 }
 
 /* Make inline images responsive on smaller viewports */
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
     .rounded-4.overflow-hidden img {
         height: 220px !important;
     }

@@ -184,7 +184,7 @@ body{
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 20px;
-    padding: 32px;
+    padding: var(--space-xl);
     box-shadow: var(--card-shadow);
     margin: 0 auto;
 }
@@ -197,10 +197,10 @@ body{
     max-width: 640px;
 }
 
-@media(max-width:768px) {
+@media (max-width: 767.98px) {
     .fc,
     .form-card {
-        padding: 20px 16px;
+        padding: var(--space-lg) var(--space-md);
         border-radius: 16px;
     }
 }
@@ -296,7 +296,7 @@ body{
     gap: 14px;
 }
 
-@media(max-width:576px) {
+@media (max-width: 575.98px) {
     .fr,
     .form-row {
         grid-template-columns: 1fr;
@@ -393,7 +393,7 @@ body{
     margin-bottom: 20px;
 }
 
-@media(max-width:576px) {
+@media (max-width: 575.98px) {
     .pay-methods {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -513,8 +513,8 @@ body{
     background: rgba(255,255,255,.7);
     border: 2px dashed var(--reef-teal);
     border-radius: 16px;
-    padding: 20px;
-    margin: 20px 0;
+    padding: var(--space-lg);
+    margin: var(--space-lg) 0;
 }
 
 .booking-number {
@@ -530,7 +530,7 @@ body{
     background: rgba(46, 213, 115, 0.1);
     color: #1a6636;
     border: 1px solid rgba(46, 213, 115, 0.35);
-    padding: 40px;
+    padding: var(--space-2xl);
     border-radius: 16px;
     text-align: center;
     margin-bottom: 20px;

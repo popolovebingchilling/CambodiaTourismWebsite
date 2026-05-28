@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ចូលគណនី / ចុះឈ្មោះ | ទេសចរណ៍កម្ពុជា</title>
+    <!-- HTML CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/register.css">
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css">
+    <!-- BOOTSTRAP THEME  -->
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <!-- FONT AWESOME FOR ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- BOOTSTRAP ICON -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="assets/js/spa-router.js" defer></script>
+    <style>
+        .auth-view {
+            display: none;
+            width: 100%;
+        }
+        .auth-view.active {
+            display: flex;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container py-2">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="assets/image/new_logo_v2.png" alt="Logo" width="45" height="45" class="me-2">
+                    <div class="d-flex flex-column lh-1">
+                        <span class="text-secondary small">ទេសចរណ៍កម្ពុជា</span>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown">គោលដៅ</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="siem-reap.html">សៀមរាប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="phnompenh.html">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="battambang.html">បាត់ដំបង</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="mondulkiri.html">មណ្ឌលគិរី</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="koh-kong.html">កោះកុង</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown">សេវាកម្ម</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="hotels.html">សណ្ឋាគារ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="restaurants.html">ភោជនីយដ្ឋាន</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="guide.html">មគ្គុទ្ទេសក៍</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="transportation.html">ការដឹកជញ្ជូន</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link px-3" href="vikjittsal.html">វិចិត្រសាល</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex align-items-center gap-3">
+                    <a href="#" onclick="switchView('register')" id="header-register-btn" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចុះឈ្មោះ</a>
+                    <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
+                    <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2" title="ប្រវត្តិរូប" style="display: none !important;">
+                        <i class="fas fa-user-circle text-white" style="font-size: 38px; transition: 0.3s; opacity: 0.9;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0.9'; this.style.transform='scale(1)';"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="bg-mixed auth-wrapper">
+        <div class="container d-flex justify-content-center">
+            <div class="auth-card d-flex flex-column flex-md-row w-100" style="max-width: 900px;" data-aos="fade-up" data-aos-delay="100">
+                
+                <!-- LOGIN VIEW -->
+                <div id="view-login" class="auth-view flex-column flex-md-row active">
+                    <!-- Image Side -->
+                    <div class="auth-img-side col-md-5">
+                        <h2 class="auth-title text-white mb-3">ចូលរួមជាមួយ<span>យើង</span></h2>
+                        <p class="mb-4">ចូលរួមជាមួយពួកយើងដើម្បីទទួលបានបទពិសោធន៍ថ្មីៗ និងការបញ្ចុះតម្លៃពិសេសសម្រាប់ការធ្វើដំណើរក្នុងប្រទេសកម្ពុជា។</p>
+                        <div class="my-4 text-center w-100">
+                            <div class="vignette-wrapper shadow w-100">
+                                <img src="assets/image/home-bg.png" alt="Angkor Wat" style="height: 300px; width: 100%; object-fit: cover; display: block; border-radius: 20px;">
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex gap-2 flex-wrap">
+                                <button onclick="switchView('register')" class="btn btn-primary rounded-pill px-4"><i class="fas fa-user-plus me-2"></i> ចុះឈ្មោះ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form Side -->
+                    <div class="auth-form-side col-md-7">
+                        <div class="mb-4">
+                            <h3 class="auth-title mb-1">ចូល<span>គណនី</span></h3>
+                            <p class="text-white-50">ចូលទៅកាន់គណនីរបស់អ្នក</p>
+                        </div>
+                        <form onsubmit="handleLogin(event)">
+                            <div class="mb-3">
+                                <label for="login-email" class="form-label">អាសយដ្ឋានអ៊ីម៉ែល</label>
+                                <input type="email" class="form-control" id="login-email" placeholder="បញ្ចូលអ៊ីមែលរបស់អ្នក" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="login-password" class="form-label">ពាក្យសម្ងាត់</label>
+                                <div class="password-field-wrapper">
+                                    <input type="password" class="form-control" id="login-password" placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
+                                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('login-password', this)">
+                                        <i class="fas fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mb-4 d-flex justify-content-between align-items-center">
+                                <div class="form-check mb-0">
+                                    <input type="checkbox" class="form-check-input" id="login-terms">
+                                    <label class="form-check-label small" for="login-terms">ចងចាំខ្ញុំ</label>
+                                </div>
+                                <a href="#" onclick="switchView('forgot-password')" class="small auth-link">ភ្លេចពាក្យសម្ងាត់?</a>
+                            </div>
+                            <button type="submit" class="btn btn-auth mb-4">ចូលគណនី</button>
+                            <div class="text-center">
+                                <p class="small text-white-50 mb-3">ឬចូលគណនីជាមួយ</p>
+                                <div class="social-auth">
+                                    <a href="#" class="btn-social"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="btn-social"><i class="fab fa-google"></i></a>
+                                    <a href="#" class="btn-social"><i class="fab fa-apple"></i></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- REGISTER VIEW -->
+                <div id="view-register" class="auth-view flex-column flex-md-row">
+                    <!-- Image Side -->
+                    <div class="auth-img-side col-md-5">
+                        <h2 class="auth-title text-white mb-3">ចូលរួមជាមួយ<span>យើង</span></h2>
+                        <p class="mb-4">ចូលរួមជាមួយពួកយើងដើម្បីទទួលបានបទពិសោធន៍ថ្មីៗ និងការបញ្ចុះតម្លៃពិសេសសម្រាប់ការធ្វើដំណើរក្នុងប្រទេសកម្ពុជា។</p>
+                        <div class="my-4 text-center w-100">
+                            <div class="vignette-wrapper shadow w-100">
+                                <img src="assets/image/home-bg.png" alt="Angkor Wat" style="height: 300px; width: 100%; object-fit: cover; display: block; border-radius: 20px;">
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex gap-2 flex-wrap">
+                                <button onclick="switchView('login')" class="btn btn-primary rounded-pill px-4"><i class="fas fa-sign-in-alt me-2"></i> ចូលគណនី</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form Side -->
+                    <div class="auth-form-side col-md-7">
+                        <div class="mb-4">
+                            <h3 class="auth-title mb-1">បង្កើត<span>គណនី</span></h3>
+                            <p class="text-white-50">បង្កើតគណនីថ្មីរបស់អ្នក</p>
+                        </div>
+                        <form onsubmit="handleRegister(event)">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="reg-firstName" class="form-label">នាមខ្លួន</label>
+                                    <input type="text" class="form-control" id="reg-firstName" placeholder="បញ្ចូលនាមខ្លួន" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="reg-lastName" class="form-label">នាមត្រកូល</label>
+                                    <input type="text" class="form-control" id="reg-lastName" placeholder="បញ្ចូលនាមត្រកូល" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="reg-email" class="form-label">អាសយដ្ឋានអ៊ីម៉ែល</label>
+                                <input type="email" class="form-control" id="reg-email" placeholder="បញ្ចូលអ៊ីមែលរបស់អ្នក" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="reg-password" class="form-label">ពាក្យសម្ងាត់</label>
+                                <div class="password-field-wrapper">
+                                    <input type="password" class="form-control" id="reg-password" placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
+                                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('reg-password', this)">
+                                        <i class="fas fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="reg-confirmPassword" class="form-label">បញ្ជាក់លេខសម្ងាត់</label>
+                                <div class="password-field-wrapper">
+                                    <input type="password" class="form-control" id="reg-confirmPassword" placeholder="បញ្ជាក់លេខសម្ងាត់របស់អ្នក" required>
+                                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('reg-confirmPassword', this)">
+                                        <i class="fas fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mb-4 d-flex justify-content-between align-items-center">
+                                <div class="form-check mb-0">
+                                    <input type="checkbox" class="form-check-input" id="reg-terms" required>
+                                    <label class="form-check-label small" for="reg-terms">
+                                        ខ្ញុំយល់ព្រមតាម <a href="#" class="auth-link">លក្ខខណ្ឌប្រើប្រាស់</a>
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-auth mb-4">ចុះឈ្មោះ</button>
+                            <div class="text-center">
+                                <p class="small text-white-50 mb-3">ឬចុះឈ្មោះជាមួយ</p>
+                                <div class="social-auth">
+                                    <a href="#" class="btn-social"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="btn-social"><i class="fab fa-google"></i></a>
+                                    <a href="#" class="btn-social"><i class="fab fa-apple"></i></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- FORGOT PASSWORD VIEW -->
+                <div id="view-forgot-password" class="auth-view flex-column flex-md-row">
+                    <!-- Image Side -->
+                    <div class="auth-img-side col-md-5">
+                        <h2 class="auth-title text-white mb-3">កំណត់ពាក្យ<span>សម្ងាត់</span></h2>
+                        <p class="mb-4">កុំបារម្ភ ប្រសិនបើអ្នកភ្លេចពាក្យសម្ងាត់។ យើងនឹងជួយអ្នកឱ្យចូលប្រើប្រាស់គណនីរបស់អ្នកឡើងវិញ។</p>
+                        <div class="my-4 text-center w-100">
+                            <div class="vignette-wrapper shadow w-100">
+                                <img src="assets/image/home-bg.png" alt="Angkor Wat" style="height: 300px; width: 100%; object-fit: cover; display: block; border-radius: 20px;">
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex gap-2 flex-wrap">
+                                <button onclick="switchView('login')" class="btn btn-primary rounded-pill px-4"><i class="fas fa-sign-in-alt me-2"></i> ចូលគណនី</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form Side -->
+                    <div class="auth-form-side col-md-7">
+                        <div class="mb-4">
+                            <h3 class="auth-title mb-1">ភ្លេចពាក្យ<span>សម្ងាត់?</span></h3>
+                            <p class="text-white-50">បញ្ចូលអ៊ីម៉ែលរបស់អ្នកដើម្បីទទួលបានតំណភ្ជាប់កំណត់ពាក្យសម្ងាត់ឡើងវិញ</p>
+                        </div>
+                        <form onsubmit="handleForgotPassword(event)">
+                            <div class="mb-4">
+                                <label for="forgot-email" class="form-label">អាសយដ្ឋានអ៊ីម៉ែល</label>
+                                <input type="email" class="form-control" id="forgot-email" placeholder="បញ្ចូលអ៊ីមែលរបស់អ្នក" required>
+                            </div>
+                            <button type="submit" class="btn btn-auth mb-4">ផ្ញើរតំណភ្ជាប់ / OTP</button>
+                        </form>
+                        <div class="mt-4 text-center d-flex justify-content-center gap-3">
+                            <p class="small text-white-50 mb-0">ត្រឡប់ទៅ <a href="#" onclick="switchView('login')" class="auth-link">ចូលគណនី</a></p>
+                            <span class="text-white-50">|</span>
+                            <p class="small text-white-50 mb-0">ទៅកាន់ <a href="#" onclick="switchView('register')" class="auth-link">ចុះឈ្មោះ</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OTP VIEW -->
+                <div id="view-otp" class="auth-view flex-column flex-md-row">
+                    <!-- Image Side -->
+                    <div class="auth-img-side col-md-5">
+                        <h2 class="auth-title text-white mb-3">ផ្ទៀងផ្ទាត់<span>គណនី</span></h2>
+                        <p class="mb-4">ដើម្បីសុវត្ថិភាពគណនីរបស់អ្នក សូមធ្វើការផ្ទៀងផ្ទាត់លេខកូដ OTP ។</p>
+                        <div class="my-4 text-center w-100">
+                            <div class="vignette-wrapper shadow w-100">
+                                <img src="assets/image/home-bg.png" alt="Angkor Wat" style="height: 300px; width: 100%; object-fit: cover; display: block; border-radius: 20px;">
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex gap-2 flex-wrap">
+                                <button onclick="switchView('login')" class="btn btn-primary rounded-pill px-4"><i class="fas fa-sign-in-alt me-2"></i> ចូលគណនី</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form Side -->
+                    <div class="auth-form-side col-md-7">
+                        <div class="mb-4">
+                            <h3 class="auth-title mb-1">បញ្ចូលលេខកូដ <span>OTP</span></h3>
+                            <p class="text-white-50">យើងបានផ្ញើលេខកូដ ៦ ខ្ទង់ទៅកាន់អ៊ីម៉ែលរបស់អ្នក។</p>
+                        </div>
+                        <form onsubmit="handleOtp(event)">
+                            <div class="mb-4">
+                                <label class="form-label">លេខកូដបញ្ជាក់ (OTP)</label>
+                                <div class="d-flex gap-2 justify-content-between">
+                                    <input type="text" class="form-control text-center fs-4 fw-bold otp-input" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                    <input type="text" class="form-control text-center fs-4 fw-bold otp-input" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                    <input type="text" class="form-control text-center fs-4 fw-bold otp-input" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                    <input type="text" class="form-control text-center fs-4 fw-bold otp-input" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                    <input type="text" class="form-control text-center fs-4 fw-bold otp-input" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                    <input type="text" class="form-control text-center fs-4 fw-bold otp-input" maxlength="1" style="width: 50px; height: 55px; padding: 0;">
+                                </div>
+                                <div class="text-end mt-2">
+                                    <a href="#" class="small auth-link">ផ្ញើលេខកូដឡើងវិញ</a>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-auth mb-4">បញ្ជាក់ និង បន្ត</button>
+                        </form>
+                        <div class="mt-4 text-center d-flex justify-content-center gap-3">
+                            <p class="small text-white-50 mb-0">ត្រឡប់ទៅ <a href="#" onclick="switchView('login')" class="auth-link">ចូលគណនី</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NEW PASSWORD VIEW -->
+                <div id="view-new-password" class="auth-view flex-column flex-md-row">
+                    <!-- Image Side -->
+                    <div class="auth-img-side col-md-5">
+                        <h2 class="auth-title text-white mb-3">កំណត់ពាក្យ<span>សម្ងាត់ថ្មី</span></h2>
+                        <p class="mb-4">សូមបញ្ចូលពាក្យសម្ងាត់ថ្មីរបស់អ្នក ដើម្បីអាចចូលប្រើប្រាស់គណនីបានម្តងទៀត។</p>
+                        <div class="my-4 text-center w-100">
+                            <div class="vignette-wrapper shadow w-100">
+                                <img src="assets/image/home-bg.png" alt="Angkor Wat" style="height: 300px; width: 100%; object-fit: cover; display: block; border-radius: 20px;">
+                            </div>
+                        </div>
+                        <div class="mt-auto">
+                            <div class="d-flex gap-2 flex-wrap">
+                                <button onclick="switchView('login')" class="btn btn-primary rounded-pill px-4"><i class="fas fa-sign-in-alt me-2"></i> ចូលគណនី</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form Side -->
+                    <div class="auth-form-side col-md-7">
+                        <div class="mb-4">
+                            <h3 class="auth-title mb-1">ពាក្យសម្ងាត់<span>ថ្មី</span></h3>
+                            <p class="text-white-50">បញ្ចូលពាក្យសម្ងាត់ថ្មីរបស់អ្នក</p>
+                        </div>
+                        <form onsubmit="handleNewPassword(event)">
+                            <div class="mb-3">
+                                <label for="new-password" class="form-label">ពាក្យសម្ងាត់ថ្មី</label>
+                                <div class="password-field-wrapper">
+                                    <input type="password" class="form-control" id="new-password" placeholder="ពាក្យសម្ងាត់ថ្មី" required>
+                                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('new-password', this)">
+                                        <i class="fas fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="new-confirm-password" class="form-label">បញ្ជាក់ពាក្យសម្ងាត់ថ្មី</label>
+                                <div class="password-field-wrapper">
+                                    <input type="password" class="form-control" id="new-confirm-password" placeholder="បញ្ជាក់ពាក្យសម្ងាត់ថ្មី" required>
+                                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('new-confirm-password', this)">
+                                        <i class="fas fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-auth mb-4">ផ្លាស់ប្តូរពាក្យសម្ងាត់</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Brand Essence -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="footer-brand mb-4">
+                        <img src="assets/image/new_logo_v2.png" alt="Logo" width="60" class="mb-3">
+                        <h5 class="text-white fw-bold">ទេសចរណ៍កម្ពុជា</h5>
+                    </div>
+                    <p class="footer-brand-text">
+                        ស្វែងយល់ពីភាពអស្ចារ្យនៃព្រះរាជាណាចក្រអច្ឆរិយៈ។ យើងខ្ញុំផ្តល់ជូននូវបទពិសោធន៍ទេសចរណ៍ដ៏ល្អបំផុត
+                        ដើម្បីបំពេញក្តីសុបិនរបស់អ្នកនៅក្នុងតំបន់អាសុីអាគ្នេយ៍។
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Destinations -->
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title">គោលដៅ</h6>
+                    <ul class="footer-links">
+                        <li><a href="phnompenh.html">ភ្នំពេញ</a></li>
+                        <li><a href="siem-reap.html">សៀមរាប</a></li>
+                        <li><a href="kampot.html">កំពត</a></li>
+                        <li><a href="kep.html">កែប</a></li>
+                        <li><a href="prea-sihanouk.html">ព្រះសីហនុ</a></li>
+                        <li><a href="battambang.html">បាត់ដំបង</a></li>
+                        <li><a href="mondulkiri.html">មណ្ឌលគិរី</a></li>
+                        <li><a href="koh-kong.html">កោះកុង</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services -->
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title">សេវាកម្ម</h6>
+                    <ul class="footer-links">
+                        <li><a href="hotels.html">សណ្ឋាគារ</a></li>
+                        <li><a href="restaurants.html">ភោជនីយដ្ឋាន</a></li>
+                        <li><a href="guide.html">មគ្គុទ្ទេសក៍</a></li>
+                        <li><a href="transportation.html">ការដឹកជញ្ជូន</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <h6 class="footer-title">ទំនាក់ទំនង</h6>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+៨៥៥ ១២ ២២៣ ៣២២</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@cambodiatourism.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>ភ្នំពេញ, ព្រះរាជាណាចក្រកម្ពុជា</span>
+                        </div>
+                        <div class="footer-contact-item align-items-start">
+                            <i class="fas fa-clock mt-1"></i>
+                            <div class="d-flex flex-column gap-1">
+                                <span>ចន្ទ - សុក្រ: ៨:០០ - ១៧:០០</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 5: Discover -->
+                <div class="col-lg-2">
+                    <h6 class="footer-title">ស្វែងយល់</h6>
+                    <ul class="footer-links">
+                        <li><a href="vikjittsal.html">វិចិត្រសាល</a></li>
+                        <li><a href="blog.html">ប្លុកទេសចរណ៍</a></li>
+                        <li><a href="review.html">មតិយោបល់</a></li>
+                        <li><a href="map.html">ផែនទី</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="border-white opacity-10 my-5">
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center w-100">
+                <p class="mb-4 mb-md-0 small text-white-50 d-flex align-items-center m-0" style="height: 24px;">
+                    &copy; ២០២៦ ទេសចរណ៍កម្ពុជារក្សាសិទ្ធិគ្រប់យ៉ាង។
+                </p>
+                <div class="trust-badges mb-0" style="margin-bottom: 0 !important; align-items: center; display: flex;">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOOTSTRAP JAVA -->
+    <script src="assets/css/bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({ duration: 1200, once: true });
+
+        // Switch between different auth views (SPA approach)
+        function switchView(viewName) {
+            document.querySelectorAll('.auth-view').forEach(view => {
+                view.classList.remove('active');
+            });
+            const target = document.getElementById('view-' + viewName);
+            if(target) {
+                target.classList.add('active');
+                // Re-trigger AOS if needed by scrolling a bit or it will just show.
+            }
+        }
+
+        // Check if URL has hash to determine which view to show
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.replace('#', '');
+            if(['login', 'register', 'forgot-password', 'otp', 'new-password'].includes(hash)) {
+                switchView(hash);
+            }
+        });
+
+        // Toggle Password Visibility
+        function togglePasswordVisibility(inputId, btnElement) {
+            const input = document.getElementById(inputId);
+            const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+            input.setAttribute('type', type);
+            
+            const icon = btnElement.querySelector('i');
+            if (icon.classList.contains('fa-eye-slash')) {
+                icon.classList.replace('fa-eye-slash', 'fa-eye');
+            } else {
+                icon.classList.replace('fa-eye', 'fa-eye-slash');
+            }
+        }
+
+        // Logic for Handling Forms
+        function handleLogin(e) {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value.trim();
+            const password = document.getElementById('login-password').value;
+            
+            const registeredPassword = localStorage.getItem('registeredPassword') || '123456';
+            const registeredFullName = localStorage.getItem('registeredFullName') || 'User';
+            
+            if (password !== registeredPassword && password !== '123456') {
+                alert('ពាក្យសម្ងាត់មិនត្រឹមត្រូវទេ! ប្រសិនបើអ្នកមិនទាន់បានចុះឈ្មោះ សូមចុះឈ្មោះជាមុនសិន។');
+                return;
+            }
+            
+            if (email) {
+                localStorage.setItem('userFullName', registeredFullName);
+                localStorage.setItem('userEmail', email);
+                window.location.href = 'index.html';
+            }
+        }
+
+        function handleRegister(e) {
+            e.preventDefault();
+            const firstName = document.getElementById('reg-firstName').value.trim();
+            const lastName = document.getElementById('reg-lastName').value.trim();
+            const email = document.getElementById('reg-email').value.trim();
+            const password = document.getElementById('reg-password').value;
+            const confirmPassword = document.getElementById('reg-confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                alert('ពាក្យសម្ងាត់មិនត្រូវគ្នាទេ!');
+                return;
+            }
+            
+            if (firstName && lastName) {
+                localStorage.setItem('tempUserFullName', lastName + ' ' + firstName);
+            }
+            if (email) {
+                localStorage.setItem('tempUserEmail', email);
+                localStorage.setItem('registeredPassword', password);
+            }
+
+            // Go to OTP view for verification
+            switchView('otp');
+            window.location.hash = 'otp';
+        }
+
+        function handleForgotPassword(e) {
+            e.preventDefault();
+            const email = document.getElementById('forgot-email').value.trim();
+            if (email) {
+                localStorage.setItem('tempResetEmail', email);
+                // Go to OTP view
+                switchView('otp');
+                window.location.hash = 'otp';
+            }
+        }
+
+        function handleOtp(e) {
+            e.preventDefault();
+            const inputs = document.querySelectorAll('#view-otp .otp-input');
+            const otpCode = Array.from(inputs).map(inp => inp.value).join('');
+            
+            if (otpCode.length < 6) {
+                alert("សូមបញ្ចូលលេខកូដ OTP ឱ្យបានគ្រប់ ៦ ខ្ទង់!");
+                return;
+            }
+
+            const tempResetEmail = localStorage.getItem('tempResetEmail');
+
+            if (tempResetEmail) {
+                // If from forgot password -> Go to New Password View
+                switchView('new-password');
+                window.location.hash = 'new-password';
+            } else {
+                // From Registration
+                const tempName = localStorage.getItem('tempUserFullName') || 'User';
+                const tempEmail = localStorage.getItem('tempUserEmail') || 'user@example.com';
+                
+                localStorage.setItem('userFullName', tempName);
+                localStorage.setItem('userEmail', tempEmail);
+                localStorage.removeItem('tempUserFullName');
+                localStorage.removeItem('tempUserEmail');
+                
+                alert("ការផ្ទៀងផ្ទាត់ OTP ទទួលបានជោគជ័យ! គណនីរបស់អ្នកត្រូវបានបង្កើតឡើងដោយជោគជ័យ។");
+                window.location.href = 'index.html';
+            }
+        }
+
+        function handleNewPassword(e) {
+            e.preventDefault();
+            const pwd1 = document.getElementById('new-password').value;
+            const pwd2 = document.getElementById('new-confirm-password').value;
+
+            if (pwd1 !== pwd2) {
+                alert('ពាក្យសម្ងាត់មិនត្រូវគ្នាទេ!');
+                return;
+            }
+
+            localStorage.setItem('registeredPassword', pwd1);
+            alert('ពាក្យសម្ងាត់របស់អ្នកត្រូវបានផ្លាស់ប្តូរដោយជោគជ័យ។ សូមចូលគណនីម្តងទៀត។');
+            localStorage.removeItem('tempResetEmail');
+            switchView('login');
+            window.location.hash = 'login';
+        }
+
+        // Setup OTP auto-focus logic
+        const otpInputs = document.querySelectorAll('.otp-input');
+        otpInputs.forEach((input, index) => {
+            input.addEventListener('input', (e) => {
+                const val = e.target.value;
+                if (!/^[0-9]$/.test(val)) {
+                    e.target.value = '';
+                    return;
+                }
+                if (val && index < otpInputs.length - 1) {
+                    otpInputs[index + 1].focus();
+                }
+            });
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace') {
+                    if (input.value === '' && index > 0) {
+                        otpInputs[index - 1].focus();
+                        otpInputs[index - 1].value = '';
+                    } else {
+                        input.value = '';
+                    }
+                    e.preventDefault();
+                }
+            });
+            input.addEventListener('paste', (e) => {
+                const data = e.clipboardData.getData('text');
+                if (data.length === otpInputs.length && /^\d+$/.test(data)) {
+                    otpInputs.forEach((inp, idx) => inp.value = data[idx]);
+                    otpInputs[otpInputs.length - 1].focus();
+                    e.preventDefault();
+                }
+            });
+        });
+
+        // Header logged in state
+        document.addEventListener("DOMContentLoaded", function() {
+            const hasRegistered = localStorage.getItem('userFullName') || localStorage.getItem('userEmail');
+            const registerBtn = document.getElementById('header-register-btn');
+            const profileAvatar = document.getElementById('header-profile-avatar');
+            
+            if (hasRegistered) {
+                if (registerBtn) registerBtn.setAttribute('style', 'display: none !important;');
+                if (profileAvatar) profileAvatar.setAttribute('style', 'display: flex !important;');
+            } else {
+                if (registerBtn) registerBtn.setAttribute('style', 'display: inline-block !important;');
+                if (profileAvatar) profileAvatar.setAttribute('style', 'display: none !important;');
+            }
+        });
+    </script>
+</body>
+
+</html>

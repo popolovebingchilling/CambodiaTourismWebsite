@@ -53,48 +53,7 @@ body{
             background: var(--primary-color);
         }
 
-        /* ── Hero ── */
-        .hero-section {
-            padding: 120px 0 80px;
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: url('../image/kompot.jpg') center/cover no-repeat !important;
-            overflow: hidden !important;
-        }
 
-        /* 4-Sided Cinematic Vignette Overlay (Kampot Hero) */
-        .hero-section::before {
-            content: '' !important;
-            position: absolute !important;
-            inset: 0 !important;
-            background: 
-                /* Top Shadow: Blends page header softly with banner */
-                linear-gradient(to bottom, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 22%),
-                /* Bottom Shadow: Adds visual depth at viewport lower boundary */
-                linear-gradient(to top, rgba(7, 18, 28, 0.9) 0%, rgba(7, 18, 28, 0) 25%),
-                /* Left Shadow: Creates anamorphic matte framing on the left */
-                linear-gradient(to right, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
-                /* Right Shadow: Creates anamorphic matte framing on the right */
-                linear-gradient(to left, rgba(7, 18, 28, 0.85) 0%, rgba(7, 18, 28, 0) 20%),
-                /* Central Spotlight: High-contrast vignette centered on Kampot image */
-                radial-gradient(circle at center, rgba(13, 42, 67, 0.15) 0%, rgba(7, 18, 28, 0.5) 50%, rgba(7, 18, 28, 0.75) 100%) !important;
-            z-index: 1 !important;
-            pointer-events: none !important;
-        }
-
-        .hero-section::after {
-            content: '' !important;
-            position: absolute !important;
-            bottom: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            height: 120px !important;
-            background: linear-gradient(rgba(13, 42, 67, 0), var(--primary-color)) !important;
-            z-index: 2 !important;
-            pointer-events: none !important;
-        }
 
         .hero-badge {
             display: inline-flex;
@@ -574,11 +533,8 @@ body{
         }
 
         /* ── Responsive ── */
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 100px 0 60px;
-                min-height: auto;
-            }
+        @media (max-width: 767.98px) {
+
 
             .hero-stat-card {
                 position: relative;
@@ -900,7 +856,7 @@ body.dark-mode .hero-stat-card .stat-label {
     color: rgba(255, 255, 255, 0.6) !important;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
     .gallery-grid {
         grid-template-columns: 1fr !important;
         grid-auto-rows: 240px !important;

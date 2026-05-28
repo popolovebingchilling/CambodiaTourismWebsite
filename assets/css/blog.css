@@ -17,7 +17,6 @@ body{
     font-family: "Kantumruy Pro", sans-serif !important;
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
-    overflow-x: hidden;
 }
 /* ── Blog Hero Section ── */
 .blog-hero {
@@ -537,7 +536,7 @@ body.dark-mode .read-more-premium {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
     .featured-card {
         flex-direction: column;
     }
@@ -555,7 +554,7 @@ body.dark-mode .read-more-premium {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
     .blog-hero {
         min-height: 50vh;
     }
@@ -699,7 +698,7 @@ body.dark-mode .bento-item {
     font-weight: 400;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
     .bento-hero-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -743,7 +742,7 @@ body.dark-mode .bento-item {
     box-shadow: 0 0 0 4px rgba(215, 181, 109, 0.2);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
     .newsletter-banner {
         padding: 40px 30px;
     }

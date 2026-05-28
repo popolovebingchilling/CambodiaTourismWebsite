@@ -278,6 +278,27 @@
             }
         });
     </script>
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            
+            const registeredPassword = localStorage.getItem('registeredPassword') || '123456';
+            const registeredFullName = localStorage.getItem('registeredFullName') || 'User';
+            
+            if (password !== registeredPassword) {
+                alert('ពាក្យសម្ងាត់មិនត្រឹមត្រូវទេ! ប្រសិនបើអ្នកមិនទាន់បានចុះឈ្មោះ សូមចុះឈ្មោះជាមុនសិន។');
+                return;
+            }
+            
+            if (email) {
+                localStorage.setItem('userFullName', registeredFullName);
+                localStorage.setItem('userEmail', email);
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1200, once: true });
