@@ -2139,7 +2139,7 @@ img.img-fluid:not(.logo), img.feature-img, img.img-food, img.attraction-img, img
 }
 
 
-button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn):not(.password-toggle), 
+button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn):not(.password-toggle):not(.lb-close):not(.lb-prev):not(.lb-next), 
 input[type="submit"], 
 input[type="button"], 
 .btn:not(.btn-close):not(.nav-link), 
@@ -2161,7 +2161,7 @@ input[type="button"],
     text-align: center !important;
 }
 
-button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn):not(.password-toggle):hover, 
+button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn):not(.password-toggle):not(.lb-close):not(.lb-prev):not(.lb-next):hover, 
 input[type="submit"]:hover, 
 input[type="button"]:hover, 
 .btn:not(.btn-close):not(.nav-link):hover, 
@@ -2319,7 +2319,7 @@ img.img-fluid:not(.logo), img.feature-img, img.img-food, img.attraction-img, img
 /* =========================================
    GLOBAL BUTTON STANDARDIZATION
    ========================================= */
-button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn):not(.password-toggle), 
+button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn):not(.password-toggle):not(.lb-close):not(.lb-prev):not(.lb-next), 
 input[type="submit"], 
 input[type="button"], 
 .btn:not(.btn-close):not(.nav-link), 
@@ -2341,7 +2341,7 @@ input[type="button"],
     text-align: center !important;
 }
 
-button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn):not(.password-toggle):hover, 
+button:not(.btn-close):not(.navbar-toggler):not(.nav-link):not([data-bs-dismiss="modal"]):not([onclick*="scrollBy"]):not(.scroll-top-btn):not(.password-toggle):not(.lb-close):not(.lb-prev):not(.lb-next):hover, 
 input[type="submit"]:hover, 
 input[type="button"]:hover, 
 .btn:not(.btn-close):not(.nav-link):hover, 
@@ -2434,3 +2434,5 @@ body.modal-open {
     padding-right: 0 !important;
     margin-right: 0 !important;
 }
+
+

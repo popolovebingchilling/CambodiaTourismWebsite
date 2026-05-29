@@ -46,10 +46,7 @@ body{
         }
 
 
-        /* ── Scrollbar ── */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--parchment); }
-        ::-webkit-scrollbar-thumb { background: var(--secondary-color); border-radius: 10px; }
+
 
         .hero-content {
             position: relative;

@@ -407,3 +407,5 @@ header {
                 margin-bottom: 10px
             }
         }
+        .lb-close, .lb-prev, .lb-next { opacity: 0; visibility: hidden; pointer-events: none; }
+        .lightbox.open .lb-close, .lightbox.open .lb-prev, .lightbox.open .lb-next { opacity: 1; visibility: visible; pointer-events: auto; }
