@@ -35,24 +35,6 @@ body{
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
 }
-/* ── Scrollbar ── */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-color);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--night-indigo);
-            border-radius: 3px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--primary-color);
-        }
-
 
 
         .hero-badge {

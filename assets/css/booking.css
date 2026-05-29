@@ -49,19 +49,6 @@ body{
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-oud) 40%, var(--angkor-stone) 100%) !important;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--sand-whisper);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--reef-teal);
-    border-radius: 3px;
-}
 
 /* Hero */
 .hero-bk {
