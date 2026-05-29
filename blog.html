@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="km">
 
 <head>
@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <!-- AOS ANIMATION -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="assets/js/spa-router.js" defer></script>
+    
+    
 </head>
 
 <body>
@@ -81,9 +82,9 @@
                 </div>
                                                 <div class="d-none d-lg-flex align-items-center gap-3">
 
-                    <a href="register.html" id="header-register-btn" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចុះឈ្មោះ</a>
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
-                    <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2" title="ប្រវត្តិរូប" style="display: none !important;">
+                    <a href="register.html" id="header-register-btn" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចុះឈ្មោះ</a>
+                    <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2" title="ប្រវត្តិរូប" >
                         <i class="fas fa-user-circle text-white" style="font-size: 38px; transition: 0.3s; opacity: 0.9;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0.9'; this.style.transform='scale(1)';"></i>
                     </a>
                 </div>
@@ -96,7 +97,7 @@
         <section class="bg-mixed hero-section" style="background-image: url('assets/image/home-bg.png') !important;">
             <div class="blog-hero-content text-center text-white">
                 <span class="badge rounded-pill px-3 py-2 mb-3 shadow-sm" style="background-color: var(--secondary-color) !important; color: var(--primary-color) !important;">រឿងរ៉ាវធ្វើដំណើរ</span>
-                <h1 class="display-3 fw-bold mb-3">
+                <h1 class="display-3 fw-bold mb-3" data-aos="fade-up">
                     <span style="color: white;">ស្វែងយល់ពី</span><span style="color: var(--secondary-color);">កម្ពុជា</span>
                 </h1>
                 <p class="lead opacity-75 fs-5 mx-auto" style="max-width: 700px;">រុករកនូវរឿងរ៉ាវពិត បទពិសោធន៍ធ្វើដំណើរ និងការណែនាំដ៏ល្អបំផុតពីអ្នកជំនាញទេសចរណ៍ក្នុងតំបន់។</p>
@@ -429,10 +430,10 @@
             <hr class="border-white opacity-10 my-5">
 
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center w-100">
-                <p class="mb-4 mb-md-0 small text-white-50 d-flex align-items-center m-0" style="height: 24px;">
+                <p class="mb-0 small text-white-50 m-0" style="line-height: 1; display: flex; align-items: center;">
                     &copy; ២០២៦ ទេសចរណ៍កម្ពុជារក្សាសិទ្ធិគ្រប់យ៉ាង។
                 </p>
-                <div class="trust-badges mb-0" style="margin-bottom: 0 !important; align-items: center; display: flex;">
+                <div class="trust-badges mb-0 d-flex align-items-center" style="margin-bottom: 0 !important;">
                     <i class="fab fa-cc-visa"></i>
                     <i class="fab fa-cc-apple-pay"></i>
                     <i class="fab fa-cc-paypal"></i>
@@ -466,6 +467,12 @@
                 if (profileAvatar) profileAvatar.setAttribute('style', 'display: none !important;');
             }
         });
+    </script>
+<script src="assets/js/spa-router.js" defer></script>
+    <script>
+        if (localStorage.getItem('userFullName') || localStorage.getItem('userEmail')) {
+            document.documentElement.classList.add('is-logged-in');
+        }
     </script>
 </body>
 
