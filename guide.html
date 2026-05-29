@@ -1,542 +1,564 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="km">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>មគ្គុទ្ទេសក៍ | ទេសចរណ៍កម្ពុជា</title>
-<!-- HTML CSS -->
-<link href="assets/css/style.css" rel="stylesheet"/>
-<link href="assets/css/guide.css" rel="stylesheet"/>
-<!-- BOOTSTRAP CSS -->
-<link href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css" rel="stylesheet"/>
-<!-- BOOTSTRAP THEME  -->
-<link href="assets/css/theme.css" rel="stylesheet"/>
-<!-- FONT AWESOME FOR ICON -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-<!-- BOOTSTRAP ICON -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet"/>
-<!-- SWIPER -->
-<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
-<!-- Animation -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-</link>    <script src="assets/js/spa-router.js" defer></script>
-</head>
-<body>
-<header class="sticky-top">
-<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-<div class="container py-2">
-<a class="navbar-brand d-flex align-items-center" href="index.html">
-<img alt="Logo" class="me-2" height="45" src="assets/image/new_logo_v2.png" width="45"/>
-<div class="d-flex flex-column lh-1">
-<span class="text-secondary small">ទេសចរណ៍កម្ពុជា</span>
-</div>
-</a>
-<button class="navbar-toggler border-0" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-<ul class="navbar-nav gap-2">
-<li class="nav-item">
-<a class="nav-link rounded-pill px-3" href="index.html">ទំព័រដើម</a>
-</li>
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown" href="#" role="button">គោលដៅ</a>
-<ul class="dropdown-menu">
-<li><a class="dropdown-content dropdown-item" href="siem-reap.html">សៀមរាប</a></li>
-<li><a class="dropdown-content dropdown-item" href="phnompenh.html">ភ្នំពេញ</a></li>
-<li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
-<li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
-<li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a>
-</li>
-<li><a class="dropdown-content dropdown-item" href="battambang.html">បាត់ដំបង</a></li>
-<li><a class="dropdown-content dropdown-item" href="mondulkiri.html">មណ្ឌលគិរី</a></li>
-<li><a class="dropdown-content dropdown-item" href="koh-kong.html">កោះកុង</a></li>
-</ul>
-</li>
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle px-3 active" data-bs-toggle="dropdown" href="#" role="button">សេវាកម្ម</a>
-<ul class="dropdown-menu">
-<li><a class="dropdown-content dropdown-item" href="hotels.html">សណ្ឋាគារ</a></li>
-<li><a class="dropdown-content dropdown-item" href="restaurants.html">ភោជនីយដ្ឋាន</a>
-</li>
-<li><a class="dropdown-content dropdown-item active" href="guide.html">មគ្គុទ្ទេសក៍</a></li>
-<li><a class="dropdown-content dropdown-item" href="transportation.html">ការដឹកជញ្ជូន</a></li>
-</ul>
-</li>
-<li class="nav-item"><a class="nav-link px-3" href="vikjittsal.html">វិចិត្រសាល</a></li>
-<li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
-<li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
-<li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
-<li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
-</ul>
-</div>
-                                <div class="d-none d-lg-flex align-items-center gap-3">
 
-                    <a href="register.html" id="header-register-btn" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចុះឈ្មោះ</a>
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>មគ្គុទ្ទេសក៍ | ទេសចរណ៍កម្ពុជា</title>
+    <!-- HTML CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/guide.css" rel="stylesheet" />
+    <!-- BOOTSTRAP CSS -->
+    <link href="assets/css/bootstrap/bootstrap-5.3.8-dist/css/bootstrap.css" rel="stylesheet" />
+    <!-- BOOTSTRAP THEME  -->
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <!-- FONT AWESOME FOR ICON -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+    <!-- BOOTSTRAP ICON -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <!-- SWIPER -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    </link>
+    
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <div class="container py-2">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img alt="Logo" class="me-2" height="45" src="assets/image/new_logo_v2.png" width="45" />
+                    <div class="d-flex flex-column lh-1">
+                        <span class="text-secondary small">ទេសចរណ៍កម្ពុជា</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler border-0" data-bs-target="#navbarNav" data-bs-toggle="collapse"
+                    type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link rounded-pill px-3" href="index.html">ទំព័រដើម</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown" href="#"
+                                role="button">គោលដៅ</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="siem-reap.html">សៀមរាប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="phnompenh.html">ភ្នំពេញ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kampot.html">កំពត</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="kep.html">កែប</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="prea-sihanouk.html">ព្រះសីហនុ</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item" href="battambang.html">បាត់ដំបង</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="mondulkiri.html">មណ្ឌលគិរី</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="koh-kong.html">កោះកុង</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3 active" data-bs-toggle="dropdown" href="#"
+                                role="button">សេវាកម្ម</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-content dropdown-item" href="hotels.html">សណ្ឋាគារ</a></li>
+                                <li><a class="dropdown-content dropdown-item" href="restaurants.html">ភោជនីយដ្ឋាន</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item active" href="guide.html">មគ្គុទ្ទេសក៍</a>
+                                </li>
+                                <li><a class="dropdown-content dropdown-item"
+                                        href="transportation.html">ការដឹកជញ្ជូន</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link px-3" href="vikjittsal.html">វិចិត្រសាល</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="blog.html">ប្លុក</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="review.html">មតិយោបល់</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="map.html">ផែនទី</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="aboutus.html">អំពីយើង</a></li>
+                    </ul>
+                </div>
+                <div class="d-none d-lg-flex align-items-center gap-3">
+
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
-                    <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2" title="ប្រវត្តិរូប" style="display: none !important;">
-                        <i class="fas fa-user-circle text-white" style="font-size: 38px; transition: 0.3s; opacity: 0.9;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0.9'; this.style.transform='scale(1)';"></i>
+                    <a href="register.html" id="header-register-btn"
+                        class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចុះឈ្មោះ</a>
+                    <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2"
+                        title="ប្រវត្តិរូប" >
+                        <i class="fas fa-user-circle text-white"
+                            style="font-size: 38px; transition: 0.3s; opacity: 0.9;"
+                            onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';"
+                            onmouseout="this.style.opacity='0.9'; this.style.transform='scale(1)';"></i>
                     </a>
                 </div>
-</div>
-</nav>
-</header>
-<!-- ════════ Hero ════════ -->
-<section class="bg-mixed hero-section" id="home" style="background-image: url('https://images.ctfassets.net/wv75stsetqy3/1e1cm8WhT3TKwW8lVCDIKb/8aba5693e20be387c12804ba81c5c986/Cambodia.jpg?q=60&amp;fit=fill&amp;fm=webp') !important;">
-<div class="container hero-content text-center">
-<div class="row justify-content-center">
-<div class="col-lg-8 d-flex flex-column align-items-center">
-<span class="section-badge mb-3 d-inline-block fade-up">
-<i class="bi bi-geo-alt-fill"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- ════════ Hero ════════ -->
+    <section class="bg-mixed hero-section" id="home"
+        style="background-image: url('https://ips-cambodia.com/wp-content/uploads/2024/02/15-Extravagant-Activities-for-a-Luxurious-Journey-in-Cambodia.jpg') !important;">
+        <div class="container hero-content text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 d-flex flex-column align-items-center">
+                    <span class="section-badge mb-3 d-inline-block fade-up">
+                        <i class="bi bi-geo-alt-fill"></i>
                         មគ្គុទេសក៍ផ្លូវការ ប្រទេសកម្ពុជា
                     </span>
-<h1 class="hero-title fade-up delay-1 text-white">
-                        រៀបចំដំណើរ<br/>
-<span style="color: var(--secondary-color);">ស្វែងយល់កម្ពុជា</span>
-</h1>
-<p class="hero-desc fade-up delay-2">
+                    <h1 class="hero-title fade-up delay-1 text-white">
+                        រៀបចំដំណើរ<br />
+                        <span style="color: var(--secondary-color);">ស្វែងយល់កម្ពុជា</span>
+                    </h1>
+                    <p class="hero-desc fade-up delay-2">
                         ព័ត៌មានប្រើប្រាស់សម្រាប់ភ្ញៀវទេសចរគ្រប់គ្នា ពីវីសា រូបិយប័ណ្ណ ពេលវេលា វប្បធម៌ សុវត្ថិភាព
                         រហូតដល់គន្លឹះប្រកបដោយប្រសិទ្ធភាពសម្រាប់ថវិកាតិច។
                     </p>
-<div class="hero-btns d-flex flex-wrap justify-content-center gap-3 fade-up delay-3">
-<a class="btn btn-golden" href="#visa">
-<i class="bi bi-book me-2"></i>អានមគ្គុទេសក៍
+                    <div class="hero-btns d-flex flex-wrap justify-content-center gap-3 fade-up delay-3">
+                        <a class="btn btn-golden" href="#visa">
+                            <i class="bi bi-book me-2"></i>អានមគ្គុទេសក៍
                         </a>
-<a class="btn btn-outline-warm" href="#budget">
-<i class="bi bi-wallet2 me-2"></i>ថវិកាតិច
+                        <a class="btn btn-outline-warm" href="#budget">
+                            <i class="bi bi-wallet2 me-2"></i>ថវិកាតិច
                         </a>
-</div>
-<div class="hero-stats justify-content-center w-100 fade-up delay-4">
-<div>
-<span class="hero-stat-num" data-count="30">0</span>
-<div class="hero-stat-label">ថ្ងៃស្នាក់នៅ</div>
-</div>
-<div>
-<span class="hero-stat-num" data-count="6">0</span>
-<div class="hero-stat-label">ខែលិខិតឆ្លងដែន</div>
-</div>
-<div>
-<span class="hero-stat-num" data-count="2">0</span>
-<div class="hero-stat-label">រូបិយប័ណ្ណ (USD/KHR)</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ════════ Visa & Currency ════════ -->
-<section class="bg-mixed section-padding" id="visa">
-<div class="container">
-<div class="text-center mb-5">
-<div class="section-label fade-up"><i class="bi bi-circle-fill"></i> បទពិសោធន៍ដំបូង</div>
-<h2 class="section-title fade-up delay-1 text-white">ព័ត៌មានវីសា <span style="color: var(--secondary-color);">និងរូបិយប័ណ្ណ</span></h2>
-<p class="section-subtitle mx-auto fade-up delay-2">រៀបចំលិខិតសម្រាប់ចូលប្រទេស
+                    </div>
+                    <div class="hero-stats justify-content-center w-100 fade-up delay-4">
+                        <div>
+                            <span class="hero-stat-num" data-count="30">0</span>
+                            <div class="hero-stat-label">ថ្ងៃស្នាក់នៅ</div>
+                        </div>
+                        <div>
+                            <span class="hero-stat-num" data-count="6">0</span>
+                            <div class="hero-stat-label">ខែលិខិតឆ្លងដែន</div>
+                        </div>
+                        <div>
+                            <span class="hero-stat-num" data-count="2">0</span>
+                            <div class="hero-stat-label">រូបិយប័ណ្ណ (USD/KHR)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ════════ Visa & Currency ════════ -->
+    <section class="bg-mixed section-padding" id="visa">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-label fade-up"><i class="bi bi-circle-fill"></i> បទពិសោធន៍ដំបូង</div>
+                <h2 class="section-title fade-up delay-1 text-white">ព័ត៌មានវីសា <span
+                        style="color: var(--secondary-color);">និងរូបិយប័ណ្ណ</span></h2>
+                <p class="section-subtitle mx-auto fade-up delay-2">រៀបចំលិខិតសម្រាប់ចូលប្រទេស
                     និងយល់ដឹងពីប្រព័ន្ធរូបិយប័ណ្ណក្នុងកម្ពុជា</p>
-</div>
-<div class="row g-4">
-<!-- Visa Card -->
-<div class="col-lg-6 fade-up delay-2">
-<div class="guide-card h-100 bg-white" data-aos="fade-up">
-<div class="card-icon-wrap icon-visa" data-aos="fade-up">
-<i class="bi bi-passport"></i>
-</div>
-<h4>ព័ត៌មានវីសា (Visa)</h4>
-<ul>
-<li>ទទួលបាន <strong>Visa on Arrival</strong> នៅព្រលានយន្តហោះ និងច្រកព្រំដែនសំខាន់ៗ</li>
-<li>មានប្រភេទ <strong>e-Visa</strong> ដាក់ពាក្យតាមអ៊ីនធឺណិត មុនមកដល់</li>
-<li>រយៈពេលស្នាក់នៅធម្មតា៖ <strong>30 ថ្ងៃ</strong></li>
-<li>ត្រូវមានលិខិតឆ្លងដែនមានសុពលភាពយ៉ាងហោចណាស់ <strong>6 ខែ</strong></li>
-</ul>
-</div>
-</div>
-<!-- Currency Card -->
-<div class="col-lg-6 fade-up delay-3">
-<div class="guide-card h-100 bg-white" data-aos="fade-up">
-<div class="card-icon-wrap icon-currency" data-aos="fade-up">
-<i class="bi bi-cash-stack"></i>
-</div>
-<h4>រូបិយប័ណ្ណ (Riel / USD)</h4>
-<ul>
-<li>រូបិយប័ណ្ណផ្លូវការ៖ <strong>រៀល (KHR)</strong></li>
-<li>ប៉ុន្តែ <strong>ដុល្លារអាមេរិក (USD)</strong> ត្រូវបានប្រើប្រាស់យ៉ាងទូលំទូលាយ</li>
-<li>ការទូទាត់តូចៗ ឬប្រាក់ប្តូរ ស្ទើរតែប្រើរៀល</li>
-<li>មាន <strong>ATM</strong> និងធនាគារច្រើន នៅទីក្រុងធំដូចជា ភ្នំពេញ និង សៀមរាប</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ════════ Best Season ════════ -->
-<section class="bg-mixed section-padding" id="season">
-<div class="container">
-<div class="row align-items-center g-5">
-<div class="col-lg-5 mb-4 mb-lg-0">
-<div class="section-label fade-up"><i class="bi bi-circle-fill"></i> កាលវិភាគ</div>
-<h2 class="section-title fade-up delay-1 text-white">ពេលល្អបំផុតសម្រាប់<span style="color: var(--secondary-color);">ដំណើរកម្សាន្ត</span></h2>
-<p class="section-subtitle fade-up delay-2">
+            </div>
+            <div class="row g-4">
+                <!-- Visa Card -->
+                <div class="col-lg-6 fade-up delay-2">
+                    <div class="guide-card h-100 bg-white" data-aos="fade-up">
+                        <div class="card-icon-wrap icon-visa" data-aos="fade-up">
+                            <i class="bi bi-passport"></i>
+                        </div>
+                        <h4>ព័ត៌មានវីសា (Visa)</h4>
+                        <ul>
+                            <li>ទទួលបាន <strong>Visa on Arrival</strong> នៅព្រលានយន្តហោះ និងច្រកព្រំដែនសំខាន់ៗ</li>
+                            <li>មានប្រភេទ <strong>e-Visa</strong> ដាក់ពាក្យតាមអ៊ីនធឺណិត មុនមកដល់</li>
+                            <li>រយៈពេលស្នាក់នៅធម្មតា៖ <strong>30 ថ្ងៃ</strong></li>
+                            <li>ត្រូវមានលិខិតឆ្លងដែនមានសុពលភាពយ៉ាងហោចណាស់ <strong>6 ខែ</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Currency Card -->
+                <div class="col-lg-6 fade-up delay-3">
+                    <div class="guide-card h-100 bg-white" data-aos="fade-up">
+                        <div class="card-icon-wrap icon-currency" data-aos="fade-up">
+                            <i class="bi bi-cash-stack"></i>
+                        </div>
+                        <h4>រូបិយប័ណ្ណ (Riel / USD)</h4>
+                        <ul>
+                            <li>រូបិយប័ណ្ណផ្លូវការ៖ <strong>រៀល (KHR)</strong></li>
+                            <li>ប៉ុន្តែ <strong>ដុល្លារអាមេរិក (USD)</strong> ត្រូវបានប្រើប្រាស់យ៉ាងទូលំទូលាយ</li>
+                            <li>ការទូទាត់តូចៗ ឬប្រាក់ប្តូរ ស្ទើរតែប្រើរៀល</li>
+                            <li>មាន <strong>ATM</strong> និងធនាគារច្រើន នៅទីក្រុងធំដូចជា ភ្នំពេញ និង សៀមរាប</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ════════ Best Season ════════ -->
+    <section class="bg-mixed section-padding" id="season">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="section-label fade-up"><i class="bi bi-circle-fill"></i> កាលវិភាគ</div>
+                    <h2 class="section-title fade-up delay-1 text-white">ពេលល្អបំផុតសម្រាប់<span
+                            style="color: var(--secondary-color);">ដំណើរកម្សាន្ត</span></h2>
+                    <p class="section-subtitle fade-up delay-2">
                         កម្ពុជាមានបីរដូវ ប៉ុន្តែរដូវត្រជាក់គឺជាពេលល្អបំផុតសម្រាប់ការធ្វើដំណើរទេសចរណ៍។
                     </p>
-<div class="mt-4 fade-up delay-3">
-<div class="d-flex align-items-center gap-2 mb-2">
-<i class="bi bi-check-circle-fill" style="color: var(--amber-dune);"></i>
-<span style="color: #ffffff; font-size: .95rem;">អាកាសធាតុអាក់អន់
+                    <div class="mt-4 fade-up delay-3">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-check-circle-fill" style="color: var(--amber-dune);"></i>
+                            <span style="color: #ffffff; font-size: .95rem;">អាកាសធាតុអាក់អន់
                                 មិនក្តៅខ្លាំង</span>
-</div>
-<div class="d-flex align-items-center gap-2 mb-2">
-<i class="bi bi-check-circle-fill" style="color: var(--amber-dune);"></i>
-<span style="color: #ffffff; font-size: .95rem;">មិនមានភ្លៀងរាំងងាយស្រួលធ្វើដំណើរ</span>
-</div>
-<div class="d-flex align-items-center gap-2">
-<i class="bi bi-check-circle-fill" style="color: var(--amber-dune);"></i>
-<span style="color: #ffffff; font-size: .95rem;">សម្រាប់ទស្សនាប្រាសាទ
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="bi bi-check-circle-fill" style="color: var(--amber-dune);"></i>
+                            <span style="color: #ffffff; font-size: .95rem;">មិនមានភ្លៀងរាំងងាយស្រួលធ្វើដំណើរ</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check-circle-fill" style="color: var(--amber-dune);"></i>
+                            <span style="color: #ffffff; font-size: .95rem;">សម្រាប់ទស្សនាប្រាសាទ
                                 និងធម្មជាតិ</span>
-</div>
-</div>
-</div>
-<div class="col-lg-7 fade-up delay-3">
-<div class="guide-card h-100 bg-white" style="padding: 2.5rem;" data-aos="fade-up">
-<h4 style="margin-bottom: 1.5rem;">កាលវិភាគរដូវកាល</h4>
-<div class="season-timeline">
-<div class="season-item best">
-<div class="season-months">ខែវិច្ឆិកា — ខែមីនា <span class="best-tag">ពេលល្អបំផុត</span>
-</div>
-<div class="season-desc">អាកាសធាតុអាក់អន់ ត្រជាក់ស្រួល គ្មានភ្លៀងធ្លាក់ច្រើន —
-                                    ពេលល្អបំផុតសម្រាប់ទេសចរណ៍</div>
-</div>
-<div class="season-item">
-<div class="season-months">ខែមេសា — ខែមិថុនា</div>
-<div class="season-desc">ក្តៅខ្លាំង សីតុណ្ហភាពអាចលើស ៤០°C ត្រូវជៀសវាងដំណើរយូរ</div>
-</div>
-<div class="season-item">
-<div class="season-months">ខែកក្កដា — ខែតុលា</div>
-<div class="season-desc">រដូវភ្លៀង ប៉ុន្តែធម្មជាតិស្រស់ស្អាត ទឹកត្រពាំងពេញ ស្មៅពណ៌ស្អាត
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 fade-up delay-3">
+                    <div class="guide-card h-100 bg-white" style="padding: 2.5rem;" data-aos="fade-up">
+                        <h4 style="margin-bottom: 1.5rem;">កាលវិភាគរដូវកាល</h4>
+                        <div class="season-timeline">
+                            <div class="season-item best">
+                                <div class="season-months">ខែវិច្ឆិកា — ខែមីនា <span class="best-tag">ពេលល្អបំផុត</span>
                                 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ════════ Culture & Safety ════════ -->
-<section class="bg-mixed section-padding" id="culture">
-<div class="container">
-<div class="text-center mb-5">
-<div class="section-label fade-up"><i class="bi bi-circle-fill"></i> សុវត្ថិភាព និងទំនាក់ទំនង</div>
-<h2 class="section-title fade-up delay-1 text-white">វប្បធម៌ និង<span style="color: var(--secondary-color);">គន្លឹះសុវត្ថិភាព</span></h2>
-<p class="section-subtitle mx-auto fade-up delay-2">គោរពសណ្តាប់ធម៌ និងការពារខ្លួនអ្នកក្នុងដំណើរ</p>
-</div>
-<div class="row g-4">
-<!-- Culture Card -->
-<div class="col-lg-6 fade-up delay-2">
-<div class="guide-card h-100 bg-white" data-aos="fade-up">
-<div class="card-icon-wrap icon-culture" data-aos="fade-up">
-<i class="bi bi-houses"></i>
-</div>
-<h4>វប្បធម៌ និងច្បាប់</h4>
-<ul>
-<li>ត្រូវគោរពវប្បធម៌ខ្មែរ និងសាសនា <strong>ព្រះពុទ្ធសាសនា</strong></li>
-<li>ពាក់សម្លៀកបំពាក់សមរម្យ ពេលចូលវត្ត ឬប្រាសាទ</li>
-<li>មិនត្រូវប៉ះក្បាលអ្នកដទៃ (គេចាត់ទុកថាមិនគួរសម)</li>
-<li>គោរពច្បាប់ និងចៀសវាងអំពើខុសច្បាប់</li>
-<li>ការសំពះ (Sampeah) ជាវិធីសម្ដែងការគោរព</li>
-</ul>
-</div>
-</div>
-<!-- Safety Card -->
-<div class="col-lg-6 fade-up delay-3" id="safety">
-<div class="guide-card h-100 bg-white" data-aos="fade-up">
-<div class="card-icon-wrap icon-safety" data-aos="fade-up">
-<i class="bi bi-shield-check"></i>
-</div>
-<h4>គន្លឹះសុវត្ថិភាព</h4>
-<ul>
-<li>ថែរក្សាសម្ភារៈផ្ទាល់ខ្លួន (ទូរស័ព្ទ កាបូប)</li>
-<li>ជៀសវាងដើរតែម្នាក់ឯងពេលយប់ នៅកន្លែងស្ងាត់</li>
-<li>ប្រើសេវាកម្មដឹកជញ្ជូនដែលទុកចិត្តបាន</li>
-<li>មានលេខទំនាក់ទំនងបន្ទាន់ និងធានារ៉ាប់រងដំណើរ</li>
-<li>ផឹកទឹកបរិសុទ្ធ និងជៀសវាងអាហារមិនស្អាត</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ════════ Budget Travel ════════ -->
-<section class="bg-mixed section-padding" id="budget">
-<div class="container">
-<div class="row align-items-center g-5">
-<div class="col-lg-7 order-lg-2 mb-4 mb-lg-0">
-<div class="section-label fade-up"><i class="bi bi-circle-fill"></i> សន្សំថវិកា</div>
-<h2 class="section-title fade-up delay-1 text-white">ដំណើរកម្សាន្ត<span style="color: var(--secondary-color);">ថវិកាតិច</span></h2>
-<p class="section-subtitle fade-up delay-2">
+                                <div class="season-desc">អាកាសធាតុអាក់អន់ ត្រជាក់ស្រួល គ្មានភ្លៀងធ្លាក់ច្រើន —
+                                    ពេលល្អបំផុតសម្រាប់ទេសចរណ៍</div>
+                            </div>
+                            <div class="season-item">
+                                <div class="season-months">ខែមេសា — ខែមិថុនា</div>
+                                <div class="season-desc">ក្តៅខ្លាំង សីតុណ្ហភាពអាចលើស ៤០°C ត្រូវជៀសវាងដំណើរយូរ</div>
+                            </div>
+                            <div class="season-item">
+                                <div class="season-months">ខែកក្កដា — ខែតុលា</div>
+                                <div class="season-desc">រដូវភ្លៀង ប៉ុន្តែធម្មជាតិស្រស់ស្អាត ទឹកត្រពាំងពេញ ស្មៅពណ៌ស្អាត
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ════════ Culture & Safety ════════ -->
+    <section class="bg-mixed section-padding" id="culture">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-label fade-up"><i class="bi bi-circle-fill"></i> សុវត្ថិភាព និងទំនាក់ទំនង</div>
+                <h2 class="section-title fade-up delay-1 text-white">វប្បធម៌ និង<span
+                        style="color: var(--secondary-color);">គន្លឹះសុវត្ថិភាព</span></h2>
+                <p class="section-subtitle mx-auto fade-up delay-2">គោរពសណ្តាប់ធម៌ និងការពារខ្លួនអ្នកក្នុងដំណើរ</p>
+            </div>
+            <div class="row g-4">
+                <!-- Culture Card -->
+                <div class="col-lg-6 fade-up delay-2">
+                    <div class="guide-card h-100 bg-white" data-aos="fade-up">
+                        <div class="card-icon-wrap icon-culture" data-aos="fade-up">
+                            <i class="bi bi-houses"></i>
+                        </div>
+                        <h4>វប្បធម៌ និងច្បាប់</h4>
+                        <ul>
+                            <li>ត្រូវគោរពវប្បធម៌ខ្មែរ និងសាសនា <strong>ព្រះពុទ្ធសាសនា</strong></li>
+                            <li>ពាក់សម្លៀកបំពាក់សមរម្យ ពេលចូលវត្ត ឬប្រាសាទ</li>
+                            <li>មិនត្រូវប៉ះក្បាលអ្នកដទៃ (គេចាត់ទុកថាមិនគួរសម)</li>
+                            <li>គោរពច្បាប់ និងចៀសវាងអំពើខុសច្បាប់</li>
+                            <li>ការសំពះ (Sampeah) ជាវិធីសម្ដែងការគោរព</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Safety Card -->
+                <div class="col-lg-6 fade-up delay-3" id="safety">
+                    <div class="guide-card h-100 bg-white" data-aos="fade-up">
+                        <div class="card-icon-wrap icon-safety" data-aos="fade-up">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4>គន្លឹះសុវត្ថិភាព</h4>
+                        <ul>
+                            <li>ថែរក្សាសម្ភារៈផ្ទាល់ខ្លួន (ទូរស័ព្ទ កាបូប)</li>
+                            <li>ជៀសវាងដើរតែម្នាក់ឯងពេលយប់ នៅកន្លែងស្ងាត់</li>
+                            <li>ប្រើសេវាកម្មដឹកជញ្ជូនដែលទុកចិត្តបាន</li>
+                            <li>មានលេខទំនាក់ទំនងបន្ទាន់ និងធានារ៉ាប់រងដំណើរ</li>
+                            <li>ផឹកទឹកបរិសុទ្ធ និងជៀសវាងអាហារមិនស្អាត</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ════════ Budget Travel ════════ -->
+    <section class="bg-mixed section-padding" id="budget">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 order-lg-2 mb-4 mb-lg-0">
+                    <div class="section-label fade-up"><i class="bi bi-circle-fill"></i> សន្សំថវិកា</div>
+                    <h2 class="section-title fade-up delay-1 text-white">ដំណើរកម្សាន្ត<span
+                            style="color: var(--secondary-color);">ថវិកាតិច</span></h2>
+                    <p class="section-subtitle fade-up delay-2">
                         អាចធ្វើដំណើរកម្ពុជាបានដោយថវិកាតិច ប្រសិនបើអ្នកដឹងពីគន្លឹះទាំងនេះ។
                     </p>
-</div>
-<div class="col-lg-5 order-lg-1 fade-up delay-3">
-<div class="guide-card h-100 bg-white" style="padding: 2rem;" data-aos="fade-up">
-<div class="card-icon-wrap icon-budget" data-aos="fade-up">
-<i class="bi bi-piggy-bank"></i>
-</div>
-<h4 style="margin-bottom: 1rem;">គន្លឹះថវិកាតិច</h4>
-<div class="budget-tip">
-<div class="budget-tip-icon"><i class="bi bi-house-door"></i></div>
-<div class="budget-tip-text">ជ្រើសរើស <strong>Guesthouse</strong> ឬ <strong>Hostel</strong>
+                </div>
+                <div class="col-lg-5 order-lg-1 fade-up delay-3">
+                    <div class="guide-card h-100 bg-white" style="padding: 2rem;" data-aos="fade-up">
+                        <div class="card-icon-wrap icon-budget" data-aos="fade-up">
+                            <i class="bi bi-piggy-bank"></i>
+                        </div>
+                        <h4 style="margin-bottom: 1rem;">គន្លឹះថវិកាតិច</h4>
+                        <div class="budget-tip">
+                            <div class="budget-tip-icon"><i class="bi bi-house-door"></i></div>
+                            <div class="budget-tip-text">ជ្រើសរើស <strong>Guesthouse</strong> ឬ <strong>Hostel</strong>
                                 តម្លៃសមរម្យ</div>
-</div>
-<div class="budget-tip">
-<div class="budget-tip-icon"><i class="bi bi-bicycle"></i></div>
-<div class="budget-tip-text">ប្រើ <strong>Tuk Tuk</strong> ឬ <strong>Bus</strong> ជំនួស Taxi
+                        </div>
+                        <div class="budget-tip">
+                            <div class="budget-tip-icon"><i class="bi bi-bicycle"></i></div>
+                            <div class="budget-tip-text">ប្រើ <strong>Tuk Tuk</strong> ឬ <strong>Bus</strong> ជំនួស Taxi
                             </div>
-</div>
-<div class="budget-tip">
-<div class="budget-tip-icon"><i class="bi bi-cup-hot"></i></div>
-<div class="budget-tip-text">ញ៉ាំអាហារតាមផ្សារ ឬ <strong>Street Food</strong> តម្លៃទាប</div>
-</div>
-<div class="budget-tip">
-<div class="budget-tip-icon"><i class="bi bi-ticket-perforated"></i></div>
-<div class="budget-tip-text">កក់សំបុត្រដំណើរជាមុន ដើម្បីបានតម្លៃល្អ</div>
-</div>
-<div class="budget-tip">
-<div class="budget-tip-icon"><i class="bi bi-tree"></i></div>
-<div class="budget-tip-text">ទៅកន្លែងទេសចរណ៍ <strong>ឥតគិតថ្លៃ</strong> ដូចជា សួនច្បារ
+                        </div>
+                        <div class="budget-tip">
+                            <div class="budget-tip-icon"><i class="bi bi-cup-hot"></i></div>
+                            <div class="budget-tip-text">ញ៉ាំអាហារតាមផ្សារ ឬ <strong>Street Food</strong> តម្លៃទាប</div>
+                        </div>
+                        <div class="budget-tip">
+                            <div class="budget-tip-icon"><i class="bi bi-ticket-perforated"></i></div>
+                            <div class="budget-tip-text">កក់សំបុត្រដំណើរជាមុន ដើម្បីបានតម្លៃល្អ</div>
+                        </div>
+                        <div class="budget-tip">
+                            <div class="budget-tip-icon"><i class="bi bi-tree"></i></div>
+                            <div class="budget-tip-text">ទៅកន្លែងទេសចរណ៍ <strong>ឥតគិតថ្លៃ</strong> ដូចជា សួនច្បារ
                                 ឬឆ្នេរ</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ════════ CTA ════════ -->
-<section class="bg-mixed guides-showcase-section">
-<div class="container">
-<div class="text-center mb-5">
-<span class="section-badge mb-2 d-inline-block">អ្នកជំនាញក្នុងតំបន់</span>
-<h2 class="section-title text-white">មគ្គុទ្ទេសក៍តាម<span style="color: var(--secondary-color);">បណ្តាខេត្ត</span></h2>
-<div class="title-line mx-auto"></div>
-<p class="section-subtitle mt-3">ជួបជាមួយអ្នកជំនាញក្នុងតំបន់ដែលត្រៀមខ្លួនជាស្រេច
-                        ដើម្បីនាំអ្នកទៅកាន់កន្លែងដែលល្អបំផុត និងរឿងរ៉ាវដែលអ្នកមិនធ្លាប់ដឹង។</p>
-</div>
-<div class="row g-4">
-<div class="col-lg-3 col-md-6">
-<div class="guide-province-card" data-aos="fade-up">
-<div class="guide-avatar-box">
-<img src="assets/image/Panha.jpg"/>
-<span class="province-tag">សៀមរាប</span>
-</div>
-<div class="guide-info">
-<h5>អ្នកជំនាញប្រវត្តិសាស្ត្រ</h5>
-<p>ស្វែងយល់ពីអាថ៌កំបាំងនៃប្រាសាទបុរាណ ជាមួយមគ្គុទ្ទេសក៍ដែលមានជំនាញឯកទេសខាងបុរាណវិទ្យា។
-                                </p>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="guide-province-card" data-aos="fade-up">
-<div class="guide-avatar-box">
-<img alt="កំពត" src="assets/image/Soama.jpg"/>
-<span class="province-tag">កំពត</span>
-</div>
-<div class="guide-info">
-<h5>អ្នកជំនាញធម្មជាតិ</h5>
-<p>ដើរកម្សាន្តតាមចម្ការម្រេច និងភ្នំបូកគោ
-                                    ជាមួយអ្នកជំនាញដែលស្គាល់គ្រប់ផ្លូវក្នុងខេត្តកំពត។</p>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="guide-province-card" data-aos="fade-up">
-<div class="guide-avatar-box">
-<img alt="ព្រះសីហនុ" src="assets/image/Makara.jpg"/>
-<span class="province-tag">ព្រះសីហនុ</span>
-</div>
-<div class="guide-info">
-<h5>អ្នកជំនាញសមុទ្រ</h5>
-<p>ស្វែងរកកោះស្ងប់ស្ងាត់ និងតំបន់មុជទឹកមើលផ្កាថ្ម ជាមួយអ្នកជំនាញក្នុងតំបន់ឆ្នេរ។</p>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="guide-province-card" data-aos="fade-up">
-<div class="guide-avatar-box">
-<img alt="មណ្ឌលគិរី" src="assets/image/Pouly.jpg" style="object-position: top;"/>
-<span class="province-tag">មណ្ឌលគិរី</span>
-</div>
-<div class="guide-info">
-<h5>អ្នកជំនាញអេកូឡូស៊ី</h5>
-<p>បទពិសោធន៍រស់នៅជាមួយដំរី និងជនជាតិដើមភាគតិច ជាមួយមគ្គុទ្ទេសក៍ការពារបរិស្ថាន។</p>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="guide-province-card" data-aos="fade-up">
-<div class="guide-avatar-box">
-<img alt="ភ្នំពេញ" src="assets/image/Panha.jpg"/>
-<span class="province-tag">ភ្នំពេញ</span>
-</div>
-<div class="guide-info">
-<h5>អ្នកជំនាញវប្បធម៌</h5>
-<p>ស្វែងយល់ពីការវិវត្តនៃរាជធានីភ្នំពេញ ពីសម័យកាលប្រវត្តិសាស្ត្ររហូតដល់សម័យទំនើប។</p>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="guide-province-card" data-aos="fade-up">
-<div class="guide-avatar-box">
-<img alt="បាត់ដំបង" src="assets/image/Makara.jpg"/>
-<span class="province-tag">បាត់ដំបង</span>
-</div>
-<div class="guide-info">
-<h5>អ្នកជំនាញសិល្បៈ</h5>
-<p>ស្វែងរកវិចិត្រសាលសិល្បៈ និងម្ហូបអាហារប្លែកៗ ជាមួយអ្នកជំនាញក្នុងក្រុងបាត់ដំបង។</p>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="guide-province-card" data-aos="fade-up">
-<div class="guide-avatar-box">
-<img alt="កែប" src="assets/image/Soama.jpg"/>
-<span class="province-tag">កែប</span>
-</div>
-<div class="guide-info">
-<h5>អ្នកជំនាញសម្រាកកាយ</h5>
-<p>ទស្សនាផ្សារក្តាម និងឆ្នេរសមុទ្រស្ងប់ស្ងាត់
-                                    ជាមួយមគ្គុទ្ទេសក៍ដែលយល់ពីតម្រូវការសម្រាកកាយ។</p>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6">
-<div class="guide-province-card" data-aos="fade-up">
-<div class="guide-avatar-box">
-<img alt="កោះកុង" src="assets/image/Pouly.jpg" style="object-position: top;"/>
-<span class="province-tag">កោះកុង</span>
-</div>
-<div class="guide-info">
-<h5>អ្នកជំនាញផ្សងព្រេង</h5>
-<p>រុករកព្រៃកោងកាង និងភ្នំក្រវាញ ជាមួយមគ្គុទ្ទេសក៍ដែលចូលចិត្តការផ្សងព្រេងពិតៗ។</p>
-</div>
-</div>
-</div>
-</div>
-</div></section><section class="bg-mixed cta-section section-padding">
-<div class="container position-relative" style="z-index: 1;">
-<div class="row align-items-center">
-<div class="col-lg-8">
-<h2 class="cta-title fade-up">រៀបចំដំណើររបស់អ្នកថ្ងៃនេះ</h2>
-<p class="cta-desc fade-up delay-1">កម្ពុជារង់ចាំអ្នកជាមួយនឹងប្រាសាទបុរាណ ឆ្នេរសមុទ្រ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ════════ CTA ════════ -->
+    <section class="bg-mixed guides-showcase-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="section-badge mb-2 d-inline-block">អ្នកជំនាញក្នុងតំបន់</span>
+                <h2 class="section-title text-white">មគ្គុទ្ទេសក៍តាម<span
+                        style="color: var(--secondary-color);">បណ្តាខេត្ត</span></h2>
+                <div class="title-line mx-auto"></div>
+                <p class="section-subtitle mt-3">ជួបជាមួយអ្នកជំនាញក្នុងតំបន់ដែលត្រៀមខ្លួនជាស្រេច
+                    ដើម្បីនាំអ្នកទៅកាន់កន្លែងដែលល្អបំផុត និងរឿងរ៉ាវដែលអ្នកមិនធ្លាប់ដឹង។</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="guide-province-card" data-aos="fade-up">
+                        <div class="guide-avatar-box">
+                            <img src="assets/image/Panha.jpg" />
+                            <span class="province-tag">សៀមរាប</span>
+                        </div>
+                        <div class="guide-info">
+                            <h5>អ្នកជំនាញប្រវត្តិសាស្ត្រ</h5>
+                            <p>ស្វែងយល់ពីអាថ៌កំបាំងនៃប្រាសាទបុរាណ ជាមួយមគ្គុទ្ទេសក៍ដែលមានជំនាញឯកទេសខាងបុរាណវិទ្យា។
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="guide-province-card" data-aos="fade-up">
+                        <div class="guide-avatar-box">
+                            <img alt="កំពត" src="assets/image/Soama.jpg" />
+                            <span class="province-tag">កំពត</span>
+                        </div>
+                        <div class="guide-info">
+                            <h5>អ្នកជំនាញធម្មជាតិ</h5>
+                            <p>ដើរកម្សាន្តតាមចម្ការម្រេច និងភ្នំបូកគោ
+                                ជាមួយអ្នកជំនាញដែលស្គាល់គ្រប់ផ្លូវក្នុងខេត្តកំពត។</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="guide-province-card" data-aos="fade-up">
+                        <div class="guide-avatar-box">
+                            <img alt="ព្រះសីហនុ" src="assets/image/Makara.jpg" />
+                            <span class="province-tag">ព្រះសីហនុ</span>
+                        </div>
+                        <div class="guide-info">
+                            <h5>អ្នកជំនាញសមុទ្រ</h5>
+                            <p>ស្វែងរកកោះស្ងប់ស្ងាត់ និងតំបន់មុជទឹកមើលផ្កាថ្ម ជាមួយអ្នកជំនាញក្នុងតំបន់ឆ្នេរ។</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="guide-province-card" data-aos="fade-up">
+                        <div class="guide-avatar-box">
+                            <img alt="មណ្ឌលគិរី" src="assets/image/Pouly.jpg" style="object-position: top;" />
+                            <span class="province-tag">មណ្ឌលគិរី</span>
+                        </div>
+                        <div class="guide-info">
+                            <h5>អ្នកជំនាញអេកូឡូស៊ី</h5>
+                            <p>បទពិសោធន៍រស់នៅជាមួយដំរី និងជនជាតិដើមភាគតិច ជាមួយមគ្គុទ្ទេសក៍ការពារបរិស្ថាន។</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="guide-province-card" data-aos="fade-up">
+                        <div class="guide-avatar-box">
+                            <img alt="ភ្នំពេញ" src="assets/image/Panha.jpg" />
+                            <span class="province-tag">ភ្នំពេញ</span>
+                        </div>
+                        <div class="guide-info">
+                            <h5>អ្នកជំនាញវប្បធម៌</h5>
+                            <p>ស្វែងយល់ពីការវិវត្តនៃរាជធានីភ្នំពេញ ពីសម័យកាលប្រវត្តិសាស្ត្ររហូតដល់សម័យទំនើប។</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="guide-province-card" data-aos="fade-up">
+                        <div class="guide-avatar-box">
+                            <img alt="បាត់ដំបង" src="assets/image/Makara.jpg" />
+                            <span class="province-tag">បាត់ដំបង</span>
+                        </div>
+                        <div class="guide-info">
+                            <h5>អ្នកជំនាញសិល្បៈ</h5>
+                            <p>ស្វែងរកវិចិត្រសាលសិល្បៈ និងម្ហូបអាហារប្លែកៗ ជាមួយអ្នកជំនាញក្នុងក្រុងបាត់ដំបង។</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="guide-province-card" data-aos="fade-up">
+                        <div class="guide-avatar-box">
+                            <img alt="កែប" src="assets/image/Soama.jpg" />
+                            <span class="province-tag">កែប</span>
+                        </div>
+                        <div class="guide-info">
+                            <h5>អ្នកជំនាញសម្រាកកាយ</h5>
+                            <p>ទស្សនាផ្សារក្តាម និងឆ្នេរសមុទ្រស្ងប់ស្ងាត់
+                                ជាមួយមគ្គុទ្ទេសក៍ដែលយល់ពីតម្រូវការសម្រាកកាយ។</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="guide-province-card" data-aos="fade-up">
+                        <div class="guide-avatar-box">
+                            <img alt="កោះកុង" src="assets/image/Pouly.jpg" style="object-position: top;" />
+                            <span class="province-tag">កោះកុង</span>
+                        </div>
+                        <div class="guide-info">
+                            <h5>អ្នកជំនាញផ្សងព្រេង</h5>
+                            <p>រុករកព្រៃកោងកាង និងភ្នំក្រវាញ ជាមួយមគ្គុទ្ទេសក៍ដែលចូលចិត្តការផ្សងព្រេងពិតៗ។</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-mixed cta-section section-padding">
+        <div class="container position-relative" style="z-index: 1;">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="cta-title fade-up">រៀបចំដំណើររបស់អ្នកថ្ងៃនេះ</h2>
+                    <p class="cta-desc fade-up delay-1">កម្ពុជារង់ចាំអ្នកជាមួយនឹងប្រាសាទបុរាណ ឆ្នេរសមុទ្រ
                         និងអាហារស្រស់ថ្មី។</p>
-</div>
-<div class="col-lg-4 text-lg-end mt-3 mt-lg-0 fade-up delay-2">
-<a class="btn btn-golden btn-lg" href="#home">
-<i class="bi bi-airplane me-2"></i>ចាប់ផ្តើមដំណើរ
+                </div>
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0 fade-up delay-2">
+                    <a class="btn btn-golden btn-lg" href="#home">
+                        <i class="bi bi-airplane me-2"></i>ចាប់ផ្តើមដំណើរ
                     </a>
-</div>
-</div>
-</div>
-</section>
-<footer class="footer py-5">
-<div class="container">
-<div class="row">
-<!-- Column 1: Brand Essence -->
-<div class="col-lg-3 mb-5 mb-lg-0">
-<div class="footer-brand mb-4">
-<img alt="Logo" class="mb-3" src="assets/image/new_logo_v2.png" width="60"/>
-<h5 class="text-white fw-bold">ទេសចរណ៍កម្ពុជា</h5>
-</div>
-<p class="footer-brand-text">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Brand Essence -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <div class="footer-brand mb-4">
+                        <img alt="Logo" class="mb-3" src="assets/image/new_logo_v2.png" width="60" />
+                        <h5 class="text-white fw-bold">ទេសចរណ៍កម្ពុជា</h5>
+                    </div>
+                    <p class="footer-brand-text">
                         ស្វែងយល់ពីភាពអស្ចារ្យនៃព្រះរាជាណាចក្រអច្ឆរិយៈ។ យើងខ្ញុំផ្តល់ជូននូវបទពិសោធន៍ទេសចរណ៍ដ៏ល្អបំផុត
                         ដើម្បីបំពេញក្តីសុបិនរបស់អ្នកនៅក្នុងតំបន់អាសុីអាគ្នេយ៍។
                     </p>
-<div class="social-links">
-<a class="social-btn" href="#"><i class="fab fa-facebook-f"></i></a>
-<a class="social-btn" href="#"><i class="fab fa-instagram"></i></a>
-<a class="social-btn" href="#"><i class="fab fa-telegram"></i></a>
-<a class="social-btn" href="#"><i class="fab fa-tiktok"></i></a>
-</div>
-</div>
-<!-- Column 2: Destinations -->
-<div class="col-6 col-lg-2 mb-5 mb-lg-0">
-<h6 class="footer-title">គោលដៅ</h6>
-<ul class="footer-links">
-<li><a href="phnompenh.html">ភ្នំពេញ</a></li>
-<li><a href="siem-reap.html">សៀមរាប</a></li>
-<li><a href="kampot.html">កំពត</a></li>
-<li><a href="kep.html">កែប</a></li>
-<li><a href="prea-sihanouk.html">ព្រះសីហនុ</a></li>
-<li><a href="battambang.html">បាត់ដំបង</a></li>
-<li><a href="mondulkiri.html">មណ្ឌលគិរី</a></li>
-<li><a href="koh-kong.html">កោះកុង</a></li>
-</ul>
-</div>
-<!-- Column 3: Services -->
-<div class="col-6 col-lg-2 mb-5 mb-lg-0">
-<h6 class="footer-title">សេវាកម្ម</h6>
-<ul class="footer-links">
-<li><a href="hotels.html">សណ្ឋាគារ</a></li>
-<li><a href="restaurants.html">ភោជនីយដ្ឋាន</a></li>
-<li><a href="guide.html">មគ្គុទ្ទេសក៍</a></li>
-<li><a href="transportation.html">ការដឹកជញ្ជូន</a></li>
-</ul>
-</div>
-<!-- Column 4: Contact -->
-<div class="col-lg-3 mb-5 mb-lg-0">
-<h6 class="footer-title">ទំនាក់ទំនង</h6>
-<div class="footer-contact">
-<div class="footer-contact-item">
-<i class="fas fa-phone-alt"></i>
-<span>+៨៥៥ ១២ ២២៣ ៣២២</span>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-envelope"></i>
-<span>info@cambodiatourism.com</span>
-</div>
-<div class="footer-contact-item">
-<i class="fas fa-map-marker-alt"></i>
-<span>ភ្នំពេញ, ព្រះរាជាណាចក្រកម្ពុជា</span>
-</div>
-<div class="footer-contact-item align-items-start">
-<i class="fas fa-clock mt-1"></i>
-<div class="d-flex flex-column gap-1">
-<span>ចន្ទ - សុក្រ: ៨:០០ - ១៧:០០</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Column 5: Discover -->
-<div class="col-lg-2">
-<h6 class="footer-title">ស្វែងយល់</h6>
-<ul class="footer-links">
-<li><a href="vikjittsal.html">វិចិត្រសាល</a></li>
-<li><a href="blog.html">ប្លុកទេសចរណ៍</a></li>
-<li><a href="review.html">មតិយោបល់</a></li>
-<li><a href="map.html">ផែនទី</a></li>
-</ul>
-</div>
-</div>
-<hr class="border-white opacity-10 my-5"/>
-<div class="row align-items-center">
-<div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
-<p class="mb-0 small text-white-50">© ២០២៦ ទេសចរណ៍កម្ពុជារក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
-</div>
-<div class="col-md-6">
-<div class="trust-badges justify-content-center justify-content-md-end">
-<i class="fab fa-cc-visa"></i>
-<i class="fab fa-cc-apple-pay"></i>
-<i class="fab fa-cc-paypal"></i>
-</div>
-</div>
-</div>
-</div>
-</footer>
-<!-- ════════ Scroll to Top ════════ -->
-<button class="scroll-top-btn" id="scrollTopBtn" title="ចុចលើ">
-<i class="bi bi-chevron-up"></i>
-</button>
-<!-- Bootstrap 5 JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
+                    <div class="social-links">
+                        <a class="social-btn" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-btn" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="social-btn" href="#"><i class="fab fa-telegram"></i></a>
+                        <a class="social-btn" href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <!-- Column 2: Destinations -->
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title">គោលដៅ</h6>
+                    <ul class="footer-links">
+                        <li><a href="phnompenh.html">ភ្នំពេញ</a></li>
+                        <li><a href="siem-reap.html">សៀមរាប</a></li>
+                        <li><a href="kampot.html">កំពត</a></li>
+                        <li><a href="kep.html">កែប</a></li>
+                        <li><a href="prea-sihanouk.html">ព្រះសីហនុ</a></li>
+                        <li><a href="battambang.html">បាត់ដំបង</a></li>
+                        <li><a href="mondulkiri.html">មណ្ឌលគិរី</a></li>
+                        <li><a href="koh-kong.html">កោះកុង</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Services -->
+                <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                    <h6 class="footer-title">សេវាកម្ម</h6>
+                    <ul class="footer-links">
+                        <li><a href="hotels.html">សណ្ឋាគារ</a></li>
+                        <li><a href="restaurants.html">ភោជនីយដ្ឋាន</a></li>
+                        <li><a href="guide.html">មគ្គុទ្ទេសក៍</a></li>
+                        <li><a href="transportation.html">ការដឹកជញ្ជូន</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Contact -->
+                <div class="col-lg-3 mb-5 mb-lg-0">
+                    <h6 class="footer-title">ទំនាក់ទំនង</h6>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+៨៥៥ ១២ ២២៣ ៣២២</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@cambodiatourism.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>ភ្នំពេញ, ព្រះរាជាណាចក្រកម្ពុជា</span>
+                        </div>
+                        <div class="footer-contact-item align-items-start">
+                            <i class="fas fa-clock mt-1"></i>
+                            <div class="d-flex flex-column gap-1">
+                                <span>ចន្ទ - សុក្រ: ៨:០០ - ១៧:០០</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column 5: Discover -->
+                <div class="col-lg-2">
+                    <h6 class="footer-title">ស្វែងយល់</h6>
+                    <ul class="footer-links">
+                        <li><a href="vikjittsal.html">វិចិត្រសាល</a></li>
+                        <li><a href="blog.html">ប្លុកទេសចរណ៍</a></li>
+                        <li><a href="review.html">មតិយោបល់</a></li>
+                        <li><a href="map.html">ផែនទី</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-white opacity-10 my-5" />
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                    <p class="mb-0 small text-white-50">© ២០២៦ ទេសចរណ៍កម្ពុជារក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="trust-badges justify-content-center justify-content-md-end">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-apple-pay"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ════════ Scroll to Top ════════ -->
+    <button class="scroll-top-btn" id="scrollTopBtn" title="ចុចលើ">
+        <i class="bi bi-chevron-up"></i>
+    </button>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
 
         // ── Scroll to top ──
         scrollTopBtn.addEventListener('click', () => {
@@ -583,25 +605,17 @@
 
         counters.forEach(c => counterObserver.observe(c));
     </script>
-<script src="assets/js/theme.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
+    <script src="assets/js/theme.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
         AOS.init();
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const hasRegistered = localStorage.getItem('userFullName') || localStorage.getItem('userEmail');
-            const registerBtn = document.getElementById('header-register-btn');
-            const profileAvatar = document.getElementById('header-profile-avatar');
-            
-            if (hasRegistered) {
-                if (registerBtn) registerBtn.setAttribute('style', 'display: none !important;');
-                if (profileAvatar) profileAvatar.setAttribute('style', 'display: flex !important;');
-            } else {
-                if (registerBtn) registerBtn.setAttribute('style', 'display: inline-block !important;');
-                if (profileAvatar) profileAvatar.setAttribute('style', 'display: none !important;');
-            }
-        });
+    
+<script>
+        if (localStorage.getItem('userFullName') || localStorage.getItem('userEmail')) {
+            document.documentElement.classList.add('is-logged-in');
+        }
     </script>
 </body>
+
 </html>

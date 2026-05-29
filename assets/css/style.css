@@ -42,11 +42,19 @@
 .text-golden-spice {
     color: var(--golden-spice) !important;
 }
+
+/* Authentication State Handling */
+html.is-logged-in #header-register-btn { display: none !important; }
+html.is-logged-in #header-profile-avatar { display: flex !important; }
+html:not(.is-logged-in) #header-register-btn { display: inline-block !important; }
+html:not(.is-logged-in) #header-profile-avatar { display: none !important; }
+
 body{
     font-family: "Kantumruy Pro", sans-serif !important;
     background-color: var(--sand-whisper) !important;
     color: var(--night-indigo) !important;
     padding-top: 76px !important;
+    overflow-x: hidden !important;
 }
 
 .bg-gradient-stone {

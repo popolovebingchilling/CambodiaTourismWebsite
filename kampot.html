@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="km">
 
 <head>
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- AOS ANIMATION -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="assets/js/spa-router.js" defer></script>
+    
 </head>
 
 <body>
@@ -82,9 +82,9 @@
             </div>
                                             <div class="d-none d-lg-flex align-items-center gap-3">
 
-                    <a href="register.html" id="header-register-btn" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចុះឈ្មោះ</a>
                     <a href="booking.html" class="btn btn-book-now px-4 py-2 rounded-3 fw-semibold">កក់ឥឡូវនេះ</a>
-                    <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2" title="ប្រវត្តិរូប" style="display: none !important;">
+                    <a href="register.html" id="header-register-btn" class="btn btn-outline-light px-4 py-2 rounded-3 fw-semibold">ចុះឈ្មោះ</a>
+                    <a href="profile.html" id="header-profile-avatar" class="d-flex align-items-center ms-2" title="ប្រវត្តិរូប" >
                         <i class="fas fa-user-circle text-white" style="font-size: 38px; transition: 0.3s; opacity: 0.9;" onmouseover="this.style.opacity='1'; this.style.transform='scale(1.05)';" onmouseout="this.style.opacity='0.9'; this.style.transform='scale(1)';"></i>
                     </a>
                 </div>
@@ -764,10 +764,10 @@
         <hr class="border-white opacity-10 my-5">
 
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center w-100">
-                <p class="mb-4 mb-md-0 small text-white-50 d-flex align-items-center m-0" style="height: 24px;">
+                <p class="mb-0 small text-white-50 m-0" style="line-height: 1; display: flex; align-items: center;">
                     &copy; ២០២៦ ទេសចរណ៍កម្ពុជារក្សាសិទ្ធិគ្រប់យ៉ាង។
                 </p>
-                <div class="trust-badges mb-0" style="margin-bottom: 0 !important; align-items: center; display: flex;">
+                <div class="trust-badges mb-0 d-flex align-items-center" style="margin-bottom: 0 !important;">
                     <i class="fab fa-cc-visa"></i>
                     <i class="fab fa-cc-apple-pay"></i>
                     <i class="fab fa-cc-paypal"></i>
@@ -882,21 +882,7 @@
     <script>
         AOS.init({ duration: 1200, once: true });
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const hasRegistered = localStorage.getItem('userFullName') || localStorage.getItem('userEmail');
-            const registerBtn = document.getElementById('header-register-btn');
-            const profileAvatar = document.getElementById('header-profile-avatar');
-            
-            if (hasRegistered) {
-                if (registerBtn) registerBtn.setAttribute('style', 'display: none !important;');
-                if (profileAvatar) profileAvatar.setAttribute('style', 'display: flex !important;');
-            } else {
-                if (registerBtn) registerBtn.setAttribute('style', 'display: inline-block !important;');
-                if (profileAvatar) profileAvatar.setAttribute('style', 'display: none !important;');
-            }
-        });
-    </script>
+    
 <section class="modal-section">
     <!-- Amber Kampot Detail Modal -->
     <div class="modal fade" id="amberModal" tabindex="-1" aria-hidden="true">
@@ -1503,6 +1489,11 @@
         </div>
     </div>
 </section>
+<script>
+        if (localStorage.getItem('userFullName') || localStorage.getItem('userEmail')) {
+            document.documentElement.classList.add('is-logged-in');
+        }
+    </script>
 </body>
 
 </html>
